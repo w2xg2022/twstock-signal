@@ -26,23 +26,27 @@ def load_stock_list():
     return pd.DataFrame(out).drop_duplicates("code").reset_index(drop=True)
 
 def fetch_prices(tickers, start="2014-01-01"):
-    """批次抓還原OHLCV -> {ticker: DataFrame[date,Open,High,Low,Close,Volume]}"""
+    """批次抓 OHLCV：同時保留原始價(High/Low/Close 給顯示)與還原價(aHigh/aLow/aClose 給指標與報酬)
+    -> {ticker: DataFrame[date,Open,High,Low,Close,aHigh,aLow,aClose,Volume]}"""
     res = {}
     for i in range(0, len(tickers), 80):
         chunk = tickers[i:i+80]
         try:
-            data = yf.download(chunk, start=start, auto_adjust=True, group_by="ticker",
+            data = yf.download(chunk, start=start, auto_adjust=False, group_by="ticker",
                                threads=True, progress=False)
         except Exception:
             time.sleep(3); continue
+        multi = isinstance(data.columns, pd.MultiIndex)
         for t in chunk:
             try:
-                df = data if len(chunk) == 1 else data[t]
-                df = df[["Open","High","Low","Close","Volume"]].dropna()
-                if len(df) >= 260:
-                    df = df.reset_index(); df.columns = ["date","Open","High","Low","Close","Volume"]
-                    df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
-                    res[t] = df
+                df = data[t] if multi else data
+                df = df[["Open","High","Low","Close","Adj Close","Volume"]].dropna()
+                if len(df) < 260: continue
+                df = df.reset_index(); df.columns = ["date","Open","High","Low","Close","AdjClose","Volume"]
+                df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+                ratio = df["AdjClose"] / df["Close"].replace(0, np.nan)   # 還原/原始 比例
+                df["aClose"] = df["AdjClose"]; df["aHigh"] = df["High"]*ratio; df["aLow"] = df["Low"]*ratio
+                res[t] = df
             except Exception: pass
         time.sleep(1)
     return res
@@ -96,15 +100,16 @@ def rev_accel_map():
     return out
 
 def compute_features(df, idx_df):
-    """回傳 DataFrame(index對齊df) 含 v1, alpha120, d240h; 需 idx_df[date,idx]"""
+    """技術指標一律用還原價(aClose/aHigh/aLow)計算；回傳 Close=原始收盤(顯示用)。需 idx_df[date,idx]"""
     g = df.merge(idx_df, on="date", how="left"); g["idx"] = g["idx"].ffill()
-    C = g["Close"].values.astype(float); H = g["High"].values.astype(float); L = g["Low"].values.astype(float)
-    IX = g["idx"].values.astype(float); c = pd.Series(C); s = c.pct_change(); m = pd.Series(IX).pct_change()
+    aC = g["aClose"].values.astype(float)  # 還原收盤(指標用)
+    rawC = g["Close"].values.astype(float)  # 原始收盤(顯示用)
+    IX = g["idx"].values.astype(float); c = pd.Series(aC); s = c.pct_change(); m = pd.Series(IX).pct_change()
     m5 = c.rolling(5).mean().values; m10 = c.rolling(10).mean().values; m20 = c.rolling(20).mean().values
-    v1 = (m5 > m10) & (m10 > m20) & (np.r_[False, m20[1:] > m20[:-1]]) & (C > m5)
+    v1 = (m5 > m10) & (m10 > m20) & (np.r_[False, m20[1:] > m20[:-1]]) & (aC > m5)
     b120 = s.rolling(120).cov(m) / m.rolling(120).var()
     a120 = ((s.rolling(120).mean() - b120 * m.rolling(120).mean()) * 252).values
-    d240h = (C / c.rolling(240).max().values - 1)
-    ext = C / m20 - 1  # 收盤離MA20（過度延伸=追高風險）
-    return pd.DataFrame(dict(date=g["date"].values, Close=C, High=H, Low=L, idx=IX,
-                             v1=v1, alpha120=a120, beta120=b120.values, d240h=d240h, ext=ext))
+    d240h = (aC / c.rolling(240).max().values - 1)
+    ext = aC / m20 - 1
+    return pd.DataFrame(dict(date=g["date"].values, Close=rawC, v1=v1, alpha120=a120,
+                             beta120=b120.values, d240h=d240h, ext=ext))

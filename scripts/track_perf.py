@@ -42,13 +42,15 @@ def main():
         dts = df["date"].values.astype(str)
         j = np.searchsorted(dts, str(pick_date), "right")
         if j >= len(df): return None
+        # 顯示用原始價
         H = df["High"].values.astype(float); L = df["Low"].values.astype(float); C = df["Close"].values.astype(float)
-        e = (H[j] + L[j]) / 2
-        if e <= 0: return None
-        hi = float(np.max(H[j:])); cur = float(C[-1])
+        # 報酬用還原價（正確處理除權息）
+        aH = df["aHigh"].values.astype(float); aL = df["aLow"].values.astype(float); aC = df["aClose"].values.astype(float)
+        e = (H[j] + L[j]) / 2; ae = (aH[j] + aL[j]) / 2
+        if e <= 0 or ae <= 0: return None
         return {"code": code, "name": name, "market": market,
-                "entry": round(e,2), "cur": round(cur,2), "hi": round(hi,2),
-                "rc": round((cur/e-1)*100,2), "rm": round((hi/e-1)*100,2)}
+                "entry": round(e,2), "cur": round(float(C[-1]),2), "hi": round(float(np.max(H[j:])),2),
+                "rc": round((aC[-1]/ae-1)*100,2), "rm": round((float(np.max(aH[j:]))/ae-1)*100,2)}
 
     def week_list(df, pick_date):
         out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date))]
