@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-"""產生本週推薦（定案策略）：
-V1多頭排列篩選 → beta120∈[0,1]濾網 → alpha120排序 → 前5
-輸出 data/picks/<資料日>.csv（含全部通過篩選的清單，rank<=5為推薦）"""
-import os, sys
+"""產生本週推薦（我們 + 猴子）：
+我們：多頭排列 → beta120∈[0,1] → alpha120排序 → 前5（data/picks/<日>.csv）
+猴子：全市場隨機5檔，以資料日為種子（data/monkey/<日>.csv）— 致敬 Malkiel《漫步華爾街》"""
+import os, sys, random
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
@@ -17,35 +17,37 @@ def main():
     prices = lib.fetch_prices(stocks["ticker"].tolist())
     print(f"抓到價格 {len(prices)} 檔", flush=True)
 
-    rows = []; data_date = ""
+    rows = []; data_date = ""; universe = []
     for r in stocks.itertuples():
         df = prices.get(r.ticker)
         if df is None or idx[r.market].empty: continue
         feat = lib.compute_features(df, idx[r.market])
         last = feat.iloc[-1]
+        if not np.isfinite(last["Close"]) or last["Close"] <= 0: continue
         data_date = max(data_date, str(last["date"]))
-        # 篩選: V1多頭排列 且 beta120∈[0,1]
+        universe.append((r.code, r.name, r.market, float(last["Close"])))
         if not last["v1"]: continue
         if not np.isfinite(last["alpha120"]) or not np.isfinite(last["beta120"]): continue
         if not (0 <= last["beta120"] < 1): continue
         rows.append(dict(code=r.code, name=r.name, market=r.market, close=round(float(last["Close"]),2),
                          alpha120=round(float(last["alpha120"]),4), beta120=round(float(last["beta120"]),3),
                          d240h=round(float(last["d240h"]),4)))
-    D = pd.DataFrame(rows)
-    if D.empty:
+    if not rows:
         print("無符合條件的股票", flush=True); return
-    # 排序：alpha120（風險調整後相對強勢）由高到低
-    D = D.sort_values("alpha120", ascending=False).reset_index(drop=True)
-    D["rank"] = D.index + 1
-    D.insert(0, "pick_date", data_date)
+    D = pd.DataFrame(rows).sort_values("alpha120", ascending=False).reset_index(drop=True)
+    D["rank"] = D.index + 1; D.insert(0, "pick_date", data_date)
     os.makedirs(os.path.join(ROOT, "data", "picks"), exist_ok=True)
-    fp = os.path.join(ROOT, "data", "picks", f"{data_date}.csv")
-    D.to_csv(fp, index=False, encoding="utf-8-sig")
-    print(f"資料日 {data_date}, 通過篩選 {len(D)} 檔, 推薦前{TOPN}:", flush=True)
+    D.to_csv(os.path.join(ROOT, "data", "picks", f"{data_date}.csv"), index=False, encoding="utf-8-sig")
+    print(f"資料日 {data_date}, 我們推薦前{TOPN}:", flush=True)
     for r in D.head(TOPN).itertuples():
-        print(f"  {r.rank:>2} {r.code} {r.name[:8]:<9} {('上市' if r.market=='TWSE' else '上櫃')} "
-              f"α120={r.alpha120:+.2f} β120={r.beta120:.2f} 距52高={r.d240h*100:+.1f}%", flush=True)
-    print(f"寫入 {fp}", flush=True)
+        print(f"  {r.rank} {r.code} {r.name[:8]} α120={r.alpha120:+.2f} β120={r.beta120:.2f}", flush=True)
+    # 猴子：以資料日為種子，全市場隨機5檔（可重現、不可事後竄改）
+    rng = random.Random(int(data_date.replace("-", "")))
+    mk = rng.sample(universe, min(TOPN, len(universe)))
+    M = pd.DataFrame([dict(pick_date=data_date, code=c, name=n, market=m, close=round(cl,2)) for c,n,m,cl in mk])
+    os.makedirs(os.path.join(ROOT, "data", "monkey"), exist_ok=True)
+    M.to_csv(os.path.join(ROOT, "data", "monkey", f"{data_date}.csv"), index=False, encoding="utf-8-sig")
+    print(f"🐒 猴子隨機5檔: {', '.join(c for c,_,_,_ in mk)}", flush=True)
 
 if __name__ == "__main__":
     main()

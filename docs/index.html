@@ -3,46 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>台股訊號選股 twstock-signal</title>
+<title>台股訊號選股 · 人 vs 猴子</title>
 <style>
-  body{font-family:system-ui,"Microsoft JhengHei",sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#222;line-height:1.6}
-  h1{font-size:1.4rem} .sub{color:#666;font-size:.9rem}
-  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.9rem}
-  th,td{border:1px solid #ddd;padding:6px 8px;text-align:right} th{background:#f5f5f5}
+  body{font-family:system-ui,"Microsoft JhengHei",sans-serif;max-width:880px;margin:0 auto;padding:16px;color:#222;line-height:1.6}
+  h1{font-size:1.4rem;margin-bottom:2px} .sub{color:#666;font-size:.88rem}
+  .tabs{display:flex;gap:8px;margin:16px 0 8px}
+  .tabs button{padding:8px 16px;border:1px solid #ccc;background:#f7f7f7;border-radius:8px 8px 0 0;cursor:pointer;font-size:.95rem}
+  .tabs button.active{background:#fff;border-bottom-color:#fff;font-weight:bold;color:#1565c0}
+  .panel{display:none} .panel.active{display:block}
+  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:.9rem}
+  th,td{border:1px solid #e0e0e0;padding:6px 8px;text-align:right} th{background:#f5f5f5}
   td.l,th.l{text-align:left}
-  .card{border:1px solid #e0e0e0;border-radius:8px;padding:12px 16px;margin:12px 0}
-  .warn{background:#fff8e1;border-color:#ffe082;font-size:.85rem}
-  .pos{color:#c62828} .neg{color:#2e7d32}
+  .card{border:1px solid #e0e0e0;border-radius:8px;padding:10px 14px;margin:10px 0}
+  .warn{background:#fff8e1;border-color:#ffe082;font-size:.84rem}
+  .vs{display:flex;gap:16px;flex-wrap:wrap} .vs>div{flex:1;min-width:300px}
+  .pos{color:#c62828;font-weight:bold} .neg{color:#2e7d32;font-weight:bold}
+  h3{margin:12px 0 4px} .big{font-size:1.1rem}
 </style>
 </head>
 <body>
-<h1>台股訊號選股 · twstock-signal</h1>
-<p class="sub">V1 多頭排列 → beta120∈[0,1] 濾網 → alpha120 排序 → 每週前 5 檔。出場：進場後第 15～20 天均價。一律對同期大盤計算超額報酬。</p>
-<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。<b>僅供研究，不構成投資建議。</b></div>
+<h1>台股訊號選股 🧑‍💻 vs 🐒</h1>
+<p class="sub">多頭排列 → beta120∈[0,1] 濾網 → alpha120 排序 → 每週前 5 檔。出場：進場後第 15～20 天均價。一律對同期大盤計算超額報酬。</p>
+<p class="sub">🐒「猴子選股」= 每週全市場隨機 5 檔（致敬 Burton Malkiel《漫步華爾街》：蒙眼猴子射飛鏢選股，未必輸給專家）。我們的策略若沒能贏過猴子，就沒有存在價值。</p>
 
-<h2>本週推薦 <span class="sub" id="pd"></span></h2>
-<table id="picks"><thead><tr><th>#</th><th class="l">代號</th><th class="l">名稱</th><th>市場</th><th>α120</th><th>β120</th><th>距52週高</th></tr></thead><tbody></tbody></table>
+<div class="tabs">
+  <button class="active" data-tab="now">本週對戰</button>
+  <button data-tab="hist">歷史對戰（5/2 起）</button>
+</div>
 
-<h2>樣本外累積績效</h2>
-<p class="sub" id="perfsub"></p>
-<table id="perf"><thead><tr><th>持有期</th><th>平均超額</th><th>勝率</th><th>樣本數</th></tr></thead><tbody></tbody></table>
+<div class="panel active" id="now">
+  <p class="sub" id="nowdate"></p>
+  <div class="vs">
+    <div><h3>🧑‍💻 我們的 5 檔</h3>
+      <table id="ourtab"><thead><tr><th>#</th><th class="l">代號</th><th class="l">名稱</th><th>市</th><th>α120</th><th>β120</th></tr></thead><tbody></tbody></table></div>
+    <div><h3>🐒 猴子的 5 檔</h3>
+      <table id="mktab"><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>市</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</div>
 
-<p class="sub">資料：yfinance 還原價、FinMind 月營收與大盤指數。<a href="https://github.com/w2xg2022/twstock-signal">GitHub 原始碼</a></p>
+<div class="panel" id="hist">
+  <div class="card" id="scoreboard"><span class="sub">尚未累積已結算週數（每檔需滿約一個月才結算）</span></div>
+  <table id="histtab"><thead><tr><th class="l">推薦日</th><th>🧑‍💻 我們超額%</th><th>🐒 猴子超額%</th><th>結果</th><th>累積(我們/猴子)</th></tr></thead><tbody></tbody></table>
+  <p class="sub">超額 = 該週 5 檔「進場→第15-20天均價」報酬 − 同期大盤，取平均。尚未滿一個月的週次顯示「結算中」。</p>
+</div>
+
+<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看的是長期累積。<b>僅供研究，不構成投資建議。</b></div>
+<p class="sub"><a href="https://github.com/w2xg2022/twstock-signal">GitHub 原始碼</a>　資料：yfinance 還原價、FinMind 大盤指數</p>
+
 <script>
-function pct(x){return x==null?'—':(x*100).toFixed(1)+'%'}
-fetch('data/latest_picks.json').then(r=>r.json()).then(d=>{
-  document.getElementById('pd').textContent='（資料日 '+d.pick_date+'，V1符合 '+d.n_v1+' 檔）';
-  const tb=document.querySelector('#picks tbody');
-  d.top.forEach(r=>{tb.insertAdjacentHTML('beforeend',
-    `<tr><td>${r.rank}</td><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${r.market=='TWSE'?'上市':'上櫃'}</td><td>${(r.alpha120).toFixed(2)}</td><td>${(r.beta120).toFixed(2)}</td><td>${pct(r.d240h)}</td></tr>`)})
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
+});
+const mkt=m=>m=='TWSE'?'上市':'上櫃';
+fetch('data/latest.json').then(r=>r.json()).then(d=>{
+  document.getElementById('nowdate').textContent='資料日 '+(d.pick_date||'—');
+  const ot=document.querySelector('#ourtab tbody');
+  (d.our||[]).forEach(r=>ot.insertAdjacentHTML('beforeend',
+    `<tr><td>${r.rank}</td><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${mkt(r.market)}</td><td>${r.alpha120.toFixed(2)}</td><td>${r.beta120.toFixed(2)}</td></tr>`));
+  const mt=document.querySelector('#mktab tbody');
+  (d.monkey||[]).forEach(r=>mt.insertAdjacentHTML('beforeend',
+    `<tr><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${mkt(r.market)}</td></tr>`));
 }).catch(()=>{});
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
-  document.getElementById('perfsub').textContent='已追蹤 '+d.n_weeks+' 週、'+d.n_picks_tracked+' 筆推薦　更新 '+d.updated.slice(0,10);
-  const tb=document.querySelector('#perf tbody');
-  Object.entries(d.horizons).forEach(([h,v])=>{
-    const cls=v.mean_excess>=0?'pos':'neg';
-    tb.insertAdjacentHTML('beforeend',`<tr><td>${h}</td><td class="${cls}">${v.mean_excess>=0?'+':''}${v.mean_excess}%</td><td>${v.win_rate}%</td><td>${v.n}</td></tr>`)})
-}).catch(()=>{document.getElementById('perfsub').textContent='尚未累積績效（上線後每週更新）'});
+  if(d.n_weeks_done>0){
+    const win=d.our_avg>=d.monkey_avg;
+    document.getElementById('scoreboard').innerHTML=
+      `<div class="big">已結算 ${d.n_weeks_done} 週：我們平均 <span class="${d.our_avg>=0?'pos':'neg'}">${d.our_avg>=0?'+':''}${d.our_avg}%</span> vs 猴子 <span class="${d.monkey_avg>=0?'pos':'neg'}">${d.monkey_avg>=0?'+':''}${d.monkey_avg}%</span>`+
+      `　|　我們贏 ${d.our_beats_monkey_weeks}/${d.n_weeks_done} 週`+
+      `　|　累積：我們 <span class="${d.our_cum>=0?'pos':'neg'}">${(d.our_cum*100).toFixed(1)}%</span> / 猴子 <span class="${d.monkey_cum>=0?'pos':'neg'}">${(d.monkey_cum*100).toFixed(1)}%</span></div>`;
+  }
+  const tb=document.querySelector('#histtab tbody'); let oc=1,mc=1;
+  (d.history||[]).forEach(h=>{
+    let res='<span class="sub">結算中</span>', cumt='—';
+    if(h.our!=null&&h.monkey!=null){
+      oc*=(1+h.our/100); mc*=(1+h.monkey/100);
+      res=h.our>h.monkey?'🧑‍💻 勝':'🐒 勝';
+      cumt=`${((oc-1)*100).toFixed(1)}% / ${((mc-1)*100).toFixed(1)}%`;
+    }
+    const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v}%</span>`;
+    tb.insertAdjacentHTML('beforeend',`<tr><td class="l">${h.date}</td><td>${f(h.our)}</td><td>${f(h.monkey)}</td><td>${res}</td><td>${cumt}</td></tr>`);
+  });
+}).catch(()=>{});
 </script>
 </body>
 </html>

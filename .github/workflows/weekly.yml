@@ -19,12 +19,8 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - name: 產生本週推薦
-        env:
-          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: python scripts/generate_picks.py
       - name: 追蹤歷史推薦績效
-        env:
-          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
         run: python scripts/track_perf.py
       - name: 產生 docs 資料
         run: python scripts/build_docs_data.py
