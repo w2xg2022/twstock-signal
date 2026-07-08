@@ -2,7 +2,7 @@ name: weekly
 
 on:
   schedule:
-    - cron: "0 2 * * 6"   # 每週六 02:00 UTC（台灣週六 10:00）
+    - cron: "0 3 * * 6"   # 每週六 03:00 UTC（台灣週六 11:00）
   workflow_dispatch: {}
 
 permissions:

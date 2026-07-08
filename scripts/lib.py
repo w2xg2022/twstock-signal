@@ -9,21 +9,55 @@ REVDIR = os.path.join(ROOT, "data", "revenue")
 FINMIND = "https://api.finmindtrade.com/api/v4/data"
 TOKEN = os.getenv("FINMIND_TOKEN", "")  # GitHub Secret; 沒有就用匿名
 
-def load_stock_list():
-    """上市(t187ap03_L)+上櫃(t187ap03_O) -> DataFrame[code,name,market('TWSE'/'OTC'),ticker]"""
-    out = []
-    for url, mk, sfx in [("https://mopsfin.twse.com.tw/opendata/t187ap03_L.csv", "TWSE", ".TW"),
-                         ("https://mopsfin.twse.com.tw/opendata/t187ap03_O.csv", "OTC", ".TWO")]:
+STOCK_LIST_CSV = os.path.join(ROOT, "data", "stock_list.csv")
+
+def _cached_stock_list():
+    if os.path.exists(STOCK_LIST_CSV):
+        try: return pd.read_csv(STOCK_LIST_CSV, dtype={"code": str})
+        except Exception: pass
+    return pd.DataFrame(columns=["code", "name", "market", "ticker"])
+
+def _fetch_market(url, mk, sfx):
+    """抓單一市場清單；失敗或空回傳空 list"""
+    try:
         r = requests.get(url, timeout=60, headers={"User-Agent": "Mozilla/5.0"})
+        d = None
         for enc in ("utf-8-sig", "big5", "utf-8"):
             try: d = pd.read_csv(io.StringIO(r.content.decode(enc))); break
-            except Exception: continue
+            except Exception: d = None
+        if d is None: return []
         cc = [c for c in d.columns if "代號" in c][0]; nc = [c for c in d.columns if "名稱" in c][0]
+        out = []
         for _, row in d.iterrows():
             code = str(row[cc]).strip()
             if code.isdigit() and len(code) == 4:
                 out.append(dict(code=code, name=str(row[nc]).strip(), market=mk, ticker=code + sfx))
-    return pd.DataFrame(out).drop_duplicates("code").reset_index(drop=True)
+        return out
+    except Exception:
+        return []
+
+def load_stock_list():
+    """上市(t187ap03_L)+上櫃(t187ap03_O) -> DataFrame[code,name,market('TWSE'/'OTC'),ticker]
+    逐市場抓 MOPS opendata；抓不到或回傳空的，就用 data/stock_list.csv 舊清單頂替(不讓整批清空)，
+    成功則把最新清單寫回快取。"""
+    cached = _cached_stock_list()
+    frames = []
+    for url, mk, sfx in [("https://mopsfin.twse.com.tw/opendata/t187ap03_L.csv", "TWSE", ".TW"),
+                         ("https://mopsfin.twse.com.tw/opendata/t187ap03_O.csv", "OTC", ".TWO")]:
+        rows = _fetch_market(url, mk, sfx)
+        if rows:
+            frames.append(pd.DataFrame(rows))
+        else:
+            old = cached[cached["market"] == mk]
+            print(f"  {mk} 清單抓取失敗/空，改用舊清單 {len(old)} 檔", flush=True)
+            frames.append(old)
+    out = pd.concat(frames, ignore_index=True).drop_duplicates("code").reset_index(drop=True)
+    if not out.empty:
+        try:
+            os.makedirs(os.path.dirname(STOCK_LIST_CSV), exist_ok=True)
+            out.to_csv(STOCK_LIST_CSV, index=False, encoding="utf-8-sig")
+        except Exception: pass
+    return out
 
 def fetch_prices(tickers, start="2014-01-01"):
     """批次抓 OHLCV：同時保留原始價(High/Low/Close 給顯示)與還原價(aHigh/aLow/aClose 給指標與報酬)
