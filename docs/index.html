@@ -5,50 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>台股訊號選股 · 人 vs 猴子</title>
 <style>
-  body{font-family:system-ui,"Microsoft JhengHei",sans-serif;max-width:880px;margin:0 auto;padding:16px;color:#222;line-height:1.6}
-  h1{font-size:1.4rem;margin-bottom:2px} .sub{color:#666;font-size:.88rem}
-  .tabs{display:flex;gap:8px;margin:16px 0 8px}
-  .tabs button{padding:8px 16px;border:1px solid #ccc;background:#f7f7f7;border-radius:8px 8px 0 0;cursor:pointer;font-size:.95rem}
-  .tabs button.active{background:#fff;border-bottom-color:#fff;font-weight:bold;color:#1565c0}
+  body{font-family:system-ui,"Microsoft JhengHei",sans-serif;max-width:920px;margin:0 auto;padding:16px;color:#222;line-height:1.6}
+  h1{font-size:1.4rem;margin-bottom:2px} .sub{color:#666;font-size:.86rem}
+  .tabs{display:flex;gap:6px;margin:16px 0 10px;flex-wrap:wrap}
+  .tabs button{padding:8px 16px;border:1px solid #ccc;background:#f7f7f7;border-radius:8px;cursor:pointer;font-size:.95rem}
+  .tabs button.active{background:#1565c0;color:#fff;border-color:#1565c0;font-weight:bold}
   .panel{display:none} .panel.active{display:block}
-  table{border-collapse:collapse;width:100%;margin:8px 0;font-size:.9rem}
-  th,td{border:1px solid #e0e0e0;padding:6px 8px;text-align:right} th{background:#f5f5f5}
+  table{border-collapse:collapse;width:100%;margin:4px 0;font-size:.86rem}
+  th,td{border:1px solid #e5e5e5;padding:4px 7px;text-align:right} th{background:#f5f5f5}
   td.l,th.l{text-align:left}
   .card{border:1px solid #e0e0e0;border-radius:8px;padding:10px 14px;margin:10px 0}
   .warn{background:#fff8e1;border-color:#ffe082;font-size:.84rem}
-  .vs{display:flex;gap:16px;flex-wrap:wrap} .vs>div{flex:1;min-width:300px}
-  .pos{color:#c62828;font-weight:bold} .neg{color:#2e7d32;font-weight:bold}
-  h3{margin:12px 0 4px} .big{font-size:1.1rem}
+  .grp{border:1px solid #e5e5e5;border-radius:8px;padding:8px 12px;margin:12px 0}
+  .grphead{font-weight:bold;margin-bottom:4px} .grphead .d{color:#666;font-weight:normal;font-size:.85rem}
+  .vs{display:flex;gap:14px;flex-wrap:wrap} .vs>div{flex:1;min-width:320px}
+  .vs h4{margin:4px 0}
+  .pos{color:#c62828} .neg{color:#2e7d32}
 </style>
 </head>
 <body>
 <h1>台股訊號選股 🧑‍💻 vs 🐒</h1>
-<p class="sub">多頭排列 → beta120∈[0,1] 濾網 → alpha120 排序 → 每週前 5 檔。出場：進場後第 15～20 天均價。一律對同期大盤計算超額報酬。</p>
-<p class="sub">🐒「猴子選股」= 每週全市場隨機 5 檔（致敬 Burton Malkiel《漫步華爾街》：蒙眼猴子射飛鏢選股，未必輸給專家）。我們的策略若沒能贏過猴子，就沒有存在價值。</p>
+<p class="sub">多頭排列 → beta120∈[0,1] 濾網 → alpha120 排序 → 每週前 5 檔。進場：推薦隔日 (最高+最低)/2。報酬追蹤到最新交易日：收盤價與進場後區間最高價兩種。</p>
+<p class="sub">🐒「猴子選股」= 每週全市場隨機 5 檔（以當週日期為種子，可重現）。典故：Burton Malkiel《漫步華爾街》——蒙眼猴子射飛鏢選股，未必輸給專家。<b>我們若長期贏不過猴子，就沒有存在價值。</b></p>
 
 <div class="tabs">
-  <button class="active" data-tab="now">本週對戰</button>
-  <button data-tab="hist">歷史對戰（5/2 起）</button>
+  <button class="active" data-tab="running">🔵 預測中</button>
+  <button data-tab="settled">✅ 已結束</button>
+  <button data-tab="board">📊 對戰總表</button>
 </div>
 
-<div class="panel active" id="now">
-  <p class="sub" id="nowdate"></p>
-  <div class="vs">
-    <div><h3>🧑‍💻 我們的 5 檔</h3>
-      <table id="ourtab"><thead><tr><th>#</th><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th><th>α120</th><th>β120</th></tr></thead><tbody></tbody></table></div>
-    <div><h3>🐒 猴子的 5 檔</h3>
-      <table id="mktab"><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th></tr></thead><tbody></tbody></table></div>
-  </div>
-</div>
-
-<div class="panel" id="hist">
-  <p class="sub">每週推薦 5 檔，追蹤到最新交易日的<b>平均報酬</b>（收盤價／進場後區間最高價兩種），並對照同期<b>大盤</b>（加權指數）走勢。每列一週，不做累積壓縮。</p>
-  <table id="histtab"><thead>
-    <tr><th class="l">推薦日</th><th>距今<br>交易日</th><th>🧑‍💻我們<br>收盤%</th><th>🧑‍💻我們<br>最高%</th><th>🐒猴子<br>收盤%</th><th>🐒猴子<br>最高%</th><th>大盤%</th></tr>
+<div class="panel active" id="running"><p class="sub">持有未滿 20 個交易日的週次（含本週推薦），新→舊。</p><div id="run-groups"></div></div>
+<div class="panel" id="settled"><p class="sub">持有已滿 20 個交易日的週次，新→舊（最多 10 組）。</p><div id="set-groups"></div></div>
+<div class="panel" id="board">
+  <p class="sub">每週 5 檔平均報酬，我們 / 猴子 / 同期大盤（加權指數）並列，每列一週。</p>
+  <table id="boardtab"><thead>
+    <tr><th class="l">推薦日</th><th>距今<br>交易日</th><th>🧑‍💻收盤%</th><th>🧑‍💻最高%</th><th>🐒收盤%</th><th>🐒最高%</th><th>大盤%</th></tr>
   </thead><tbody></tbody><tfoot></tfoot></table>
 </div>
 
-<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看的是長期累積。<b>僅供研究，不構成投資建議。</b></div>
+<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看長期。<b>僅供研究，不構成投資建議。</b></div>
 <p class="sub"><a href="https://github.com/w2xg2022/twstock-signal">GitHub 原始碼</a>　資料：yfinance 還原價、FinMind 大盤指數</p>
 
 <script>
@@ -58,22 +53,26 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
   b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
 });
 const mkt=m=>m=='TWSE'?'上市':'上櫃';
-fetch('data/latest.json').then(r=>r.json()).then(d=>{
-  document.getElementById('nowdate').textContent='資料日 '+(d.pick_date||'—');
-  const ot=document.querySelector('#ourtab tbody');
-  (d.our||[]).forEach(r=>ot.insertAdjacentHTML('beforeend',
-    `<tr><td>${r.rank}</td><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${mkt(r.market)}</td><td>${r.alpha120.toFixed(2)}</td><td>${r.beta120.toFixed(2)}</td></tr>`));
-  const mt=document.querySelector('#mktab tbody');
-  (d.monkey||[]).forEach(r=>mt.insertAdjacentHTML('beforeend',
-    `<tr><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${mkt(r.market)}</td></tr>`));
-}).catch(()=>{});
+const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v}%</span>`;
+function stockTable(title,arr){
+  let h=`<h4>${title}</h4><table><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>`;
+  (arr||[]).forEach(s=>h+=`<tr><td class="l">${s.code}</td><td class="l">${s.name}</td><td>${mkt(s.market)}</td><td>${f(s.close)}</td><td>${f(s.max)}</td></tr>`);
+  return h+'</tbody></table>';
+}
+function group(g){
+  return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 ${f(g.market)}</span></div>`+
+    `<div class="vs"><div>${stockTable('🧑‍💻 我們',g.our)}</div><div>${stockTable('🐒 猴子',g.monkey)}</div></div></div>`;
+}
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
-  const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v}%</span>`;
-  const tb=document.querySelector('#histtab tbody');
+  const run=(d.detail||[]).filter(g=>g.status=='running');
+  const set=(d.detail||[]).filter(g=>g.status=='settled').slice(0,10);
+  document.getElementById('run-groups').innerHTML=run.length?run.map(group).join(''):'<p class="sub">目前沒有預測中的週次</p>';
+  document.getElementById('set-groups').innerHTML=set.length?set.map(group).join(''):'<p class="sub">尚無已結束的週次</p>';
+  const tb=document.querySelector('#boardtab tbody');
   (d.weeks||[]).forEach(w=>tb.insertAdjacentHTML('beforeend',
     `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market)}</td></tr>`));
   const a=d.avg||{};
-  document.querySelector('#histtab tfoot').innerHTML=
+  document.querySelector('#boardtab tfoot').innerHTML=
     `<tr style="font-weight:bold;background:#f5f5f5"><td class="l">平均</td><td>—</td><td>${f(a.our_close)}</td><td>${f(a.our_max)}</td><td>${f(a.monkey_close)}</td><td>${f(a.monkey_max)}</td><td>${f(a.market)}</td></tr>`;
 }).catch(()=>{});
 </script>
