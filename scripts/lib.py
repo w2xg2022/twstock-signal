@@ -105,5 +105,6 @@ def compute_features(df, idx_df):
     b120 = s.rolling(120).cov(m) / m.rolling(120).var()
     a120 = ((s.rolling(120).mean() - b120 * m.rolling(120).mean()) * 252).values
     d240h = (C / c.rolling(240).max().values - 1)
+    ext = C / m20 - 1  # 收盤離MA20（過度延伸=追高風險）
     return pd.DataFrame(dict(date=g["date"].values, Close=C, High=H, Low=L, idx=IX,
-                             v1=v1, alpha120=a120, beta120=b120.values, d240h=d240h))
+                             v1=v1, alpha120=a120, beta120=b120.values, d240h=d240h, ext=ext))

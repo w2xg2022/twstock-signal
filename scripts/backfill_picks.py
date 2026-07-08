@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-"""一次性: 用VM快取價格回填 2026-05-02 起每週六的歷史推薦(我們+猴子)
-我們: 多頭排列 → beta120∈[0,1] → alpha120 top5
-猴子: 全市場隨機5檔(以當週日期為種子,可重現) — 致敬 Malkiel《漫步華爾街》"""
+"""一次性: 回填 2026-05-02 起每週六歷史推薦(我們+猴子)
+我們: 多頭排列 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序 → 前5
+去重: 20交易日內(=持有期)已推薦過的股票不再選,由下一名遞補；猴子同理(重抽)
+猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"
-ROOT="/home/woody/twstock-signal"; TOPN=5
+ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
+tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
 lst=pd.read_csv(f"{ROOT}/../twstock-alphabeta/data/stock_list.csv",dtype={"code":str})
 info={r.code:(r.name,r.market) for r in lst.itertuples()}
 S={}
@@ -22,29 +24,46 @@ for r in lst.itertuples():
     v1=(m5>m10)&(m10>m20)&(np.r_[False,m20[1:]>m20[:-1]])&(C>m5)
     b120=(s.rolling(120).cov(m)/m.rolling(120).var()).values
     a120=((s.rolling(120).mean()-pd.Series(b120)*m.rolling(120).mean())*252).values
-    d240h=(C/c.rolling(240).max().values-1)
-    S[r.code]=dict(name=info[r.code][0],mk=r.market,C=C,dt=D,v1=v1,a120=a120,b120=b120,d240h=d240h,n=len(C))
+    ext=C/m20-1; d240h=(C/c.rolling(240).max().values-1)
+    S[r.code]=dict(name=info[r.code][0],mk=r.market,C=C,dt=D,v1=v1,a120=a120,b120=b120,ext=ext,d240h=d240h,n=len(C))
 last=max(max(d["dt"]) for d in S.values())
 print(f"載入{len(S)}檔, 資料至{last}")
 os.makedirs(f"{ROOT}/data/picks",exist_ok=True); os.makedirs(f"{ROOT}/data/monkey",exist_ok=True)
-d0=dt.date(2026,5,2); n=0
-while d0.strftime("%Y-%m-%d")<=last:
-    sat=d0.strftime("%Y-%m-%d"); d0+=dt.timedelta(days=7)
-    rows=[]; universe=[]; ddate=""
+# 依時間順序(舊→新)處理，維護持有中集合
+sats=[]; d0=dt.date(2026,5,2)
+while d0.strftime("%Y-%m-%d")<=last: sats.append(d0.strftime("%Y-%m-%d")); d0+=dt.timedelta(days=7)
+held_our={}; held_mk={}; n=0  # code -> 決策日交易索引
+for sat in sats:
+    cand=[]; universe=[]; ddate=""; tcur=None
     for code,d in S.items():
         t=np.searchsorted(d["dt"],sat+"~")-1
         if t<240 or t>=d["n"] or d["dt"][t]>sat: continue
         ddate=max(ddate,d["dt"][t]); universe.append(code)
-        if not d["v1"][t] or not np.isfinite(d["a120"][t]) or not np.isfinite(d["b120"][t]): continue
-        if not (0<=d["b120"][t]<1): continue
-        rows.append(dict(code=code,name=d["name"],market=d["mk"],close=round(float(d["C"][t]),2),
-            alpha120=round(float(d["a120"][t]),4),beta120=round(float(d["b120"][t]),3),d240h=round(float(d["d240h"][t]),4)))
-    if not rows or len(universe)<20: continue
-    D=pd.DataFrame(rows).sort_values("alpha120",ascending=False).reset_index(drop=True)
-    D["rank"]=D.index+1; D.insert(0,"pick_date",ddate)
+        if not d["v1"][t] or not np.isfinite(d["a120"][t]) or not np.isfinite(d["b120"][t]) or not np.isfinite(d["ext"][t]): continue
+        if not (0<=d["b120"][t]<1) or d["ext"][t]>EXT: continue
+        cand.append((code,d))
+    if not ddate or len(universe)<20: continue
+    tcur=int(np.searchsorted(tdates,ddate))
+    held_our={c:tt for c,tt in held_our.items() if tcur-tt<HOLD}
+    held_mk={c:tt for c,tt in held_mk.items() if tcur-tt<HOLD}
+    cand.sort(key=lambda x:-x[1]["a120"][np.searchsorted(x[1]["dt"],ddate)])
+    # 我們: 取前5, 跳過持有中
+    our=[]
+    for code,d in cand:
+        if code in held_our: continue
+        tt=np.searchsorted(d["dt"],ddate)
+        our.append(dict(code=code,name=d["name"],market=d["mk"],close=round(float(d["C"][tt]),2),
+            alpha120=round(float(d["a120"][tt]),4),beta120=round(float(d["b120"][tt]),3),d240h=round(float(d["d240h"][tt]),4)))
+        held_our[code]=tcur
+        if len(our)>=TOPN: break
+    if not our: continue
+    D=pd.DataFrame(our); D["rank"]=range(1,len(D)+1); D.insert(0,"pick_date",ddate)
     D.to_csv(f"{ROOT}/data/picks/{ddate}.csv",index=False,encoding="utf-8-sig")
-    # 猴子: 以日期為種子隨機5檔(全市場)
-    rng=random.Random(int(ddate.replace("-",""))); mk_codes=rng.sample(universe,TOPN)
-    M=pd.DataFrame([dict(pick_date=ddate,code=c,name=S[c]["name"],market=S[c]["mk"],close=round(float(S[c]["C"][np.searchsorted(S[c]["dt"],ddate)]),2)) for c in mk_codes])
+    # 猴子: 隨機5(排除持有中的猴子)
+    rng=random.Random(int(ddate.replace("-","")))
+    pool=[c for c in universe if c not in held_mk]; rng.shuffle(pool); mk=pool[:TOPN]
+    for c in mk: held_mk[c]=tcur
+    M=pd.DataFrame([dict(pick_date=ddate,code=c,name=S[c]["name"],market=S[c]["mk"],
+        close=round(float(S[c]["C"][np.searchsorted(S[c]["dt"],ddate)]),2)) for c in mk])
     M.to_csv(f"{ROOT}/data/monkey/{ddate}.csv",index=False,encoding="utf-8-sig"); n+=1
-print(f"回填 {n} 週 (我們+猴子)")
+print(f"回填 {n} 週 (延伸<{EXT*100:.0f}% + 去重{HOLD}交易日)")
