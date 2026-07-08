@@ -38,9 +38,10 @@
 <div class="panel" id="settled"><p class="sub">持有已滿 20 個交易日的週次，新→舊（最多 10 組）。</p><div id="set-groups"></div></div>
 <div class="panel" id="board">
   <p class="sub">每週 5 檔平均報酬，我們 / 猴子 / 同期大盤（加權指數）並列，每列一週。</p>
-  <table id="boardtab"><thead>
-    <tr><th class="l">推薦日</th><th>距今<br>交易日</th><th>🧑‍💻收盤%</th><th>🧑‍💻最高%</th><th>🐒收盤%</th><th>🐒最高%</th><th>大盤<br>上市%</th><th>大盤<br>上櫃%</th></tr>
-  </thead><tbody></tbody><tfoot></tfoot></table>
+  <div style="overflow-x:auto"><table id="boardtab"><thead>
+    <tr><th class="l" rowspan="2">推薦日</th><th rowspan="2">距今<br>交易日</th><th colspan="2">🧑‍💻 我們</th><th colspan="2">🐒 猴子</th><th colspan="2">大盤上市</th><th colspan="2">大盤上櫃</th></tr>
+    <tr><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th></tr>
+  </thead><tbody></tbody><tfoot></tfoot></table></div>
 </div>
 
 <div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看長期。<b>僅供研究，不構成投資建議。</b></div>
@@ -53,7 +54,7 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
   b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
 });
 const mkt=m=>m=='TWSE'?'上市':'上櫃';
-const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v}%</span>`;
+const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v.toFixed(2)}%</span>`;
 function stockTable(title,arr){
   let rows='';
   (arr||[]).forEach(s=>rows+=`<tr><td class="l">${s.code}</td><td class="l">${s.name}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}</td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
@@ -64,7 +65,7 @@ function stockTable(title,arr){
 }
 function group(g){
   return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse)}／上櫃 ${f(g.market_otc)}</span></div>`+
-    stockTable('🧑‍💻 我們（上）',g.our)+stockTable('🐒 猴子（下）',g.monkey)+`</div>`;
+    stockTable('🧑‍💻 我們',g.our)+stockTable('🐒 猴子',g.monkey)+`</div>`;
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
   const run=(d.detail||[]).filter(g=>g.status=='running');
@@ -73,10 +74,10 @@ fetch('data/performance.json').then(r=>r.json()).then(d=>{
   document.getElementById('set-groups').innerHTML=set.length?set.map(group).join(''):'<p class="sub">尚無已結束的週次</p>';
   const tb=document.querySelector('#boardtab tbody');
   (d.weeks||[]).forEach(w=>tb.insertAdjacentHTML('beforeend',
-    `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market_twse)}</td><td>${f(w.market_otc)}</td></tr>`));
+    `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market_twse_close)}</td><td>${f(w.market_twse_max)}</td><td>${f(w.market_otc_close)}</td><td>${f(w.market_otc_max)}</td></tr>`));
   const a=d.avg||{};
   document.querySelector('#boardtab tfoot').innerHTML=
-    `<tr style="font-weight:bold;background:#f5f5f5"><td class="l">平均</td><td>—</td><td>${f(a.our_close)}</td><td>${f(a.our_max)}</td><td>${f(a.monkey_close)}</td><td>${f(a.monkey_max)}</td><td>${f(a.market_twse)}</td><td>${f(a.market_otc)}</td></tr>`;
+    `<tr style="font-weight:bold;background:#f5f5f5"><td class="l">平均</td><td>—</td><td>${f(a.our_close)}</td><td>${f(a.our_max)}</td><td>${f(a.monkey_close)}</td><td>${f(a.monkey_max)}</td><td>${f(a.market_twse_close)}</td><td>${f(a.market_twse_max)}</td><td>${f(a.market_otc_close)}</td><td>${f(a.market_otc_max)}</td></tr>`;
 }).catch(()=>{});
 </script>
 </body>
