@@ -1,0 +1,44 @@
+name: weekly
+
+on:
+  schedule:
+    - cron: "0 2 * * 6"   # 每週六 02:00 UTC（台灣週六 10:00）
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30    # 只抓yfinance價格(~10分)+2個指數；無FinMind限流問題
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: 產生本週推薦
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+        run: python scripts/generate_picks.py
+      - name: 追蹤歷史推薦績效
+        env:
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+        run: python scripts/track_perf.py
+      - name: 產生 docs 資料
+        run: python scripts/build_docs_data.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data docs
+          git commit -m "weekly update $(date -u +%Y-%m-%d)" || echo "無變更"
+          git push
+      - name: Release 本週推薦
+        run: |
+          LATEST=$(ls -t data/picks/*.csv | head -1)
+          DATE=$(basename "$LATEST" .csv)
+          gh release create "picks-$DATE" "$LATEST" --title "本週推薦 $DATE" --notes "V1多頭排列 → alpha120+營收加速 排序 → 前10。詳見 README 與 docs 績效頁。" || echo "release 已存在"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

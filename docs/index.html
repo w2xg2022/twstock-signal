@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台股訊號選股 twstock-signal</title>
+<style>
+  body{font-family:system-ui,"Microsoft JhengHei",sans-serif;max-width:860px;margin:0 auto;padding:16px;color:#222;line-height:1.6}
+  h1{font-size:1.4rem} .sub{color:#666;font-size:.9rem}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.9rem}
+  th,td{border:1px solid #ddd;padding:6px 8px;text-align:right} th{background:#f5f5f5}
+  td.l,th.l{text-align:left}
+  .card{border:1px solid #e0e0e0;border-radius:8px;padding:12px 16px;margin:12px 0}
+  .warn{background:#fff8e1;border-color:#ffe082;font-size:.85rem}
+  .pos{color:#c62828} .neg{color:#2e7d32}
+</style>
+</head>
+<body>
+<h1>台股訊號選股 · twstock-signal</h1>
+<p class="sub">V1 多頭排列 → beta120∈[0,1] 濾網 → alpha120 排序 → 每週前 5 檔。出場：進場後第 15～20 天均價。一律對同期大盤計算超額報酬。</p>
+<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。<b>僅供研究，不構成投資建議。</b></div>
+
+<h2>本週推薦 <span class="sub" id="pd"></span></h2>
+<table id="picks"><thead><tr><th>#</th><th class="l">代號</th><th class="l">名稱</th><th>市場</th><th>α120</th><th>β120</th><th>距52週高</th></tr></thead><tbody></tbody></table>
+
+<h2>樣本外累積績效</h2>
+<p class="sub" id="perfsub"></p>
+<table id="perf"><thead><tr><th>持有期</th><th>平均超額</th><th>勝率</th><th>樣本數</th></tr></thead><tbody></tbody></table>
+
+<p class="sub">資料：yfinance 還原價、FinMind 月營收與大盤指數。<a href="https://github.com/w2xg2022/twstock-signal">GitHub 原始碼</a></p>
+<script>
+function pct(x){return x==null?'—':(x*100).toFixed(1)+'%'}
+fetch('data/latest_picks.json').then(r=>r.json()).then(d=>{
+  document.getElementById('pd').textContent='（資料日 '+d.pick_date+'，V1符合 '+d.n_v1+' 檔）';
+  const tb=document.querySelector('#picks tbody');
+  d.top.forEach(r=>{tb.insertAdjacentHTML('beforeend',
+    `<tr><td>${r.rank}</td><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${r.market=='TWSE'?'上市':'上櫃'}</td><td>${(r.alpha120).toFixed(2)}</td><td>${(r.beta120).toFixed(2)}</td><td>${pct(r.d240h)}</td></tr>`)})
+}).catch(()=>{});
+fetch('data/performance.json').then(r=>r.json()).then(d=>{
+  document.getElementById('perfsub').textContent='已追蹤 '+d.n_weeks+' 週、'+d.n_picks_tracked+' 筆推薦　更新 '+d.updated.slice(0,10);
+  const tb=document.querySelector('#perf tbody');
+  Object.entries(d.horizons).forEach(([h,v])=>{
+    const cls=v.mean_excess>=0?'pos':'neg';
+    tb.insertAdjacentHTML('beforeend',`<tr><td>${h}</td><td class="${cls}">${v.mean_excess>=0?'+':''}${v.mean_excess}%</td><td>${v.win_rate}%</td><td>${v.n}</td></tr>`)})
+}).catch(()=>{document.getElementById('perfsub').textContent='尚未累積績效（上線後每週更新）'});
+</script>
+</body>
+</html>
