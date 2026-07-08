@@ -34,8 +34,8 @@
   <button data-tab="board">📊 對戰總表</button>
 </div>
 
-<div class="panel active" id="running"><p class="sub">持有未滿 20 個交易日的週次（含本週推薦），新→舊。</p><div id="run-groups"></div></div>
-<div class="panel" id="settled"><p class="sub">持有已滿 20 個交易日的週次，新→舊（最多 10 組）。</p><div id="set-groups"></div></div>
+<div class="panel active" id="running"><p class="sub">持有未滿 20 個交易日的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（為公平估計，非單一成交價）；<b>當前價</b>＝最新收盤（仍持有中）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
+<div class="panel" id="settled"><p class="sub">持有已滿 20 個交易日的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝進場後第 15～20 交易日均價（TWAP，策略出場價）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
 <div class="panel" id="board">
   <p class="sub">每週 5 檔平均報酬，我們 / 猴子 / 同期大盤（加權指數）並列，每列一週。</p>
   <div style="overflow-x:auto"><table id="boardtab"><thead>
@@ -55,17 +55,18 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
 });
 const mkt=m=>m=='TWSE'?'上市':'上櫃';
 const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v.toFixed(2)}%</span>`;
-function stockTable(title,arr){
+function stockTable(title,arr,curLabel){
   let rows='';
   (arr||[]).forEach(s=>rows+=`<tr><td class="l">${s.code}</td><td class="l">${s.name}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}</td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
   let ac=null,am=null;
-  if(arr&&arr.length){ac=Math.round(arr.reduce((a,s)=>a+s.rc,0)/arr.length*10)/10; am=Math.round(arr.reduce((a,s)=>a+s.rm,0)/arr.length*10)/10;}
+  if(arr&&arr.length){ac=Math.round(arr.reduce((a,s)=>a+s.rc,0)/arr.length*100)/100; am=Math.round(arr.reduce((a,s)=>a+s.rm,0)/arr.length*100)/100;}
   const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(ac)}</td><td>${f(am)}</td></tr>`;
-  return `<h4>${title}</h4><table><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th><th>買入價</th><th>當前價</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}</tfoot></table>`;
+  return `<h4>${title}</h4><table><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th><th>買入價</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}</tfoot></table>`;
 }
 function group(g){
-  return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse)}／上櫃 ${f(g.market_otc)}</span></div>`+
-    stockTable('🧑‍💻 我們',g.our)+stockTable('🐒 猴子',g.monkey)+`</div>`;
+  const cl = g.status=='settled' ? '賣出價' : '當前價';
+  return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+
+    stockTable('🧑‍💻 我們',g.our,cl)+stockTable('🐒 猴子',g.monkey,cl)+`</div>`;
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
   const run=(d.detail||[]).filter(g=>g.status=='running');

@@ -45,26 +45,31 @@ def main():
     taiex = lib.fetch_index("TAIEX"); tpex = lib.fetch_index("TPEx")
     tdates = taiex["date"].values.astype(str); latest = tdates[-1]
 
-    def detail_one(code, name, market, pick_date):
+    def detail_one(code, name, market, pick_date, settled):
         if code not in slist.index: return None
         df = prices.get(slist.loc[code, "ticker"])
         if df is None: return None
         dts = df["date"].values.astype(str)
-        j = np.searchsorted(dts, str(pick_date), "right")
+        j = np.searchsorted(dts, str(pick_date), "right")  # 進場=推薦隔日
         if j >= len(df): return None
-        # 顯示用原始價
-        H = df["High"].values.astype(float); L = df["Low"].values.astype(float); C = df["Close"].values.astype(float)
-        # 報酬用還原價（正確處理除權息）
-        aH = df["aHigh"].values.astype(float); aL = df["aLow"].values.astype(float); aC = df["aClose"].values.astype(float)
+        H = df["High"].values.astype(float); L = df["Low"].values.astype(float); C = df["Close"].values.astype(float)         # 原始(顯示)
+        aH = df["aHigh"].values.astype(float); aC = df["aClose"].values.astype(float)                                          # 還原(報酬)
         e = tick((H[j] + L[j]) / 2)  # 買入價=當日(高+低)/2，湊合法檔位
         if e <= 0 or C[j] <= 0: return None
-        ae = e * (aC[j] / C[j])       # 對應還原價（處理除權息），報酬與顯示的買入價一致
+        ae = e * (aC[j] / C[j])       # 對應還原買入價
+        if settled and j + SETTLE < len(df):
+            # 已結束：賣出價=第15-20交易日均價(TWAP)；最高=持有期間最高
+            sell = float(np.mean(C[j+15:j+SETTLE+1])); sell_a = float(np.mean(aC[j+15:j+SETTLE+1]))
+            hi_r = float(np.max(H[j:j+SETTLE+1])); hi_a = float(np.max(aH[j:j+SETTLE+1]))
+        else:
+            # 預測中：當前價=最新收盤；最高=進場至今最高
+            sell = float(C[-1]); sell_a = float(aC[-1]); hi_r = float(np.max(H[j:])); hi_a = float(np.max(aH[j:]))
         return {"code": code, "name": name, "market": market,
-                "entry": e, "cur": round(float(C[-1]),2), "hi": round(float(np.max(H[j:])),2),
-                "rc": round((aC[-1]/ae-1)*100,2), "rm": round((float(np.max(aH[j:]))/ae-1)*100,2)}
+                "entry": e, "cur": round(sell,2), "hi": round(hi_r,2),
+                "rc": round((sell_a/ae-1)*100,2), "rm": round((hi_a/ae-1)*100,2)}
 
-    def week_list(df, pick_date):
-        out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date))]
+    def week_list(df, pick_date, settled):
+        out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date, settled))]
         out.sort(key=lambda x: -x["rc"])
         return out
 
@@ -75,8 +80,9 @@ def main():
         if j >= len(tdates): continue
         days = int(len(tdates) - 1 - j)
         mtc, mtm = idx_ret(taiex, w); moc, mom = idx_ret(tpex, w)
-        od = week_list(ours[w], w) if w in ours else []
-        md = week_list(monk[w], w) if w in monk else []
+        settled = days >= SETTLE
+        od = week_list(ours[w], w, settled) if w in ours else []
+        md = week_list(monk[w], w, settled) if w in monk else []
         avg = lambda lst, k: round(float(np.mean([x[k] for x in lst])), 2) if lst else None
         st = "settled" if days >= SETTLE else "running"
         mkt = {"market_twse_close": mtc, "market_twse_max": mtm, "market_otc_close": moc, "market_otc_max": mom}
