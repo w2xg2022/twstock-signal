@@ -26,7 +26,9 @@ def _fetch_market(url, mk, sfx):
             try: d = pd.read_csv(io.StringIO(r.content.decode(enc))); break
             except Exception: d = None
         if d is None: return []
-        cc = [c for c in d.columns if "代號" in c][0]; nc = [c for c in d.columns if "名稱" in c][0]
+        cc = [c for c in d.columns if "代號" in c][0]
+        sc = [c for c in d.columns if "簡稱" in c and "英文" not in c]   # 優先用「公司簡稱」
+        nc = sc[0] if sc else [c for c in d.columns if "名稱" in c][0]   # 沒有就退回全名
         out = []
         for _, row in d.iterrows():
             code = str(row[cc]).strip()

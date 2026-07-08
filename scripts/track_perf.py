@@ -47,6 +47,7 @@ def main():
 
     def detail_one(code, name, market, pick_date, settled):
         if code not in slist.index: return None
+        name = str(slist.loc[code, "name"])  # 一律用清單簡稱顯示
         df = prices.get(slist.loc[code, "ticker"])
         if df is None: return None
         dts = df["date"].values.astype(str)
