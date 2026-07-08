@@ -1,0 +1,7 @@
+{
+ "updated": "2026-07-08T07:22:16.664258+00:00",
+ "n_weeks": 1,
+ "n_picks_tracked": 0,
+ "exit_rule": "進場後第15-20天均價(TWAP)",
+ "horizons": {}
+}
