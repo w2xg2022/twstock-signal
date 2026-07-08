@@ -19,6 +19,16 @@ def load(dirn, rank_cap=None):
         out[os.path.basename(f)[:-4]] = d
     return out
 
+def tick(p):
+    """湊到台股合法升降單位(檔位)"""
+    if p < 10: t = 0.01
+    elif p < 50: t = 0.05
+    elif p < 100: t = 0.1
+    elif p < 500: t = 0.5
+    elif p < 1000: t = 1.0
+    else: t = 5.0
+    return round(round(p / t) * t, 2)
+
 def idx_ret(idxdf, pick_date):
     dts = idxdf["date"].values.astype(str); v = idxdf["idx"].values.astype(float)
     j = np.searchsorted(dts, str(pick_date), "right")
@@ -46,10 +56,11 @@ def main():
         H = df["High"].values.astype(float); L = df["Low"].values.astype(float); C = df["Close"].values.astype(float)
         # 報酬用還原價（正確處理除權息）
         aH = df["aHigh"].values.astype(float); aL = df["aLow"].values.astype(float); aC = df["aClose"].values.astype(float)
-        e = (H[j] + L[j]) / 2; ae = (aH[j] + aL[j]) / 2
-        if e <= 0 or ae <= 0: return None
+        e = tick((H[j] + L[j]) / 2)  # 買入價=當日(高+低)/2，湊合法檔位
+        if e <= 0 or C[j] <= 0: return None
+        ae = e * (aC[j] / C[j])       # 對應還原價（處理除權息），報酬與顯示的買入價一致
         return {"code": code, "name": name, "market": market,
-                "entry": round(e,2), "cur": round(float(C[-1]),2), "hi": round(float(np.max(H[j:])),2),
+                "entry": e, "cur": round(float(C[-1]),2), "hi": round(float(np.max(H[j:])),2),
                 "rc": round((aC[-1]/ae-1)*100,2), "rm": round((float(np.max(aH[j:]))/ae-1)*100,2)}
 
     def week_list(df, pick_date):
