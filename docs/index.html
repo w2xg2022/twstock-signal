@@ -13,7 +13,7 @@
   .panel{display:none} .panel.active{display:block}
   table{border-collapse:collapse;width:100%;margin:4px 0;font-size:.86rem}
   th,td{border:1px solid #e5e5e5;padding:4px 7px;text-align:right;white-space:nowrap} th{background:#f5f5f5}
-  td.l,th.l{text-align:left} td.l{white-space:normal;word-break:break-all}
+  td.l,th.l{text-align:left}
   .card{border:1px solid #e0e0e0;border-radius:8px;padding:10px 14px;margin:10px 0}
   .warn{background:#fff8e1;border-color:#ffe082;font-size:.84rem}
   .grp{border:1px solid #e5e5e5;border-radius:8px;padding:8px 12px;margin:12px 0}
@@ -62,7 +62,7 @@ function stockTable(title,arr,curLabel){
   let ac=null,am=null;
   if(arr&&arr.length){ac=Math.round(arr.reduce((a,s)=>a+s.rc,0)/arr.length*100)/100; am=Math.round(arr.reduce((a,s)=>a+s.rm,0)/arr.length*100)/100;}
   const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(ac)}</td><td>${f(am)}</td></tr>`;
-  return `<h4>${title}</h4><table><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th><th>買入價</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}</tfoot></table>`;
+  return `<h4>${title}</h4><table><thead><tr><th class="l">代號</th><th class="l">簡稱</th><th>市場</th><th>買入價</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}</tfoot></table>`;
 }
 function group(g){
   const cl = g.status=='settled' ? '賣出價' : '當前價';
