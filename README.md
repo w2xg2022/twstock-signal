@@ -11,15 +11,21 @@
 
 ## 策略（131 個月全量回測定案）
 
-三段式：**趨勢過濾 → 風險過濾 → 因子排序 → 取前 5 檔**。
+四道關卡：**趨勢過濾 → 風險過濾 → 追高過濾 → 因子排序 → 取前 5 檔**。
 
-1. **多頭排列篩選**：`MA5 > MA10 > MA20` 且 `MA20 向上` 且 `收盤站上 MA5`
-2. **beta120 濾網**：只留 `beta120 ∈ [0, 1]`（波動不高於大盤，控制集中組合的變異）
-3. **alpha120 排序**：`alpha120`（120 日對大盤的滾動 OLS 超額報酬 × 252，風險調整後的相對強勢），由高到低取 **前 5 名**
+1. **趨勢過濾（多頭排列）**：`MA5 > MA10 > MA20` 且 `MA20 向上` 且 `收盤站上 MA5`
+2. **風險過濾（beta120）**：只留 `beta120 ∈ [0, 1]`（波動不高於大盤，控制集中組合的變異）
+3. **追高過濾**：收盤離 MA20 在 **10% 以內**，避開已經噴太遠、容易反轉的股票
+4. **因子排序（alpha120）**：`alpha120`（120 日對大盤的滾動 OLS 超額報酬 × 252，風險調整後的相對強勢），由高到低取 **前 5 名**
 
-- **入場價**：推薦後**下一個交易日的 (最高＋最低)/2**（多頭排列可能在當週任何一天出現）
-- **出場**：進場後**第 15～20 個交易日的均價（TWAP）**——約一個月跑完一輪，且用區間均價去除單日雜訊（回測顯示比單押某一天報酬更高、更顯著）
-- **基準**：一律對同期大盤（上市對 TAIEX、上櫃對 TPEx，FinMind 指數）計算超額報酬
+同一檔在 20 個交易日的持有期內不會重複推薦，由下一名遞補（猴子若抽到持有中的也一樣剔除、重抽）。
+
+### 價格與報酬怎麼算
+
+- **買入價**：推薦後**下一個交易日 (最高＋最低)/2**，並湊到台股合法升降單位（檔位）。這是一個公平估計，不是某一筆實際成交價（多頭排列可能在當天任何時點出現，取中值避免高估或低估）。
+- **賣出價（已結束）**：進場後**第 15～20 個交易日的均價（TWAP）**——約一個月跑完一輪，用區間均價去除單日雜訊（回測顯示比單押某一天更高、更顯著）。尚未滿 20 天的週次（「預測中」）則顯示追到最新收盤的**當前價**。
+- **顯示 vs 計算**：頁面上的買入／賣出／最高價用**成交價（原始，對得上券商看盤）**；報酬率與所有技術指標則用**還原價（正確處理除權息，避免把配息當成虧損）**。
+- **基準**：一律對同期大盤（上市對 TAIEX、上櫃對 TPEx，FinMind 指數）計算超額報酬。
 
 > 回測（131 月、全量、扣成本）：top5 × β[0,1] 超越大盤約 **+2.2%/月（t≈2.4）**、贏「隨機選股（猴子）」約 +2.6%。
 > 註：檔數越少 beta 濾網要越緊——若改推 3 檔，用 `beta120 ∈ [0, 0.5]`。
@@ -32,22 +38,24 @@
 - **僅供研究參考，不構成投資建議。**
 
 ## 資料來源
-- 價格：yfinance（`auto_adjust=True` 還原價），每次執行即時抓取
-- 月營收：FinMind `TaiwanStockMonthRevenue`，快取於 `data/revenue/`，每月增量更新
-- 大盤指數：FinMind `TaiwanStockTotalReturnIndex`（TAIEX／TPEx）
+- 價格：yfinance，每次執行即時抓取；同時保留**原始價（顯示用）**與**還原價（指標與報酬用）**
+- 大盤指數：FinMind `TaiwanStockTotalReturnIndex`（TAIEX／TPEx），並本地快取，抓取失敗時自動 fallback
+
+> 定案策略只用價量（多頭排列＋alpha／beta），不依賴月營收等基本面資料，因此每週更新只需抓價與指數，跑得又快又穩。
 
 ## 目錄結構
 ```
 scripts/
-  lib.py            共用：抓價、指標、V1、alpha、營收
-  generate_picks.py 產生本週推薦 -> data/picks/YYYY-MM-DD.csv
-  track_perf.py     歷史推薦 + 最新價 -> data/performance.json（樣本外成績單）
-  update_revenue.py FinMind 增量更新營收快取
+  lib.py            共用：抓價、技術指標、多頭排列、alpha／beta
+  generate_picks.py 產生本週推薦（我們＋猴子）-> data/picks、data/monkey
+  track_perf.py     歷史推薦 + 事後價 -> data/performance.json（樣本外成績單）
+  build_docs_data.py 把 performance.json 複製給 Pages
 data/
-  revenue/<code>.csv  月營收快取
-  picks/YYYY-MM-DD.csv 每週推薦存檔
-  performance.json     累積績效
-docs/                 GitHub Pages（本週名單＋績效曲線）
+  picks/YYYY-MM-DD.csv  每週推薦存檔（我們）
+  monkey/YYYY-MM-DD.csv 每週隨機 5 檔（猴子）
+  index/                大盤指數快取
+  performance.json      累積績效
+docs/                 GitHub Pages（預測中／已結束／對戰總表）
 .github/workflows/
   weekly.yml          每週末：抓/算/追蹤/commit/Release
   pages.yml           自動部署 Pages

@@ -35,6 +35,7 @@ jobs:
         run: |
           LATEST=$(ls -t data/picks/*.csv | head -1)
           DATE=$(basename "$LATEST" .csv)
-          gh release create "picks-$DATE" "$LATEST" --title "本週推薦 $DATE" --notes "V1多頭排列 → alpha120+營收加速 排序 → 前10。詳見 README 與 docs 績效頁。" || echo "release 已存在"
+          MONKEY=$(ls -t data/monkey/*.csv | head -1)
+          gh release create "picks-$DATE" "$LATEST" "$MONKEY" --title "本週推薦 $DATE 🧑‍💻 vs 🐒" --notes $'策略：多頭排列 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序 → 前5檔。\n買入價＝推薦隔日(高+低)/2，出場＝進場後第15~20交易日均價(TWAP)。\n同附一組隨機5檔(猴子，Malkiel《漫步華爾街》)一起對戰。詳見 README 與 docs 績效頁。' || echo "release 已存在"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
