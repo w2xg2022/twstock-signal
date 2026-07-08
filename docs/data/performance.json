@@ -1,93 +1,104 @@
 {
- "updated": "2026-07-08T07:34:04.495989+00:00",
- "n_weeks_done": 6,
- "our_avg": -6.23,
- "monkey_avg": -2.78,
- "our_beats_monkey_weeks": 3,
- "our_cum": -0.3576,
- "monkey_cum": -0.1646,
- "history": [
+ "updated": "2026-07-08T07:55:48.358530+00:00",
+ "latest_date": "2026-07-07",
+ "n_weeks": 10,
+ "weeks": [
   {
    "date": "2026-04-30",
-   "our": 11.59,
-   "monkey": -8.47
+   "days": 45,
+   "our_close": -1.41,
+   "our_max": 40.57,
+   "monkey_close": -4.73,
+   "monkey_max": 15.27,
+   "market": 12.44
   },
   {
    "date": "2026-05-08",
-   "our": -4.58,
-   "monkey": -10.41
+   "days": 40,
+   "our_close": -2.37,
+   "our_max": 35.26,
+   "monkey_close": -11.63,
+   "monkey_max": 20.27,
+   "market": 9.52
   },
   {
    "date": "2026-05-15",
-   "our": -17.37,
-   "monkey": -4.56
+   "days": 35,
+   "our_close": -10.49,
+   "our_max": 44.04,
+   "monkey_close": -3.14,
+   "monkey_max": 17.38,
+   "market": 11.92
   },
   {
    "date": "2026-05-22",
-   "our": -26.8,
-   "monkey": 3.85
+   "days": 30,
+   "our_close": -25.27,
+   "our_max": 19.72,
+   "monkey_close": 3.11,
+   "monkey_max": 16.65,
+   "market": 4.86
   },
   {
    "date": "2026-05-29",
-   "our": -1.55,
-   "monkey": -1.87
+   "days": 25,
+   "our_close": -12.83,
+   "our_max": 20.91,
+   "monkey_close": -4.81,
+   "monkey_max": 11.9,
+   "market": 0.94
   },
   {
    "date": "2026-06-05",
-   "our": 1.31,
-   "monkey": 4.75
+   "days": 20,
+   "our_close": 0.96,
+   "our_max": 24.59,
+   "monkey_close": 8.88,
+   "monkey_max": 23.96,
+   "market": 5.18
   },
   {
    "date": "2026-06-12",
-   "our": null,
-   "monkey": null
+   "days": 15,
+   "our_close": 13.62,
+   "our_max": 40.35,
+   "monkey_close": -2.4,
+   "monkey_max": 8.79,
+   "market": 0.63
   },
   {
    "date": "2026-06-18",
-   "our": null,
-   "monkey": null
+   "days": 11,
+   "our_close": -12.49,
+   "our_max": 19.47,
+   "monkey_close": 0.43,
+   "monkey_max": 8.15,
+   "market": -4.42
   },
   {
    "date": "2026-06-26",
-   "our": null,
-   "monkey": null
+   "days": 6,
+   "our_close": 10.17,
+   "our_max": 27.13,
+   "monkey_close": 2.91,
+   "monkey_max": 11.54,
+   "market": 1.36
   },
   {
    "date": "2026-07-03",
-   "our": null,
-   "monkey": null
+   "days": 1,
+   "our_close": -6.26,
+   "our_max": 5.47,
+   "monkey_close": -1.64,
+   "monkey_max": 1.92,
+   "market": -2.28
   }
  ],
- "cum_curve": [
-  {
-   "date": "2026-04-30",
-   "our": 0.1159,
-   "monkey": -0.0847
-  },
-  {
-   "date": "2026-05-08",
-   "our": 0.0648,
-   "monkey": -0.18
-  },
-  {
-   "date": "2026-05-15",
-   "our": -0.1202,
-   "monkey": -0.2174
-  },
-  {
-   "date": "2026-05-22",
-   "our": -0.356,
-   "monkey": -0.1872
-  },
-  {
-   "date": "2026-05-29",
-   "our": -0.3659,
-   "monkey": -0.2024
-  },
-  {
-   "date": "2026-06-05",
-   "our": -0.3576,
-   "monkey": -0.1646
-  }
- ]
+ "avg": {
+  "our_close": -4.64,
+  "our_max": 27.75,
+  "monkey_close": -1.3,
+  "monkey_max": 13.58,
+  "market": 4.01
+ }
 }

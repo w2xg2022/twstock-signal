@@ -35,16 +35,17 @@
   <p class="sub" id="nowdate"></p>
   <div class="vs">
     <div><h3>🧑‍💻 我們的 5 檔</h3>
-      <table id="ourtab"><thead><tr><th>#</th><th class="l">代號</th><th class="l">名稱</th><th>市</th><th>α120</th><th>β120</th></tr></thead><tbody></tbody></table></div>
+      <table id="ourtab"><thead><tr><th>#</th><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th><th>α120</th><th>β120</th></tr></thead><tbody></tbody></table></div>
     <div><h3>🐒 猴子的 5 檔</h3>
-      <table id="mktab"><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>市</th></tr></thead><tbody></tbody></table></div>
+      <table id="mktab"><thead><tr><th class="l">代號</th><th class="l">名稱</th><th>上市櫃</th></tr></thead><tbody></tbody></table></div>
   </div>
 </div>
 
 <div class="panel" id="hist">
-  <div class="card" id="scoreboard"><span class="sub">尚未累積已結算週數（每檔需滿約一個月才結算）</span></div>
-  <table id="histtab"><thead><tr><th class="l">推薦日</th><th>🧑‍💻 我們超額%</th><th>🐒 猴子超額%</th><th>結果</th><th>累積(我們/猴子)</th></tr></thead><tbody></tbody></table>
-  <p class="sub">超額 = 該週 5 檔「進場→第15-20天均價」報酬 − 同期大盤，取平均。尚未滿一個月的週次顯示「結算中」。</p>
+  <p class="sub">每週推薦 5 檔，追蹤到最新交易日的<b>平均報酬</b>（收盤價／進場後區間最高價兩種），並對照同期<b>大盤</b>（加權指數）走勢。每列一週，不做累積壓縮。</p>
+  <table id="histtab"><thead>
+    <tr><th class="l">推薦日</th><th>距今<br>交易日</th><th>🧑‍💻我們<br>收盤%</th><th>🧑‍💻我們<br>最高%</th><th>🐒猴子<br>收盤%</th><th>🐒猴子<br>最高%</th><th>大盤%</th></tr>
+  </thead><tbody></tbody><tfoot></tfoot></table>
 </div>
 
 <div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看的是長期累積。<b>僅供研究，不構成投資建議。</b></div>
@@ -67,24 +68,13 @@ fetch('data/latest.json').then(r=>r.json()).then(d=>{
     `<tr><td class="l">${r.code}</td><td class="l">${r.name}</td><td>${mkt(r.market)}</td></tr>`));
 }).catch(()=>{});
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
-  if(d.n_weeks_done>0){
-    const win=d.our_avg>=d.monkey_avg;
-    document.getElementById('scoreboard').innerHTML=
-      `<div class="big">已結算 ${d.n_weeks_done} 週：我們平均 <span class="${d.our_avg>=0?'pos':'neg'}">${d.our_avg>=0?'+':''}${d.our_avg}%</span> vs 猴子 <span class="${d.monkey_avg>=0?'pos':'neg'}">${d.monkey_avg>=0?'+':''}${d.monkey_avg}%</span>`+
-      `　|　我們贏 ${d.our_beats_monkey_weeks}/${d.n_weeks_done} 週`+
-      `　|　累積：我們 <span class="${d.our_cum>=0?'pos':'neg'}">${(d.our_cum*100).toFixed(1)}%</span> / 猴子 <span class="${d.monkey_cum>=0?'pos':'neg'}">${(d.monkey_cum*100).toFixed(1)}%</span></div>`;
-  }
-  const tb=document.querySelector('#histtab tbody'); let oc=1,mc=1;
-  (d.history||[]).forEach(h=>{
-    let res='<span class="sub">結算中</span>', cumt='—';
-    if(h.our!=null&&h.monkey!=null){
-      oc*=(1+h.our/100); mc*=(1+h.monkey/100);
-      res=h.our>h.monkey?'🧑‍💻 勝':'🐒 勝';
-      cumt=`${((oc-1)*100).toFixed(1)}% / ${((mc-1)*100).toFixed(1)}%`;
-    }
-    const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v}%</span>`;
-    tb.insertAdjacentHTML('beforeend',`<tr><td class="l">${h.date}</td><td>${f(h.our)}</td><td>${f(h.monkey)}</td><td>${res}</td><td>${cumt}</td></tr>`);
-  });
+  const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v}%</span>`;
+  const tb=document.querySelector('#histtab tbody');
+  (d.weeks||[]).forEach(w=>tb.insertAdjacentHTML('beforeend',
+    `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market)}</td></tr>`));
+  const a=d.avg||{};
+  document.querySelector('#histtab tfoot').innerHTML=
+    `<tr style="font-weight:bold;background:#f5f5f5"><td class="l">平均</td><td>—</td><td>${f(a.our_close)}</td><td>${f(a.our_max)}</td><td>${f(a.monkey_close)}</td><td>${f(a.monkey_max)}</td><td>${f(a.market)}</td></tr>`;
 }).catch(()=>{});
 </script>
 </body>

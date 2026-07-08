@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-"""樣本外對戰成績單：我們(前5) vs 猴子(隨機5)
-每檔報酬 = 進場(推薦隔日(H+L)/2) → 第15-20天均價(TWAP) 的「超越大盤」報酬。
-每週取5檔平均，累積成權益曲線。輸出 data/performance.json"""
+"""樣本外對戰成績單（每週一列，不做累積壓縮）
+每檔：進場=推薦隔日(H+L)/2 → 追蹤到最新交易日；報酬有兩種：
+  收盤報酬% = 最新收盤/進場 − 1；最高報酬% = 進場後區間最高價/進場 − 1
+每週取 5 檔平均，分「我們 / 猴子」，並對照同期大盤(加權指數)走勢。輸出 data/performance.json"""
 import os, sys, json, glob
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -17,61 +18,64 @@ def load(dirn, rank_cap=None):
         out[os.path.basename(f)[:-4]] = d
     return out
 
-def excess_1520(df, idxdf, entry_date):
-    d = df.merge(idxdf, on="date", how="left"); d["idx"] = d["idx"].ffill()
-    dts = d["date"].values.astype(str)
-    j = np.searchsorted(dts, str(entry_date), "right")  # 推薦後下一交易日=進場
-    if j >= len(d) or j + 20 >= len(d): return None
-    H = d["High"].values.astype(float); L = d["Low"].values.astype(float)
-    C = d["Close"].values.astype(float); IX = d["idx"].values.astype(float)
-    e = (H[j] + L[j]) / 2
-    if e <= 0 or IX[j] <= 0: return None
-    px = np.mean(C[j+15:j+21]); ii = np.mean(IX[j+15:j+21])
-    return (px/e - 1) - (ii/IX[j] - 1)
-
 def main():
     ours = load("picks", TOPN); monk = load("monkey")
     if not ours: print("尚無推薦"); return
     slist = lib.load_stock_list().set_index("code")
     allcodes = set()
     for d in list(ours.values()) + list(monk.values()): allcodes |= set(d["code"].astype(str))
-    tickers = [slist.loc[c, "ticker"] for c in allcodes if c in slist.index]
-    prices = lib.fetch_prices(tickers)
-    idx = {"TWSE": lib.fetch_index("TAIEX"), "OTC": lib.fetch_index("TPEx")}
-    def week_excess(df):
-        vals = []
+    prices = lib.fetch_prices([slist.loc[c, "ticker"] for c in allcodes if c in slist.index])
+    taiex = lib.fetch_index("TAIEX")
+    tdates = taiex["date"].values.astype(str); tidx = taiex["idx"].values.astype(float)
+    latest = tdates[-1]
+
+    def pick_ret(code, pick_date):
+        """回傳 (收盤報酬, 最高報酬, 進場日index_in_taiex)"""
+        if code not in slist.index: return None
+        df = prices.get(slist.loc[code, "ticker"])
+        if df is None: return None
+        dts = df["date"].values.astype(str)
+        j = np.searchsorted(dts, str(pick_date), "right")  # 進場=推薦隔日
+        if j >= len(df): return None
+        H = df["High"].values.astype(float); L = df["Low"].values.astype(float); C = df["Close"].values.astype(float)
+        e = (H[j] + L[j]) / 2
+        if e <= 0: return None
+        close_r = C[-1] / e - 1
+        max_r = np.max(H[j:]) / e - 1
+        return close_r, max_r
+
+    def week_avg(df, pick_date):
+        cr, mr = [], []
         for r in df.itertuples():
-            if r.code not in slist.index: continue
-            tk = slist.loc[r.code, "ticker"]; mk = slist.loc[r.code, "market"]
-            p = prices.get(tk)
-            if p is None or idx[mk].empty: continue
-            x = excess_1520(p, idx[mk], r.pick_date)
-            if x is not None: vals.append(x)
-        return np.mean(vals)*100 if vals else None
+            v = pick_ret(r.code, pick_date)
+            if v: cr.append(v[0]); mr.append(v[1])
+        if not cr: return None, None
+        return np.mean(cr)*100, np.mean(mr)*100
+
     weeks = sorted(set(ours) | set(monk))
-    hist = []
+    rows = []
     for w in weeks:
-        oe = week_excess(ours[w]) if w in ours else None
-        me = week_excess(monk[w]) if w in monk else None
-        hist.append({"date": w, "our": None if oe is None else round(oe,2),
-                     "monkey": None if me is None else round(me,2)})
-    done = [h for h in hist if h["our"] is not None and h["monkey"] is not None]
-    def cum(key):
-        c=1.0; out=[]
-        for h in done: c*=(1+h[key]/100); out.append(round(c-1,4))
-        return out
-    oc, mc = cum("our"), cum("monkey")
-    summary = {"updated": pd.Timestamp.now("UTC").isoformat(),
-               "n_weeks_done": len(done),
-               "our_avg": round(np.mean([h["our"] for h in done]),2) if done else None,
-               "monkey_avg": round(np.mean([h["monkey"] for h in done]),2) if done else None,
-               "our_beats_monkey_weeks": sum(1 for h in done if h["our"]>h["monkey"]),
-               "our_cum": oc[-1] if oc else None, "monkey_cum": mc[-1] if mc else None,
-               "history": hist,
-               "cum_curve": [{"date":done[i]["date"],"our":oc[i],"monkey":mc[i]} for i in range(len(done))]}
+        # 進場日 = w 的隔一交易日；距今交易日數 & 大盤報酬 用 TAIEX
+        j = np.searchsorted(tdates, w, "right")
+        if j >= len(tdates): continue
+        days = len(tdates) - 1 - j
+        mkt = round(float(tidx[-1]/tidx[j] - 1)*100, 2) if tidx[j] > 0 else None
+        oc, om = week_avg(ours[w], w) if w in ours else (None, None)
+        mc, mm = week_avg(monk[w], w) if w in monk else (None, None)
+        rows.append({"date": w, "days": int(days),
+                     "our_close": None if oc is None else round(oc,2), "our_max": None if om is None else round(om,2),
+                     "monkey_close": None if mc is None else round(mc,2), "monkey_max": None if mm is None else round(mm,2),
+                     "market": mkt})
+    def avg(key):
+        v = [r[key] for r in rows if r[key] is not None]
+        return round(float(np.mean(v)),2) if v else None
+    summary = {"updated": pd.Timestamp.now("UTC").isoformat(), "latest_date": latest, "n_weeks": len(rows),
+               "weeks": rows,
+               "avg": {k: avg(k) for k in ["our_close","our_max","monkey_close","monkey_max","market"]}}
     with open(os.path.join(ROOT,"data","performance.json"),"w",encoding="utf-8") as f:
         json.dump(summary,f,ensure_ascii=False,indent=1)
-    print(f"對戰: {len(done)}週已結算, 我們均{summary['our_avg']}% vs 猴子{summary['monkey_avg']}%, 我們贏{summary['our_beats_monkey_weeks']}週",flush=True)
+    a = summary["avg"]
+    print(f"{len(rows)}週. 平均(收盤): 我們{a['our_close']}% 猴子{a['monkey_close']}% 大盤{a['market']}%",flush=True)
 
 if __name__ == "__main__":
     main()
