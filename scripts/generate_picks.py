@@ -8,7 +8,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; ROOT = lib.ROOT
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; ROOT = lib.ROOT  # VOL_MIN: 近20日日均量下限(張)
 
 def held_within(dirn, taiex_dates, cur_i):
     """回傳 20交易日內已推薦的 code 集合"""
@@ -38,6 +38,7 @@ def main():
         data_date = max(data_date, str(last["date"]))
         universe.append((r.code, r.name, r.market, float(last["Close"])))
         if not last["v1"]: continue
+        if not np.isfinite(last["vol20"]) or last["vol20"]/1000 <= VOL_MIN: continue  # 流動性:近20日日均量>1000張
         if not all(np.isfinite(last[k]) for k in ["alpha120","beta120","ext"]): continue
         if not (0 <= last["beta120"] < 1) or last["ext"] > EXT: continue
         rows.append(dict(code=r.code, name=r.name, market=r.market, close=round(float(last["Close"]),2),

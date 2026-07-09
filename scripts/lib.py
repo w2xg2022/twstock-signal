@@ -147,5 +147,6 @@ def compute_features(df, idx_df):
     a120 = ((s.rolling(120).mean() - b120 * m.rolling(120).mean()) * 252).values
     d240h = (aC / c.rolling(240).max().values - 1)
     ext = aC / m20 - 1
+    vol20 = pd.Series(g["Volume"].values.astype(float)).rolling(20).mean().values  # 近20日日均量(股)
     return pd.DataFrame(dict(date=g["date"].values, Close=rawC, v1=v1, alpha120=a120,
-                             beta120=b120.values, d240h=d240h, ext=ext))
+                             beta120=b120.values, d240h=d240h, ext=ext, vol20=vol20))

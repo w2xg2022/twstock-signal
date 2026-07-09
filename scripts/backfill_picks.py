@@ -5,7 +5,7 @@
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"
-ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20
+ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000  # 近20日日均量下限(張)
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
 lst=pd.read_csv(f"{ROOT}/../twstock-alphabeta/data/stock_list.csv",dtype={"code":str})
@@ -25,7 +25,8 @@ for r in lst.itertuples():
     b120=(s.rolling(120).cov(m)/m.rolling(120).var()).values
     a120=((s.rolling(120).mean()-pd.Series(b120)*m.rolling(120).mean())*252).values
     ext=C/m20-1; d240h=(C/c.rolling(240).max().values-1)
-    S[r.code]=dict(name=info[r.code][0],mk=r.market,C=C,dt=D,v1=v1,a120=a120,b120=b120,ext=ext,d240h=d240h,n=len(C))
+    V=g["Volume"].values.astype(float); vol20=pd.Series(V).rolling(20).mean().values  # 近20日日均量(股)
+    S[r.code]=dict(name=info[r.code][0],mk=r.market,C=C,dt=D,v1=v1,a120=a120,b120=b120,ext=ext,d240h=d240h,vol20=vol20,n=len(C))
 last=max(max(d["dt"]) for d in S.values())
 print(f"載入{len(S)}檔, 資料至{last}")
 os.makedirs(f"{ROOT}/data/picks",exist_ok=True); os.makedirs(f"{ROOT}/data/monkey",exist_ok=True)
@@ -40,6 +41,7 @@ for sat in sats:
         if t<240 or t>=d["n"] or d["dt"][t]>sat: continue
         ddate=max(ddate,d["dt"][t]); universe.append(code)
         if not d["v1"][t] or not np.isfinite(d["a120"][t]) or not np.isfinite(d["b120"][t]) or not np.isfinite(d["ext"][t]): continue
+        if not np.isfinite(d["vol20"][t]) or d["vol20"][t]/1000<=VOL_MIN: continue  # 流動性:近20日日均量>1000張
         if not (0<=d["b120"][t]<1) or d["ext"][t]>EXT: continue
         cand.append((code,d))
     if not ddate or len(universe)<20: continue
