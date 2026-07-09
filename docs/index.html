@@ -26,6 +26,7 @@
   .tag{font-size:.7rem;background:#ff7043;color:#fff;border-radius:4px;padding:0 4px;vertical-align:middle}
   .regwarn{background:#fff3e0;border:1px solid #ffcc80;border-radius:6px;padding:6px 10px;margin:6px 0;font-size:.82rem;color:#a15b00}
   .hd{font-size:.7rem;color:#999}
+  .win{font-size:.72rem;background:#2e7d32;color:#fff;border-radius:4px;padding:1px 7px;font-weight:normal;vertical-align:middle}
 </style>
 </head>
 <body>
@@ -60,19 +61,28 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
 });
 const mkt=m=>m=='TWSE'?'上市':'上櫃';
 const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v.toFixed(2)}%</span>`;
-function stockTable(title,arr,curLabel){
+const r2=v=>v==null?null:Math.round(v*100)/100;
+const mean=a=>a&&a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
+const med=a=>{if(!a||!a.length)return null;const b=[...a].sort((x,y)=>x-y),n=b.length;return n%2?b[(n-1)/2]:(b[n/2-1]+b[n/2])/2;};
+function stockTable(title,arr,curLabel,badge){
   let rows='';
   (arr||[]).forEach(s=>rows+=`<tr${s.regime===0?' class="weak"':''}><td class="l">${s.code}</td><td class="l">${s.name}${s.regime===0?' <span class="tag">轉弱</span>':''}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}<br><span class="hd">${s.exited?('第'+s.hold+'天出'):('持有'+s.hold+'天')}</span></td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
-  let ac=null,am=null;
-  if(arr&&arr.length){ac=Math.round(arr.reduce((a,s)=>a+s.rc,0)/arr.length*100)/100; am=Math.round(arr.reduce((a,s)=>a+s.rm,0)/arr.length*100)/100;}
-  const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(ac)}</td><td>${f(am)}</td></tr>`;
-  return `<h4>${title}</h4><table><thead><tr><th class="l">代號</th><th class="l">簡稱</th><th>市場</th><th>買入價</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}</tfoot></table>`;
+  const rc=(arr||[]).map(s=>s.rc), rm=(arr||[]).map(s=>s.rm);
+  const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(r2(mean(rc)))}</td><td>${f(r2(mean(rm)))}</td></tr>`;
+  const mrow=`<tr style="background:#fafafa"><td class="l">中位數</td><td></td><td></td><td></td><td></td><td></td><td>${f(r2(med(rc)))}</td><td>${f(r2(med(rm)))}</td></tr>`;
+  return `<h4>${title}${badge||''}</h4><table><thead><tr><th class="l">代號</th><th class="l">簡稱</th><th>市場</th><th>買入價</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}${mrow}</tfoot></table>`;
 }
 function group(g){
   const cl = g.status=='settled' ? '賣出價' : '當前價';
   const warn = g.weak>0 ? `<div class="regwarn">⚠️ 本週 ${g.weak} 檔所屬市場跌破季線（MA60），市況濾網建議這幾檔<b>空手</b>；「套用市況濾網」績效已把它們視為持現金。</div>` : '';
+  // 平均勝 / 中位數勝：我們 vs 猴子（收盤%）
+  const orc=(g.our||[]).map(s=>s.rc), mrc=(g.monkey||[]).map(s=>s.rc);
+  const oa=mean(orc),ma=mean(mrc),om=med(orc),mm=med(mrc),ow=[],mw=[];
+  if(oa!=null&&ma!=null){(oa>ma?ow:ma>oa?mw:[]).push('平均勝');}
+  if(om!=null&&mm!=null){(om>mm?ow:mm>om?mw:[]).push('中位數勝');}
+  const bd=w=>w.length?` <span class="win">${w.join(' ｜ ')}</span>`:'';
   return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+warn+
-    stockTable('🧑‍💻 我們',g.our,cl)+stockTable('🐒 猴子',g.monkey,cl)+`</div>`;
+    stockTable('🧑‍💻 我們',g.our,cl,bd(ow))+stockTable('🐒 猴子',g.monkey,cl,bd(mw))+`</div>`;
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
   const run=(d.detail||[]).filter(g=>g.status=='running');
