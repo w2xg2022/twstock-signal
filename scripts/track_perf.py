@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 """樣本外對戰成績單：每週個股明細（我們/猴子）+ 每週彙總
-每檔：買入價=推薦隔日(H+L)/2；當前價=最新收盤；最高價=進場後區間最高；
-  報酬%(收盤)=當前/買入−1；報酬%(最高)=最高/買入−1（皆取2位小數）。組內依收盤報酬由高到低。
-大盤分 上市(TAIEX)/上櫃(TPEx)，各有 收盤%/最高%（指數區間最高收盤）。
-週狀態：距今交易日 <20 預測中；>=20 已結束。輸出 data/performance.json"""
+每檔：買入價=推薦隔日(H+L)/2；出場=ATR移動停利（收盤自持有期高點回落 ATR_K×ATR(14) 即出場，最長抱 MAXH 天）。
+  賣出價=出場當日收盤（未出場則=最新收盤，仍持有）；最高價=進場至出場區間最高。
+  報酬%(收盤)=賣出/買入−1；報酬%(最高)=最高/買入−1（皆取2位小數，用還原價）。組內依收盤報酬由高到低。
+大盤分 上市(TAIEX)/上櫃(TPEx)，各有 收盤%/最高%。
+週狀態：該週我們+猴子 10 檔全部出場=已結束；否則預測中。輸出 data/performance.json"""
 import os, sys, json, glob
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; ROOT = lib.ROOT; SETTLE = 20; TWAP_LO = 18  # 出場=進場後第 TWAP_LO~SETTLE 交易日均價(TWAP)
+TOPN = 5; ROOT = lib.ROOT; ATR_N = 14; ATR_K = 3.0; MAXH = 60  # ATR移動停利:回落ATR_K倍ATR出場,最長持有MAXH交易日
 
 def load(dirn, rank_cap=None):
     out = {}
@@ -47,7 +48,7 @@ def main():
     taiex = lib.fetch_index("TAIEX"); tpex = lib.fetch_index("TPEx")
     tdates = taiex["date"].values.astype(str); latest = tdates[-1]
 
-    def detail_one(code, name, market, pick_date, settled, regime=1):
+    def detail_one(code, name, market, pick_date, regime=1):
         if code not in slist.index: return None
         name = str(slist.loc[code, "name"])  # 一律用清單簡稱顯示
         df = prices.get(slist.loc[code, "ticker"])
@@ -60,19 +61,28 @@ def main():
         e = tick((H[j] + L[j]) / 2)  # 買入價=當日(高+低)/2，湊合法檔位
         if e <= 0 or C[j] <= 0: return None
         ae = e * (aC[j] / C[j])       # 對應還原買入價
-        if settled and j + SETTLE < len(df):
-            # 已結束：賣出價=第18-20交易日均價(TWAP)；最高=持有期間最高
-            sell = float(np.mean(C[j+TWAP_LO:j+SETTLE+1])); sell_a = float(np.mean(aC[j+TWAP_LO:j+SETTLE+1]))
-            hi_r = float(np.max(H[j:j+SETTLE+1])); hi_a = float(np.max(aH[j:j+SETTLE+1]))
-        else:
-            # 預測中：當前價=最新收盤；最高=進場至今最高
-            sell = float(C[-1]); sell_a = float(aC[-1]); hi_r = float(np.max(H[j:])); hi_a = float(np.max(aH[j:]))
+        # ATR(14) 移動停利：收盤自持有期高點回落 ATR_K×ATR 即出場；最長抱 MAXH 天
+        pcC = np.r_[C[0], C[:-1]]
+        tr = np.maximum.reduce([H - L, np.abs(H - pcC), np.abs(L - pcC)])
+        atr = pd.Series(tr).rolling(ATR_N).mean().values
+        end = len(df) - 1; cap = j + MAXH
+        exit_i = None; peak = H[j]
+        for i in range(j, min(cap, end) + 1):
+            if np.isfinite(atr[i]) and C[i] <= peak - ATR_K * atr[i]:
+                exit_i = i; break
+            peak = max(peak, H[i])
+        if exit_i is not None: exited = True                 # ATR 觸發出場
+        elif cap <= end: exit_i = cap; exited = True         # 抱滿 MAXH 天到期出場
+        else: exit_i = end; exited = False                   # 未觸發、也還沒滿 MAXH 天 -> 仍持有
+        sell = float(C[exit_i]); sell_a = float(aC[exit_i])
+        hi_r = float(np.max(H[j:exit_i+1])); hi_a = float(np.max(aH[j:exit_i+1]))
         return {"code": code, "name": name, "market": market, "regime": int(regime),
                 "entry": e, "cur": round(sell,2), "hi": round(hi_r,2),
-                "rc": round((sell_a/ae-1)*100,2), "rm": round((hi_a/ae-1)*100,2)}
+                "rc": round((sell_a/ae-1)*100,2), "rm": round((hi_a/ae-1)*100,2),
+                "exited": bool(exited), "hold": int(exit_i - j)}
 
-    def week_list(df, pick_date, settled):
-        out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date, settled, getattr(r, "regime", 1)))]
+    def week_list(df, pick_date):
+        out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date, getattr(r, "regime", 1)))]
         out.sort(key=lambda x: -x["rc"])
         return out
 
@@ -83,13 +93,14 @@ def main():
         if j >= len(tdates): continue
         days = int(len(tdates) - 1 - j)
         mtc, mtm = idx_ret(taiex, w); moc, mom = idx_ret(tpex, w)
-        settled = days >= SETTLE
-        od = week_list(ours[w], w, settled) if w in ours else []
-        md = week_list(monk[w], w, settled) if w in monk else []
+        od = week_list(ours[w], w) if w in ours else []
+        md = week_list(monk[w], w) if w in monk else []
         avg = lambda lst, k: round(float(np.mean([x[k] for x in lst])), 2) if lst else None
         # 套用regime版：轉弱(regime=0)的股票視為空手(該檔報酬=0)
         avgr = lambda lst, k: round(float(np.mean([(x[k] if x["regime"] else 0.0) for x in lst])), 2) if lst else None
-        st = "settled" if days >= SETTLE else "running"
+        alls = od + md
+        settled = bool(alls) and all(x["exited"] for x in alls)  # 我們+猴子全部出場才算已結束
+        st = "settled" if settled else "running"
         nwk = sum(1 for x in od if not x["regime"])  # 本週我們有幾檔轉弱(建議空手)
         mkt = {"market_twse_close": mtc, "market_twse_max": mtm, "market_otc_close": moc, "market_otc_max": mom}
         agg.append({"date": w, "days": days, "status": st,

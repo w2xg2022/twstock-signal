@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""一次性: 回填 2026-05-02 起每週六歷史推薦(我們+猴子)
+"""一次性: 回填 2026-03-07 起每週六歷史推薦(我們+猴子)
 我們: 多頭排列 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序 → 前5
 去重: 20交易日內(=持有期)已推薦過的股票不再選,由下一名遞補；猴子同理(重抽)
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
@@ -37,7 +37,7 @@ last=max(max(d["dt"]) for d in S.values())
 print(f"載入{len(S)}檔, 資料至{last}")
 os.makedirs(f"{ROOT}/data/picks",exist_ok=True); os.makedirs(f"{ROOT}/data/monkey",exist_ok=True)
 # 依時間順序(舊→新)處理，維護持有中集合
-sats=[]; d0=dt.date(2026,5,2)
+sats=[]; d0=dt.date(2026,3,7)
 while d0.strftime("%Y-%m-%d")<=last: sats.append(d0.strftime("%Y-%m-%d")); d0+=dt.timedelta(days=7)
 held_our={}; held_mk={}; n=0  # code -> 決策日交易索引
 for sat in sats:

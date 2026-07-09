@@ -1,7 +1,7 @@
 {
- "updated": "2026-07-09T11:23:42.222118+00:00",
+ "updated": "2026-07-09T12:05:06.752672+00:00",
  "latest_date": "2026-07-09",
- "n_weeks": 10,
+ "n_weeks": 18,
  "weeks": [
   {
    "date": "2026-07-03",
@@ -39,13 +39,13 @@
    "date": "2026-06-18",
    "days": 13,
    "status": "running",
-   "our_close": -0.76,
+   "our_close": -2.68,
    "our_max": 10.99,
-   "our_close_reg": -0.76,
+   "our_close_reg": -2.68,
    "our_max_reg": 10.99,
    "weak": 0,
-   "monkey_close": -5.15,
-   "monkey_max": 8.66,
+   "monkey_close": -6.26,
+   "monkey_max": 6.93,
    "market_twse_close": -3.26,
    "market_twse_max": 1.37,
    "market_otc_close": -5.14,
@@ -55,13 +55,13 @@
    "date": "2026-06-12",
    "days": 17,
    "status": "running",
-   "our_close": 8.85,
+   "our_close": 8.18,
    "our_max": 21.44,
-   "our_close_reg": 8.85,
+   "our_close_reg": 8.18,
    "our_max_reg": 21.44,
    "weak": 0,
-   "monkey_close": 1.23,
-   "monkey_max": 19.79,
+   "monkey_close": 3.03,
+   "monkey_max": 18.95,
    "market_twse_close": 1.85,
    "market_twse_max": 6.73,
    "market_otc_close": 0.69,
@@ -70,14 +70,14 @@
   {
    "date": "2026-06-05",
    "days": 22,
-   "status": "settled",
-   "our_close": 1.84,
-   "our_max": 15.85,
-   "our_close_reg": 1.84,
-   "our_max_reg": 15.85,
+   "status": "running",
+   "our_close": 0.6,
+   "our_max": 15.27,
+   "our_close_reg": 0.6,
+   "our_max_reg": 15.27,
    "weak": 0,
-   "monkey_close": 2.16,
-   "monkey_max": 11.94,
+   "monkey_close": 5.18,
+   "monkey_max": 17.02,
    "market_twse_close": 3.16,
    "market_twse_max": 8.1,
    "market_otc_close": 1.4,
@@ -86,14 +86,14 @@
   {
    "date": "2026-05-29",
    "days": 27,
-   "status": "settled",
-   "our_close": -0.43,
-   "our_max": 10.78,
-   "our_close_reg": -0.43,
-   "our_max_reg": 10.78,
+   "status": "running",
+   "our_close": -5.81,
+   "our_max": 9.28,
+   "our_close_reg": -5.81,
+   "our_max_reg": 9.28,
    "weak": 0,
-   "monkey_close": -6.75,
-   "monkey_max": 9.49,
+   "monkey_close": -2.7,
+   "monkey_max": 13.2,
    "market_twse_close": 1.46,
    "market_twse_max": 6.31,
    "market_otc_close": -3.81,
@@ -102,14 +102,14 @@
   {
    "date": "2026-05-22",
    "days": 32,
-   "status": "settled",
-   "our_close": 6.89,
-   "our_max": 19.65,
-   "our_close_reg": 6.89,
-   "our_max_reg": 19.65,
+   "status": "running",
+   "our_close": 3.82,
+   "our_max": 24.57,
+   "our_close_reg": 3.82,
+   "our_max_reg": 24.57,
    "weak": 0,
-   "monkey_close": -3.22,
-   "monkey_max": 13.2,
+   "monkey_close": -1.73,
+   "monkey_max": 6.91,
    "market_twse_close": 6.37,
    "market_twse_max": 11.46,
    "market_otc_close": -0.27,
@@ -119,13 +119,13 @@
    "date": "2026-05-15",
    "days": 37,
    "status": "settled",
-   "our_close": 19.31,
-   "our_max": 31.71,
-   "our_close_reg": 19.31,
-   "our_max_reg": 31.71,
+   "our_close": 14.02,
+   "our_max": 34.85,
+   "our_close_reg": 14.02,
+   "our_max_reg": 34.85,
    "weak": 0,
-   "monkey_close": 0.47,
-   "monkey_max": 10.25,
+   "monkey_close": 18.66,
+   "monkey_max": 42.9,
    "market_twse_close": 11.36,
    "market_twse_max": 16.69,
    "market_otc_close": 4.28,
@@ -134,14 +134,14 @@
   {
    "date": "2026-05-08",
    "days": 42,
-   "status": "settled",
-   "our_close": 10.33,
-   "our_max": 17.84,
-   "our_close_reg": 10.33,
-   "our_max_reg": 17.84,
+   "status": "running",
+   "our_close": 0.43,
+   "our_max": 15.16,
+   "our_close_reg": 0.43,
+   "our_max_reg": 15.16,
    "weak": 0,
-   "monkey_close": 1.93,
-   "monkey_max": 11.92,
+   "monkey_close": -0.69,
+   "monkey_max": 11.36,
    "market_twse_close": 9.59,
    "market_twse_max": 14.83,
    "market_otc_close": 2.94,
@@ -150,18 +150,146 @@
   {
    "date": "2026-04-30",
    "days": 47,
-   "status": "settled",
-   "our_close": 12.98,
-   "our_max": 20.67,
-   "our_close_reg": 12.98,
-   "our_max_reg": 20.67,
+   "status": "running",
+   "our_close": 22.59,
+   "our_max": 45.56,
+   "our_close_reg": 22.59,
+   "our_max_reg": 45.56,
    "weak": 0,
-   "monkey_close": 8.6,
-   "monkey_max": 19.45,
+   "monkey_close": 8.24,
+   "monkey_max": 24.97,
    "market_twse_close": 14.76,
    "market_twse_max": 20.26,
    "market_otc_close": 9.34,
    "market_otc_max": 16.08
+  },
+  {
+   "date": "2026-04-24",
+   "days": 51,
+   "status": "running",
+   "our_close": -2.24,
+   "our_max": 9.42,
+   "our_close_reg": -2.24,
+   "our_max_reg": 9.42,
+   "weak": 0,
+   "monkey_close": -1.23,
+   "monkey_max": 5.67,
+   "market_twse_close": 16.34,
+   "market_twse_max": 21.91,
+   "market_otc_close": 12.83,
+   "market_otc_max": 19.79
+  },
+  {
+   "date": "2026-04-17",
+   "days": 56,
+   "status": "settled",
+   "our_close": -5.52,
+   "our_max": 6.01,
+   "our_close_reg": -5.52,
+   "our_max_reg": 6.01,
+   "weak": 0,
+   "monkey_close": -6.42,
+   "monkey_max": 7.56,
+   "market_twse_close": 23.9,
+   "market_twse_max": 29.83,
+   "market_otc_close": 13.25,
+   "market_otc_max": 20.23
+  },
+  {
+   "date": "2026-04-10",
+   "days": 61,
+   "status": "settled",
+   "our_close": 15.86,
+   "our_max": 35.06,
+   "our_close_reg": 15.86,
+   "our_max_reg": 35.06,
+   "weak": 0,
+   "monkey_close": 0.57,
+   "monkey_max": 15.84,
+   "market_twse_close": 28.95,
+   "market_twse_max": 35.12,
+   "market_otc_close": 22.05,
+   "market_otc_max": 29.58
+  },
+  {
+   "date": "2026-04-02",
+   "days": 65,
+   "status": "settled",
+   "our_close": -0.91,
+   "our_max": 7.9,
+   "our_close_reg": -0.91,
+   "our_max_reg": 7.9,
+   "weak": 0,
+   "monkey_close": 14.17,
+   "monkey_max": 32.2,
+   "market_twse_close": 38.9,
+   "market_twse_max": 45.54,
+   "market_otc_close": 33.13,
+   "market_otc_max": 41.34
+  },
+  {
+   "date": "2026-03-27",
+   "days": 69,
+   "status": "settled",
+   "our_close": -0.52,
+   "our_max": 7.81,
+   "our_close_reg": -0.52,
+   "our_max_reg": 7.81,
+   "weak": 0,
+   "monkey_close": 13.39,
+   "monkey_max": 28.48,
+   "market_twse_close": 39.26,
+   "market_twse_max": 45.93,
+   "market_otc_close": 32.78,
+   "market_otc_max": 40.97
+  },
+  {
+   "date": "2026-03-20",
+   "days": 74,
+   "status": "settled",
+   "our_close": -1.4,
+   "our_max": 11.99,
+   "our_close_reg": -1.4,
+   "our_max_reg": 11.99,
+   "weak": 0,
+   "monkey_close": -4.96,
+   "monkey_max": 8.64,
+   "market_twse_close": 37.97,
+   "market_twse_max": 44.57,
+   "market_otc_close": 32.92,
+   "market_otc_max": 41.12
+  },
+  {
+   "date": "2026-03-13",
+   "days": 79,
+   "status": "settled",
+   "our_close": 0.6,
+   "our_max": 15.17,
+   "our_close_reg": 0.6,
+   "our_max_reg": 15.17,
+   "weak": 0,
+   "monkey_close": 9.53,
+   "monkey_max": 22.44,
+   "market_twse_close": 37.21,
+   "market_twse_max": 43.78,
+   "market_otc_close": 36.25,
+   "market_otc_max": 44.66
+  },
+  {
+   "date": "2026-03-06",
+   "days": 84,
+   "status": "settled",
+   "our_close": 1.3,
+   "our_max": 22.51,
+   "our_close_reg": 1.3,
+   "our_max_reg": 22.51,
+   "weak": 0,
+   "monkey_close": 2.2,
+   "monkey_max": 12.89,
+   "market_twse_close": 39.37,
+   "market_twse_max": 46.04,
+   "market_otc_close": 44.18,
+   "market_otc_max": 53.07
   }
  ],
  "detail": [
@@ -180,7 +308,9 @@
      "cur": 69.7,
      "hi": 69.7,
      "rc": 4.81,
-     "rm": 4.81
+     "rm": 4.81,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "3479",
@@ -191,7 +321,9 @@
      "cur": 146.0,
      "hi": 148.5,
      "rc": 0.34,
-     "rm": 2.06
+     "rm": 2.06,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "8039",
@@ -202,7 +334,9 @@
      "cur": 154.0,
      "hi": 160.0,
      "rc": -0.65,
-     "rm": 3.23
+     "rm": 3.23,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "3023",
@@ -213,7 +347,9 @@
      "cur": 326.0,
      "hi": 349.0,
      "rc": -1.06,
-     "rm": 5.92
+     "rm": 5.92,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "1312",
@@ -224,7 +360,9 @@
      "cur": 13.5,
      "hi": 15.05,
      "rc": -7.53,
-     "rm": 3.08
+     "rm": 3.08,
+     "exited": false,
+     "hold": 3
     }
    ],
    "monkey": [
@@ -237,7 +375,9 @@
      "cur": 55.6,
      "hi": 58.4,
      "rc": 5.1,
-     "rm": 10.4
+     "rm": 10.4,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "2520",
@@ -248,7 +388,9 @@
      "cur": 35.1,
      "hi": 35.45,
      "rc": 0.29,
-     "rm": 1.29
+     "rm": 1.29,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "8069",
@@ -259,7 +401,9 @@
      "cur": 200.5,
      "hi": 215.0,
      "rc": -4.52,
-     "rm": 2.38
+     "rm": 2.38,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "2305",
@@ -270,7 +414,9 @@
      "cur": 36.0,
      "hi": 42.65,
      "rc": -13.46,
-     "rm": 2.52
+     "rm": 2.52,
+     "exited": false,
+     "hold": 3
     },
     {
      "code": "5227",
@@ -281,7 +427,9 @@
      "cur": 30.15,
      "hi": 36.5,
      "rc": -15.78,
-     "rm": 1.96
+     "rm": 1.96,
+     "exited": false,
+     "hold": 3
     }
    ],
    "market_twse_close": -2.66,
@@ -304,7 +452,9 @@
      "cur": 118.5,
      "hi": 123.5,
      "rc": 9.72,
-     "rm": 14.35
+     "rm": 14.35,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "2527",
@@ -315,7 +465,9 @@
      "cur": 42.6,
      "hi": 43.4,
      "rc": 6.63,
-     "rm": 8.64
+     "rm": 8.64,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "2006",
@@ -326,7 +478,9 @@
      "cur": 70.2,
      "hi": 71.0,
      "rc": -0.0,
-     "rm": 1.14
+     "rm": 1.14,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "2886",
@@ -337,7 +491,9 @@
      "cur": 46.7,
      "hi": 47.4,
      "rc": -0.21,
-     "rm": 1.28
+     "rm": 1.28,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "6139",
@@ -348,7 +504,9 @@
      "cur": 875.0,
      "hi": 987.0,
      "rc": -5.71,
-     "rm": 6.36
+     "rm": 6.36,
+     "exited": false,
+     "hold": 8
     }
    ],
    "monkey": [
@@ -361,7 +519,9 @@
      "cur": 43.2,
      "hi": 52.3,
      "rc": 8.68,
-     "rm": 31.57
+     "rm": 31.57,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "3164",
@@ -372,7 +532,9 @@
      "cur": 16.45,
      "hi": 16.65,
      "rc": 2.49,
-     "rm": 3.74
+     "rm": 3.74,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "1558",
@@ -383,7 +545,9 @@
      "cur": 92.4,
      "hi": 92.8,
      "rc": 2.1,
-     "rm": 2.54
+     "rm": 2.54,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "2834",
@@ -394,7 +558,9 @@
      "cur": 17.95,
      "hi": 18.25,
      "rc": 0.28,
-     "rm": 1.96
+     "rm": 1.96,
+     "exited": false,
+     "hold": 8
     },
     {
      "code": "3713",
@@ -405,7 +571,9 @@
      "cur": 14.5,
      "hi": 15.7,
      "rc": -0.34,
-     "rm": 7.9
+     "rm": 7.9,
+     "exited": false,
+     "hold": 8
     }
    ],
    "market_twse_close": 1.68,
@@ -428,29 +596,9 @@
      "cur": 60.0,
      "hi": 73.0,
      "rc": 9.15,
-     "rm": 32.8
-    },
-    {
-     "code": "3034",
-     "name": "聯詠",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 546.0,
-     "cur": 542.0,
-     "hi": 606.0,
-     "rc": -0.73,
-     "rm": 10.99
-    },
-    {
-     "code": "9939",
-     "name": "宏全",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 133.0,
-     "cur": 122.5,
-     "hi": 134.5,
-     "rc": -3.19,
-     "rm": 1.13
+     "rm": 32.8,
+     "exited": false,
+     "hold": 13
     },
     {
      "code": "3003",
@@ -461,7 +609,9 @@
      "cur": 66.1,
      "hi": 71.1,
      "rc": -4.2,
-     "rm": 3.04
+     "rm": 3.04,
+     "exited": false,
+     "hold": 13
     },
     {
      "code": "3704",
@@ -472,7 +622,35 @@
      "cur": 45.35,
      "hi": 51.4,
      "rc": -4.81,
-     "rm": 6.97
+     "rm": 6.97,
+     "exited": false,
+     "hold": 13
+    },
+    {
+     "code": "9939",
+     "name": "宏全",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 133.0,
+     "cur": 118.0,
+     "hi": 134.5,
+     "rc": -6.74,
+     "rm": 1.13,
+     "exited": true,
+     "hold": 8
+    },
+    {
+     "code": "3034",
+     "name": "聯詠",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 546.0,
+     "cur": 509.0,
+     "hi": 606.0,
+     "rc": -6.78,
+     "rm": 10.99,
+     "exited": true,
+     "hold": 4
     }
    ],
    "monkey": [
@@ -485,7 +663,9 @@
      "cur": 127.5,
      "hi": 148.5,
      "rc": 7.14,
-     "rm": 24.79
+     "rm": 24.79,
+     "exited": false,
+     "hold": 13
     },
     {
      "code": "1506",
@@ -496,18 +676,22 @@
      "cur": 10.55,
      "hi": 10.75,
      "rc": 3.43,
-     "rm": 5.39
+     "rm": 5.39,
+     "exited": false,
+     "hold": 13
     },
     {
-     "code": "2454",
-     "name": "聯發科",
-     "market": "TWSE",
+     "code": "6221",
+     "name": "晉泰",
+     "market": "OTC",
      "regime": 1,
-     "entry": 4470.0,
-     "cur": 3925.0,
-     "hi": 4785.0,
-     "rc": -11.67,
-     "rm": 7.05
+     "entry": 24.05,
+     "cur": 22.3,
+     "hi": 24.5,
+     "rc": -7.28,
+     "rm": 1.87,
+     "exited": true,
+     "hold": 5
     },
     {
      "code": "8155",
@@ -515,21 +699,25 @@
      "market": "OTC",
      "regime": 1,
      "entry": 405.0,
-     "cur": 351.0,
+     "cur": 350.0,
      "hi": 409.5,
-     "rc": -12.04,
-     "rm": 1.11
+     "rc": -13.58,
+     "rm": 1.11,
+     "exited": true,
+     "hold": 11
     },
     {
-     "code": "6220",
-     "name": "岳豐",
-     "market": "OTC",
+     "code": "2455",
+     "name": "全新",
+     "market": "TWSE",
      "regime": 1,
-     "entry": 39.25,
-     "cur": 33.6,
-     "hi": 41.2,
-     "rc": -12.63,
-     "rm": 4.97
+     "entry": 406.0,
+     "cur": 318.5,
+     "hi": 412.0,
+     "rc": -21.02,
+     "rm": 1.48,
+     "exited": true,
+     "hold": 11
     }
    ],
    "market_twse_close": -3.26,
@@ -552,7 +740,9 @@
      "cur": 199.5,
      "hi": 221.0,
      "rc": 57.09,
-     "rm": 74.02
+     "rm": 74.02,
+     "exited": false,
+     "hold": 17
     },
     {
      "code": "2103",
@@ -563,7 +753,9 @@
      "cur": 23.05,
      "hi": 25.85,
      "rc": 5.65,
-     "rm": 18.48
+     "rm": 18.48,
+     "exited": false,
+     "hold": 17
     },
     {
      "code": "2885",
@@ -574,7 +766,9 @@
      "cur": 68.3,
      "hi": 72.3,
      "rc": 4.59,
-     "rm": 10.72
+     "rm": 10.72,
+     "exited": false,
+     "hold": 17
     },
     {
      "code": "2108",
@@ -582,10 +776,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 30.3,
-     "cur": 28.85,
+     "cur": 27.0,
      "hi": 30.65,
-     "rc": -4.79,
-     "rm": 1.16
+     "rc": -10.89,
+     "rm": 1.16,
+     "exited": true,
+     "hold": 8
     },
     {
      "code": "3048",
@@ -593,10 +789,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 74.6,
-     "cur": 60.0,
+     "cur": 63.0,
      "hi": 76.7,
-     "rc": -18.31,
-     "rm": 2.82
+     "rc": -15.55,
+     "rm": 2.82,
+     "exited": true,
+     "hold": 8
     }
    ],
    "monkey": [
@@ -606,21 +804,38 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 55.6,
-     "cur": 64.2,
-     "hi": 78.2,
-     "rc": 15.47,
-     "rm": 40.65
+     "cur": 62.7,
+     "hi": 73.9,
+     "rc": 12.77,
+     "rm": 32.91,
+     "exited": true,
+     "hold": 9
     },
     {
-     "code": "2351",
-     "name": "順德",
+     "code": "2352",
+     "name": "佳世達",
      "market": "TWSE",
      "regime": 1,
-     "entry": 185.0,
-     "cur": 200.0,
-     "hi": 233.0,
-     "rc": 8.11,
-     "rm": 25.95
+     "entry": 31.4,
+     "cur": 33.0,
+     "hi": 36.3,
+     "rc": 5.1,
+     "rm": 15.61,
+     "exited": false,
+     "hold": 17
+    },
+    {
+     "code": "4916",
+     "name": "事欣科",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 103.5,
+     "cur": 108.0,
+     "hi": 119.5,
+     "rc": 4.35,
+     "rm": 15.46,
+     "exited": false,
+     "hold": 17
     },
     {
      "code": "8227",
@@ -631,18 +846,9 @@
      "cur": 185.5,
      "hi": 229.5,
      "rc": 2.01,
-     "rm": 26.2
-    },
-    {
-     "code": "4915",
-     "name": "致伸",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 77.6,
-     "cur": 68.8,
-     "hi": 78.8,
-     "rc": -5.46,
-     "rm": 1.55
+     "rm": 26.2,
+     "exited": false,
+     "hold": 17
     },
     {
      "code": "6485",
@@ -650,10 +856,12 @@
      "market": "OTC",
      "regime": 1,
      "entry": 89.3,
-     "cur": 76.8,
+     "cur": 81.2,
      "hi": 93.4,
-     "rc": -14.0,
-     "rm": 4.59
+     "rc": -9.07,
+     "rm": 4.59,
+     "exited": true,
+     "hold": 11
     }
    ],
    "market_twse_close": 1.85,
@@ -664,30 +872,34 @@
   {
    "date": "2026-06-05",
    "days": 22,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
-    {
-     "code": "2851",
-     "name": "中再保",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 35.55,
-     "cur": 38.68,
-     "hi": 40.75,
-     "rc": 15.66,
-     "rm": 17.51
-    },
     {
      "code": "3504",
      "name": "揚明光",
      "market": "TWSE",
      "regime": 1,
      "entry": 73.7,
-     "cur": 76.73,
+     "cur": 77.8,
      "hi": 97.8,
-     "rc": 4.12,
-     "rm": 32.7
+     "rc": 5.56,
+     "rm": 32.7,
+     "exited": true,
+     "hold": 14
+    },
+    {
+     "code": "2851",
+     "name": "中再保",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 35.55,
+     "cur": 37.15,
+     "hi": 40.75,
+     "rc": 4.5,
+     "rm": 14.63,
+     "exited": true,
+     "hold": 13
     },
     {
      "code": "4904",
@@ -695,10 +907,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 101.0,
-     "cur": 103.67,
+     "cur": 103.0,
      "hi": 113.5,
-     "rc": 2.64,
-     "rm": 12.38
+     "rc": 1.98,
+     "rm": 12.38,
+     "exited": true,
+     "hold": 19
     },
     {
      "code": "5522",
@@ -706,10 +920,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 73.9,
-     "cur": 64.37,
+     "cur": 72.4,
      "hi": 83.9,
-     "rc": -5.64,
-     "rm": 13.53
+     "rc": -2.03,
+     "rm": 13.53,
+     "exited": true,
+     "hold": 10
     },
     {
      "code": "2603",
@@ -717,67 +933,79 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 225.0,
-     "cur": 192.83,
+     "cur": 194.0,
      "hi": 232.0,
-     "rc": -7.59,
-     "rm": 3.11
+     "rc": -7.03,
+     "rm": 3.11,
+     "exited": true,
+     "hold": 7
     }
    ],
    "monkey": [
     {
-     "code": "3576",
-     "name": "聯合再生",
+     "code": "3588",
+     "name": "通嘉",
      "market": "TWSE",
      "regime": 1,
-     "entry": 15.7,
-     "cur": 16.67,
-     "hi": 21.75,
-     "rc": 6.16,
-     "rm": 38.54
+     "entry": 54.2,
+     "cur": 65.8,
+     "hi": 80.0,
+     "rc": 21.4,
+     "rm": 47.6,
+     "exited": true,
+     "hold": 16
     },
     {
-     "code": "4526",
-     "name": "東台",
+     "code": "4536",
+     "name": "拓凱",
      "market": "TWSE",
      "regime": 1,
-     "entry": 39.35,
-     "cur": 40.5,
-     "hi": 43.85,
-     "rc": 2.92,
-     "rm": 11.44
+     "entry": 158.0,
+     "cur": 171.5,
+     "hi": 177.5,
+     "rc": 8.54,
+     "rm": 12.34,
+     "exited": false,
+     "hold": 22
     },
     {
-     "code": "4133",
-     "name": "亞諾法",
+     "code": "2033",
+     "name": "佳大",
      "market": "TWSE",
      "regime": 1,
-     "entry": 20.75,
-     "cur": 21.08,
-     "hi": 21.7,
-     "rc": 2.16,
-     "rm": 5.14
+     "entry": 15.55,
+     "cur": 15.8,
+     "hi": 17.0,
+     "rc": 1.61,
+     "rm": 9.32,
+     "exited": false,
+     "hold": 22
     },
     {
-     "code": "2031",
-     "name": "新光鋼",
+     "code": "4142",
+     "name": "國光生",
      "market": "TWSE",
      "regime": 1,
-     "entry": 41.15,
-     "cur": 38.8,
-     "hi": 42.6,
-     "rc": 0.29,
-     "rm": 3.52
+     "entry": 17.4,
+     "cur": 17.15,
+     "hi": 18.45,
+     "rc": -1.44,
+     "rm": 6.03,
+     "exited": true,
+     "hold": 10
     },
     {
-     "code": "6721",
-     "name": "信實",
+     "code": "6720",
+     "name": "久昌",
      "market": "OTC",
      "regime": 1,
-     "entry": 58.8,
-     "cur": 55.1,
-     "hi": 59.4,
-     "rc": -0.72,
-     "rm": 1.08
+     "entry": 143.0,
+     "cur": 137.0,
+     "hi": 157.0,
+     "rc": -4.2,
+     "rm": 9.79,
+     "exited": true,
+     "hold": 13
     }
    ],
    "market_twse_close": 3.16,
@@ -788,7 +1016,7 @@
   {
    "date": "2026-05-29",
    "days": 27,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
     {
@@ -797,10 +1025,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 61.5,
-     "cur": 70.53,
+     "cur": 69.9,
      "hi": 73.6,
-     "rc": 14.69,
-     "rm": 19.67
+     "rc": 13.66,
+     "rm": 19.67,
+     "exited": false,
+     "hold": 27
     },
     {
      "code": "2347",
@@ -808,21 +1038,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 85.7,
-     "cur": 91.8,
-     "hi": 97.1,
-     "rc": 7.12,
-     "rm": 13.3
-    },
-    {
-     "code": "3031",
-     "name": "佰鴻",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 32.85,
-     "cur": 31.18,
-     "hi": 33.7,
-     "rc": -5.07,
-     "rm": 2.59
+     "cur": 85.3,
+     "hi": 94.0,
+     "rc": -0.47,
+     "rm": 9.68,
+     "exited": true,
+     "hold": 5
     },
     {
      "code": "8215",
@@ -830,10 +1051,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 30.75,
-     "cur": 29.13,
+     "cur": 27.85,
      "hi": 33.4,
-     "rc": -5.26,
-     "rm": 8.62
+     "rc": -9.43,
+     "rm": 8.62,
+     "exited": true,
+     "hold": 5
     },
     {
      "code": "6244",
@@ -841,56 +1064,53 @@
      "market": "OTC",
      "regime": 1,
      "entry": 30.85,
-     "cur": 26.65,
-     "hi": 33.85,
-     "rc": -13.61,
-     "rm": 9.72
+     "cur": 25.85,
+     "hi": 32.65,
+     "rc": -16.21,
+     "rm": 5.83,
+     "exited": true,
+     "hold": 5
+    },
+    {
+     "code": "3031",
+     "name": "佰鴻",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 32.85,
+     "cur": 27.4,
+     "hi": 33.7,
+     "rc": -16.59,
+     "rm": 2.59,
+     "exited": true,
+     "hold": 7
     }
    ],
    "monkey": [
     {
-     "code": "6661",
-     "name": "威健生技",
+     "code": "6654",
+     "name": "天正國際",
      "market": "OTC",
      "regime": 1,
-     "entry": 16.8,
-     "cur": 17.85,
-     "hi": 18.95,
-     "rc": 6.25,
-     "rm": 12.8
+     "entry": 169.0,
+     "cur": 192.5,
+     "hi": 242.0,
+     "rc": 13.91,
+     "rm": 43.2,
+     "exited": true,
+     "hold": 16
     },
     {
-     "code": "6550",
-     "name": "北極星藥業-KY",
+     "code": "6581",
+     "name": "鋼聯",
      "market": "TWSE",
      "regime": 1,
-     "entry": 13.15,
-     "cur": 13.1,
-     "hi": 13.75,
-     "rc": -0.38,
-     "rm": 4.56
-    },
-    {
-     "code": "8076",
-     "name": "伍豐",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 24.7,
-     "cur": 24.35,
-     "hi": 29.9,
-     "rc": -1.42,
-     "rm": 21.05
-    },
-    {
-     "code": "1587",
-     "name": "吉茂",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 30.9,
-     "cur": 27.1,
-     "hi": 31.45,
-     "rc": -12.3,
-     "rm": 1.78
+     "entry": 112.5,
+     "cur": 109.5,
+     "hi": 115.0,
+     "rc": -2.67,
+     "rm": 2.22,
+     "exited": true,
+     "hold": 3
     },
     {
      "code": "6986",
@@ -898,10 +1118,38 @@
      "market": "OTC",
      "regime": 1,
      "entry": 63.2,
-     "cur": 46.82,
+     "cur": 60.1,
      "hi": 67.8,
-     "rc": -25.92,
-     "rm": 7.28
+     "rc": -4.91,
+     "rm": 7.28,
+     "exited": true,
+     "hold": 8
+    },
+    {
+     "code": "1590",
+     "name": "亞德客-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 1360.0,
+     "cur": 1280.0,
+     "hi": 1480.0,
+     "rc": -5.88,
+     "rm": 8.82,
+     "exited": true,
+     "hold": 27
+    },
+    {
+     "code": "8074",
+     "name": "鉅橡",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 76.0,
+     "cur": 65.4,
+     "hi": 79.4,
+     "rc": -13.95,
+     "rm": 4.47,
+     "exited": true,
+     "hold": 25
     }
    ],
    "market_twse_close": 1.46,
@@ -912,7 +1160,7 @@
   {
    "date": "2026-05-22",
    "days": 32,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
     {
@@ -921,10 +1169,12 @@
      "market": "OTC",
      "regime": 1,
      "entry": 53.0,
-     "cur": 83.57,
-     "hi": 91.2,
-     "rc": 57.67,
-     "rm": 72.08
+     "cur": 77.3,
+     "hi": 102.0,
+     "rc": 45.85,
+     "rm": 92.45,
+     "exited": true,
+     "hold": 30
     },
     {
      "code": "3023",
@@ -932,10 +1182,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 318.0,
-     "cur": 323.67,
-     "hi": 340.0,
-     "rc": 1.78,
-     "rm": 6.92
+     "cur": 326.0,
+     "hi": 353.5,
+     "rc": 2.52,
+     "rm": 11.16,
+     "exited": false,
+     "hold": 32
     },
     {
      "code": "6133",
@@ -943,10 +1195,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 24.3,
-     "cur": 23.1,
+     "cur": 23.0,
      "hi": 26.9,
-     "rc": -4.94,
-     "rm": 10.7
+     "rc": -5.35,
+     "rm": 10.7,
+     "exited": true,
+     "hold": 10
     },
     {
      "code": "3702",
@@ -954,10 +1208,12 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 121.0,
-     "cur": 110.83,
+     "cur": 109.0,
      "hi": 126.5,
-     "rc": -8.4,
-     "rm": 4.55
+     "rc": -9.92,
+     "rm": 4.55,
+     "exited": true,
+     "hold": 12
     },
     {
      "code": "4533",
@@ -965,67 +1221,79 @@
      "market": "OTC",
      "regime": 1,
      "entry": 33.9,
-     "cur": 29.95,
+     "cur": 29.15,
      "hi": 35.25,
-     "rc": -11.65,
-     "rm": 3.98
+     "rc": -14.01,
+     "rm": 3.98,
+     "exited": true,
+     "hold": 10
     }
    ],
    "monkey": [
     {
-     "code": "3049",
-     "name": "精金",
+     "code": "2505",
+     "name": "國揚",
      "market": "TWSE",
      "regime": 1,
-     "entry": 12.6,
-     "cur": 14.15,
-     "hi": 17.4,
-     "rc": 12.3,
-     "rm": 38.1
+     "entry": 17.9,
+     "cur": 18.6,
+     "hi": 20.5,
+     "rc": 3.91,
+     "rm": 14.53,
+     "exited": true,
+     "hold": 13
     },
     {
-     "code": "2851",
-     "name": "中再保",
+     "code": "1589",
+     "name": "永冠-KY",
      "market": "TWSE",
      "regime": 1,
-     "entry": 34.85,
-     "cur": 39.1,
-     "hi": 40.75,
-     "rc": 12.2,
-     "rm": 16.93
+     "entry": 5.54,
+     "cur": 5.54,
+     "hi": 5.54,
+     "rc": -0.0,
+     "rm": -0.0,
+     "exited": true,
+     "hold": 0
     },
     {
-     "code": "6228",
-     "name": "全譜",
+     "code": "5223",
+     "name": "安力-KY",
      "market": "OTC",
      "regime": 1,
-     "entry": 21.05,
-     "cur": 20.02,
-     "hi": 21.8,
-     "rc": -4.91,
-     "rm": 3.56
+     "entry": 25.0,
+     "cur": 24.8,
+     "hi": 27.1,
+     "rc": -0.8,
+     "rm": 8.4,
+     "exited": true,
+     "hold": 23
     },
     {
-     "code": "3217",
-     "name": "優群",
+     "code": "8089",
+     "name": "康全電訊",
      "market": "OTC",
      "regime": 1,
-     "entry": 204.5,
-     "cur": 173.83,
-     "hi": 212.0,
-     "rc": -15.0,
-     "rm": 3.67
+     "entry": 20.5,
+     "cur": 19.6,
+     "hi": 22.55,
+     "rc": -4.39,
+     "rm": 10.0,
+     "exited": true,
+     "hold": 23
     },
     {
-     "code": "7751",
-     "name": "竑騰",
-     "market": "OTC",
+     "code": "4763",
+     "name": "材料*-KY",
+     "market": "TWSE",
      "regime": 1,
-     "entry": 1870.0,
-     "cur": 1483.33,
-     "hi": 1940.0,
-     "rc": -20.68,
-     "rm": 3.74
+     "entry": 43.5,
+     "cur": 40.3,
+     "hi": 44.2,
+     "rc": -7.36,
+     "rm": 1.61,
+     "exited": true,
+     "hold": 3
     }
    ],
    "market_twse_close": 6.37,
@@ -1040,37 +1308,43 @@
    "weak": 0,
    "our": [
     {
-     "code": "2881",
-     "name": "富邦金",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 95.5,
-     "cur": 125.0,
-     "hi": 129.0,
-     "rc": 30.89,
-     "rm": 35.08
-    },
-    {
      "code": "2356",
      "name": "英業達",
      "market": "TWSE",
      "regime": 1,
      "entry": 51.3,
-     "cur": 66.23,
+     "cur": 69.2,
      "hi": 88.6,
-     "rc": 29.11,
-     "rm": 72.71
+     "rc": 34.89,
+     "rm": 72.71,
+     "exited": true,
+     "hold": 15
     },
     {
-     "code": "2241",
-     "name": "艾姆勒",
+     "code": "2881",
+     "name": "富邦金",
      "market": "TWSE",
      "regime": 1,
-     "entry": 33.35,
-     "cur": 42.57,
-     "hi": 45.8,
-     "rc": 27.64,
-     "rm": 37.33
+     "entry": 95.5,
+     "cur": 122.5,
+     "hi": 141.0,
+     "rc": 32.62,
+     "rm": 47.64,
+     "exited": true,
+     "hold": 31
+    },
+    {
+     "code": "1810",
+     "name": "和成",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 18.55,
+     "cur": 19.4,
+     "hi": 23.0,
+     "rc": 5.6,
+     "rm": 23.99,
+     "exited": true,
+     "hold": 28
     },
     {
      "code": "9939",
@@ -1078,78 +1352,92 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 123.5,
-     "cur": 133.0,
+     "cur": 118.0,
      "hi": 136.0,
-     "rc": 7.69,
-     "rm": 10.12
+     "rc": 0.43,
+     "rm": 10.12,
+     "exited": true,
+     "hold": 32
     },
     {
-     "code": "1216",
-     "name": "統一",
+     "code": "2241",
+     "name": "艾姆勒",
      "market": "TWSE",
      "regime": 1,
-     "entry": 75.2,
-     "cur": 76.13,
-     "hi": 77.7,
-     "rc": 1.24,
-     "rm": 3.32
+     "entry": 33.35,
+     "cur": 32.2,
+     "hi": 39.95,
+     "rc": -3.45,
+     "rm": 19.79,
+     "exited": true,
+     "hold": 13
     }
    ],
    "monkey": [
     {
-     "code": "3014",
-     "name": "聯陽",
+     "code": "3090",
+     "name": "日電貿",
      "market": "TWSE",
      "regime": 1,
-     "entry": 134.0,
-     "cur": 147.67,
-     "hi": 168.0,
-     "rc": 10.2,
-     "rm": 25.37
+     "entry": 143.0,
+     "cur": 286.5,
+     "hi": 365.0,
+     "rc": 103.44,
+     "rm": 155.24,
+     "exited": true,
+     "hold": 37
     },
     {
-     "code": "6616",
-     "name": "特昇-KY",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 9.52,
-     "cur": 9.68,
-     "hi": 10.6,
-     "rc": 1.65,
-     "rm": 11.34
-    },
-    {
-     "code": "6754",
-     "name": "匯僑設計",
+     "code": "2401",
+     "name": "凌陽",
      "market": "TWSE",
      "regime": 1,
-     "entry": 44.2,
-     "cur": 44.85,
-     "hi": 47.8,
-     "rc": 1.47,
-     "rm": 8.14
+     "entry": 24.2,
+     "cur": 27.45,
+     "hi": 33.0,
+     "rc": 13.43,
+     "rm": 36.36,
+     "exited": true,
+     "hold": 14
     },
     {
-     "code": "5878",
-     "name": "台名",
-     "market": "OTC",
+     "code": "1304",
+     "name": "台聚",
+     "market": "TWSE",
      "regime": 1,
-     "entry": 40.75,
-     "cur": 39.33,
-     "hi": 41.9,
-     "rc": -2.99,
-     "rm": 2.82
+     "entry": 12.6,
+     "cur": 12.75,
+     "hi": 14.45,
+     "rc": 1.19,
+     "rm": 14.68,
+     "exited": true,
+     "hold": 16
     },
     {
-     "code": "3522",
-     "name": "御嵿",
+     "code": "4503",
+     "name": "金雨",
      "market": "OTC",
      "regime": 1,
-     "entry": 12.55,
-     "cur": 11.55,
-     "hi": 13.0,
-     "rc": -7.97,
-     "rm": 3.59
+     "entry": 43.6,
+     "cur": 38.5,
+     "hi": 44.8,
+     "rc": -11.7,
+     "rm": 2.75,
+     "exited": true,
+     "hold": 8
+    },
+    {
+     "code": "6791",
+     "name": "虎門科技",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 118.5,
+     "cur": 103.0,
+     "hi": 125.0,
+     "rc": -13.08,
+     "rm": 5.49,
+     "exited": true,
+     "hold": 15
     }
    ],
    "market_twse_close": 11.36,
@@ -1160,52 +1448,21 @@
   {
    "date": "2026-05-08",
    "days": 42,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
-    {
-     "code": "4707",
-     "name": "磐亞",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 16.2,
-     "cur": 20.12,
-     "hi": 21.75,
-     "rc": 24.18,
-     "rm": 34.26
-    },
     {
      "code": "6139",
      "name": "亞翔",
      "market": "TWSE",
      "regime": 1,
      "entry": 687.0,
-     "cur": 787.0,
-     "hi": 853.0,
-     "rc": 14.56,
-     "rm": 24.16
-    },
-    {
-     "code": "2108",
-     "name": "南帝",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 29.35,
-     "cur": 30.78,
-     "hi": 32.7,
-     "rc": 4.88,
-     "rm": 11.41
-    },
-    {
-     "code": "2103",
-     "name": "台橡",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 20.8,
-     "cur": 21.7,
-     "hi": 22.7,
-     "rc": 4.33,
-     "rm": 9.13
+     "cur": 875.0,
+     "hi": 987.0,
+     "rc": 27.37,
+     "rm": 43.67,
+     "exited": false,
+     "hold": 42
     },
     {
      "code": "2497",
@@ -1213,67 +1470,118 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 59.5,
-     "cur": 61.7,
-     "hi": 65.6,
-     "rc": 3.7,
-     "rm": 10.25
+     "cur": 58.2,
+     "hi": 69.0,
+     "rc": -2.18,
+     "rm": 15.97,
+     "exited": true,
+     "hold": 30
+    },
+    {
+     "code": "2103",
+     "name": "台橡",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 20.8,
+     "cur": 19.5,
+     "hi": 22.45,
+     "rc": -6.25,
+     "rm": 7.93,
+     "exited": true,
+     "hold": 10
+    },
+    {
+     "code": "2108",
+     "name": "南帝",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 29.35,
+     "cur": 27.05,
+     "hi": 29.95,
+     "rc": -7.84,
+     "rm": 2.04,
+     "exited": true,
+     "hold": 14
+    },
+    {
+     "code": "4707",
+     "name": "磐亞",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 16.2,
+     "cur": 14.75,
+     "hi": 17.2,
+     "rc": -8.95,
+     "rm": 6.17,
+     "exited": true,
+     "hold": 4
     }
    ],
    "monkey": [
     {
-     "code": "3511",
-     "name": "矽瑪",
+     "code": "6125",
+     "name": "廣運",
      "market": "OTC",
      "regime": 1,
-     "entry": 21.8,
-     "cur": 25.62,
-     "hi": 28.5,
-     "rc": 17.51,
-     "rm": 30.73
+     "entry": 59.4,
+     "cur": 62.4,
+     "hi": 75.9,
+     "rc": 5.05,
+     "rm": 27.78,
+     "exited": true,
+     "hold": 21
     },
     {
-     "code": "6210",
-     "name": "慶生",
+     "code": "8354",
+     "name": "冠好",
      "market": "OTC",
      "regime": 1,
-     "entry": 20.4,
-     "cur": 20.95,
-     "hi": 22.65,
-     "rc": 2.7,
-     "rm": 11.03
+     "entry": 15.55,
+     "cur": 16.05,
+     "hi": 18.2,
+     "rc": 3.22,
+     "rm": 17.04,
+     "exited": true,
+     "hold": 6
     },
     {
-     "code": "8415",
-     "name": "大國鋼",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 34.55,
-     "cur": 35.05,
-     "hi": 36.55,
-     "rc": 1.45,
-     "rm": 5.79
-    },
-    {
-     "code": "2342",
-     "name": "茂矽",
+     "code": "2607",
+     "name": "榮運",
      "market": "TWSE",
      "regime": 1,
-     "entry": 43.55,
-     "cur": 41.12,
-     "hi": 47.45,
-     "rc": -5.59,
-     "rm": 8.96
+     "entry": 48.1,
+     "cur": 45.5,
+     "hi": 50.4,
+     "rc": 0.15,
+     "rm": 4.78,
+     "exited": true,
+     "hold": 37
     },
     {
-     "code": "2926",
-     "name": "誠品生活",
-     "market": "OTC",
+     "code": "2115",
+     "name": "六暉-KY",
+     "market": "TWSE",
      "regime": 1,
-     "entry": 37.1,
-     "cur": 34.72,
-     "hi": 38.25,
-     "rc": -6.42,
-     "rm": 3.1
+     "entry": 21.05,
+     "cur": 19.9,
+     "hi": 21.35,
+     "rc": -5.46,
+     "rm": 1.43,
+     "exited": true,
+     "hold": 5
+    },
+    {
+     "code": "2612",
+     "name": "中航",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 57.2,
+     "cur": 51.5,
+     "hi": 58.6,
+     "rc": -6.4,
+     "rm": 5.78,
+     "exited": true,
+     "hold": 33
     }
    ],
    "market_twse_close": 9.59,
@@ -1284,30 +1592,21 @@
   {
    "date": "2026-04-30",
    "days": 47,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
     {
-     "code": "6015",
-     "name": "宏遠證",
-     "market": "OTC",
+     "code": "3149",
+     "name": "正達",
+     "market": "TWSE",
      "regime": 1,
-     "entry": 14.6,
-     "cur": 19.02,
-     "hi": 20.05,
-     "rc": 30.25,
-     "rm": 37.33
-    },
-    {
-     "code": "3580",
-     "name": "友威科",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 91.1,
-     "cur": 106.0,
-     "hi": 114.5,
-     "rc": 16.36,
-     "rm": 25.69
+     "entry": 49.6,
+     "cur": 89.5,
+     "hi": 109.0,
+     "rc": 80.44,
+     "rm": 119.76,
+     "exited": false,
+     "hold": 47
     },
     {
      "code": "2882",
@@ -1315,21 +1614,38 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 77.5,
-     "cur": 86.23,
-     "hi": 89.4,
-     "rc": 11.27,
-     "rm": 15.35
+     "cur": 98.3,
+     "hi": 117.5,
+     "rc": 31.37,
+     "rm": 51.61,
+     "exited": true,
+     "hold": 40
     },
     {
-     "code": "2883",
-     "name": "凱基金",
-     "market": "TWSE",
+     "code": "3580",
+     "name": "友威科",
+     "market": "OTC",
      "regime": 1,
-     "entry": 21.5,
-     "cur": 22.43,
-     "hi": 23.1,
-     "rc": 4.34,
-     "rm": 7.44
+     "entry": 91.1,
+     "cur": 95.1,
+     "hi": 118.0,
+     "rc": 4.39,
+     "rm": 29.53,
+     "exited": true,
+     "hold": 37
+    },
+    {
+     "code": "6026",
+     "name": "福邦證",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 15.55,
+     "cur": 15.55,
+     "hi": 17.0,
+     "rc": 0.0,
+     "rm": 9.32,
+     "exited": true,
+     "hold": 8
     },
     {
      "code": "8147",
@@ -1337,85 +1653,1249 @@
      "market": "OTC",
      "regime": 1,
      "entry": 168.0,
-     "cur": 172.5,
+     "cur": 162.5,
      "hi": 197.5,
-     "rc": 2.68,
-     "rm": 17.56
+     "rc": -3.27,
+     "rm": 17.56,
+     "exited": true,
+     "hold": 23
     }
    ],
    "monkey": [
     {
-     "code": "6716",
-     "name": "應廣",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 84.9,
-     "cur": 109.67,
-     "hi": 129.0,
-     "rc": 29.17,
-     "rm": 51.94
-    },
-    {
-     "code": "6962",
-     "name": "奕力-KY",
+     "code": "2441",
+     "name": "超豐",
      "market": "TWSE",
      "regime": 1,
-     "entry": 35.1,
-     "cur": 37.97,
-     "hi": 41.4,
-     "rc": 8.17,
-     "rm": 17.95
+     "entry": 89.0,
+     "cur": 120.5,
+     "hi": 148.0,
+     "rc": 35.39,
+     "rm": 66.29,
+     "exited": true,
+     "hold": 27
     },
     {
-     "code": "2258",
-     "name": "鴻華先進-創",
+     "code": "1504",
+     "name": "東元",
      "market": "TWSE",
      "regime": 1,
-     "entry": 28.55,
-     "cur": 30.77,
-     "hi": 33.05,
-     "rc": 7.76,
-     "rm": 15.76
+     "entry": 65.7,
+     "cur": 71.6,
+     "hi": 89.6,
+     "rc": 8.98,
+     "rm": 36.38,
+     "exited": true,
+     "hold": 25
     },
     {
-     "code": "8435",
-     "name": "鉅邁",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 55.8,
-     "cur": 55.57,
-     "hi": 56.8,
-     "rc": -0.42,
-     "rm": 1.79
-    },
-    {
-     "code": "6918",
-     "name": "愛派司",
+     "code": "1232",
+     "name": "大統益",
      "market": "TWSE",
      "regime": 1,
-     "entry": 74.5,
-     "cur": 73.27,
-     "hi": 81.8,
-     "rc": -1.66,
-     "rm": 9.8
+     "entry": 148.5,
+     "cur": 144.5,
+     "hi": 150.5,
+     "rc": 2.2,
+     "rm": 2.55,
+     "exited": true,
+     "hold": 30
+    },
+    {
+     "code": "2103",
+     "name": "台橡",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 19.4,
+     "cur": 19.5,
+     "hi": 22.45,
+     "rc": 0.52,
+     "rm": 15.72,
+     "exited": true,
+     "hold": 15
+    },
+    {
+     "code": "3447",
+     "name": "展達",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 38.35,
+     "cur": 36.1,
+     "hi": 39.85,
+     "rc": -5.87,
+     "rm": 3.91,
+     "exited": true,
+     "hold": 10
     }
    ],
    "market_twse_close": 14.76,
    "market_twse_max": 20.26,
    "market_otc_close": 9.34,
    "market_otc_max": 16.08
+  },
+  {
+   "date": "2026-04-24",
+   "days": 51,
+   "status": "running",
+   "weak": 0,
+   "our": [
+    {
+     "code": "6015",
+     "name": "宏遠證",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 14.05,
+     "cur": 15.0,
+     "hi": 17.4,
+     "rc": 6.76,
+     "rm": 23.84,
+     "exited": true,
+     "hold": 12
+    },
+    {
+     "code": "3071",
+     "name": "協禧",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 31.15,
+     "cur": 31.15,
+     "hi": 36.2,
+     "rc": -0.0,
+     "rm": 16.21,
+     "exited": true,
+     "hold": 42
+    },
+    {
+     "code": "4904",
+     "name": "遠傳",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 95.9,
+     "cur": 92.9,
+     "hi": 99.5,
+     "rc": -3.13,
+     "rm": 3.75,
+     "exited": true,
+     "hold": 21
+    },
+    {
+     "code": "2387",
+     "name": "精元",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 41.5,
+     "cur": 38.5,
+     "hi": 42.0,
+     "rc": -7.23,
+     "rm": 1.2,
+     "exited": true,
+     "hold": 10
+    },
+    {
+     "code": "5871",
+     "name": "中租-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 118.5,
+     "cur": 109.5,
+     "hi": 121.0,
+     "rc": -7.59,
+     "rm": 2.11,
+     "exited": true,
+     "hold": 10
+    }
+   ],
+   "monkey": [
+    {
+     "code": "2029",
+     "name": "盛餘",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 19.9,
+     "cur": 20.8,
+     "hi": 21.45,
+     "rc": 4.52,
+     "rm": 7.79,
+     "exited": false,
+     "hold": 51
+    },
+    {
+     "code": "4771",
+     "name": "望隼",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 189.0,
+     "cur": 188.0,
+     "hi": 208.0,
+     "rc": -0.53,
+     "rm": 10.05,
+     "exited": true,
+     "hold": 32
+    },
+    {
+     "code": "1307",
+     "name": "三芳",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 31.35,
+     "cur": 31.0,
+     "hi": 33.0,
+     "rc": -1.12,
+     "rm": 5.26,
+     "exited": true,
+     "hold": 19
+    },
+    {
+     "code": "6186",
+     "name": "新潤",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 40.65,
+     "cur": 38.85,
+     "hi": 41.9,
+     "rc": -4.43,
+     "rm": 3.08,
+     "exited": true,
+     "hold": 10
+    },
+    {
+     "code": "4102",
+     "name": "永日",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 18.55,
+     "cur": 17.7,
+     "hi": 18.95,
+     "rc": -4.58,
+     "rm": 2.16,
+     "exited": true,
+     "hold": 5
+    }
+   ],
+   "market_twse_close": 16.34,
+   "market_twse_max": 21.91,
+   "market_otc_close": 12.83,
+   "market_otc_max": 19.79
+  },
+  {
+   "date": "2026-04-17",
+   "days": 56,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "9933",
+     "name": "中鼎",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 37.7,
+     "cur": 40.65,
+     "hi": 44.85,
+     "rc": 7.82,
+     "rm": 18.97,
+     "exited": true,
+     "hold": 55
+    },
+    {
+     "code": "2548",
+     "name": "華固",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 128.5,
+     "cur": 121.0,
+     "hi": 132.5,
+     "rc": -5.84,
+     "rm": 3.11,
+     "exited": true,
+     "hold": 10
+    },
+    {
+     "code": "3205",
+     "name": "佰研",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 60.6,
+     "cur": 56.0,
+     "hi": 62.0,
+     "rc": -7.59,
+     "rm": 2.31,
+     "exited": true,
+     "hold": 12
+    },
+    {
+     "code": "2880",
+     "name": "華南金",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 36.05,
+     "cur": 33.05,
+     "hi": 36.75,
+     "rc": -8.32,
+     "rm": 1.94,
+     "exited": true,
+     "hold": 6
+    },
+    {
+     "code": "3615",
+     "name": "安可",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 36.15,
+     "cur": 31.2,
+     "hi": 37.5,
+     "rc": -13.69,
+     "rm": 3.73,
+     "exited": true,
+     "hold": 3
+    }
+   ],
+   "monkey": [
+    {
+     "code": "6218",
+     "name": "豪勉",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 36.8,
+     "cur": 38.35,
+     "hi": 46.6,
+     "rc": 4.21,
+     "rm": 26.63,
+     "exited": true,
+     "hold": 29
+    },
+    {
+     "code": "2929",
+     "name": "淘帝-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 6.15,
+     "cur": 5.83,
+     "hi": 6.25,
+     "rc": -5.2,
+     "rm": 1.63,
+     "exited": true,
+     "hold": 4
+    },
+    {
+     "code": "2010",
+     "name": "春源",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 24.95,
+     "cur": 23.4,
+     "hi": 25.3,
+     "rc": -6.21,
+     "rm": 1.4,
+     "exited": true,
+     "hold": 13
+    },
+    {
+     "code": "7631",
+     "name": "聚賢研發-創",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 136.5,
+     "cur": 123.5,
+     "hi": 142.0,
+     "rc": -9.52,
+     "rm": 4.03,
+     "exited": true,
+     "hold": 13
+    },
+    {
+     "code": "2466",
+     "name": "冠西電",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 63.0,
+     "cur": 53.3,
+     "hi": 65.6,
+     "rc": -15.4,
+     "rm": 4.13,
+     "exited": true,
+     "hold": 5
+    }
+   ],
+   "market_twse_close": 23.9,
+   "market_twse_max": 29.83,
+   "market_otc_close": 13.25,
+   "market_otc_max": 20.23
+  },
+  {
+   "date": "2026-04-10",
+   "days": 61,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "6175",
+     "name": "立敦",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 56.2,
+     "cur": 91.3,
+     "hi": 115.5,
+     "rc": 62.46,
+     "rm": 105.52,
+     "exited": true,
+     "hold": 36
+    },
+    {
+     "code": "3023",
+     "name": "信邦",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 273.0,
+     "cur": 319.5,
+     "hi": 353.5,
+     "rc": 17.03,
+     "rm": 29.49,
+     "exited": true,
+     "hold": 60
+    },
+    {
+     "code": "3591",
+     "name": "艾笛森",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 22.55,
+     "cur": 23.7,
+     "hi": 29.9,
+     "rc": 5.1,
+     "rm": 32.59,
+     "exited": true,
+     "hold": 8
+    },
+    {
+     "code": "1709",
+     "name": "和益",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 19.05,
+     "cur": 18.6,
+     "hi": 19.9,
+     "rc": -2.36,
+     "rm": 4.46,
+     "exited": true,
+     "hold": 8
+    },
+    {
+     "code": "2890",
+     "name": "永豐金",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 32.6,
+     "cur": 31.65,
+     "hi": 33.65,
+     "rc": -2.91,
+     "rm": 3.22,
+     "exited": true,
+     "hold": 6
+    }
+   ],
+   "monkey": [
+    {
+     "code": "3504",
+     "name": "揚明光",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 55.0,
+     "cur": 62.1,
+     "hi": 74.8,
+     "rc": 12.91,
+     "rm": 36.0,
+     "exited": true,
+     "hold": 18
+    },
+    {
+     "code": "6949",
+     "name": "沛爾生醫-創",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 686.0,
+     "cur": 756.0,
+     "hi": 929.0,
+     "rc": 10.2,
+     "rm": 35.42,
+     "exited": true,
+     "hold": 10
+    },
+    {
+     "code": "2235",
+     "name": "謚源",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 32.95,
+     "cur": 31.2,
+     "hi": 33.7,
+     "rc": -5.31,
+     "rm": 2.28,
+     "exited": true,
+     "hold": 16
+    },
+    {
+     "code": "1340",
+     "name": "勝悅-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 6.45,
+     "cur": 6.05,
+     "hi": 6.55,
+     "rc": -6.2,
+     "rm": 1.55,
+     "exited": true,
+     "hold": 8
+    },
+    {
+     "code": "6870",
+     "name": "騰雲",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 189.0,
+     "cur": 172.5,
+     "hi": 196.5,
+     "rc": -8.73,
+     "rm": 3.97,
+     "exited": true,
+     "hold": 10
+    }
+   ],
+   "market_twse_close": 28.95,
+   "market_twse_max": 35.12,
+   "market_otc_close": 22.05,
+   "market_otc_max": 29.58
+  },
+  {
+   "date": "2026-04-02",
+   "days": 65,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "2474",
+     "name": "可成",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 192.0,
+     "cur": 205.5,
+     "hi": 243.0,
+     "rc": 7.03,
+     "rm": 26.56,
+     "exited": true,
+     "hold": 24
+    },
+    {
+     "code": "3045",
+     "name": "台灣大",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 109.0,
+     "cur": 111.0,
+     "hi": 115.5,
+     "rc": 1.83,
+     "rm": 5.96,
+     "exited": true,
+     "hold": 15
+    },
+    {
+     "code": "1218",
+     "name": "泰山",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 19.5,
+     "cur": 18.75,
+     "hi": 19.6,
+     "rc": -3.85,
+     "rm": 0.51,
+     "exited": true,
+     "hold": 12
+    },
+    {
+     "code": "4142",
+     "name": "國光生",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 18.45,
+     "cur": 17.7,
+     "hi": 19.2,
+     "rc": -4.07,
+     "rm": 4.07,
+     "exited": true,
+     "hold": 17
+    },
+    {
+     "code": "2032",
+     "name": "新鋼",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 16.95,
+     "cur": 15.55,
+     "hi": 17.3,
+     "rc": -5.48,
+     "rm": 2.42,
+     "exited": true,
+     "hold": 12
+    }
+   ],
+   "monkey": [
+    {
+     "code": "4919",
+     "name": "新唐",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 90.5,
+     "cur": 148.5,
+     "hi": 197.0,
+     "rc": 64.09,
+     "rm": 117.68,
+     "exited": true,
+     "hold": 28
+    },
+    {
+     "code": "2480",
+     "name": "敦陽科",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 139.0,
+     "cur": 147.0,
+     "hi": 163.0,
+     "rc": 11.3,
+     "rm": 17.27,
+     "exited": true,
+     "hold": 49
+    },
+    {
+     "code": "3290",
+     "name": "東浦",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 43.6,
+     "cur": 45.05,
+     "hi": 52.0,
+     "rc": 3.33,
+     "rm": 19.27,
+     "exited": true,
+     "hold": 27
+    },
+    {
+     "code": "4942",
+     "name": "嘉彰",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 38.4,
+     "cur": 37.25,
+     "hi": 38.95,
+     "rc": -2.99,
+     "rm": 1.43,
+     "exited": true,
+     "hold": 26
+    },
+    {
+     "code": "2371",
+     "name": "大同",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 31.85,
+     "cur": 30.3,
+     "hi": 33.55,
+     "rc": -4.87,
+     "rm": 5.34,
+     "exited": true,
+     "hold": 13
+    }
+   ],
+   "market_twse_close": 38.9,
+   "market_twse_max": 45.54,
+   "market_otc_close": 33.13,
+   "market_otc_max": 41.34
+  },
+  {
+   "date": "2026-03-27",
+   "days": 69,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "2347",
+     "name": "聯強",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 77.8,
+     "cur": 85.3,
+     "hi": 94.0,
+     "rc": 9.64,
+     "rm": 20.82,
+     "exited": true,
+     "hold": 47
+    },
+    {
+     "code": "5522",
+     "name": "遠雄",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 70.8,
+     "cur": 69.1,
+     "hi": 74.0,
+     "rc": -2.4,
+     "rm": 4.52,
+     "exited": true,
+     "hold": 18
+    },
+    {
+     "code": "4938",
+     "name": "和碩",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 79.0,
+     "cur": 77.0,
+     "hi": 86.0,
+     "rc": -2.53,
+     "rm": 8.86,
+     "exited": true,
+     "hold": 30
+    },
+    {
+     "code": "4532",
+     "name": "瑞智",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 26.7,
+     "cur": 24.45,
+     "hi": 27.15,
+     "rc": -2.81,
+     "rm": 1.69,
+     "exited": true,
+     "hold": 7
+    },
+    {
+     "code": "2014",
+     "name": "中鴻",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 18.9,
+     "cur": 18.05,
+     "hi": 19.5,
+     "rc": -4.5,
+     "rm": 3.17,
+     "exited": true,
+     "hold": 15
+    }
+   ],
+   "monkey": [
+    {
+     "code": "7769",
+     "name": "鴻勁",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 3650.0,
+     "cur": 6655.0,
+     "hi": 7995.0,
+     "rc": 82.33,
+     "rm": 119.04,
+     "exited": true,
+     "hold": 32
+    },
+    {
+     "code": "2020",
+     "name": "美亞",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 24.4,
+     "cur": 23.4,
+     "hi": 25.7,
+     "rc": 3.29,
+     "rm": 5.33,
+     "exited": true,
+     "hold": 11
+    },
+    {
+     "code": "2851",
+     "name": "中再保",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 30.85,
+     "cur": 29.65,
+     "hi": 31.85,
+     "rc": -3.89,
+     "rm": 3.24,
+     "exited": true,
+     "hold": 11
+    },
+    {
+     "code": "8906",
+     "name": "花王",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 29.4,
+     "cur": 27.8,
+     "hi": 30.0,
+     "rc": -5.44,
+     "rm": 2.04,
+     "exited": true,
+     "hold": 13
+    },
+    {
+     "code": "6431",
+     "name": "光麗-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 23.5,
+     "cur": 21.3,
+     "hi": 26.5,
+     "rc": -9.36,
+     "rm": 12.77,
+     "exited": true,
+     "hold": 10
+    }
+   ],
+   "market_twse_close": 39.26,
+   "market_twse_max": 45.93,
+   "market_otc_close": 32.78,
+   "market_otc_max": 40.97
+  },
+  {
+   "date": "2026-03-20",
+   "days": 74,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "2419",
+     "name": "仲琦",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 29.65,
+     "cur": 32.05,
+     "hi": 39.85,
+     "rc": 8.09,
+     "rm": 34.4,
+     "exited": true,
+     "hold": 21
+    },
+    {
+     "code": "1210",
+     "name": "大成",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 53.5,
+     "cur": 53.1,
+     "hi": 56.0,
+     "rc": -0.75,
+     "rm": 4.67,
+     "exited": true,
+     "hold": 22
+    },
+    {
+     "code": "2387",
+     "name": "精元",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 45.25,
+     "cur": 40.2,
+     "hi": 46.2,
+     "rc": -2.41,
+     "rm": 2.1,
+     "exited": true,
+     "hold": 4
+    },
+    {
+     "code": "6120",
+     "name": "達運",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 13.4,
+     "cur": 12.95,
+     "hi": 15.6,
+     "rc": -3.36,
+     "rm": 16.42,
+     "exited": true,
+     "hold": 22
+    },
+    {
+     "code": "8936",
+     "name": "國統",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 54.9,
+     "cur": 50.2,
+     "hi": 56.2,
+     "rc": -8.56,
+     "rm": 2.37,
+     "exited": true,
+     "hold": 9
+    }
+   ],
+   "monkey": [
+    {
+     "code": "7747",
+     "name": "昕奇雲端",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 116.0,
+     "cur": 129.0,
+     "hi": 138.0,
+     "rc": 11.21,
+     "rm": 18.97,
+     "exited": true,
+     "hold": 36
+    },
+    {
+     "code": "5465",
+     "name": "富驊",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 26.05,
+     "cur": 25.95,
+     "hi": 27.95,
+     "rc": -0.38,
+     "rm": 7.29,
+     "exited": true,
+     "hold": 22
+    },
+    {
+     "code": "3686",
+     "name": "達能",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 18.5,
+     "cur": 17.25,
+     "hi": 19.2,
+     "rc": -6.76,
+     "rm": 3.78,
+     "exited": true,
+     "hold": 14
+    },
+    {
+     "code": "6230",
+     "name": "尼得科超眾",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 169.0,
+     "cur": 147.5,
+     "hi": 176.0,
+     "rc": -12.72,
+     "rm": 4.14,
+     "exited": true,
+     "hold": 5
+    },
+    {
+     "code": "6894",
+     "name": "衛司特",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 366.0,
+     "cur": 300.0,
+     "hi": 390.0,
+     "rc": -16.13,
+     "rm": 9.03,
+     "exited": true,
+     "hold": 6
+    }
+   ],
+   "market_twse_close": 37.97,
+   "market_twse_max": 44.57,
+   "market_otc_close": 32.92,
+   "market_otc_max": 41.12
+  },
+  {
+   "date": "2026-03-13",
+   "days": 79,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "2409",
+     "name": "友達",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 16.0,
+     "cur": 17.75,
+     "hi": 21.85,
+     "rc": 10.94,
+     "rm": 36.56,
+     "exited": true,
+     "hold": 26
+    },
+    {
+     "code": "2897",
+     "name": "王道銀行",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 9.92,
+     "cur": 10.0,
+     "hi": 10.4,
+     "rc": 0.81,
+     "rm": 4.84,
+     "exited": true,
+     "hold": 41
+    },
+    {
+     "code": "2838",
+     "name": "聯邦銀",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 20.0,
+     "cur": 20.1,
+     "hi": 21.55,
+     "rc": 0.5,
+     "rm": 7.75,
+     "exited": true,
+     "hold": 26
+    },
+    {
+     "code": "1710",
+     "name": "東聯",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 14.05,
+     "cur": 13.65,
+     "hi": 16.85,
+     "rc": -2.85,
+     "rm": 19.93,
+     "exited": true,
+     "hold": 15
+    },
+    {
+     "code": "3010",
+     "name": "華立",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 133.0,
+     "cur": 124.5,
+     "hi": 142.0,
+     "rc": -6.39,
+     "rm": 6.77,
+     "exited": true,
+     "hold": 8
+    }
+   ],
+   "monkey": [
+    {
+     "code": "4906",
+     "name": "正文",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 27.5,
+     "cur": 34.25,
+     "hi": 43.2,
+     "rc": 24.55,
+     "rm": 57.09,
+     "exited": true,
+     "hold": 27
+    },
+    {
+     "code": "6414",
+     "name": "樺漢",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 277.0,
+     "cur": 319.5,
+     "hi": 362.0,
+     "rc": 15.34,
+     "rm": 30.69,
+     "exited": true,
+     "hold": 41
+    },
+    {
+     "code": "2834",
+     "name": "臺企銀",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 15.05,
+     "cur": 16.15,
+     "hi": 16.95,
+     "rc": 7.31,
+     "rm": 12.62,
+     "exited": true,
+     "hold": 37
+    },
+    {
+     "code": "4580",
+     "name": "捷流閥業",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 80.1,
+     "cur": 80.6,
+     "hi": 84.5,
+     "rc": 0.62,
+     "rm": 5.49,
+     "exited": true,
+     "hold": 59
+    },
+    {
+     "code": "2816",
+     "name": "旺旺保",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 30.15,
+     "cur": 30.1,
+     "hi": 32.05,
+     "rc": -0.17,
+     "rm": 6.3,
+     "exited": true,
+     "hold": 28
+    }
+   ],
+   "market_twse_close": 37.21,
+   "market_twse_max": 43.78,
+   "market_otc_close": 36.25,
+   "market_otc_max": 44.66
+  },
+  {
+   "date": "2026-03-06",
+   "days": 84,
+   "status": "settled",
+   "weak": 0,
+   "our": [
+    {
+     "code": "1304",
+     "name": "台聚",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 13.7,
+     "cur": 15.35,
+     "hi": 19.55,
+     "rc": 12.04,
+     "rm": 42.7,
+     "exited": true,
+     "hold": 25
+    },
+    {
+     "code": "2548",
+     "name": "華固",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 110.5,
+     "cur": 121.0,
+     "hi": 132.5,
+     "rc": 9.5,
+     "rm": 19.91,
+     "exited": true,
+     "hold": 38
+    },
+    {
+     "code": "1305",
+     "name": "華夏",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 13.95,
+     "cur": 14.9,
+     "hi": 20.1,
+     "rc": 6.81,
+     "rm": 44.09,
+     "exited": true,
+     "hold": 27
+    },
+    {
+     "code": "1718",
+     "name": "中纖",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 7.83,
+     "cur": 7.41,
+     "hi": 8.29,
+     "rc": -5.36,
+     "rm": 5.87,
+     "exited": true,
+     "hold": 1
+    },
+    {
+     "code": "1314",
+     "name": "中石化",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 9.81,
+     "cur": 8.19,
+     "hi": 9.81,
+     "rc": -16.51,
+     "rm": 0.0,
+     "exited": true,
+     "hold": 12
+    }
+   ],
+   "monkey": [
+    {
+     "code": "8489",
+     "name": "三貝德",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 23.6,
+     "cur": 25.15,
+     "hi": 29.95,
+     "rc": 6.57,
+     "rm": 26.91,
+     "exited": true,
+     "hold": 39
+    },
+    {
+     "code": "2911",
+     "name": "麗嬰房",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 4.81,
+     "cur": 5.1,
+     "hi": 5.78,
+     "rc": 6.03,
+     "rm": 20.17,
+     "exited": true,
+     "hold": 9
+    },
+    {
+     "code": "2364",
+     "name": "倫飛",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 60.3,
+     "cur": 61.0,
+     "hi": 66.6,
+     "rc": 1.16,
+     "rm": 10.45,
+     "exited": true,
+     "hold": 10
+    },
+    {
+     "code": "4728",
+     "name": "雙美",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 392.0,
+     "cur": 383.5,
+     "hi": 396.0,
+     "rc": 0.93,
+     "rm": 2.12,
+     "exited": true,
+     "hold": 16
+    },
+    {
+     "code": "1532",
+     "name": "勤美",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 22.9,
+     "cur": 22.05,
+     "hi": 24.0,
+     "rc": -3.71,
+     "rm": 4.8,
+     "exited": true,
+     "hold": 10
+    }
+   ],
+   "market_twse_close": 39.37,
+   "market_twse_max": 46.04,
+   "market_otc_close": 44.18,
+   "market_otc_max": 53.07
   }
  ],
  "avg": {
-  "our_close": 6.03,
-  "our_max": 15.91,
-  "our_close_reg": 6.03,
-  "our_max_reg": 15.91,
-  "monkey_close": -0.38,
-  "monkey_max": 11.79,
-  "market_twse_close": 4.43,
-  "market_twse_max": 9.07,
-  "market_otc_close": 0.87,
-  "market_otc_max": 6.65
+  "our_close": 2.75,
+  "our_max": 16.84,
+  "our_close_reg": 2.75,
+  "our_max_reg": 16.84,
+  "monkey_close": 2.66,
+  "monkey_max": 16.07,
+  "market_twse_close": 17.01,
+  "market_twse_max": 22.41,
+  "market_otc_close": 13.12,
+  "market_otc_max": 19.85
  }
 }

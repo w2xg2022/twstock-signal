@@ -25,11 +25,12 @@
   tr.weak{background:#fbe9e7} tr.weak td{color:#999}
   .tag{font-size:.7rem;background:#ff7043;color:#fff;border-radius:4px;padding:0 4px;vertical-align:middle}
   .regwarn{background:#fff3e0;border:1px solid #ffcc80;border-radius:6px;padding:6px 10px;margin:6px 0;font-size:.82rem;color:#a15b00}
+  .hd{font-size:.7rem;color:#999}
 </style>
 </head>
 <body>
 <h1>台股訊號選股 🧑‍💻 vs 🐒</h1>
-<p class="sub">多頭排列 → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 6～10 名。進場：推薦隔日 (最高+最低)/2。報酬追蹤到最新交易日：收盤價與進場後區間最高價兩種。</p>
+<p class="sub">多頭排列 → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 6～10 名。進場：推薦隔日 (最高+最低)/2。出場：ATR 移動停利（收盤自高點回落 3×ATR(14)，最長抱 60 交易日），讓贏家續跑、轉弱才出。</p>
 <p class="sub">🐒「猴子選股」= 每週全市場隨機 5 檔（以當週日期為種子，可重現）。典故：Burton Malkiel《漫步華爾街》——蒙眼猴子射飛鏢選股，未必輸給專家。<b>我們若長期贏不過猴子，就沒有存在價值。</b></p>
 
 <div class="tabs">
@@ -38,8 +39,8 @@
   <button data-tab="board">📊 對戰總表</button>
 </div>
 
-<div class="panel active" id="running"><p class="sub">持有未滿 20 個交易日的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（為公平估計，非單一成交價）；<b>當前價</b>＝最新收盤（仍持有中）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
-<div class="panel" id="settled"><p class="sub">持有已滿 20 個交易日的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝進場後第 18～20 交易日均價（TWAP，策略出場價）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
+<div class="panel active" id="running"><p class="sub">尚有個股未出場的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（公平估計，非單一成交價）；<b>出場</b>＝ATR 移動停利（收盤自持有期高點回落 3×ATR(14) 即出場，最長抱 60 交易日）。已出場者「當前價」＝出場價（標「第 N 天出」）、未出場者＝最新收盤（標「持有 N 天」）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
+<div class="panel" id="settled"><p class="sub">我們＋猴子 10 檔<b>全部出場</b>的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝ATR 移動停利觸發（收盤自高點回落 3×ATR(14)）或抱滿 60 交易日的出場價。全量回測顯示此動態出場比固定天數出場把夏普 0.12→0.47、淨值 ×1.0→×2.4（樣本內外皆成立）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
 <div class="panel" id="board">
   <p class="sub">每週 5 檔平均報酬，我們 / 我們﹢市況濾網 / 猴子 / 同期大盤 並列，每列一週。<br><b>﹢市況濾網（季線）</b>＝進場當下所屬市場指數跌破季線（MA60）的個股視為空手（報酬計 0）。全量 131 個月回測顯示此濾網能把夏普 0.81→1.04、最大回撤 44%→32%（樣本內外皆成立）。<br>📌 大盤處於季線之上時，濾網不作動、兩欄會完全相同（如目前 2026 多頭）；<b>要等大盤跌破季線的下跌段，濾網空手躲開，兩欄才會拉開</b>。</p>
   <div style="overflow-x:auto"><table id="boardtab"><thead>
@@ -61,7 +62,7 @@ const mkt=m=>m=='TWSE'?'上市':'上櫃';
 const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v.toFixed(2)}%</span>`;
 function stockTable(title,arr,curLabel){
   let rows='';
-  (arr||[]).forEach(s=>rows+=`<tr${s.regime===0?' class="weak"':''}><td class="l">${s.code}</td><td class="l">${s.name}${s.regime===0?' <span class="tag">轉弱</span>':''}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}</td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
+  (arr||[]).forEach(s=>rows+=`<tr${s.regime===0?' class="weak"':''}><td class="l">${s.code}</td><td class="l">${s.name}${s.regime===0?' <span class="tag">轉弱</span>':''}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}<br><span class="hd">${s.exited?('第'+s.hold+'天出'):('持有'+s.hold+'天')}</span></td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
   let ac=null,am=null;
   if(arr&&arr.length){ac=Math.round(arr.reduce((a,s)=>a+s.rc,0)/arr.length*100)/100; am=Math.round(arr.reduce((a,s)=>a+s.rm,0)/arr.length*100)/100;}
   const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(ac)}</td><td>${f(am)}</td></tr>`;
