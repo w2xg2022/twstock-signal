@@ -31,9 +31,11 @@ def tick(p):
 
 def idx_ret(idxdf, pick_date):
     dts = idxdf["date"].values.astype(str); v = idxdf["idx"].values.astype(float)
-    j = np.searchsorted(dts, str(pick_date), "right")
-    if j >= len(v) or v[j] <= 0: return None, None
-    return round(float(v[-1]/v[j]-1)*100, 2), round(float(np.max(v[j:])/v[j]-1)*100, 2)
+    j = np.searchsorted(dts, str(pick_date), "right")  # j=次一交易日；j-1=推薦日
+    if j >= len(v) or j < 1: return None, None
+    base = (v[j-1] + v[j]) / 2   # 大盤基準=推薦日收盤與次一交易日收盤的均值(降低次日單日大漲跌造成的失真)
+    if base <= 0: return None, None
+    return round(float(v[-1]/base-1)*100, 2), round(float(np.max(v[j:])/base-1)*100, 2)
 
 def main():
     ours = load("picks", TOPN); monk = load("monkey")
