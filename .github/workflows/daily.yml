@@ -1,0 +1,36 @@
+name: daily
+
+on:
+  schedule:
+    - cron: "0 8 * * 1-5"   # 週一~五 08:00 UTC（台灣 16:00，收盤後）
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20    # 只抓價格重算報酬，不重新選股
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: 重算歷史推薦績效（不重新選股）
+        run: python scripts/track_perf.py
+      - name: 產生 docs 資料
+        run: python scripts/build_docs_data.py
+      - name: commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/performance.json docs
+          git commit -m "daily refresh $(date -u +%Y-%m-%d)" || { echo "無變更"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git push && break
+            echo "push 被拒，pull --rebase 後重試 ($i/5)"
+            git pull --rebase origin main
+            sleep $((i * 5))
+          done
