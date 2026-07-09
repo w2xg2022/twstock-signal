@@ -8,7 +8,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; ROOT = lib.ROOT  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名alpha(取6-10名)
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; ROOT = lib.ROOT  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10); MA_REG:regime季線
 
 def held_within(dirn, taiex_dates, cur_i):
     """回傳 20交易日內已推薦的 code 集合"""
@@ -26,6 +26,12 @@ def main():
     print(f"全市場 {len(stocks)} 檔", flush=True)
     idx = {"TWSE": lib.fetch_index("TAIEX"), "OTC": lib.fetch_index("TPEx")}
     tdates = idx["TWSE"]["date"].values.astype(str)
+    # regime 濾網：市場指數站上 MA60(季線) 才進場，跌破則該市場的股票標記轉弱(建議空手)
+    regime_ok = {}
+    for mk, idf in idx.items():
+        v = idf["idx"].values.astype(float); ma = pd.Series(v).rolling(MA_REG).mean().values
+        regime_ok[mk] = bool(len(v) >= MA_REG and np.isfinite(ma[-1]) and v[-1] >= ma[-1])
+    print(f"regime: 上市{'多' if regime_ok['TWSE'] else '空'} 上櫃{'多' if regime_ok['OTC'] else '空'}", flush=True)
     prices = lib.fetch_prices(stocks["ticker"].tolist())
     print(f"抓到價格 {len(prices)} 檔", flush=True)
 
@@ -53,7 +59,9 @@ def main():
     # 大樣本(116期,扣成本)證實：最高alpha最延伸易回落，中段動能(6-10)超額最佳且OOS穩健
     D = pd.DataFrame(rows).sort_values("alpha120", ascending=False)
     D = D[~D["code"].isin(held_our)].reset_index(drop=True).iloc[SKIP:SKIP+TOPN].reset_index(drop=True)
-    D["rank"] = range(SKIP + 1, SKIP + 1 + len(D)); D.insert(0, "pick_date", data_date)
+    D["rank"] = range(SKIP + 1, SKIP + 1 + len(D))
+    D["regime"] = D["market"].map(lambda m: int(regime_ok[m]))  # 1=市場站上季線可進場; 0=轉弱建議空手
+    D.insert(0, "pick_date", data_date)
     os.makedirs(os.path.join(ROOT, "data", "picks"), exist_ok=True)
     D.to_csv(os.path.join(ROOT, "data", "picks", f"{data_date}.csv"), index=False, encoding="utf-8-sig")
     print(f"資料日 {data_date}, 我們推薦前{len(D)}:", flush=True)

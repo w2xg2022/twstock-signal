@@ -9,6 +9,11 @@ ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP
 D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
+MA_REG=60  # regime季線
+regidx={mk:(g["date"].values.astype(str),g["idx"].values.astype(float),pd.Series(g["idx"].values.astype(float)).rolling(MA_REG).mean().values) for mk,g in idxs.items()}
+def regime_ok(mk,ddate):
+    dd,v,ma=regidx[mk]; ii=np.searchsorted(dd,ddate,"right")-1
+    return bool(ii>=MA_REG and np.isfinite(ma[ii]) and v[ii]>=ma[ii])
 lst=pd.read_csv(f"{ROOT}/../twstock-alphabeta/data/stock_list.csv",dtype={"code":str})
 info={r.code:(r.name,r.market) for r in lst.itertuples()}
 S={}
@@ -59,7 +64,8 @@ for sat in sats:
             alpha120=round(float(d["a120"][tt]),4),beta120=round(float(d["b120"][tt]),3),d240h=round(float(d["d240h"][tt]),4)))
         held_our[code]=tcur
     if not our: continue
-    D=pd.DataFrame(our); D["rank"]=range(D_RANK_START,D_RANK_START+len(D)); D.insert(0,"pick_date",ddate)
+    D=pd.DataFrame(our); D["rank"]=range(D_RANK_START,D_RANK_START+len(D))
+    D["regime"]=D["market"].map(lambda m:int(regime_ok(m,ddate))); D.insert(0,"pick_date",ddate)
     D.to_csv(f"{ROOT}/data/picks/{ddate}.csv",index=False,encoding="utf-8-sig")
     # 猴子: 隨機5(排除持有中的猴子)
     rng=random.Random(int(ddate.replace("-","")))

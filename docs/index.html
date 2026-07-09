@@ -22,6 +22,9 @@
   .vs h4{margin:4px 0}
   .grp h4{margin:10px 0 2px;font-size:.95rem} .grp h4:first-of-type{margin-top:2px}
   .pos{color:#c62828} .neg{color:#2e7d32}
+  tr.weak{background:#fbe9e7} tr.weak td{color:#999}
+  .tag{font-size:.7rem;background:#ff7043;color:#fff;border-radius:4px;padding:0 4px;vertical-align:middle}
+  .regwarn{background:#fff3e0;border:1px solid #ffcc80;border-radius:6px;padding:6px 10px;margin:6px 0;font-size:.82rem;color:#a15b00}
 </style>
 </head>
 <body>
@@ -38,10 +41,10 @@
 <div class="panel active" id="running"><p class="sub">持有未滿 20 個交易日的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（為公平估計，非單一成交價）；<b>當前價</b>＝最新收盤（仍持有中）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
 <div class="panel" id="settled"><p class="sub">持有已滿 20 個交易日的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝進場後第 18～20 交易日均價（TWAP，策略出場價）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
 <div class="panel" id="board">
-  <p class="sub">每週 5 檔平均報酬，我們 / 猴子 / 同期大盤（加權指數）並列，每列一週。</p>
+  <p class="sub">每週 5 檔平均報酬，我們 / 我們﹢季線濾網 / 猴子 / 同期大盤 並列，每列一週。<br><b>﹢季線濾網</b>＝套用 regime：進場當下所屬市場指數跌破季線（MA60）的個股視為空手（報酬計 0）。全量 131 個月回測顯示此濾網能把夏普 0.81→1.04、最大回撤 44%→32%（樣本內外皆成立）。</p>
   <div style="overflow-x:auto"><table id="boardtab"><thead>
-    <tr><th class="l" rowspan="2">推薦日</th><th rowspan="2">距今<br>交易日</th><th colspan="2">🧑‍💻 我們</th><th colspan="2">🐒 猴子</th><th colspan="2">大盤上市</th><th colspan="2">大盤上櫃</th></tr>
-    <tr><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th></tr>
+    <tr><th class="l" rowspan="2">推薦日</th><th rowspan="2">距今<br>交易日</th><th colspan="2">🧑‍💻 我們</th><th colspan="2">🧑‍💻﹢季線濾網</th><th colspan="2">🐒 猴子</th><th colspan="2">大盤上市</th><th colspan="2">大盤上櫃</th></tr>
+    <tr><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th></tr>
   </thead><tbody></tbody><tfoot></tfoot></table></div>
 </div>
 
@@ -58,7 +61,7 @@ const mkt=m=>m=='TWSE'?'上市':'上櫃';
 const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v.toFixed(2)}%</span>`;
 function stockTable(title,arr,curLabel){
   let rows='';
-  (arr||[]).forEach(s=>rows+=`<tr><td class="l">${s.code}</td><td class="l">${s.name}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}</td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
+  (arr||[]).forEach(s=>rows+=`<tr${s.regime===0?' class="weak"':''}><td class="l">${s.code}</td><td class="l">${s.name}${s.regime===0?' <span class="tag">轉弱</span>':''}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}</td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
   let ac=null,am=null;
   if(arr&&arr.length){ac=Math.round(arr.reduce((a,s)=>a+s.rc,0)/arr.length*100)/100; am=Math.round(arr.reduce((a,s)=>a+s.rm,0)/arr.length*100)/100;}
   const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(ac)}</td><td>${f(am)}</td></tr>`;
@@ -66,7 +69,8 @@ function stockTable(title,arr,curLabel){
 }
 function group(g){
   const cl = g.status=='settled' ? '賣出價' : '當前價';
-  return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+
+  const warn = g.weak>0 ? `<div class="regwarn">⚠️ 本週 ${g.weak} 檔所屬市場跌破季線（MA60），regime 濾網建議這幾檔<b>空手</b>；「套用季線濾網」績效已把它們視為持現金。</div>` : '';
+  return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+warn+
     stockTable('🧑‍💻 我們',g.our,cl)+stockTable('🐒 猴子',g.monkey,cl)+`</div>`;
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
@@ -76,10 +80,10 @@ fetch('data/performance.json').then(r=>r.json()).then(d=>{
   document.getElementById('set-groups').innerHTML=set.length?set.map(group).join(''):'<p class="sub">尚無已結束的週次</p>';
   const tb=document.querySelector('#boardtab tbody');
   (d.weeks||[]).forEach(w=>tb.insertAdjacentHTML('beforeend',
-    `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market_twse_close)}</td><td>${f(w.market_twse_max)}</td><td>${f(w.market_otc_close)}</td><td>${f(w.market_otc_max)}</td></tr>`));
+    `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.our_close_reg)}</td><td>${f(w.our_max_reg)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market_twse_close)}</td><td>${f(w.market_twse_max)}</td><td>${f(w.market_otc_close)}</td><td>${f(w.market_otc_max)}</td></tr>`));
   const a=d.avg||{};
   document.querySelector('#boardtab tfoot').innerHTML=
-    `<tr style="font-weight:bold;background:#f5f5f5"><td class="l">平均</td><td>—</td><td>${f(a.our_close)}</td><td>${f(a.our_max)}</td><td>${f(a.monkey_close)}</td><td>${f(a.monkey_max)}</td><td>${f(a.market_twse_close)}</td><td>${f(a.market_twse_max)}</td><td>${f(a.market_otc_close)}</td><td>${f(a.market_otc_max)}</td></tr>`;
+    `<tr style="font-weight:bold;background:#f5f5f5"><td class="l">平均</td><td>—</td><td>${f(a.our_close)}</td><td>${f(a.our_max)}</td><td>${f(a.our_close_reg)}</td><td>${f(a.our_max_reg)}</td><td>${f(a.monkey_close)}</td><td>${f(a.monkey_max)}</td><td>${f(a.market_twse_close)}</td><td>${f(a.market_twse_max)}</td><td>${f(a.market_otc_close)}</td><td>${f(a.market_otc_max)}</td></tr>`;
 }).catch(()=>{});
 </script>
 </body>

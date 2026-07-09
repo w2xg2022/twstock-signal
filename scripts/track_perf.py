@@ -47,7 +47,7 @@ def main():
     taiex = lib.fetch_index("TAIEX"); tpex = lib.fetch_index("TPEx")
     tdates = taiex["date"].values.astype(str); latest = tdates[-1]
 
-    def detail_one(code, name, market, pick_date, settled):
+    def detail_one(code, name, market, pick_date, settled, regime=1):
         if code not in slist.index: return None
         name = str(slist.loc[code, "name"])  # 一律用清單簡稱顯示
         df = prices.get(slist.loc[code, "ticker"])
@@ -67,12 +67,12 @@ def main():
         else:
             # 預測中：當前價=最新收盤；最高=進場至今最高
             sell = float(C[-1]); sell_a = float(aC[-1]); hi_r = float(np.max(H[j:])); hi_a = float(np.max(aH[j:]))
-        return {"code": code, "name": name, "market": market,
+        return {"code": code, "name": name, "market": market, "regime": int(regime),
                 "entry": e, "cur": round(sell,2), "hi": round(hi_r,2),
                 "rc": round((sell_a/ae-1)*100,2), "rm": round((hi_a/ae-1)*100,2)}
 
     def week_list(df, pick_date, settled):
-        out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date, settled))]
+        out = [d for r in df.itertuples() if (d := detail_one(r.code, r.name, r.market, pick_date, settled, getattr(r, "regime", 1)))]
         out.sort(key=lambda x: -x["rc"])
         return out
 
@@ -87,13 +87,17 @@ def main():
         od = week_list(ours[w], w, settled) if w in ours else []
         md = week_list(monk[w], w, settled) if w in monk else []
         avg = lambda lst, k: round(float(np.mean([x[k] for x in lst])), 2) if lst else None
+        # 套用regime版：轉弱(regime=0)的股票視為空手(該檔報酬=0)
+        avgr = lambda lst, k: round(float(np.mean([(x[k] if x["regime"] else 0.0) for x in lst])), 2) if lst else None
         st = "settled" if days >= SETTLE else "running"
+        nwk = sum(1 for x in od if not x["regime"])  # 本週我們有幾檔轉弱(建議空手)
         mkt = {"market_twse_close": mtc, "market_twse_max": mtm, "market_otc_close": moc, "market_otc_max": mom}
         agg.append({"date": w, "days": days, "status": st,
                     "our_close": avg(od,"rc"), "our_max": avg(od,"rm"),
+                    "our_close_reg": avgr(od,"rc"), "our_max_reg": avgr(od,"rm"), "weak": nwk,
                     "monkey_close": avg(md,"rc"), "monkey_max": avg(md,"rm"), **mkt})
-        detail.append({"date": w, "days": days, "status": st, "our": od, "monkey": md, **mkt})
-    keys = ["our_close","our_max","monkey_close","monkey_max","market_twse_close","market_twse_max","market_otc_close","market_otc_max"]
+        detail.append({"date": w, "days": days, "status": st, "weak": nwk, "our": od, "monkey": md, **mkt})
+    keys = ["our_close","our_max","our_close_reg","our_max_reg","monkey_close","monkey_max","market_twse_close","market_twse_max","market_otc_close","market_otc_max"]
     def gavg(k):
         v = [r[k] for r in agg if r[k] is not None]
         return round(float(np.mean(v)),2) if v else None
