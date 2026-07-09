@@ -5,7 +5,8 @@
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"
-ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000  # 近20日日均量下限(張)
+ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=5  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10)
+D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
 lst=pd.read_csv(f"{ROOT}/../twstock-alphabeta/data/stock_list.csv",dtype={"code":str})
@@ -49,17 +50,16 @@ for sat in sats:
     held_our={c:tt for c,tt in held_our.items() if tcur-tt<HOLD}
     held_mk={c:tt for c,tt in held_mk.items() if tcur-tt<HOLD}
     cand.sort(key=lambda x:-x[1]["a120"][np.searchsorted(x[1]["dt"],ddate)])
-    # 我們: 取前5, 跳過持有中
+    # 我們: 跳過持有中後，取 rank SKIP+1 .. SKIP+TOPN (6-10名，大樣本驗證中段動能最佳)
+    elig=[(code,d) for code,d in cand if code not in held_our]
     our=[]
-    for code,d in cand:
-        if code in held_our: continue
+    for code,d in elig[SKIP:SKIP+TOPN]:
         tt=np.searchsorted(d["dt"],ddate)
         our.append(dict(code=code,name=d["name"],market=d["mk"],close=round(float(d["C"][tt]),2),
             alpha120=round(float(d["a120"][tt]),4),beta120=round(float(d["b120"][tt]),3),d240h=round(float(d["d240h"][tt]),4)))
         held_our[code]=tcur
-        if len(our)>=TOPN: break
     if not our: continue
-    D=pd.DataFrame(our); D["rank"]=range(1,len(D)+1); D.insert(0,"pick_date",ddate)
+    D=pd.DataFrame(our); D["rank"]=range(D_RANK_START,D_RANK_START+len(D)); D.insert(0,"pick_date",ddate)
     D.to_csv(f"{ROOT}/data/picks/{ddate}.csv",index=False,encoding="utf-8-sig")
     # 猴子: 隨機5(排除持有中的猴子)
     rng=random.Random(int(ddate.replace("-","")))

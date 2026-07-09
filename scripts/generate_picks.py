@@ -8,7 +8,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; ROOT = lib.ROOT  # VOL_MIN: 近20日日均量下限(張)
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; ROOT = lib.ROOT  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名alpha(取6-10名)
 
 def held_within(dirn, taiex_dates, cur_i):
     """回傳 20交易日內已推薦的 code 集合"""
@@ -49,10 +49,11 @@ def main():
     cur_i = int(np.searchsorted(tdates, data_date))
     held_our = held_within("picks", tdates, cur_i)
     held_mk = held_within("monkey", tdates, cur_i)
-    # 我們：alpha 由高到低，跳過持有中，取前5
+    # 我們：alpha 由高到低，跳過持有中，取第 SKIP+1 .. SKIP+TOPN 名(6-10)
+    # 大樣本(116期,扣成本)證實：最高alpha最延伸易回落，中段動能(6-10)超額最佳且OOS穩健
     D = pd.DataFrame(rows).sort_values("alpha120", ascending=False)
-    D = D[~D["code"].isin(held_our)].head(TOPN).reset_index(drop=True)
-    D["rank"] = D.index + 1; D.insert(0, "pick_date", data_date)
+    D = D[~D["code"].isin(held_our)].reset_index(drop=True).iloc[SKIP:SKIP+TOPN].reset_index(drop=True)
+    D["rank"] = range(SKIP + 1, SKIP + 1 + len(D)); D.insert(0, "pick_date", data_date)
     os.makedirs(os.path.join(ROOT, "data", "picks"), exist_ok=True)
     D.to_csv(os.path.join(ROOT, "data", "picks", f"{data_date}.csv"), index=False, encoding="utf-8-sig")
     print(f"資料日 {data_date}, 我們推薦前{len(D)}:", flush=True)

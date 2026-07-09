@@ -1,194 +1,194 @@
 {
- "updated": "2026-07-09T03:00:07.981439+00:00",
- "latest_date": "2026-07-08",
+ "updated": "2026-07-09T10:49:04.004577+00:00",
+ "latest_date": "2026-07-09",
  "n_weeks": 10,
  "weeks": [
   {
    "date": "2026-07-03",
-   "days": 2,
+   "days": 3,
    "status": "running",
-   "our_close": -1.92,
-   "our_max": 3.36,
-   "monkey_close": -4.47,
+   "our_close": -0.82,
+   "our_max": 3.82,
+   "monkey_close": -5.67,
    "monkey_max": 3.71,
-   "market_twse_close": -1.9,
+   "market_twse_close": -2.66,
    "market_twse_max": -0.23,
-   "market_otc_close": -4.63,
+   "market_otc_close": -3.77,
    "market_otc_max": -0.58
   },
   {
    "date": "2026-06-26",
-   "days": 7,
+   "days": 8,
    "status": "running",
-   "our_close": 0.3,
-   "our_max": 8.94,
-   "monkey_close": 2.5,
+   "our_close": 2.09,
+   "our_max": 6.35,
+   "monkey_close": 2.64,
    "monkey_max": 9.54,
-   "market_twse_close": 2.48,
+   "market_twse_close": 1.68,
    "market_twse_max": 5.14,
-   "market_otc_close": 2.14,
+   "market_otc_close": 3.05,
    "market_otc_max": 7.72
   },
   {
    "date": "2026-06-18",
-   "days": 12,
+   "days": 13,
    "status": "running",
-   "our_close": -0.36,
-   "our_max": 8.28,
-   "monkey_close": -4.06,
+   "our_close": -0.76,
+   "our_max": 10.99,
+   "monkey_close": -5.15,
    "monkey_max": 8.66,
-   "market_twse_close": -2.51,
+   "market_twse_close": -3.26,
    "market_twse_max": 1.37,
-   "market_otc_close": -5.98,
+   "market_otc_close": -5.14,
    "market_otc_max": 0.72
   },
   {
    "date": "2026-06-12",
-   "days": 16,
+   "days": 17,
    "status": "running",
-   "our_close": 11.89,
-   "our_max": 29.03,
-   "monkey_close": 3.23,
+   "our_close": 8.85,
+   "our_max": 21.44,
+   "monkey_close": 1.23,
    "monkey_max": 19.79,
-   "market_twse_close": 2.65,
+   "market_twse_close": 1.85,
    "market_twse_max": 6.73,
-   "market_otc_close": -0.2,
+   "market_otc_close": 0.69,
    "market_otc_max": 6.91
   },
   {
    "date": "2026-06-05",
-   "days": 21,
+   "days": 22,
    "status": "settled",
-   "our_close": 27.21,
-   "our_max": 38.17,
+   "our_close": 1.84,
+   "our_max": 15.85,
    "monkey_close": 2.16,
    "monkey_max": 11.94,
-   "market_twse_close": 3.97,
+   "market_twse_close": 3.16,
    "market_twse_max": 8.1,
-   "market_otc_close": 0.5,
+   "market_otc_close": 1.4,
    "market_otc_max": 7.66
   },
   {
    "date": "2026-05-29",
-   "days": 26,
+   "days": 27,
    "status": "settled",
-   "our_close": -13.91,
-   "our_max": 6.91,
+   "our_close": -0.43,
+   "our_max": 10.78,
    "monkey_close": -6.75,
    "monkey_max": 9.49,
-   "market_twse_close": 2.25,
+   "market_twse_close": 1.46,
    "market_twse_max": 6.31,
-   "market_otc_close": -4.66,
+   "market_otc_close": -3.81,
    "market_otc_max": 2.12
   },
   {
    "date": "2026-05-22",
-   "days": 31,
+   "days": 32,
    "status": "settled",
-   "our_close": -15.71,
-   "our_max": 7.24,
+   "our_close": 6.89,
+   "our_max": 19.65,
    "monkey_close": -3.22,
    "monkey_max": 13.2,
-   "market_twse_close": 7.2,
+   "market_twse_close": 6.37,
    "market_twse_max": 11.46,
-   "market_otc_close": -1.16,
+   "market_otc_close": -0.27,
    "market_otc_max": 5.88
   },
   {
    "date": "2026-05-15",
-   "days": 36,
+   "days": 37,
    "status": "settled",
-   "our_close": 3.58,
-   "our_max": 19.72,
+   "our_close": 19.31,
+   "our_max": 31.71,
    "monkey_close": 0.47,
    "monkey_max": 10.25,
-   "market_twse_close": 12.23,
+   "market_twse_close": 11.36,
    "market_twse_max": 16.69,
-   "market_otc_close": 3.35,
+   "market_otc_close": 4.28,
    "market_otc_max": 10.71
   },
   {
    "date": "2026-05-08",
-   "days": 41,
+   "days": 42,
    "status": "settled",
-   "our_close": 8.46,
-   "our_max": 23.62,
+   "our_close": 10.33,
+   "our_max": 17.84,
    "monkey_close": 1.93,
    "monkey_max": 11.92,
-   "market_twse_close": 10.44,
+   "market_twse_close": 9.59,
    "market_twse_max": 14.83,
-   "market_otc_close": 2.03,
+   "market_otc_close": 2.94,
    "market_otc_max": 9.29
   },
   {
    "date": "2026-04-30",
-   "days": 46,
+   "days": 47,
    "status": "settled",
-   "our_close": 19.02,
-   "our_max": 25.62,
+   "our_close": 12.98,
+   "our_max": 20.67,
    "monkey_close": 8.6,
    "monkey_max": 19.45,
-   "market_twse_close": 15.66,
+   "market_twse_close": 14.76,
    "market_twse_max": 20.26,
-   "market_otc_close": 8.37,
+   "market_otc_close": 9.34,
    "market_otc_max": 16.08
   }
  ],
  "detail": [
   {
    "date": "2026-07-03",
-   "days": 2,
+   "days": 3,
    "status": "running",
    "our": [
     {
-     "code": "2887",
-     "name": "台新新光金",
-     "market": "TWSE",
-     "entry": 34.5,
-     "cur": 36.75,
-     "hi": 37.15,
-     "rc": 6.52,
-     "rm": 7.68
+     "code": "8383",
+     "name": "千附",
+     "market": "OTC",
+     "entry": 66.5,
+     "cur": 69.7,
+     "hi": 69.7,
+     "rc": 4.81,
+     "rm": 4.81
     },
     {
-     "code": "3088",
-     "name": "艾訊",
+     "code": "3479",
+     "name": "安勤",
      "market": "OTC",
-     "entry": 146.0,
-     "cur": 145.0,
-     "hi": 149.0,
-     "rc": -0.68,
-     "rm": 2.05
+     "entry": 145.5,
+     "cur": 146.0,
+     "hi": 148.5,
+     "rc": 0.34,
+     "rm": 2.06
     },
     {
      "code": "8039",
      "name": "台虹",
      "market": "TWSE",
      "entry": 155.0,
-     "cur": 149.5,
+     "cur": 154.0,
      "hi": 160.0,
-     "rc": -3.55,
+     "rc": -0.65,
      "rm": 3.23
     },
     {
-     "code": "6190",
-     "name": "萬泰科",
-     "market": "OTC",
-     "entry": 86.6,
-     "cur": 83.2,
-     "hi": 88.0,
-     "rc": -3.93,
-     "rm": 1.62
+     "code": "3023",
+     "name": "信邦",
+     "market": "TWSE",
+     "entry": 329.5,
+     "cur": 326.0,
+     "hi": 349.0,
+     "rc": -1.06,
+     "rm": 5.92
     },
     {
-     "code": "1785",
-     "name": "光洋科",
-     "market": "OTC",
-     "entry": 157.0,
-     "cur": 144.5,
-     "hi": 160.5,
-     "rc": -7.96,
-     "rm": 2.23
+     "code": "1312",
+     "name": "國喬",
+     "market": "TWSE",
+     "entry": 14.6,
+     "cur": 13.5,
+     "hi": 15.05,
+     "rc": -7.53,
+     "rm": 3.08
     }
    ],
    "monkey": [
@@ -197,9 +197,9 @@
      "name": "建碁",
      "market": "TWSE",
      "entry": 52.9,
-     "cur": 55.8,
+     "cur": 55.6,
      "hi": 58.4,
-     "rc": 5.48,
+     "rc": 5.1,
      "rm": 10.4
     },
     {
@@ -207,9 +207,9 @@
      "name": "冠德",
      "market": "TWSE",
      "entry": 35.0,
-     "cur": 35.15,
+     "cur": 35.1,
      "hi": 35.45,
-     "rc": 0.43,
+     "rc": 0.29,
      "rm": 1.29
     },
     {
@@ -217,91 +217,91 @@
      "name": "元太",
      "market": "OTC",
      "entry": 210.0,
-     "cur": 201.0,
+     "cur": 200.5,
      "hi": 215.0,
-     "rc": -4.29,
+     "rc": -4.52,
      "rm": 2.38
-    },
-    {
-     "code": "5227",
-     "name": "立凱-KY",
-     "market": "OTC",
-     "entry": 35.8,
-     "cur": 31.6,
-     "hi": 36.5,
-     "rc": -11.73,
-     "rm": 1.96
     },
     {
      "code": "2305",
      "name": "全友",
      "market": "TWSE",
      "entry": 41.6,
-     "cur": 36.5,
+     "cur": 36.0,
      "hi": 42.65,
-     "rc": -12.26,
+     "rc": -13.46,
      "rm": 2.52
+    },
+    {
+     "code": "5227",
+     "name": "立凱-KY",
+     "market": "OTC",
+     "entry": 35.8,
+     "cur": 30.15,
+     "hi": 36.5,
+     "rc": -15.78,
+     "rm": 1.96
     }
    ],
-   "market_twse_close": -1.9,
+   "market_twse_close": -2.66,
    "market_twse_max": -0.23,
-   "market_otc_close": -4.63,
+   "market_otc_close": -3.77,
    "market_otc_max": -0.58
   },
   {
    "date": "2026-06-26",
-   "days": 7,
+   "days": 8,
    "status": "running",
    "our": [
     {
-     "code": "3479",
-     "name": "安勤",
+     "code": "8932",
+     "name": "智通*",
      "market": "OTC",
-     "entry": 141.0,
-     "cur": 147.0,
-     "hi": 148.5,
-     "rc": 7.65,
-     "rm": 8.75
+     "entry": 108.0,
+     "cur": 118.5,
+     "hi": 123.5,
+     "rc": 9.72,
+     "rm": 14.35
     },
     {
-     "code": "6197",
-     "name": "佳必琪",
+     "code": "2527",
+     "name": "宏璟",
      "market": "TWSE",
-     "entry": 358.0,
-     "cur": 370.5,
-     "hi": 405.0,
-     "rc": 5.59,
-     "rm": 15.42
+     "entry": 39.95,
+     "cur": 42.6,
+     "hi": 43.4,
+     "rc": 6.63,
+     "rm": 8.64
     },
     {
-     "code": "7777",
-     "name": "能率亞洲",
-     "market": "OTC",
-     "entry": 42.05,
-     "cur": 41.0,
-     "hi": 44.3,
-     "rc": -2.5,
-     "rm": 5.35
-    },
-    {
-     "code": "1312",
-     "name": "國喬",
+     "code": "2006",
+     "name": "東和鋼鐵",
      "market": "TWSE",
-     "entry": 14.05,
-     "cur": 13.45,
-     "hi": 15.4,
-     "rc": -4.27,
-     "rm": 9.61
+     "entry": 70.2,
+     "cur": 70.2,
+     "hi": 71.0,
+     "rc": -0.0,
+     "rm": 1.14
     },
     {
-     "code": "3028",
-     "name": "增你強",
+     "code": "2886",
+     "name": "兆豐金",
      "market": "TWSE",
-     "entry": 80.8,
-     "cur": 76.8,
-     "hi": 85.3,
-     "rc": -4.95,
-     "rm": 5.57
+     "entry": 46.8,
+     "cur": 46.7,
+     "hi": 47.4,
+     "rc": -0.21,
+     "rm": 1.28
+    },
+    {
+     "code": "6139",
+     "name": "亞翔",
+     "market": "TWSE",
+     "entry": 928.0,
+     "cur": 875.0,
+     "hi": 987.0,
+     "rc": -5.71,
+     "rm": 6.36
     }
    ],
    "monkey": [
@@ -310,9 +310,9 @@
      "name": "銘旺科",
      "market": "TWSE",
      "entry": 39.75,
-     "cur": 43.25,
+     "cur": 43.2,
      "hi": 52.3,
-     "rc": 8.81,
+     "rc": 8.68,
      "rm": 31.57
     },
     {
@@ -340,9 +340,9 @@
      "name": "臺企銀",
      "market": "TWSE",
      "entry": 17.9,
-     "cur": 18.05,
+     "cur": 17.95,
      "hi": 18.25,
-     "rc": 0.84,
+     "rc": 0.28,
      "rm": 1.96
     },
     {
@@ -350,71 +350,71 @@
      "name": "新晶投控",
      "market": "OTC",
      "entry": 14.55,
-     "cur": 14.3,
+     "cur": 14.5,
      "hi": 15.7,
-     "rc": -1.72,
+     "rc": -0.34,
      "rm": 7.9
     }
    ],
-   "market_twse_close": 2.48,
+   "market_twse_close": 1.68,
    "market_twse_max": 5.14,
-   "market_otc_close": 2.14,
+   "market_otc_close": 3.05,
    "market_otc_max": 7.72
   },
   {
    "date": "2026-06-18",
-   "days": 12,
+   "days": 13,
    "status": "running",
    "our": [
     {
-     "code": "1709",
-     "name": "和益",
+     "code": "1326",
+     "name": "台化",
      "market": "TWSE",
-     "entry": 21.7,
-     "cur": 24.1,
-     "hi": 25.45,
-     "rc": 11.06,
-     "rm": 17.28
+     "entry": 55.6,
+     "cur": 60.0,
+     "hi": 73.0,
+     "rc": 9.15,
+     "rm": 32.8
     },
     {
-     "code": "2851",
-     "name": "中再保",
+     "code": "3034",
+     "name": "聯詠",
      "market": "TWSE",
-     "entry": 39.1,
-     "cur": 37.7,
-     "hi": 39.5,
-     "rc": 2.49,
-     "rm": 6.84
+     "entry": 546.0,
+     "cur": 542.0,
+     "hi": 606.0,
+     "rc": -0.73,
+     "rm": 10.99
     },
     {
-     "code": "1904",
-     "name": "正隆",
+     "code": "9939",
+     "name": "宏全",
      "market": "TWSE",
-     "entry": 22.85,
-     "cur": 22.8,
-     "hi": 24.7,
-     "rc": -0.22,
-     "rm": 8.1
+     "entry": 133.0,
+     "cur": 122.5,
+     "hi": 134.5,
+     "rc": -3.19,
+     "rm": 1.13
     },
     {
-     "code": "2347",
-     "name": "聯強",
+     "code": "3003",
+     "name": "健和興",
      "market": "TWSE",
-     "entry": 94.2,
-     "cur": 89.1,
-     "hi": 98.3,
-     "rc": -5.41,
-     "rm": 4.35
+     "entry": 69.0,
+     "cur": 66.1,
+     "hi": 71.1,
+     "rc": -4.2,
+     "rm": 3.04
     },
     {
-     "code": "5864",
-     "name": "致和證",
-     "market": "OTC",
-     "entry": 45.3,
-     "cur": 40.4,
-     "hi": 47.48,
-     "rc": -9.73,
-     "rm": 4.81
+     "code": "3704",
+     "name": "合勤控",
+     "market": "TWSE",
+     "entry": 48.05,
+     "cur": 45.35,
+     "hi": 51.4,
+     "rc": -4.81,
+     "rm": 6.97
     }
    ],
    "monkey": [
@@ -423,9 +423,9 @@
      "name": "鐿鈦",
      "market": "OTC",
      "entry": 119.0,
-     "cur": 129.5,
+     "cur": 127.5,
      "hi": 148.5,
-     "rc": 8.82,
+     "rc": 7.14,
      "rm": 24.79
     },
     {
@@ -433,100 +433,100 @@
      "name": "正道",
      "market": "TWSE",
      "entry": 10.2,
-     "cur": 10.5,
+     "cur": 10.55,
      "hi": 10.75,
-     "rc": 2.94,
+     "rc": 3.43,
      "rm": 5.39
-    },
-    {
-     "code": "8155",
-     "name": "博智",
-     "market": "OTC",
-     "entry": 405.0,
-     "cur": 363.0,
-     "hi": 409.5,
-     "rc": -9.03,
-     "rm": 1.11
     },
     {
      "code": "2454",
      "name": "聯發科",
      "market": "TWSE",
      "entry": 4470.0,
-     "cur": 3975.0,
+     "cur": 3925.0,
      "hi": 4785.0,
-     "rc": -10.54,
+     "rc": -11.67,
      "rm": 7.05
+    },
+    {
+     "code": "8155",
+     "name": "博智",
+     "market": "OTC",
+     "entry": 405.0,
+     "cur": 351.0,
+     "hi": 409.5,
+     "rc": -12.04,
+     "rm": 1.11
     },
     {
      "code": "6220",
      "name": "岳豐",
      "market": "OTC",
      "entry": 39.25,
-     "cur": 33.65,
+     "cur": 33.6,
      "hi": 41.2,
-     "rc": -12.5,
+     "rc": -12.63,
      "rm": 4.97
     }
    ],
-   "market_twse_close": -2.51,
+   "market_twse_close": -3.26,
    "market_twse_max": 1.37,
-   "market_otc_close": -5.98,
+   "market_otc_close": -5.14,
    "market_otc_max": 0.72
   },
   {
    "date": "2026-06-12",
-   "days": 16,
+   "days": 17,
    "status": "running",
    "our": [
     {
-     "code": "6259",
-     "name": "百徽",
-     "market": "OTC",
-     "entry": 29.2,
-     "cur": 40.65,
-     "hi": 43.3,
-     "rc": 39.21,
-     "rm": 48.29
-    },
-    {
-     "code": "4923",
-     "name": "力士",
-     "market": "OTC",
-     "entry": 50.0,
-     "cur": 65.2,
-     "hi": 70.5,
-     "rc": 30.4,
-     "rm": 41.0
-    },
-    {
-     "code": "6174",
-     "name": "安碁",
-     "market": "OTC",
-     "entry": 53.4,
-     "cur": 59.5,
-     "hi": 67.0,
-     "rc": 12.19,
-     "rm": 26.33
-    },
-    {
-     "code": "3008",
-     "name": "大立光",
+     "code": "6525",
+     "name": "捷敏-KY",
      "market": "TWSE",
-     "entry": 4230.0,
-     "cur": 4025.0,
-     "hi": 5360.0,
-     "rc": -4.85,
-     "rm": 26.71
+     "entry": 127.0,
+     "cur": 199.5,
+     "hi": 221.0,
+     "rc": 57.09,
+     "rm": 74.02
+    },
+    {
+     "code": "2103",
+     "name": "台橡",
+     "market": "TWSE",
+     "entry": 22.1,
+     "cur": 23.05,
+     "hi": 25.85,
+     "rc": 5.65,
+     "rm": 18.48
+    },
+    {
+     "code": "2885",
+     "name": "元大金",
+     "market": "TWSE",
+     "entry": 65.3,
+     "cur": 68.3,
+     "hi": 72.3,
+     "rc": 4.59,
+     "rm": 10.72
+    },
+    {
+     "code": "2108",
+     "name": "南帝",
+     "market": "TWSE",
+     "entry": 30.3,
+     "cur": 28.85,
+     "hi": 30.65,
+     "rc": -4.79,
+     "rm": 1.16
     },
     {
      "code": "3048",
      "name": "益登",
      "market": "TWSE",
      "entry": 74.6,
-     "cur": 60.6,
+     "cur": 60.0,
      "hi": 76.7,
-     "rc": -17.49,
+     "rc": -18.31,
      "rm": 2.82
     }
    ],
@@ -536,9 +536,9 @@
      "name": "虹冠電",
      "market": "TWSE",
      "entry": 55.6,
-     "cur": 65.5,
+     "cur": 64.2,
      "hi": 78.2,
-     "rc": 17.81,
+     "rc": 15.47,
      "rm": 40.65
     },
     {
@@ -546,9 +546,9 @@
      "name": "順德",
      "market": "TWSE",
      "entry": 185.0,
-     "cur": 207.0,
+     "cur": 200.0,
      "hi": 233.0,
-     "rc": 11.89,
+     "rc": 8.11,
      "rm": 25.95
     },
     {
@@ -556,9 +556,9 @@
      "name": "巨有科技",
      "market": "OTC",
      "entry": 183.5,
-     "cur": 191.0,
+     "cur": 185.5,
      "hi": 229.5,
-     "rc": 5.03,
+     "rc": 2.01,
      "rm": 26.2
     },
     {
@@ -566,9 +566,9 @@
      "name": "致伸",
      "market": "TWSE",
      "entry": 77.6,
-     "cur": 68.7,
+     "cur": 68.8,
      "hi": 78.8,
-     "rc": -5.6,
+     "rc": -5.46,
      "rm": 1.55
     },
     {
@@ -576,71 +576,71 @@
      "name": "點序",
      "market": "OTC",
      "entry": 89.3,
-     "cur": 77.7,
+     "cur": 76.8,
      "hi": 93.4,
-     "rc": -12.99,
+     "rc": -14.0,
      "rm": 4.59
     }
    ],
-   "market_twse_close": 2.65,
+   "market_twse_close": 1.85,
    "market_twse_max": 6.73,
-   "market_otc_close": -0.2,
+   "market_otc_close": 0.69,
    "market_otc_max": 6.91
   },
   {
    "date": "2026-06-05",
-   "days": 21,
+   "days": 22,
    "status": "settled",
    "our": [
     {
-     "code": "6693",
-     "name": "廣閎科",
-     "market": "OTC",
-     "entry": 156.0,
-     "cur": 259.0,
-     "hi": 280.0,
-     "rc": 66.03,
-     "rm": 79.49
-    },
-    {
-     "code": "6672",
-     "name": "騰輝電子-KY",
+     "code": "2851",
+     "name": "中再保",
      "market": "TWSE",
-     "entry": 208.0,
-     "cur": 307.67,
-     "hi": 330.0,
-     "rc": 47.92,
-     "rm": 58.65
+     "entry": 35.55,
+     "cur": 38.68,
+     "hi": 40.75,
+     "rc": 15.66,
+     "rm": 17.51
     },
     {
-     "code": "2221",
-     "name": "大甲",
-     "market": "OTC",
-     "entry": 43.6,
-     "cur": 48.78,
-     "hi": 54.1,
-     "rc": 11.89,
-     "rm": 24.08
-    },
-    {
-     "code": "2497",
-     "name": "怡利電",
+     "code": "3504",
+     "name": "揚明光",
      "market": "TWSE",
-     "entry": 58.9,
-     "cur": 64.03,
-     "hi": 70.8,
-     "rc": 8.72,
-     "rm": 20.2
+     "entry": 73.7,
+     "cur": 76.73,
+     "hi": 97.8,
+     "rc": 4.12,
+     "rm": 32.7
     },
     {
-     "code": "3023",
-     "name": "信邦",
+     "code": "4904",
+     "name": "遠傳",
      "market": "TWSE",
-     "entry": 326.0,
-     "cur": 330.83,
-     "hi": 353.5,
-     "rc": 1.48,
-     "rm": 8.44
+     "entry": 101.0,
+     "cur": 103.67,
+     "hi": 113.5,
+     "rc": 2.64,
+     "rm": 12.38
+    },
+    {
+     "code": "5522",
+     "name": "遠雄",
+     "market": "TWSE",
+     "entry": 73.9,
+     "cur": 64.37,
+     "hi": 83.9,
+     "rc": -5.64,
+     "rm": 13.53
+    },
+    {
+     "code": "2603",
+     "name": "長榮",
+     "market": "TWSE",
+     "entry": 225.0,
+     "cur": 192.83,
+     "hi": 232.0,
+     "rc": -7.59,
+     "rm": 3.11
     }
    ],
    "monkey": [
@@ -695,25 +695,55 @@
      "rm": 1.08
     }
    ],
-   "market_twse_close": 3.97,
+   "market_twse_close": 3.16,
    "market_twse_max": 8.1,
-   "market_otc_close": 0.5,
+   "market_otc_close": 1.4,
    "market_otc_max": 7.66
   },
   {
    "date": "2026-05-29",
-   "days": 26,
+   "days": 27,
    "status": "settled",
    "our": [
     {
-     "code": "2885",
-     "name": "元大金",
+     "code": "2891",
+     "name": "中信金",
      "market": "TWSE",
-     "entry": 58.9,
-     "cur": 65.9,
-     "hi": 69.7,
-     "rc": 11.88,
-     "rm": 18.34
+     "entry": 61.5,
+     "cur": 70.53,
+     "hi": 73.6,
+     "rc": 14.69,
+     "rm": 19.67
+    },
+    {
+     "code": "2347",
+     "name": "聯強",
+     "market": "TWSE",
+     "entry": 85.7,
+     "cur": 91.8,
+     "hi": 97.1,
+     "rc": 7.12,
+     "rm": 13.3
+    },
+    {
+     "code": "3031",
+     "name": "佰鴻",
+     "market": "TWSE",
+     "entry": 32.85,
+     "cur": 31.18,
+     "hi": 33.7,
+     "rc": -5.07,
+     "rm": 2.59
+    },
+    {
+     "code": "8215",
+     "name": "明基材",
+     "market": "TWSE",
+     "entry": 30.75,
+     "cur": 29.13,
+     "hi": 33.4,
+     "rc": -5.26,
+     "rm": 8.62
     },
     {
      "code": "6244",
@@ -724,36 +754,6 @@
      "hi": 33.85,
      "rc": -13.61,
      "rm": 9.72
-    },
-    {
-     "code": "3709",
-     "name": "鑫聯大投控",
-     "market": "OTC",
-     "entry": 87.6,
-     "cur": 75.4,
-     "hi": 89.9,
-     "rc": -13.93,
-     "rm": 2.63
-    },
-    {
-     "code": "6261",
-     "name": "久元",
-     "market": "OTC",
-     "entry": 120.5,
-     "cur": 91.8,
-     "hi": 123.0,
-     "rc": -23.82,
-     "rm": 2.07
-    },
-    {
-     "code": "3138",
-     "name": "耀登",
-     "market": "TWSE",
-     "entry": 168.5,
-     "cur": 117.83,
-     "hi": 171.5,
-     "rc": -30.07,
-     "rm": 1.78
     }
    ],
    "monkey": [
@@ -808,65 +808,65 @@
      "rm": 7.28
     }
    ],
-   "market_twse_close": 2.25,
+   "market_twse_close": 1.46,
    "market_twse_max": 6.31,
-   "market_otc_close": -4.66,
+   "market_otc_close": -3.81,
    "market_otc_max": 2.12
   },
   {
    "date": "2026-05-22",
-   "days": 31,
+   "days": 32,
    "status": "settled",
    "our": [
     {
-     "code": "3576",
-     "name": "聯合再生",
-     "market": "TWSE",
-     "entry": 18.9,
-     "cur": 17.83,
-     "hi": 21.75,
-     "rc": -5.64,
-     "rm": 15.08
+     "code": "6127",
+     "name": "九豪",
+     "market": "OTC",
+     "entry": 53.0,
+     "cur": 83.57,
+     "hi": 91.2,
+     "rc": 57.67,
+     "rm": 72.08
     },
     {
-     "code": "2367",
-     "name": "燿華",
+     "code": "3023",
+     "name": "信邦",
      "market": "TWSE",
-     "entry": 70.3,
-     "cur": 60.0,
-     "hi": 72.5,
-     "rc": -14.65,
-     "rm": 3.13
+     "entry": 318.0,
+     "cur": 323.67,
+     "hi": 340.0,
+     "rc": 1.78,
+     "rm": 6.92
     },
     {
-     "code": "3645",
-     "name": "達邁",
+     "code": "6133",
+     "name": "金橋",
      "market": "TWSE",
-     "entry": 113.5,
-     "cur": 94.17,
-     "hi": 121.5,
-     "rc": -17.03,
-     "rm": 7.05
+     "entry": 24.3,
+     "cur": 23.1,
+     "hi": 26.9,
+     "rc": -4.94,
+     "rm": 10.7
     },
     {
-     "code": "4540",
-     "name": "全球傳動",
+     "code": "3702",
+     "name": "大聯大",
      "market": "TWSE",
-     "entry": 75.9,
-     "cur": 60.93,
-     "hi": 81.9,
-     "rc": -19.72,
-     "rm": 7.91
+     "entry": 121.0,
+     "cur": 110.83,
+     "hi": 126.5,
+     "rc": -8.4,
+     "rm": 4.55
     },
     {
-     "code": "2485",
-     "name": "兆赫",
-     "market": "TWSE",
-     "entry": 76.3,
-     "cur": 59.9,
-     "hi": 78.6,
-     "rc": -21.49,
-     "rm": 3.01
+     "code": "4533",
+     "name": "協易機",
+     "market": "OTC",
+     "entry": 33.9,
+     "cur": 29.95,
+     "hi": 35.25,
+     "rc": -11.65,
+     "rm": 3.98
     }
    ],
    "monkey": [
@@ -921,65 +921,65 @@
      "rm": 3.74
     }
    ],
-   "market_twse_close": 7.2,
+   "market_twse_close": 6.37,
    "market_twse_max": 11.46,
-   "market_otc_close": -1.16,
+   "market_otc_close": -0.27,
    "market_otc_max": 5.88
   },
   {
    "date": "2026-05-15",
-   "days": 36,
+   "days": 37,
    "status": "settled",
    "our": [
     {
-     "code": "8261",
-     "name": "富鼎",
+     "code": "2881",
+     "name": "富邦金",
      "market": "TWSE",
-     "entry": 136.0,
-     "cur": 172.5,
-     "hi": 212.5,
-     "rc": 26.84,
-     "rm": 56.25
+     "entry": 95.5,
+     "cur": 125.0,
+     "hi": 129.0,
+     "rc": 30.89,
+     "rm": 35.08
     },
     {
-     "code": "4904",
-     "name": "遠傳",
+     "code": "2356",
+     "name": "英業達",
      "market": "TWSE",
-     "entry": 97.9,
-     "cur": 109.33,
-     "hi": 112.0,
-     "rc": 11.68,
-     "rm": 14.4
+     "entry": 51.3,
+     "cur": 66.23,
+     "hi": 88.6,
+     "rc": 29.11,
+     "rm": 72.71
     },
     {
-     "code": "2027",
-     "name": "大成鋼",
+     "code": "2241",
+     "name": "艾姆勒",
      "market": "TWSE",
-     "entry": 40.1,
-     "cur": 43.25,
-     "hi": 44.75,
-     "rc": 7.86,
-     "rm": 11.6
+     "entry": 33.35,
+     "cur": 42.57,
+     "hi": 45.8,
+     "rc": 27.64,
+     "rm": 37.33
     },
     {
-     "code": "4720",
-     "name": "德淵",
+     "code": "9939",
+     "name": "宏全",
      "market": "TWSE",
-     "entry": 26.7,
-     "cur": 23.68,
-     "hi": 29.7,
-     "rc": -11.3,
-     "rm": 11.24
+     "entry": 123.5,
+     "cur": 133.0,
+     "hi": 136.0,
+     "rc": 7.69,
+     "rm": 10.12
     },
     {
-     "code": "6532",
-     "name": "瑞耘",
-     "market": "OTC",
-     "entry": 107.5,
-     "cur": 87.97,
-     "hi": 113.0,
-     "rc": -17.2,
-     "rm": 5.12
+     "code": "1216",
+     "name": "統一",
+     "market": "TWSE",
+     "entry": 75.2,
+     "cur": 76.13,
+     "hi": 77.7,
+     "rc": 1.24,
+     "rm": 3.32
     }
    ],
    "monkey": [
@@ -1034,14 +1034,14 @@
      "rm": 3.59
     }
    ],
-   "market_twse_close": 12.23,
+   "market_twse_close": 11.36,
    "market_twse_max": 16.69,
-   "market_otc_close": 3.35,
+   "market_otc_close": 4.28,
    "market_otc_max": 10.71
   },
   {
    "date": "2026-05-08",
-   "days": 41,
+   "days": 42,
    "status": "settled",
    "our": [
     {
@@ -1055,44 +1055,44 @@
      "rm": 34.26
     },
     {
-     "code": "3209",
-     "name": "全科",
+     "code": "6139",
+     "name": "亞翔",
+     "market": "TWSE",
+     "entry": 687.0,
+     "cur": 787.0,
+     "hi": 853.0,
+     "rc": 14.56,
+     "rm": 24.16
+    },
+    {
+     "code": "2108",
+     "name": "南帝",
+     "market": "TWSE",
+     "entry": 29.35,
+     "cur": 30.78,
+     "hi": 32.7,
+     "rc": 4.88,
+     "rm": 11.41
+    },
+    {
+     "code": "2103",
+     "name": "台橡",
+     "market": "TWSE",
+     "entry": 20.8,
+     "cur": 21.7,
+     "hi": 22.7,
+     "rc": 4.33,
+     "rm": 9.13
+    },
+    {
+     "code": "2497",
+     "name": "怡利電",
      "market": "TWSE",
      "entry": 59.5,
-     "cur": 73.47,
-     "hi": 83.7,
-     "rc": 23.47,
-     "rm": 40.67
-    },
-    {
-     "code": "4741",
-     "name": "泓瀚",
-     "market": "OTC",
-     "entry": 62.4,
-     "cur": 65.27,
-     "hi": 69.1,
-     "rc": 4.59,
-     "rm": 10.74
-    },
-    {
-     "code": "6903",
-     "name": "巨漢",
-     "market": "OTC",
-     "entry": 410.0,
-     "cur": 395.0,
-     "hi": 451.5,
-     "rc": -3.66,
-     "rm": 10.12
-    },
-    {
-     "code": "6218",
-     "name": "豪勉",
-     "market": "OTC",
-     "entry": 38.1,
-     "cur": 35.7,
-     "hi": 46.6,
-     "rc": -6.3,
-     "rm": 22.31
+     "cur": 61.7,
+     "hi": 65.6,
+     "rc": 3.7,
+     "rm": 10.25
     }
    ],
    "monkey": [
@@ -1147,65 +1147,65 @@
      "rm": 3.1
     }
    ],
-   "market_twse_close": 10.44,
+   "market_twse_close": 9.59,
    "market_twse_max": 14.83,
-   "market_otc_close": 2.03,
+   "market_otc_close": 2.94,
    "market_otc_max": 9.29
   },
   {
    "date": "2026-04-30",
-   "days": 46,
+   "days": 47,
    "status": "settled",
    "our": [
     {
-     "code": "5386",
-     "name": "青雲",
+     "code": "6015",
+     "name": "宏遠證",
      "market": "OTC",
-     "entry": 390.0,
-     "cur": 583.0,
-     "hi": 628.0,
-     "rc": 49.49,
-     "rm": 61.03
+     "entry": 14.6,
+     "cur": 19.02,
+     "hi": 20.05,
+     "rc": 30.25,
+     "rm": 37.33
     },
     {
-     "code": "2855",
-     "name": "統一證",
-     "market": "TWSE",
-     "entry": 36.6,
-     "cur": 46.93,
-     "hi": 49.35,
-     "rc": 28.23,
-     "rm": 34.84
+     "code": "3580",
+     "name": "友威科",
+     "market": "OTC",
+     "entry": 91.1,
+     "cur": 106.0,
+     "hi": 114.5,
+     "rc": 16.36,
+     "rm": 25.69
     },
     {
-     "code": "2885",
-     "name": "元大金",
+     "code": "2882",
+     "name": "國泰金",
      "market": "TWSE",
-     "entry": 52.6,
-     "cur": 59.3,
-     "hi": 60.2,
-     "rc": 12.74,
-     "rm": 14.45
+     "entry": 77.5,
+     "cur": 86.23,
+     "hi": 89.4,
+     "rc": 11.27,
+     "rm": 15.35
     },
     {
-     "code": "3023",
-     "name": "信邦",
+     "code": "2883",
+     "name": "凱基金",
      "market": "TWSE",
-     "entry": 289.0,
-     "cur": 312.0,
-     "hi": 323.0,
-     "rc": 7.96,
-     "rm": 11.76
+     "entry": 21.5,
+     "cur": 22.43,
+     "hi": 23.1,
+     "rc": 4.34,
+     "rm": 7.44
     },
     {
-     "code": "1326",
-     "name": "台化",
-     "market": "TWSE",
-     "entry": 51.4,
-     "cur": 49.7,
-     "hi": 54.5,
-     "rc": -3.31,
-     "rm": 6.03
+     "code": "8147",
+     "name": "正淩",
+     "market": "OTC",
+     "entry": 168.0,
+     "cur": 172.5,
+     "hi": 197.5,
+     "rc": 2.68,
+     "rm": 17.56
     }
    ],
    "monkey": [
@@ -1260,20 +1260,20 @@
      "rm": 9.8
     }
    ],
-   "market_twse_close": 15.66,
+   "market_twse_close": 14.76,
    "market_twse_max": 20.26,
-   "market_otc_close": 8.37,
+   "market_otc_close": 9.34,
    "market_otc_max": 16.08
   }
  ],
  "avg": {
-  "our_close": 3.86,
-  "our_max": 17.09,
-  "monkey_close": 0.04,
+  "our_close": 6.03,
+  "our_max": 15.91,
+  "monkey_close": -0.38,
   "monkey_max": 11.79,
-  "market_twse_close": 5.25,
+  "market_twse_close": 4.43,
   "market_twse_max": 9.07,
-  "market_otc_close": -0.02,
+  "market_otc_close": 0.87,
   "market_otc_max": 6.65
  }
 }

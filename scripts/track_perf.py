@@ -38,7 +38,7 @@ def idx_ret(idxdf, pick_date):
     return round(float(v[-1]/base-1)*100, 2), round(float(np.max(v[j:])/base-1)*100, 2)
 
 def main():
-    ours = load("picks", TOPN); monk = load("monkey")
+    ours = load("picks"); monk = load("monkey")  # picks已是選定的5檔(rank 6-10)，不再用rank_cap過濾
     if not ours: print("尚無推薦"); return
     slist = lib.load_stock_list().set_index("code")
     allcodes = set()
