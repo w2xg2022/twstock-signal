@@ -9,7 +9,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; ROOT = lib.ROOT; SETTLE = 20
+TOPN = 5; ROOT = lib.ROOT; SETTLE = 20; TWAP_LO = 18  # 出場=進場後第 TWAP_LO~SETTLE 交易日均價(TWAP)
 
 def load(dirn, rank_cap=None):
     out = {}
@@ -61,8 +61,8 @@ def main():
         if e <= 0 or C[j] <= 0: return None
         ae = e * (aC[j] / C[j])       # 對應還原買入價
         if settled and j + SETTLE < len(df):
-            # 已結束：賣出價=第15-20交易日均價(TWAP)；最高=持有期間最高
-            sell = float(np.mean(C[j+15:j+SETTLE+1])); sell_a = float(np.mean(aC[j+15:j+SETTLE+1]))
+            # 已結束：賣出價=第18-20交易日均價(TWAP)；最高=持有期間最高
+            sell = float(np.mean(C[j+TWAP_LO:j+SETTLE+1])); sell_a = float(np.mean(aC[j+TWAP_LO:j+SETTLE+1]))
             hi_r = float(np.max(H[j:j+SETTLE+1])); hi_a = float(np.max(aH[j:j+SETTLE+1]))
         else:
             # 預測中：當前價=最新收盤；最高=進場至今最高
