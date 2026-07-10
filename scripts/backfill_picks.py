@@ -5,7 +5,7 @@
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"
-ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=5  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10)
+ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=7  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取8-12,平台中央)
 D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
@@ -55,7 +55,7 @@ for sat in sats:
     held_our={c:tt for c,tt in held_our.items() if tcur-tt<HOLD}
     held_mk={c:tt for c,tt in held_mk.items() if tcur-tt<HOLD}
     cand.sort(key=lambda x:-x[1]["a120"][np.searchsorted(x[1]["dt"],ddate)])
-    # 我們: 跳過持有中後，取 rank SKIP+1 .. SKIP+TOPN (6-10名，大樣本驗證中段動能最佳)
+    # 我們: 跳過持有中後，取 rank SKIP+1 .. SKIP+TOPN (8-12名，平台中央，與6-10報酬等價但OOS更均衡)
     elig=[(code,d) for code,d in cand if code not in held_our]
     our=[]
     for code,d in elig[SKIP:SKIP+TOPN]:

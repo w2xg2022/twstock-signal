@@ -106,7 +106,6 @@ def main():
         agg.append({"date": w, "days": days, "status": st,
                     "our_close": avg(od,"rc"), "our_max": avg(od,"rm"),
                     "our_close_reg": avgr(od,"rc"), "our_max_reg": avgr(od,"rm"), "weak": nwk,
-                    "our_close_t80": top80(od,"rc"), "monkey_close_t80": top80(md,"rc"),
                     "monkey_close": avg(md,"rc"), "monkey_max": avg(md,"rm"), **mkt})
         detail.append({"date": w, "days": days, "status": st, "weak": nwk, "our": od, "monkey": md, **mkt})
     keys = ["our_close","our_max","our_close_reg","our_max_reg","monkey_close","monkey_max","market_twse_close","market_twse_max","market_otc_close","market_otc_max"]
