@@ -24,10 +24,14 @@ jobs:
         run: python scripts/build_docs_data.py
       - name: commit
         run: |
+          # 防呆：只在「最新交易日有前進」時才提交；休市/颱風/假日/資料未出 -> 跳過(自癒，隔天照常)
+          NEW=$(python -c "import json;print(json.load(open('data/performance.json'))['latest_date'])")
+          OLD=$(git show HEAD:data/performance.json | python -c "import json,sys;print(json.load(sys.stdin)['latest_date'])" 2>/dev/null || echo "")
+          if [ "$NEW" = "$OLD" ]; then echo "無新交易日 ($NEW)，跳過提交"; exit 0; fi
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add data/performance.json docs
-          git commit -m "daily refresh $(date -u +%Y-%m-%d)" || { echo "無變更"; exit 0; }
+          git commit -m "daily refresh $NEW" || { echo "無變更"; exit 0; }
           for i in 1 2 3 4 5; do
             git push && break
             echo "push 被拒，pull --rebase 後重試 ($i/5)"
