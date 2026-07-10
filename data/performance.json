@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-10T06:36:31.094279+00:00",
+ "updated": "2026-07-10T10:32:04.779006+00:00",
  "latest_date": "2026-07-09",
  "n_weeks": 18,
  "weeks": [
@@ -7,10 +7,10 @@
    "date": "2026-07-03",
    "days": 3,
    "status": "running",
-   "our_close": -4.89,
-   "our_max": 3.14,
-   "our_close_reg": -4.89,
-   "our_max_reg": 3.14,
+   "our_close": -4.92,
+   "our_max": 3.12,
+   "our_close_reg": -4.92,
+   "our_max_reg": 3.12,
    "weak": 0,
    "monkey_close": -5.67,
    "monkey_max": 3.71,
@@ -23,10 +23,10 @@
    "date": "2026-06-26",
    "days": 8,
    "status": "running",
-   "our_close": -0.64,
-   "our_max": 4.07,
-   "our_close_reg": -0.64,
-   "our_max_reg": 4.07,
+   "our_close": 0.83,
+   "our_max": 3.5,
+   "our_close_reg": 0.83,
+   "our_max_reg": 3.5,
    "weak": 0,
    "monkey_close": 2.64,
    "monkey_max": 9.54,
@@ -39,12 +39,12 @@
    "date": "2026-06-18",
    "days": 13,
    "status": "running",
-   "our_close": -0.88,
-   "our_max": 10.68,
-   "our_close_reg": -0.88,
-   "our_max_reg": 10.68,
+   "our_close": -0.44,
+   "our_max": 9.29,
+   "our_close_reg": -0.44,
+   "our_max_reg": 9.29,
    "weak": 0,
-   "monkey_close": -6.26,
+   "monkey_close": -5.52,
    "monkey_max": 6.93,
    "market_twse_close": -3.26,
    "market_twse_max": 1.37,
@@ -55,13 +55,13 @@
    "date": "2026-06-12",
    "days": 17,
    "status": "running",
-   "our_close": 7.95,
-   "our_max": 18.48,
-   "our_close_reg": 7.95,
-   "our_max_reg": 18.48,
+   "our_close": 5.22,
+   "our_max": 14.94,
+   "our_close_reg": 5.22,
+   "our_max_reg": 14.94,
    "weak": 0,
-   "monkey_close": 3.03,
-   "monkey_max": 18.95,
+   "monkey_close": 2.59,
+   "monkey_max": 20.5,
    "market_twse_close": 1.85,
    "market_twse_max": 6.73,
    "market_otc_close": 0.69,
@@ -71,12 +71,12 @@
    "date": "2026-06-05",
    "days": 22,
    "status": "running",
-   "our_close": 3.61,
-   "our_max": 13.54,
-   "our_close_reg": 3.61,
-   "our_max_reg": 13.54,
+   "our_close": 2.21,
+   "our_max": 14.06,
+   "our_close_reg": 2.21,
+   "our_max_reg": 14.06,
    "weak": 0,
-   "monkey_close": 5.18,
+   "monkey_close": 7.97,
    "monkey_max": 17.02,
    "market_twse_close": 3.16,
    "market_twse_max": 8.1,
@@ -86,14 +86,14 @@
   {
    "date": "2026-05-29",
    "days": 27,
-   "status": "settled",
-   "our_close": 11.99,
-   "our_max": 32.89,
-   "our_close_reg": 11.99,
-   "our_max_reg": 32.89,
+   "status": "running",
+   "our_close": 12.82,
+   "our_max": 31.74,
+   "our_close_reg": 12.82,
+   "our_max_reg": 31.74,
    "weak": 0,
-   "monkey_close": -2.7,
-   "monkey_max": 13.2,
+   "monkey_close": -6.28,
+   "monkey_max": 12.46,
    "market_twse_close": 1.46,
    "market_twse_max": 6.31,
    "market_otc_close": -3.81,
@@ -103,13 +103,13 @@
    "date": "2026-05-22",
    "days": 32,
    "status": "running",
-   "our_close": 8.07,
-   "our_max": 28.21,
-   "our_close_reg": 8.07,
-   "our_max_reg": 28.21,
+   "our_close": 6.28,
+   "our_max": 24.08,
+   "our_close_reg": 6.28,
+   "our_max_reg": 24.08,
    "weak": 0,
-   "monkey_close": -1.73,
-   "monkey_max": 6.91,
+   "monkey_close": 2.28,
+   "monkey_max": 8.56,
    "market_twse_close": 6.37,
    "market_twse_max": 11.46,
    "market_otc_close": -0.27,
@@ -119,13 +119,13 @@
    "date": "2026-05-15",
    "days": 37,
    "status": "running",
-   "our_close": 9.83,
-   "our_max": 26.66,
-   "our_close_reg": 9.83,
-   "our_max_reg": 26.66,
+   "our_close": 14.06,
+   "our_max": 32.95,
+   "our_close_reg": 14.06,
+   "our_max_reg": 32.95,
    "weak": 0,
-   "monkey_close": 18.66,
-   "monkey_max": 42.9,
+   "monkey_close": 20.5,
+   "monkey_max": 31.23,
    "market_twse_close": 11.36,
    "market_twse_max": 16.69,
    "market_otc_close": 4.28,
@@ -135,13 +135,13 @@
    "date": "2026-05-08",
    "days": 42,
    "status": "running",
-   "our_close": 9.95,
-   "our_max": 24.19,
-   "our_close_reg": 9.95,
-   "our_max_reg": 24.19,
+   "our_close": 11.75,
+   "our_max": 26.33,
+   "our_close_reg": 11.75,
+   "our_max_reg": 26.33,
    "weak": 0,
-   "monkey_close": -0.69,
-   "monkey_max": 11.36,
+   "monkey_close": 3.58,
+   "monkey_max": 12.17,
    "market_twse_close": 9.59,
    "market_twse_max": 14.83,
    "market_otc_close": 2.94,
@@ -151,13 +151,13 @@
    "date": "2026-04-30",
    "days": 47,
    "status": "running",
-   "our_close": 29.2,
-   "our_max": 51.46,
-   "our_close_reg": 29.2,
-   "our_max_reg": 51.46,
+   "our_close": 24.86,
+   "our_max": 45.06,
+   "our_close_reg": 24.86,
+   "our_max_reg": 45.06,
    "weak": 0,
-   "monkey_close": 8.24,
-   "monkey_max": 24.97,
+   "monkey_close": 14.9,
+   "monkey_max": 21.61,
    "market_twse_close": 14.76,
    "market_twse_max": 20.26,
    "market_otc_close": 9.34,
@@ -166,14 +166,14 @@
   {
    "date": "2026-04-24",
    "days": 51,
-   "status": "running",
-   "our_close": -4.37,
-   "our_max": 4.79,
-   "our_close_reg": -4.37,
-   "our_max_reg": 4.79,
+   "status": "settled",
+   "our_close": -3.83,
+   "our_max": 7.43,
+   "our_close_reg": -3.83,
+   "our_max_reg": 7.43,
    "weak": 0,
-   "monkey_close": -1.23,
-   "monkey_max": 5.67,
+   "monkey_close": -0.31,
+   "monkey_max": 5.15,
    "market_twse_close": 16.34,
    "market_twse_max": 21.91,
    "market_otc_close": 12.83,
@@ -182,13 +182,13 @@
   {
    "date": "2026-04-17",
    "days": 56,
-   "status": "settled",
-   "our_close": 0.13,
-   "our_max": 14.26,
-   "our_close_reg": 0.13,
-   "our_max_reg": 14.26,
+   "status": "running",
+   "our_close": -2.05,
+   "our_max": 11.1,
+   "our_close_reg": -2.05,
+   "our_max_reg": 11.1,
    "weak": 0,
-   "monkey_close": -6.42,
+   "monkey_close": -10.37,
    "monkey_max": 7.56,
    "market_twse_close": 23.9,
    "market_twse_max": 29.83,
@@ -199,12 +199,12 @@
    "date": "2026-04-10",
    "days": 61,
    "status": "settled",
-   "our_close": 15.96,
-   "our_max": 34.7,
-   "our_close_reg": 15.96,
-   "our_max_reg": 34.7,
+   "our_close": 6.06,
+   "our_max": 19.04,
+   "our_close_reg": 6.06,
+   "our_max_reg": 19.04,
    "weak": 0,
-   "monkey_close": 0.57,
+   "monkey_close": -1.38,
    "monkey_max": 15.84,
    "market_twse_close": 28.95,
    "market_twse_max": 35.12,
@@ -215,13 +215,13 @@
    "date": "2026-04-02",
    "days": 65,
    "status": "settled",
-   "our_close": -2.0,
-   "our_max": 2.76,
-   "our_close_reg": -2.0,
-   "our_max_reg": 2.76,
+   "our_close": -1.84,
+   "our_max": 2.75,
+   "our_close_reg": -1.84,
+   "our_max_reg": 2.75,
    "weak": 0,
-   "monkey_close": 14.17,
-   "monkey_max": 32.2,
+   "monkey_close": 17.96,
+   "monkey_max": 24.87,
    "market_twse_close": 38.9,
    "market_twse_max": 45.54,
    "market_otc_close": 33.13,
@@ -231,13 +231,13 @@
    "date": "2026-03-27",
    "days": 69,
    "status": "settled",
-   "our_close": -2.79,
-   "our_max": 4.67,
-   "our_close_reg": -2.79,
-   "our_max_reg": 4.67,
+   "our_close": -4.6,
+   "our_max": 4.44,
+   "our_close_reg": -4.6,
+   "our_max_reg": 4.44,
    "weak": 0,
-   "monkey_close": 13.39,
-   "monkey_max": 28.48,
+   "monkey_close": 1.48,
+   "monkey_max": 13.42,
    "market_twse_close": 39.26,
    "market_twse_max": 45.93,
    "market_otc_close": 32.78,
@@ -248,12 +248,12 @@
    "days": 74,
    "status": "settled",
    "our_close": -3.05,
-   "our_max": 6.02,
+   "our_max": 4.81,
    "our_close_reg": -3.05,
-   "our_max_reg": 6.02,
+   "our_max_reg": 4.81,
    "weak": 0,
-   "monkey_close": -5.31,
-   "monkey_max": 8.63,
+   "monkey_close": 1.94,
+   "monkey_max": 9.08,
    "market_twse_close": 37.97,
    "market_twse_max": 44.57,
    "market_otc_close": 32.92,
@@ -263,13 +263,13 @@
    "date": "2026-03-13",
    "days": 79,
    "status": "settled",
-   "our_close": 8.26,
-   "our_max": 26.51,
-   "our_close_reg": 8.26,
-   "our_max_reg": 26.51,
+   "our_close": 9.53,
+   "our_max": 27.11,
+   "our_close_reg": 9.53,
+   "our_max_reg": 27.11,
    "weak": 0,
-   "monkey_close": 9.53,
-   "monkey_max": 22.44,
+   "monkey_close": 11.6,
+   "monkey_max": 15.17,
    "market_twse_close": 37.21,
    "market_twse_max": 43.78,
    "market_otc_close": 36.25,
@@ -279,13 +279,13 @@
    "date": "2026-03-06",
    "days": 84,
    "status": "settled",
-   "our_close": 1.56,
-   "our_max": 16.15,
-   "our_close_reg": 1.56,
-   "our_max_reg": 16.15,
+   "our_close": 0.53,
+   "our_max": 11.5,
+   "our_close_reg": 0.53,
+   "our_max_reg": 11.5,
    "weak": 0,
-   "monkey_close": 2.2,
-   "monkey_max": 12.89,
+   "monkey_close": 4.73,
+   "monkey_max": 13.17,
    "market_twse_close": 39.37,
    "market_twse_max": 46.04,
    "market_otc_close": 44.18,
@@ -310,7 +310,9 @@
      "rc": 4.81,
      "rm": 4.81,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09",
+     "weight": 0.196
     },
     {
      "code": "8039",
@@ -323,7 +325,9 @@
      "rc": -0.65,
      "rm": 3.23,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09",
+     "weight": 0.1804
     },
     {
      "code": "4952",
@@ -336,7 +340,9 @@
      "rc": -3.18,
      "rm": 1.68,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09",
+     "weight": 0.2127
     },
     {
      "code": "1312",
@@ -349,7 +355,9 @@
      "rc": -7.53,
      "rm": 3.08,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09",
+     "weight": 0.2208
     },
     {
      "code": "6204",
@@ -362,7 +370,9 @@
      "rc": -17.92,
      "rm": 2.92,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09",
+     "weight": 0.1901
     }
    ],
    "monkey": [
@@ -377,7 +387,8 @@
      "rc": 5.1,
      "rm": 10.4,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "2520",
@@ -390,7 +401,8 @@
      "rc": 0.29,
      "rm": 1.29,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "8069",
@@ -403,7 +415,8 @@
      "rc": -4.52,
      "rm": 2.38,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "2305",
@@ -416,7 +429,8 @@
      "rc": -13.46,
      "rm": 2.52,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "5227",
@@ -429,7 +443,8 @@
      "rc": -15.78,
      "rm": 1.96,
      "exited": false,
-     "hold": 3
+     "hold": 3,
+     "exit_date": "2026-07-09"
     }
    ],
    "market_twse_close": -2.66,
@@ -454,7 +469,9 @@
      "rc": 6.63,
      "rm": 8.64,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09",
+     "weight": 0.1184
     },
     {
      "code": "2801",
@@ -467,7 +484,9 @@
      "rc": 2.34,
      "rm": 3.19,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09",
+     "weight": 0.2816
     },
     {
      "code": "2892",
@@ -480,7 +499,9 @@
      "rc": 2.13,
      "rm": 3.8,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09",
+     "weight": 0.2549
     },
     {
      "code": "2006",
@@ -493,7 +514,9 @@
      "rc": -0.0,
      "rm": 1.14,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09",
+     "weight": 0.258
     },
     {
      "code": "2404",
@@ -501,12 +524,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 1400.0,
-     "cur": 1200.0,
+     "cur": 1215.0,
      "hi": 1450.0,
-     "rc": -14.29,
+     "rc": -13.21,
      "rm": 3.57,
-     "exited": true,
-     "hold": 7
+     "exited": false,
+     "hold": 8,
+     "exit_date": "2026-07-09",
+     "weight": 0.0872
     }
    ],
    "monkey": [
@@ -521,7 +546,8 @@
      "rc": 8.68,
      "rm": 31.57,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "3164",
@@ -534,7 +560,8 @@
      "rc": 2.49,
      "rm": 3.74,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "1558",
@@ -547,7 +574,8 @@
      "rc": 2.1,
      "rm": 2.54,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "2834",
@@ -560,7 +588,8 @@
      "rc": 0.28,
      "rm": 1.96,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "3713",
@@ -573,7 +602,8 @@
      "rc": -0.34,
      "rm": 7.9,
      "exited": false,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-07-09"
     }
    ],
    "market_twse_close": 1.68,
@@ -598,7 +628,9 @@
      "rc": 4.88,
      "rm": 15.85,
      "exited": false,
-     "hold": 13
+     "hold": 13,
+     "exit_date": "2026-07-09",
+     "weight": 0.2107
     },
     {
      "code": "2377",
@@ -611,7 +643,9 @@
      "rc": 4.69,
      "rm": 6.5,
      "exited": false,
-     "hold": 13
+     "hold": 13,
+     "exit_date": "2026-07-09",
+     "weight": 0.1579
     },
     {
      "code": "7777",
@@ -624,7 +658,24 @@
      "rc": -0.43,
      "rm": 18.95,
      "exited": false,
-     "hold": 13
+     "hold": 13,
+     "exit_date": "2026-07-09",
+     "weight": 0.1153
+    },
+    {
+     "code": "3034",
+     "name": "聯詠",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 546.0,
+     "cur": 542.0,
+     "hi": 606.0,
+     "rc": -0.73,
+     "rm": 10.99,
+     "exited": false,
+     "hold": 13,
+     "exit_date": "2026-07-09",
+     "weight": 0.219
     },
     {
      "code": "9939",
@@ -637,20 +688,9 @@
      "rc": -6.74,
      "rm": 1.13,
      "exited": true,
-     "hold": 8
-    },
-    {
-     "code": "3034",
-     "name": "聯詠",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 546.0,
-     "cur": 509.0,
-     "hi": 606.0,
-     "rc": -6.78,
-     "rm": 10.99,
-     "exited": true,
-     "hold": 4
+     "hold": 8,
+     "exit_date": "2026-07-02",
+     "weight": 0.297
     }
    ],
    "monkey": [
@@ -665,7 +705,8 @@
      "rc": 7.14,
      "rm": 24.79,
      "exited": false,
-     "hold": 13
+     "hold": 13,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "1506",
@@ -678,7 +719,8 @@
      "rc": 3.43,
      "rm": 5.39,
      "exited": false,
-     "hold": 13
+     "hold": 13,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "6221",
@@ -686,12 +728,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 24.05,
-     "cur": 22.3,
+     "cur": 22.1,
      "hi": 24.5,
-     "rc": -7.28,
+     "rc": -8.11,
      "rm": 1.87,
-     "exited": true,
-     "hold": 5
+     "exited": false,
+     "hold": 13,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "8155",
@@ -699,12 +742,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 405.0,
-     "cur": 350.0,
+     "cur": 351.0,
      "hi": 409.5,
-     "rc": -13.58,
+     "rc": -12.04,
      "rm": 1.11,
-     "exited": true,
-     "hold": 11
+     "exited": false,
+     "hold": 13,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "2455",
@@ -712,12 +756,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 406.0,
-     "cur": 318.5,
+     "cur": 330.5,
      "hi": 412.0,
-     "rc": -21.02,
+     "rc": -18.04,
      "rm": 1.48,
-     "exited": true,
-     "hold": 11
+     "exited": false,
+     "hold": 13,
+     "exit_date": "2026-07-09"
     }
    ],
    "market_twse_close": -3.26,
@@ -742,7 +787,9 @@
      "rc": 57.09,
      "rm": 74.02,
      "exited": false,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-07-09",
+     "weight": 0.1457
     },
     {
      "code": "2885",
@@ -755,7 +802,9 @@
      "rc": 4.59,
      "rm": 10.72,
      "exited": false,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-07-09",
+     "weight": 0.2318
     },
     {
      "code": "2891",
@@ -768,7 +817,24 @@
      "rc": -1.27,
      "rm": 3.95,
      "exited": false,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-07-09",
+     "weight": 0.2187
+    },
+    {
+     "code": "2108",
+     "name": "南帝",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 30.3,
+     "cur": 27.45,
+     "hi": 30.65,
+     "rc": -9.41,
+     "rm": 1.16,
+     "exited": true,
+     "hold": 11,
+     "exit_date": "2026-07-01",
+     "weight": 0.1591
     },
     {
      "code": "5522",
@@ -781,20 +847,9 @@
      "rc": -9.77,
      "rm": 2.53,
      "exited": true,
-     "hold": 7
-    },
-    {
-     "code": "2108",
-     "name": "南帝",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 30.3,
-     "cur": 27.0,
-     "hi": 30.65,
-     "rc": -10.89,
-     "rm": 1.16,
-     "exited": true,
-     "hold": 8
+     "hold": 7,
+     "exit_date": "2026-06-25",
+     "weight": 0.2447
     }
    ],
    "monkey": [
@@ -804,12 +859,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 55.6,
-     "cur": 62.7,
-     "hi": 73.9,
-     "rc": 12.77,
-     "rm": 32.91,
-     "exited": true,
-     "hold": 9
+     "cur": 64.2,
+     "hi": 78.2,
+     "rc": 15.47,
+     "rm": 40.65,
+     "exited": false,
+     "hold": 17,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "2352",
@@ -822,7 +878,8 @@
      "rc": 5.1,
      "rm": 15.61,
      "exited": false,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "4916",
@@ -835,7 +892,8 @@
      "rc": 4.35,
      "rm": 15.46,
      "exited": false,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "8227",
@@ -848,7 +906,8 @@
      "rc": 2.01,
      "rm": 26.2,
      "exited": false,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-07-09"
     },
     {
      "code": "6485",
@@ -856,12 +915,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 89.3,
-     "cur": 81.2,
+     "cur": 76.8,
      "hi": 93.4,
-     "rc": -9.07,
+     "rc": -14.0,
      "rm": 4.59,
-     "exited": true,
-     "hold": 11
+     "exited": false,
+     "hold": 17,
+     "exit_date": "2026-07-09"
     }
    ],
    "market_twse_close": 1.85,
@@ -886,7 +946,9 @@
      "rc": 23.54,
      "rm": 28.86,
      "exited": false,
-     "hold": 22
+     "hold": 22,
+     "exit_date": "2026-07-09",
+     "weight": 0.209
     },
     {
      "code": "2851",
@@ -894,12 +956,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 35.55,
-     "cur": 37.15,
+     "cur": 34.65,
      "hi": 40.75,
-     "rc": 4.5,
+     "rc": 3.6,
      "rm": 14.63,
      "exited": true,
-     "hold": 13
+     "hold": 14,
+     "exit_date": "2026-06-29",
+     "weight": 0.1674
     },
     {
      "code": "4904",
@@ -907,12 +971,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 101.0,
-     "cur": 103.0,
+     "cur": 93.2,
      "hi": 113.5,
-     "rc": 1.98,
+     "rc": -4.18,
      "rm": 12.38,
      "exited": true,
-     "hold": 19
+     "hold": 21,
+     "exit_date": "2026-07-08",
+     "weight": 0.3071
     },
     {
      "code": "6206",
@@ -920,12 +986,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 132.0,
-     "cur": 125.5,
+     "cur": 124.5,
      "hi": 143.5,
-     "rc": -4.92,
+     "rc": -5.68,
      "rm": 8.71,
      "exited": true,
-     "hold": 13
+     "hold": 14,
+     "exit_date": "2026-06-29",
+     "weight": 0.1424
     },
     {
      "code": "2603",
@@ -938,7 +1006,9 @@
      "rc": -7.03,
      "rm": 3.11,
      "exited": true,
-     "hold": 7
+     "hold": 7,
+     "exit_date": "2026-06-17",
+     "weight": 0.1741
     }
    ],
    "monkey": [
@@ -948,12 +1018,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 54.2,
-     "cur": 65.8,
+     "cur": 68.4,
      "hi": 80.0,
-     "rc": 21.4,
+     "rc": 26.2,
      "rm": 47.6,
      "exited": true,
-     "hold": 16
+     "hold": 20,
+     "exit_date": "2026-07-07"
     },
     {
      "code": "4536",
@@ -961,12 +1032,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 158.0,
-     "cur": 171.5,
+     "cur": 173.5,
      "hi": 177.5,
-     "rc": 8.54,
+     "rc": 9.81,
      "rm": 12.34,
-     "exited": false,
-     "hold": 22
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-07-07"
     },
     {
      "code": "2033",
@@ -974,12 +1046,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 15.55,
-     "cur": 15.8,
+     "cur": 16.15,
      "hi": 17.0,
-     "rc": 1.61,
+     "rc": 3.86,
      "rm": 9.32,
-     "exited": false,
-     "hold": 22
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-07-07"
     },
     {
      "code": "4142",
@@ -987,12 +1060,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 17.4,
-     "cur": 17.15,
+     "cur": 17.7,
      "hi": 18.45,
-     "rc": -1.44,
+     "rc": 1.72,
      "rm": 6.03,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-07-07"
     },
     {
      "code": "6720",
@@ -1000,12 +1074,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 143.0,
-     "cur": 137.0,
+     "cur": 140.5,
      "hi": 157.0,
-     "rc": -4.2,
+     "rc": -1.75,
      "rm": 9.79,
      "exited": true,
-     "hold": 13
+     "hold": 20,
+     "exit_date": "2026-07-07"
     }
    ],
    "market_twse_close": 3.16,
@@ -1016,7 +1091,7 @@
   {
    "date": "2026-05-29",
    "days": 27,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
     {
@@ -1029,8 +1104,10 @@
      "hi": 291.5,
      "rc": 48.06,
      "rm": 88.06,
-     "exited": true,
-     "hold": 27
+     "exited": false,
+     "hold": 27,
+     "exit_date": "2026-07-09",
+     "weight": 0.1458
     },
     {
      "code": "2882",
@@ -1043,7 +1120,9 @@
      "rc": 16.49,
      "rm": 34.44,
      "exited": true,
-     "hold": 20
+     "hold": 20,
+     "exit_date": "2026-06-30",
+     "weight": 0.2676
     },
     {
      "code": "5410",
@@ -1051,12 +1130,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 41.6,
-     "cur": 43.65,
+     "cur": 44.0,
      "hi": 49.8,
-     "rc": 4.93,
+     "rc": 5.77,
      "rm": 19.71,
      "exited": true,
-     "hold": 19
+     "hold": 25,
+     "exit_date": "2026-07-07",
+     "weight": 0.2631
     },
     {
      "code": "2347",
@@ -1064,12 +1145,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 85.7,
-     "cur": 85.3,
-     "hi": 94.0,
-     "rc": -0.47,
-     "rm": 9.68,
-     "exited": true,
-     "hold": 5
+     "cur": 88.5,
+     "hi": 98.3,
+     "rc": 3.27,
+     "rm": 14.7,
+     "exited": false,
+     "hold": 27,
+     "exit_date": "2026-07-09",
+     "weight": 0.205
     },
     {
      "code": "2349",
@@ -1077,12 +1160,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 14.35,
-     "cur": 13.05,
+     "cur": 13.4,
      "hi": 16.15,
-     "rc": -9.06,
+     "rc": -6.62,
      "rm": 12.54,
      "exited": true,
-     "hold": 7
+     "hold": 17,
+     "exit_date": "2026-06-25",
+     "weight": 0.1184
     }
    ],
    "monkey": [
@@ -1092,38 +1177,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 169.0,
-     "cur": 192.5,
+     "cur": 185.0,
      "hi": 242.0,
-     "rc": 13.91,
+     "rc": 9.47,
      "rm": 43.2,
      "exited": true,
-     "hold": 16
-    },
-    {
-     "code": "6581",
-     "name": "鋼聯",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 112.5,
-     "cur": 109.5,
-     "hi": 115.0,
-     "rc": -2.67,
-     "rm": 2.22,
-     "exited": true,
-     "hold": 3
-    },
-    {
-     "code": "6986",
-     "name": "和迅",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 63.2,
-     "cur": 60.1,
-     "hi": 67.8,
-     "rc": -4.91,
-     "rm": 7.28,
-     "exited": true,
-     "hold": 8
+     "hold": 20,
+     "exit_date": "2026-06-30"
     },
     {
      "code": "1590",
@@ -1131,12 +1191,27 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 1360.0,
-     "cur": 1280.0,
-     "hi": 1480.0,
-     "rc": -5.88,
-     "rm": 8.82,
+     "cur": 1335.0,
+     "hi": 1430.0,
+     "rc": -1.84,
+     "rm": 5.15,
      "exited": true,
-     "hold": 27
+     "hold": 20,
+     "exit_date": "2026-06-30"
+    },
+    {
+     "code": "6581",
+     "name": "鋼聯",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 112.5,
+     "cur": 107.0,
+     "hi": 115.0,
+     "rc": -4.89,
+     "rm": 2.22,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-30"
     },
     {
      "code": "8074",
@@ -1144,12 +1219,27 @@
      "market": "OTC",
      "regime": 1,
      "entry": 76.0,
-     "cur": 65.4,
+     "cur": 70.3,
      "hi": 79.4,
-     "rc": -13.95,
+     "rc": -7.5,
      "rm": 4.47,
      "exited": true,
-     "hold": 25
+     "hold": 20,
+     "exit_date": "2026-06-30"
+    },
+    {
+     "code": "6986",
+     "name": "和迅",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 63.2,
+     "cur": 46.35,
+     "hi": 67.8,
+     "rc": -26.66,
+     "rm": 7.28,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-30"
     }
    ],
    "market_twse_close": 1.46,
@@ -1169,12 +1259,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 53.0,
-     "cur": 77.3,
+     "cur": 76.1,
      "hi": 102.0,
-     "rc": 45.85,
+     "rc": 43.58,
      "rm": 92.45,
      "exited": true,
-     "hold": 30
+     "hold": 31,
+     "exit_date": "2026-07-08",
+     "weight": 0.1473
     },
     {
      "code": "9933",
@@ -1182,12 +1274,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 39.25,
-     "cur": 40.65,
+     "cur": 41.1,
      "hi": 44.85,
-     "rc": 3.57,
+     "rc": 4.71,
      "rm": 14.27,
-     "exited": true,
-     "hold": 31
+     "exited": false,
+     "hold": 32,
+     "exit_date": "2026-07-09",
+     "weight": 0.2704
     },
     {
      "code": "3023",
@@ -1200,20 +1294,9 @@
      "rc": 2.52,
      "rm": 11.16,
      "exited": false,
-     "hold": 32
-    },
-    {
-     "code": "6133",
-     "name": "金橋",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 24.3,
-     "cur": 23.0,
-     "hi": 26.9,
-     "rc": -5.35,
-     "rm": 10.7,
-     "exited": true,
-     "hold": 10
+     "hold": 32,
+     "exit_date": "2026-07-09",
+     "weight": 0.2302
     },
     {
      "code": "8215",
@@ -1221,27 +1304,73 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 29.7,
-     "cur": 27.85,
+     "cur": 28.3,
      "hi": 33.4,
-     "rc": -6.23,
+     "rc": -4.71,
      "rm": 12.46,
+     "exited": false,
+     "hold": 32,
+     "exit_date": "2026-07-09",
+     "weight": 0.1536
+    },
+    {
+     "code": "6133",
+     "name": "金橋",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 24.3,
+     "cur": 22.75,
+     "hi": 26.9,
+     "rc": -6.38,
+     "rm": 10.7,
      "exited": true,
-     "hold": 10
+     "hold": 12,
+     "exit_date": "2026-06-10",
+     "weight": 0.1984
     }
    ],
    "monkey": [
+    {
+     "code": "4763",
+     "name": "材料*-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 43.5,
+     "cur": 46.65,
+     "hi": 47.8,
+     "rc": 7.24,
+     "rm": 9.89,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-23"
+    },
     {
      "code": "2505",
      "name": "國揚",
      "market": "TWSE",
      "regime": 1,
      "entry": 17.9,
-     "cur": 18.6,
+     "cur": 18.45,
      "hi": 20.5,
-     "rc": 3.91,
+     "rc": 3.07,
      "rm": 14.53,
      "exited": true,
-     "hold": 13
+     "hold": 20,
+     "exit_date": "2026-06-23"
+    },
+    {
+     "code": "5223",
+     "name": "安力-KY",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 25.0,
+     "cur": 25.4,
+     "hi": 27.1,
+     "rc": 1.6,
+     "rm": 8.4,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-23"
     },
     {
      "code": "1589",
@@ -1254,20 +1383,8 @@
      "rc": -0.0,
      "rm": -0.0,
      "exited": true,
-     "hold": 0
-    },
-    {
-     "code": "5223",
-     "name": "安力-KY",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 25.0,
-     "cur": 24.8,
-     "hi": 27.1,
-     "rc": -0.8,
-     "rm": 8.4,
-     "exited": true,
-     "hold": 23
+     "hold": 20,
+     "exit_date": "2026-06-23"
     },
     {
      "code": "8089",
@@ -1275,25 +1392,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 20.5,
-     "cur": 19.6,
+     "cur": 20.4,
      "hi": 22.55,
-     "rc": -4.39,
+     "rc": -0.49,
      "rm": 10.0,
      "exited": true,
-     "hold": 23
-    },
-    {
-     "code": "4763",
-     "name": "材料*-KY",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 43.5,
-     "cur": 40.3,
-     "hi": 44.2,
-     "rc": -7.36,
-     "rm": 1.61,
-     "exited": true,
-     "hold": 3
+     "hold": 20,
+     "exit_date": "2026-06-23"
     }
    ],
    "market_twse_close": 6.37,
@@ -1308,17 +1413,34 @@
    "weak": 0,
    "our": [
     {
+     "code": "2241",
+     "name": "艾姆勒",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 33.35,
+     "cur": 43.1,
+     "hi": 55.0,
+     "rc": 29.24,
+     "rm": 64.92,
+     "exited": true,
+     "hold": 35,
+     "exit_date": "2026-07-07",
+     "weight": 0.1671
+    },
+    {
      "code": "3312",
      "name": "弘憶股",
      "market": "TWSE",
      "regime": 1,
      "entry": 46.75,
-     "cur": 57.8,
+     "cur": 56.0,
      "hi": 73.2,
-     "rc": 23.64,
+     "rc": 19.79,
      "rm": 56.58,
      "exited": true,
-     "hold": 18
+     "hold": 21,
+     "exit_date": "2026-06-16",
+     "weight": 0.1586
     },
     {
      "code": "8932",
@@ -1331,7 +1453,9 @@
      "rc": 17.91,
      "rm": 22.89,
      "exited": false,
-     "hold": 37
+     "hold": 37,
+     "exit_date": "2026-07-09",
+     "weight": 0.186
     },
     {
      "code": "1810",
@@ -1344,7 +1468,9 @@
      "rc": 5.6,
      "rm": 23.99,
      "exited": true,
-     "hold": 28
+     "hold": 28,
+     "exit_date": "2026-06-26",
+     "weight": 0.2844
     },
     {
      "code": "3596",
@@ -1357,20 +1483,9 @@
      "rc": 5.43,
      "rm": 10.05,
      "exited": false,
-     "hold": 37
-    },
-    {
-     "code": "2241",
-     "name": "艾姆勒",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 33.35,
-     "cur": 32.2,
-     "hi": 39.95,
-     "rc": -3.45,
-     "rm": 19.79,
-     "exited": true,
-     "hold": 13
+     "hold": 37,
+     "exit_date": "2026-07-09",
+     "weight": 0.2039
     }
    ],
    "monkey": [
@@ -1380,12 +1495,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 143.0,
-     "cur": 286.5,
-     "hi": 365.0,
-     "rc": 103.44,
-     "rm": 155.24,
+     "cur": 281.5,
+     "hi": 281.5,
+     "rc": 96.85,
+     "rm": 96.85,
      "exited": true,
-     "hold": 37
+     "hold": 20,
+     "exit_date": "2026-06-15"
     },
     {
      "code": "2401",
@@ -1393,12 +1509,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 24.2,
-     "cur": 27.45,
+     "cur": 31.45,
      "hi": 33.0,
-     "rc": 13.43,
+     "rc": 29.96,
      "rm": 36.36,
      "exited": true,
-     "hold": 14
+     "hold": 20,
+     "exit_date": "2026-06-15"
     },
     {
      "code": "1304",
@@ -1406,25 +1523,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 12.6,
-     "cur": 12.75,
+     "cur": 12.7,
      "hi": 14.45,
-     "rc": 1.19,
+     "rc": 0.79,
      "rm": 14.68,
      "exited": true,
-     "hold": 16
-    },
-    {
-     "code": "4503",
-     "name": "金雨",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 43.6,
-     "cur": 38.5,
-     "hi": 44.8,
-     "rc": -11.7,
-     "rm": 2.75,
-     "exited": true,
-     "hold": 8
+     "hold": 20,
+     "exit_date": "2026-06-15"
     },
     {
      "code": "6791",
@@ -1432,12 +1537,27 @@
      "market": "OTC",
      "regime": 1,
      "entry": 118.5,
-     "cur": 103.0,
+     "cur": 104.5,
      "hi": 125.0,
-     "rc": -13.08,
+     "rc": -11.81,
      "rm": 5.49,
      "exited": true,
-     "hold": 15
+     "hold": 20,
+     "exit_date": "2026-06-15"
+    },
+    {
+     "code": "4503",
+     "name": "金雨",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 43.6,
+     "cur": 37.8,
+     "hi": 44.8,
+     "rc": -13.3,
+     "rm": 2.75,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-15"
     }
    ],
    "market_twse_close": 11.36,
@@ -1462,7 +1582,9 @@
      "rc": 27.37,
      "rm": 43.67,
      "exited": false,
-     "hold": 42
+     "hold": 42,
+     "exit_date": "2026-07-09",
+     "weight": 0.143
     },
     {
      "code": "2891",
@@ -1475,7 +1597,9 @@
      "rc": 26.17,
      "rm": 32.85,
      "exited": false,
-     "hold": 42
+     "hold": 42,
+     "exit_date": "2026-07-09",
+     "weight": 0.3286
     },
     {
      "code": "2049",
@@ -1483,12 +1607,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 337.0,
-     "cur": 358.0,
+     "cur": 345.0,
      "hi": 426.0,
-     "rc": 6.23,
+     "rc": 2.37,
      "rm": 26.41,
      "exited": true,
-     "hold": 18
+     "hold": 19,
+     "exit_date": "2026-06-05",
+     "weight": 0.1649
     },
     {
      "code": "2497",
@@ -1501,7 +1627,9 @@
      "rc": -2.18,
      "rm": 15.97,
      "exited": true,
-     "hold": 30
+     "hold": 30,
+     "exit_date": "2026-06-23",
+     "weight": 0.1724
     },
     {
      "code": "2108",
@@ -1509,53 +1637,44 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 29.35,
-     "cur": 27.05,
-     "hi": 29.95,
-     "rc": -7.84,
-     "rm": 2.04,
+     "cur": 28.15,
+     "hi": 32.7,
+     "rc": -4.09,
+     "rm": 11.41,
      "exited": true,
-     "hold": 14
+     "hold": 32,
+     "exit_date": "2026-06-25",
+     "weight": 0.1911
     }
    ],
    "monkey": [
-    {
-     "code": "6125",
-     "name": "廣運",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 59.4,
-     "cur": 62.4,
-     "hi": 75.9,
-     "rc": 5.05,
-     "rm": 27.78,
-     "exited": true,
-     "hold": 21
-    },
     {
      "code": "8354",
      "name": "冠好",
      "market": "OTC",
      "regime": 1,
      "entry": 15.55,
-     "cur": 16.05,
+     "cur": 16.75,
      "hi": 18.2,
-     "rc": 3.22,
+     "rc": 7.72,
      "rm": 17.04,
      "exited": true,
-     "hold": 6
+     "hold": 20,
+     "exit_date": "2026-06-08"
     },
     {
-     "code": "2607",
-     "name": "榮運",
-     "market": "TWSE",
+     "code": "6125",
+     "name": "廣運",
+     "market": "OTC",
      "regime": 1,
-     "entry": 48.1,
-     "cur": 45.5,
-     "hi": 50.4,
-     "rc": 0.15,
-     "rm": 4.78,
+     "entry": 59.4,
+     "cur": 63.1,
+     "hi": 75.9,
+     "rc": 6.23,
+     "rm": 27.78,
      "exited": true,
-     "hold": 37
+     "hold": 20,
+     "exit_date": "2026-06-08"
     },
     {
      "code": "2115",
@@ -1563,12 +1682,27 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 21.05,
-     "cur": 19.9,
-     "hi": 21.35,
-     "rc": -5.46,
-     "rm": 1.43,
+     "cur": 21.75,
+     "hi": 22.4,
+     "rc": 3.33,
+     "rm": 6.41,
      "exited": true,
-     "hold": 5
+     "hold": 20,
+     "exit_date": "2026-06-08"
+    },
+    {
+     "code": "2607",
+     "name": "榮運",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 48.1,
+     "cur": 48.6,
+     "hi": 49.95,
+     "rc": 1.04,
+     "rm": 3.85,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-08"
     },
     {
      "code": "2612",
@@ -1576,12 +1710,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 57.2,
-     "cur": 51.5,
+     "cur": 54.8,
      "hi": 58.6,
-     "rc": -6.4,
+     "rc": -0.4,
      "rm": 5.78,
      "exited": true,
-     "hold": 33
+     "hold": 20,
+     "exit_date": "2026-06-08"
     }
    ],
    "market_twse_close": 9.59,
@@ -1606,7 +1741,24 @@
      "rc": 80.44,
      "rm": 119.76,
      "exited": false,
-     "hold": 47
+     "hold": 47,
+     "exit_date": "2026-07-09",
+     "weight": 0.1093
+    },
+    {
+     "code": "3033",
+     "name": "威健",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 37.6,
+     "cur": 49.4,
+     "hi": 55.3,
+     "rc": 31.38,
+     "rm": 47.07,
+     "exited": true,
+     "hold": 45,
+     "exit_date": "2026-07-07",
+     "weight": 0.2301
     },
     {
      "code": "2882",
@@ -1619,20 +1771,9 @@
      "rc": 31.37,
      "rm": 51.61,
      "exited": true,
-     "hold": 40
-    },
-    {
-     "code": "3033",
-     "name": "威健",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 37.6,
-     "cur": 48.8,
-     "hi": 55.3,
-     "rc": 29.79,
-     "rm": 47.07,
-     "exited": true,
-     "hold": 39
+     "hold": 40,
+     "exit_date": "2026-06-30",
+     "weight": 0.2857
     },
     {
      "code": "3580",
@@ -1640,12 +1781,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 91.1,
-     "cur": 95.1,
+     "cur": 91.8,
      "hi": 118.0,
-     "rc": 4.39,
+     "rc": 0.77,
      "rm": 29.53,
      "exited": true,
-     "hold": 37
+     "hold": 38,
+     "exit_date": "2026-06-26",
+     "weight": 0.1437
     },
     {
      "code": "6026",
@@ -1653,12 +1796,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 15.55,
-     "cur": 15.55,
+     "cur": 15.4,
      "hi": 17.0,
-     "rc": 0.0,
+     "rc": -0.96,
      "rm": 9.32,
      "exited": true,
-     "hold": 8
+     "hold": 9,
+     "exit_date": "2026-05-15",
+     "weight": 0.2312
     }
    ],
    "monkey": [
@@ -1668,12 +1813,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 89.0,
-     "cur": 120.5,
+     "cur": 137.5,
      "hi": 148.0,
-     "rc": 35.39,
+     "rc": 54.49,
      "rm": 66.29,
      "exited": true,
-     "hold": 27
+     "hold": 20,
+     "exit_date": "2026-06-01"
     },
     {
      "code": "1504",
@@ -1681,38 +1827,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 65.7,
-     "cur": 71.6,
-     "hi": 89.6,
-     "rc": 8.98,
-     "rm": 36.38,
+     "cur": 78.7,
+     "hi": 80.0,
+     "rc": 19.79,
+     "rm": 21.77,
      "exited": true,
-     "hold": 25
-    },
-    {
-     "code": "1232",
-     "name": "大統益",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 148.5,
-     "cur": 144.5,
-     "hi": 150.5,
-     "rc": 2.2,
-     "rm": 2.55,
-     "exited": true,
-     "hold": 30
-    },
-    {
-     "code": "2103",
-     "name": "台橡",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 19.4,
-     "cur": 19.5,
-     "hi": 22.45,
-     "rc": 0.52,
-     "rm": 15.72,
-     "exited": true,
-     "hold": 15
+     "hold": 20,
+     "exit_date": "2026-06-01"
     },
     {
      "code": "3447",
@@ -1720,12 +1841,41 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 38.35,
-     "cur": 36.1,
+     "cur": 38.6,
      "hi": 39.85,
-     "rc": -5.87,
+     "rc": 0.65,
      "rm": 3.91,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-06-01"
+    },
+    {
+     "code": "2103",
+     "name": "台橡",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 19.4,
+     "cur": 19.45,
+     "hi": 22.45,
+     "rc": 0.26,
+     "rm": 15.72,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-01"
+    },
+    {
+     "code": "1232",
+     "name": "大統益",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 148.5,
+     "cur": 147.5,
+     "hi": 149.0,
+     "rc": -0.67,
+     "rm": 0.34,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-06-01"
     }
    ],
    "market_twse_close": 14.76,
@@ -1736,7 +1886,7 @@
   {
    "date": "2026-04-24",
    "days": 51,
-   "status": "running",
+   "status": "settled",
    "weak": 0,
    "our": [
     {
@@ -1745,12 +1895,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 31.15,
-     "cur": 31.15,
+     "cur": 30.9,
      "hi": 36.2,
-     "rc": -0.0,
+     "rc": 1.67,
      "rm": 16.21,
      "exited": true,
-     "hold": 42
+     "hold": 49,
+     "exit_date": "2026-07-07",
+     "weight": 0.093
     },
     {
      "code": "4904",
@@ -1758,12 +1910,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 95.9,
-     "cur": 92.9,
-     "hi": 99.5,
-     "rc": -3.13,
-     "rm": 3.75,
+     "cur": 93.2,
+     "hi": 113.5,
+     "rc": 0.92,
+     "rm": 18.35,
      "exited": true,
-     "hold": 21
+     "hold": 50,
+     "exit_date": "2026-07-08",
+     "weight": 0.28
     },
     {
      "code": "1102",
@@ -1771,12 +1925,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 35.55,
-     "cur": 34.35,
+     "cur": 33.6,
      "hi": 35.9,
-     "rc": -3.38,
+     "rc": -5.49,
      "rm": 0.98,
      "exited": true,
-     "hold": 14
+     "hold": 19,
+     "exit_date": "2026-05-25",
+     "weight": 0.3194
     },
     {
      "code": "2387",
@@ -1784,12 +1940,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 41.5,
-     "cur": 38.5,
+     "cur": 38.15,
      "hi": 42.0,
-     "rc": -7.23,
+     "rc": -8.07,
      "rm": 1.2,
      "exited": true,
-     "hold": 10
+     "hold": 11,
+     "exit_date": "2026-05-13",
+     "weight": 0.1421
     },
     {
      "code": "4938",
@@ -1802,48 +1960,39 @@
      "rc": -8.11,
      "rm": 1.79,
      "exited": true,
-     "hold": 12
+     "hold": 12,
+     "exit_date": "2026-05-14",
+     "weight": 0.1655
     }
    ],
    "monkey": [
-    {
-     "code": "2029",
-     "name": "盛餘",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 19.9,
-     "cur": 20.8,
-     "hi": 21.45,
-     "rc": 4.52,
-     "rm": 7.79,
-     "exited": false,
-     "hold": 51
-    },
     {
      "code": "4771",
      "name": "望隼",
      "market": "TWSE",
      "regime": 1,
      "entry": 189.0,
-     "cur": 188.0,
-     "hi": 208.0,
-     "rc": -0.53,
-     "rm": 10.05,
+     "cur": 199.5,
+     "hi": 205.0,
+     "rc": 5.56,
+     "rm": 8.47,
      "exited": true,
-     "hold": 32
+     "hold": 20,
+     "exit_date": "2026-05-26"
     },
     {
-     "code": "1307",
-     "name": "三芳",
+     "code": "2029",
+     "name": "盛餘",
      "market": "TWSE",
      "regime": 1,
-     "entry": 31.35,
-     "cur": 31.0,
-     "hi": 33.0,
-     "rc": -1.12,
-     "rm": 5.26,
+     "entry": 19.9,
+     "cur": 20.6,
+     "hi": 21.25,
+     "rc": 3.52,
+     "rm": 6.78,
      "exited": true,
-     "hold": 19
+     "hold": 20,
+     "exit_date": "2026-05-26"
     },
     {
      "code": "6186",
@@ -1851,12 +2000,27 @@
      "market": "OTC",
      "regime": 1,
      "entry": 40.65,
-     "cur": 38.85,
+     "cur": 40.05,
      "hi": 41.9,
-     "rc": -4.43,
+     "rc": -1.48,
      "rm": 3.08,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-05-26"
+    },
+    {
+     "code": "1307",
+     "name": "三芳",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 31.35,
+     "cur": 30.85,
+     "hi": 33.0,
+     "rc": -1.59,
+     "rm": 5.26,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-05-26"
     },
     {
      "code": "4102",
@@ -1864,12 +2028,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 18.55,
-     "cur": 17.7,
+     "cur": 17.15,
      "hi": 18.95,
-     "rc": -4.58,
+     "rc": -7.55,
      "rm": 2.16,
      "exited": true,
-     "hold": 5
+     "hold": 20,
+     "exit_date": "2026-05-26"
     }
    ],
    "market_twse_close": 16.34,
@@ -1880,7 +2045,7 @@
   {
    "date": "2026-04-17",
    "days": 56,
-   "status": "settled",
+   "status": "running",
    "weak": 0,
    "our": [
     {
@@ -1889,12 +2054,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 84.5,
-     "cur": 96.8,
+     "cur": 97.9,
      "hi": 122.5,
-     "rc": 14.56,
+     "rc": 15.86,
      "rm": 44.97,
      "exited": true,
-     "hold": 21
+     "hold": 30,
+     "exit_date": "2026-06-02",
+     "weight": 0.1377
     },
     {
      "code": "9933",
@@ -1902,12 +2069,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 37.7,
-     "cur": 40.65,
+     "cur": 41.1,
      "hi": 44.85,
-     "rc": 7.82,
+     "rc": 9.02,
      "rm": 18.97,
-     "exited": true,
-     "hold": 55
+     "exited": false,
+     "hold": 56,
+     "exit_date": "2026-07-09",
+     "weight": 0.1693
     },
     {
      "code": "2548",
@@ -1920,20 +2089,9 @@
      "rc": -5.84,
      "rm": 3.11,
      "exited": true,
-     "hold": 10
-    },
-    {
-     "code": "3205",
-     "name": "佰研",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 60.6,
-     "cur": 56.0,
-     "hi": 62.0,
-     "rc": -7.59,
-     "rm": 2.31,
-     "exited": true,
-     "hold": 12
+     "hold": 10,
+     "exit_date": "2026-05-05",
+     "weight": 0.242
     },
     {
      "code": "2880",
@@ -1946,7 +2104,24 @@
      "rc": -8.32,
      "rm": 1.94,
      "exited": true,
-     "hold": 6
+     "hold": 6,
+     "exit_date": "2026-04-28",
+     "weight": 0.2755
+    },
+    {
+     "code": "3205",
+     "name": "佰研",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 60.6,
+     "cur": 53.5,
+     "hi": 62.0,
+     "rc": -11.72,
+     "rm": 2.31,
+     "exited": true,
+     "hold": 16,
+     "exit_date": "2026-05-13",
+     "weight": 0.1755
     }
    ],
    "monkey": [
@@ -1956,38 +2131,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 36.8,
-     "cur": 38.35,
+     "cur": 39.35,
      "hi": 46.6,
-     "rc": 4.21,
+     "rc": 6.93,
      "rm": 26.63,
      "exited": true,
-     "hold": 29
-    },
-    {
-     "code": "2929",
-     "name": "淘帝-KY",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 6.15,
-     "cur": 5.83,
-     "hi": 6.25,
-     "rc": -5.2,
-     "rm": 1.63,
-     "exited": true,
-     "hold": 4
-    },
-    {
-     "code": "2010",
-     "name": "春源",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 24.95,
-     "cur": 23.4,
-     "hi": 25.3,
-     "rc": -6.21,
-     "rm": 1.4,
-     "exited": true,
-     "hold": 13
+     "hold": 20,
+     "exit_date": "2026-05-19"
     },
     {
      "code": "7631",
@@ -2000,7 +2150,36 @@
      "rc": -9.52,
      "rm": 4.03,
      "exited": true,
-     "hold": 13
+     "hold": 20,
+     "exit_date": "2026-05-19"
+    },
+    {
+     "code": "2010",
+     "name": "春源",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 24.95,
+     "cur": 22.45,
+     "hi": 25.3,
+     "rc": -10.02,
+     "rm": 1.4,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-05-19"
+    },
+    {
+     "code": "2929",
+     "name": "淘帝-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 6.15,
+     "cur": 5.3,
+     "hi": 6.25,
+     "rc": -13.82,
+     "rm": 1.63,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-05-19"
     },
     {
      "code": "2466",
@@ -2008,12 +2187,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 63.0,
-     "cur": 53.3,
+     "cur": 47.0,
      "hi": 65.6,
-     "rc": -15.4,
+     "rc": -25.4,
      "rm": 4.13,
      "exited": true,
-     "hold": 5
+     "hold": 20,
+     "exit_date": "2026-05-19"
     }
    ],
    "market_twse_close": 23.9,
@@ -2033,12 +2213,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 56.2,
-     "cur": 91.3,
+     "cur": 87.9,
      "hi": 115.5,
-     "rc": 62.46,
+     "rc": 56.41,
      "rm": 105.52,
      "exited": true,
-     "hold": 36
+     "hold": 37,
+     "exit_date": "2026-06-04",
+     "weight": 0.1013
     },
     {
      "code": "3023",
@@ -2051,7 +2233,9 @@
      "rc": 17.03,
      "rm": 29.49,
      "exited": true,
-     "hold": 60
+     "hold": 60,
+     "exit_date": "2026-07-08",
+     "weight": 0.1042
     },
     {
      "code": "3591",
@@ -2064,7 +2248,9 @@
      "rc": 5.1,
      "rm": 32.59,
      "exited": true,
-     "hold": 8
+     "hold": 8,
+     "exit_date": "2026-04-23",
+     "weight": 0.1108
     },
     {
      "code": "1709",
@@ -2072,12 +2258,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 19.05,
-     "cur": 18.6,
+     "cur": 18.5,
      "hi": 19.9,
-     "rc": -2.36,
+     "rc": -2.89,
      "rm": 4.46,
      "exited": true,
-     "hold": 8
+     "hold": 15,
+     "exit_date": "2026-05-05",
+     "weight": 0.2238
     },
     {
      "code": "2897",
@@ -2085,12 +2273,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 10.25,
-     "cur": 10.0,
+     "cur": 9.95,
      "hi": 10.4,
-     "rc": -2.44,
+     "rc": -2.93,
      "rm": 1.46,
      "exited": true,
-     "hold": 23
+     "hold": 24,
+     "exit_date": "2026-05-18",
+     "weight": 0.4599
     }
    ],
    "monkey": [
@@ -2100,12 +2290,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 55.0,
-     "cur": 62.1,
+     "cur": 65.6,
      "hi": 74.8,
-     "rc": 12.91,
+     "rc": 19.27,
      "rm": 36.0,
      "exited": true,
-     "hold": 18
+     "hold": 20,
+     "exit_date": "2026-05-12"
     },
     {
      "code": "6949",
@@ -2113,38 +2304,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 686.0,
-     "cur": 756.0,
+     "cur": 680.0,
      "hi": 929.0,
-     "rc": 10.2,
+     "rc": -0.87,
      "rm": 35.42,
      "exited": true,
-     "hold": 10
-    },
-    {
-     "code": "2235",
-     "name": "謚源",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 32.95,
-     "cur": 31.2,
-     "hi": 33.7,
-     "rc": -5.31,
-     "rm": 2.28,
-     "exited": true,
-     "hold": 16
-    },
-    {
-     "code": "1340",
-     "name": "勝悅-KY",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 6.45,
-     "cur": 6.05,
-     "hi": 6.55,
-     "rc": -6.2,
-     "rm": 1.55,
-     "exited": true,
-     "hold": 8
+     "hold": 20,
+     "exit_date": "2026-05-12"
     },
     {
      "code": "6870",
@@ -2152,12 +2318,41 @@
      "market": "OTC",
      "regime": 1,
      "entry": 189.0,
-     "cur": 172.5,
+     "cur": 186.5,
      "hi": 196.5,
-     "rc": -8.73,
+     "rc": -1.32,
      "rm": 3.97,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-05-12"
+    },
+    {
+     "code": "2235",
+     "name": "謚源",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 32.95,
+     "cur": 30.05,
+     "hi": 33.7,
+     "rc": -8.8,
+     "rm": 2.28,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-05-12"
+    },
+    {
+     "code": "1340",
+     "name": "勝悅-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 6.45,
+     "cur": 5.47,
+     "hi": 6.55,
+     "rc": -15.19,
+     "rm": 1.55,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-05-12"
     }
    ],
    "market_twse_close": 28.95,
@@ -2177,12 +2372,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 109.0,
-     "cur": 111.0,
+     "cur": 110.0,
      "hi": 115.5,
-     "rc": 1.83,
+     "rc": 0.92,
      "rm": 5.96,
      "exited": true,
-     "hold": 15
+     "hold": 20,
+     "exit_date": "2026-05-06",
+     "weight": 0.2554
     },
     {
      "code": "2845",
@@ -2195,7 +2392,9 @@
      "rc": -1.59,
      "rm": 1.59,
      "exited": true,
-     "hold": 12
+     "hold": 12,
+     "exit_date": "2026-04-23",
+     "weight": 0.2206
     },
     {
      "code": "5880",
@@ -2208,7 +2407,9 @@
      "rc": -2.32,
      "rm": 1.69,
      "exited": true,
-     "hold": 12
+     "hold": 12,
+     "exit_date": "2026-04-23",
+     "weight": 0.2067
     },
     {
      "code": "1218",
@@ -2221,7 +2422,9 @@
      "rc": -3.85,
      "rm": 0.51,
      "exited": true,
-     "hold": 12
+     "hold": 12,
+     "exit_date": "2026-04-23",
+     "weight": 0.2156
     },
     {
      "code": "4142",
@@ -2234,7 +2437,9 @@
      "rc": -4.07,
      "rm": 4.07,
      "exited": true,
-     "hold": 17
+     "hold": 17,
+     "exit_date": "2026-04-30",
+     "weight": 0.1017
     }
    ],
    "monkey": [
@@ -2244,25 +2449,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 90.5,
-     "cur": 148.5,
-     "hi": 197.0,
-     "rc": 64.09,
-     "rm": 117.68,
+     "cur": 161.0,
+     "hi": 172.0,
+     "rc": 77.9,
+     "rm": 90.06,
      "exited": true,
-     "hold": 28
-    },
-    {
-     "code": "2480",
-     "name": "敦陽科",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 139.0,
-     "cur": 147.0,
-     "hi": 163.0,
-     "rc": 11.3,
-     "rm": 17.27,
-     "exited": true,
-     "hold": 49
+     "hold": 20,
+     "exit_date": "2026-05-06"
     },
     {
      "code": "3290",
@@ -2270,12 +2463,27 @@
      "market": "OTC",
      "regime": 1,
      "entry": 43.6,
-     "cur": 45.05,
+     "cur": 48.05,
      "hi": 52.0,
-     "rc": 3.33,
+     "rc": 10.21,
      "rm": 19.27,
      "exited": true,
-     "hold": 27
+     "hold": 20,
+     "exit_date": "2026-05-06"
+    },
+    {
+     "code": "2480",
+     "name": "敦陽科",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 139.0,
+     "cur": 149.5,
+     "hi": 150.5,
+     "rc": 7.55,
+     "rm": 8.27,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-05-06"
     },
     {
      "code": "4942",
@@ -2283,12 +2491,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 38.4,
-     "cur": 37.25,
+     "cur": 37.9,
      "hi": 38.95,
-     "rc": -2.99,
+     "rc": -1.3,
      "rm": 1.43,
      "exited": true,
-     "hold": 26
+     "hold": 20,
+     "exit_date": "2026-05-06"
     },
     {
      "code": "2371",
@@ -2296,12 +2505,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 31.85,
-     "cur": 30.3,
+     "cur": 30.4,
      "hi": 33.55,
-     "rc": -4.87,
+     "rc": -4.55,
      "rm": 5.34,
      "exited": true,
-     "hold": 13
+     "hold": 20,
+     "exit_date": "2026-05-06"
     }
    ],
    "market_twse_close": 38.9,
@@ -2316,32 +2526,6 @@
    "weak": 0,
    "our": [
     {
-     "code": "2393",
-     "name": "億光",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 68.2,
-     "cur": 68.8,
-     "hi": 75.0,
-     "rc": 0.88,
-     "rm": 9.97,
-     "exited": true,
-     "hold": 19
-    },
-    {
-     "code": "5522",
-     "name": "遠雄",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 70.8,
-     "cur": 69.1,
-     "hi": 74.0,
-     "rc": -2.4,
-     "rm": 4.52,
-     "exited": true,
-     "hold": 18
-    },
-    {
      "code": "4532",
      "name": "瑞智",
      "market": "TWSE",
@@ -2352,20 +2536,39 @@
      "rc": -2.81,
      "rm": 1.69,
      "exited": true,
-     "hold": 7
+     "hold": 7,
+     "exit_date": "2026-04-10",
+     "weight": 0.2826
     },
     {
-     "code": "2014",
-     "name": "中鴻",
+     "code": "5522",
+     "name": "遠雄",
      "market": "TWSE",
      "regime": 1,
-     "entry": 18.9,
-     "cur": 18.05,
-     "hi": 19.5,
-     "rc": -4.5,
-     "rm": 3.17,
+     "entry": 70.8,
+     "cur": 68.4,
+     "hi": 74.0,
+     "rc": -3.39,
+     "rm": 4.52,
      "exited": true,
-     "hold": 15
+     "hold": 19,
+     "exit_date": "2026-04-28",
+     "weight": 0.1772
+    },
+    {
+     "code": "2393",
+     "name": "億光",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 68.2,
+     "cur": 65.7,
+     "hi": 75.0,
+     "rc": -3.67,
+     "rm": 9.97,
+     "exited": true,
+     "hold": 30,
+     "exit_date": "2026-05-14",
+     "weight": 0.183
     },
     {
      "code": "1907",
@@ -2373,12 +2576,29 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 27.35,
-     "cur": 25.95,
+     "cur": 25.55,
      "hi": 28.45,
-     "rc": -5.12,
+     "rc": -6.58,
      "rm": 4.02,
      "exited": true,
-     "hold": 11
+     "hold": 12,
+     "exit_date": "2026-04-17",
+     "weight": 0.243
+    },
+    {
+     "code": "2014",
+     "name": "中鴻",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 18.9,
+     "cur": 17.35,
+     "hi": 19.5,
+     "rc": -8.2,
+     "rm": 3.17,
+     "exited": true,
+     "hold": 16,
+     "exit_date": "2026-04-23",
+     "weight": 0.1142
     }
    ],
    "monkey": [
@@ -2388,25 +2608,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 3650.0,
-     "cur": 6655.0,
-     "hi": 7995.0,
-     "rc": 82.33,
-     "rm": 119.04,
+     "cur": 5220.0,
+     "hi": 5245.0,
+     "rc": 43.01,
+     "rm": 43.7,
      "exited": true,
-     "hold": 32
-    },
-    {
-     "code": "2020",
-     "name": "美亞",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 24.4,
-     "cur": 23.4,
-     "hi": 25.7,
-     "rc": 3.29,
-     "rm": 5.33,
-     "exited": true,
-     "hold": 11
+     "hold": 20,
+     "exit_date": "2026-04-29"
     },
     {
      "code": "2851",
@@ -2414,25 +2622,27 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 30.85,
-     "cur": 29.65,
+     "cur": 30.4,
      "hi": 31.85,
-     "rc": -3.89,
+     "rc": -1.46,
      "rm": 3.24,
      "exited": true,
-     "hold": 11
+     "hold": 20,
+     "exit_date": "2026-04-29"
     },
     {
-     "code": "8906",
-     "name": "花王",
-     "market": "OTC",
+     "code": "2020",
+     "name": "美亞",
+     "market": "TWSE",
      "regime": 1,
-     "entry": 29.4,
-     "cur": 27.8,
-     "hi": 30.0,
-     "rc": -5.44,
-     "rm": 2.04,
+     "entry": 24.4,
+     "cur": 22.3,
+     "hi": 25.7,
+     "rc": -1.56,
+     "rm": 5.33,
      "exited": true,
-     "hold": 13
+     "hold": 20,
+     "exit_date": "2026-04-29"
     },
     {
      "code": "6431",
@@ -2440,12 +2650,27 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 23.5,
-     "cur": 21.3,
+     "cur": 19.8,
      "hi": 26.5,
-     "rc": -9.36,
+     "rc": -15.74,
      "rm": 12.77,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-04-29"
+    },
+    {
+     "code": "8906",
+     "name": "花王",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 29.4,
+     "cur": 24.45,
+     "hi": 30.0,
+     "rc": -16.84,
+     "rm": 2.04,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-04-29"
     }
    ],
    "market_twse_close": 39.26,
@@ -2460,30 +2685,34 @@
    "weak": 0,
    "our": [
     {
-     "code": "1227",
-     "name": "佳格",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 29.9,
-     "cur": 29.85,
-     "hi": 31.25,
-     "rc": -0.17,
-     "rm": 4.52,
-     "exited": true,
-     "hold": 15
-    },
-    {
      "code": "1210",
      "name": "大成",
      "market": "TWSE",
      "regime": 1,
      "entry": 53.5,
-     "cur": 53.1,
+     "cur": 52.6,
      "hi": 56.0,
-     "rc": -0.75,
+     "rc": -1.68,
      "rm": 4.67,
      "exited": true,
-     "hold": 22
+     "hold": 27,
+     "exit_date": "2026-05-04",
+     "weight": 0.3212
+    },
+    {
+     "code": "1227",
+     "name": "佳格",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 29.9,
+     "cur": 29.35,
+     "hi": 31.25,
+     "rc": -1.84,
+     "rm": 4.52,
+     "exited": true,
+     "hold": 21,
+     "exit_date": "2026-04-23",
+     "weight": 0.3065
     },
     {
      "code": "2387",
@@ -2496,7 +2725,9 @@
      "rc": -2.41,
      "rm": 2.1,
      "exited": true,
-     "hold": 4
+     "hold": 4,
+     "exit_date": "2026-03-27",
+     "weight": 0.1456
     },
     {
      "code": "6120",
@@ -2504,12 +2735,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 13.4,
-     "cur": 12.95,
+     "cur": 12.8,
      "hi": 15.6,
-     "rc": -3.36,
+     "rc": -4.48,
      "rm": 16.42,
      "exited": true,
-     "hold": 22
+     "hold": 26,
+     "exit_date": "2026-04-30",
+     "weight": 0.077
     },
     {
      "code": "8936",
@@ -2517,12 +2750,14 @@
      "market": "OTC",
      "regime": 1,
      "entry": 54.9,
-     "cur": 50.2,
+     "cur": 50.3,
      "hi": 56.2,
-     "rc": -8.56,
+     "rc": -8.38,
      "rm": 2.37,
      "exited": true,
-     "hold": 9
+     "hold": 10,
+     "exit_date": "2026-04-08",
+     "weight": 0.1498
     }
    ],
    "monkey": [
@@ -2532,12 +2767,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 105.5,
-     "cur": 115.45,
+     "cur": 120.91,
      "hi": 125.45,
-     "rc": 9.44,
+     "rc": 14.61,
      "rm": 18.91,
      "exited": true,
-     "hold": 37
+     "hold": 20,
+     "exit_date": "2026-04-22"
     },
     {
      "code": "5465",
@@ -2545,25 +2781,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 26.05,
-     "cur": 25.95,
-     "hi": 27.95,
-     "rc": -0.38,
-     "rm": 7.29,
+     "cur": 26.45,
+     "hi": 26.5,
+     "rc": 1.54,
+     "rm": 1.73,
      "exited": true,
-     "hold": 22
-    },
-    {
-     "code": "3686",
-     "name": "達能",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 18.5,
-     "cur": 17.25,
-     "hi": 19.2,
-     "rc": -6.76,
-     "rm": 3.78,
-     "exited": true,
-     "hold": 14
+     "hold": 20,
+     "exit_date": "2026-04-22"
     },
     {
      "code": "6230",
@@ -2571,12 +2795,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 169.0,
-     "cur": 147.5,
+     "cur": 166.5,
      "hi": 176.0,
-     "rc": -12.72,
+     "rc": -1.48,
      "rm": 4.14,
      "exited": true,
-     "hold": 5
+     "hold": 20,
+     "exit_date": "2026-04-22"
     },
     {
      "code": "6894",
@@ -2584,12 +2809,27 @@
      "market": "OTC",
      "regime": 1,
      "entry": 366.0,
-     "cur": 300.0,
-     "hi": 390.0,
-     "rc": -16.13,
-     "rm": 9.03,
+     "cur": 351.5,
+     "hi": 418.0,
+     "rc": -1.73,
+     "rm": 16.86,
      "exited": true,
-     "hold": 6
+     "hold": 20,
+     "exit_date": "2026-04-22"
+    },
+    {
+     "code": "3686",
+     "name": "達能",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 18.5,
+     "cur": 17.9,
+     "hi": 19.2,
+     "rc": -3.24,
+     "rm": 3.78,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-04-22"
     }
    ],
    "market_twse_close": 37.97,
@@ -2609,12 +2849,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 79.7,
-     "cur": 108.0,
+     "cur": 108.5,
      "hi": 127.5,
-     "rc": 35.51,
+     "rc": 36.14,
      "rm": 59.97,
      "exited": true,
-     "hold": 57
+     "hold": 60,
+     "exit_date": "2026-06-11",
+     "weight": 0.27
     },
     {
      "code": "2409",
@@ -2622,12 +2864,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 16.0,
-     "cur": 17.75,
+     "cur": 17.35,
      "hi": 21.85,
-     "rc": 10.94,
+     "rc": 8.44,
      "rm": 36.56,
      "exited": true,
-     "hold": 26
+     "hold": 28,
+     "exit_date": "2026-04-27",
+     "weight": 0.1043
     },
     {
      "code": "4938",
@@ -2640,7 +2884,9 @@
      "rc": -0.26,
      "rm": 11.4,
      "exited": true,
-     "hold": 40
+     "hold": 40,
+     "exit_date": "2026-05-14",
+     "weight": 0.241
     },
     {
      "code": "2324",
@@ -2653,7 +2899,9 @@
      "rc": -2.05,
      "rm": 4.69,
      "exited": true,
-     "hold": 9
+     "hold": 9,
+     "exit_date": "2026-03-27",
+     "weight": 0.2173
     },
     {
      "code": "1710",
@@ -2661,12 +2909,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 14.05,
-     "cur": 13.65,
+     "cur": 13.55,
      "hi": 16.85,
-     "rc": -2.85,
+     "rc": -3.56,
      "rm": 19.93,
      "exited": true,
-     "hold": 15
+     "hold": 17,
+     "exit_date": "2026-04-10",
+     "weight": 0.1675
     }
    ],
    "monkey": [
@@ -2676,12 +2926,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 27.5,
-     "cur": 34.25,
+     "cur": 39.55,
      "hi": 43.2,
-     "rc": 24.55,
+     "rc": 43.82,
      "rm": 57.09,
      "exited": true,
-     "hold": 27
+     "hold": 20,
+     "exit_date": "2026-04-15"
     },
     {
      "code": "6414",
@@ -2689,38 +2940,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 277.0,
-     "cur": 319.5,
-     "hi": 362.0,
-     "rc": 15.34,
-     "rm": 30.69,
+     "cur": 294.5,
+     "hi": 297.5,
+     "rc": 6.32,
+     "rm": 7.4,
      "exited": true,
-     "hold": 41
-    },
-    {
-     "code": "2834",
-     "name": "臺企銀",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 15.05,
-     "cur": 16.15,
-     "hi": 16.95,
-     "rc": 7.31,
-     "rm": 12.62,
-     "exited": true,
-     "hold": 37
-    },
-    {
-     "code": "4580",
-     "name": "捷流閥業",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 80.1,
-     "cur": 80.6,
-     "hi": 84.5,
-     "rc": 0.62,
-     "rm": 5.49,
-     "exited": true,
-     "hold": 59
+     "hold": 20,
+     "exit_date": "2026-04-15"
     },
     {
      "code": "2816",
@@ -2728,12 +2954,41 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 30.15,
-     "cur": 30.1,
+     "cur": 31.85,
      "hi": 32.05,
-     "rc": -0.17,
+     "rc": 5.64,
      "rm": 6.3,
      "exited": true,
-     "hold": 28
+     "hold": 20,
+     "exit_date": "2026-04-15"
+    },
+    {
+     "code": "2834",
+     "name": "臺企銀",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 15.05,
+     "cur": 15.5,
+     "hi": 15.55,
+     "rc": 2.99,
+     "rm": 3.32,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-04-15"
+    },
+    {
+     "code": "4580",
+     "name": "捷流閥業",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 80.1,
+     "cur": 79.5,
+     "hi": 81.5,
+     "rc": -0.75,
+     "rm": 1.75,
+     "exited": true,
+     "hold": 20,
+     "exit_date": "2026-04-15"
     }
    ],
    "market_twse_close": 37.21,
@@ -2758,7 +3013,9 @@
      "rc": 9.5,
      "rm": 19.91,
      "exited": true,
-     "hold": 38
+     "hold": 38,
+     "exit_date": "2026-05-05",
+     "weight": 0.1433
     },
     {
      "code": "1305",
@@ -2771,7 +3028,9 @@
      "rc": 6.81,
      "rm": 44.09,
      "exited": true,
-     "hold": 27
+     "hold": 27,
+     "exit_date": "2026-04-17",
+     "weight": 0.0845
     },
     {
      "code": "2897",
@@ -2779,12 +3038,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 9.59,
-     "cur": 10.0,
+     "cur": 9.95,
      "hi": 10.4,
-     "rc": 4.28,
+     "rc": 3.75,
      "rm": 8.45,
      "exited": true,
-     "hold": 46
+     "hold": 47,
+     "exit_date": "2026-05-18",
+     "weight": 0.4278
     },
     {
      "code": "1718",
@@ -2792,12 +3053,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 7.83,
-     "cur": 7.41,
+     "cur": 7.17,
      "hi": 8.29,
-     "rc": -5.36,
+     "rc": -8.43,
      "rm": 5.87,
      "exited": true,
-     "hold": 1
+     "hold": 22,
+     "exit_date": "2026-04-10",
+     "weight": 0.1368
     },
     {
      "code": "1402",
@@ -2805,12 +3068,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 29.0,
-     "cur": 26.85,
+     "cur": 26.4,
      "hi": 29.7,
-     "rc": -7.41,
+     "rc": -8.97,
      "rm": 2.41,
      "exited": true,
-     "hold": 7
+     "hold": 9,
+     "exit_date": "2026-03-20",
+     "weight": 0.2076
     }
    ],
    "monkey": [
@@ -2820,12 +3085,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 23.6,
-     "cur": 25.15,
-     "hi": 29.95,
-     "rc": 6.57,
-     "rm": 26.91,
+     "cur": 26.95,
+     "hi": 28.85,
+     "rc": 14.19,
+     "rm": 22.25,
      "exited": true,
-     "hold": 39
+     "hold": 20,
+     "exit_date": "2026-04-08"
     },
     {
      "code": "2911",
@@ -2838,7 +3104,8 @@
      "rc": 6.03,
      "rm": 20.17,
      "exited": true,
-     "hold": 9
+     "hold": 20,
+     "exit_date": "2026-04-08"
     },
     {
      "code": "2364",
@@ -2846,12 +3113,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 60.3,
-     "cur": 61.0,
-     "hi": 66.6,
-     "rc": 1.16,
-     "rm": 10.45,
+     "cur": 63.8,
+     "hi": 68.6,
+     "rc": 5.8,
+     "rm": 13.76,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-04-08"
     },
     {
      "code": "4728",
@@ -2860,11 +3128,12 @@
      "regime": 1,
      "entry": 392.0,
      "cur": 383.5,
-     "hi": 396.0,
+     "hi": 398.5,
      "rc": 0.93,
-     "rm": 2.12,
+     "rm": 4.88,
      "exited": true,
-     "hold": 16
+     "hold": 20,
+     "exit_date": "2026-04-08"
     },
     {
      "code": "1532",
@@ -2872,12 +3141,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 22.9,
-     "cur": 22.05,
+     "cur": 22.15,
      "hi": 24.0,
-     "rc": -3.71,
+     "rc": -3.28,
      "rm": 4.8,
      "exited": true,
-     "hold": 10
+     "hold": 20,
+     "exit_date": "2026-04-08"
     }
    ],
    "market_twse_close": 39.37,
@@ -2887,12 +3157,12 @@
   }
  ],
  "avg": {
-  "our_close": 4.88,
-  "our_max": 17.95,
-  "our_close_reg": 4.88,
-  "our_max_reg": 17.95,
-  "monkey_close": 2.64,
-  "monkey_max": 16.07,
+  "our_close": 4.08,
+  "our_max": 16.29,
+  "our_close_reg": 4.08,
+  "our_max_reg": 16.29,
+  "monkey_close": 3.48,
+  "monkey_max": 13.78,
   "market_twse_close": 17.01,
   "market_twse_max": 22.41,
   "market_otc_close": 13.12,

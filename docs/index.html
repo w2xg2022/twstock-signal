@@ -31,8 +31,8 @@
 </head>
 <body>
 <h1>台股訊號選股 🧑‍💻 vs 🐒</h1>
-<p class="sub">多頭排列 → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 8～12 名（中段動能高原）。進場：推薦隔日 (最高+最低)/2。出場：ATR 移動停利（收盤自高點回落 3×ATR(14)，最長抱 60 交易日），讓贏家續跑、轉弱才出。</p>
-<p class="sub">🐒「猴子選股」= 每週全市場隨機 5 檔（以當週日期為種子，可重現）。典故：Burton Malkiel《漫步華爾街》——蒙眼猴子射飛鏢選股，未必輸給專家。<b>我們若長期贏不過猴子，就沒有存在價值。</b></p>
+<p class="sub">多頭排列 → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 8～12 名（中段動能高原）。進場：推薦隔日 (最高+最低)/2；<b>反波動(60日)加權</b>5 檔（越穩配越多）；<b>季線(MA60)濾網</b>，轉弱該檔空手。出場：<b>ATR 移動停利</b>（收盤自高點回落 3.5×ATR(14)，最長抱 60 交易日），讓贏家續跑、轉弱才出。以<b>固定 100 萬</b>試算張數，買不滿與空手皆計入<b>現金部位</b>。</p>
+<p class="sub">🐒「猴子選股」= 每週全市場隨機 5 檔（以當週日期為種子，可重現），<b>等權、固定抱 20 交易日、無濾網無停利</b>。典故：Burton Malkiel《漫步華爾街》——蒙眼猴子射飛鏢選股，未必輸給專家。<b>我們若長期贏不過猴子，就沒有存在價值。</b></p>
 
 <div class="tabs">
   <button class="active" data-tab="running">🔵 預測中</button>
@@ -40,8 +40,8 @@
   <button data-tab="board">📊 對戰總表</button>
 </div>
 
-<div class="panel active" id="running"><p class="sub">尚有個股未出場的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（公平估計，非單一成交價）；<b>出場</b>＝ATR 移動停利（收盤自持有期高點回落 3×ATR(14) 即出場，最長抱 60 交易日）。已出場者「當前價」＝出場價（標「第 N 天出」）、未出場者＝最新收盤（標「持有 N 天」）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
-<div class="panel" id="settled"><p class="sub">我們＋猴子 10 檔<b>全部出場</b>的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝ATR 移動停利觸發（收盤自高點回落 3×ATR(14)）或抱滿 60 交易日的出場價。全量回測顯示此動態出場比固定天數出場把夏普 0.12→0.47、淨值 ×1.0→×2.4（樣本內外皆成立）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
+<div class="panel active" id="running"><p class="sub">尚有個股未出場的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（公平估計，非單一成交價）；<b>配置(100萬)</b>＝反波動權重 × 100 萬換算的建議張數（不足一張走零股、轉弱空手）；<b>出場</b>＝ATR 移動停利（收盤自持有期高點回落 3.5×ATR(14) 即出場，最長抱 60 交易日）。已出場者「當前價」＝出場價（標「第 N 天出」）、未出場者＝最新收盤（標「持有 N 天」）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
+<div class="panel" id="settled"><p class="sub">我們＋猴子 10 檔<b>全部出場</b>的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝ATR 移動停利觸發（收盤自高點回落 3.5×ATR(14)）或抱滿 60 交易日的出場價。全量回測顯示此動態出場比固定天數出場把夏普 0.12→0.47、淨值 ×1.0→×2.4（樣本內外皆成立）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
 <div class="panel" id="board">
   <p class="sub">每週 5 檔平均報酬，我們 / 我們﹢市況濾網 / 猴子 / 同期大盤 並列，每列一週。<br><b>﹢市況濾網（季線）</b>＝進場當下所屬市場指數跌破季線（MA60）的個股視為空手（報酬計 0）。全量 131 個月回測顯示此濾網能把夏普 0.81→1.04、最大回撤 44%→32%（樣本內外皆成立）。<br>📌 大盤處於季線之上時，濾網不作動、兩欄會完全相同（如目前 2026 多頭）；<b>要等大盤跌破季線的下跌段，濾網空手躲開，兩欄才會拉開</b>。<br>末列<b>平均 vs 中位數</b>：平均＝跨週平均（含暴衝週）；中位數＝各週的中位數（典型一週，剔除少數暴衝/暴跌週的影響）。若平均高、中位數低，代表績效靠少數幾週撐起、不夠穩定。</p>
   <div style="overflow-x:auto"><table id="boardtab"><thead>
@@ -50,6 +50,7 @@
   </thead><tbody></tbody><tfoot></tfoot></table></div>
 </div>
 
+<div class="card warn">🐒 <b>猴子現在看起來很猛？那是「多頭窗口」的錯覺。</b> 全樣本 127 期蒙地卡羅：隨機猴子長期只有 +0.66%/月，<b>遠低於大盤 +1.61%</b>（本策略回測 +3.5%）。目前 live 只有十幾週、全泡在 2026 大多頭裡，水漲船高把猴子、我們、大盤全一起抬上去、擠在一起。<b>等遇到一段回檔，猴子會現原形、我們的領先才會浮出來</b>——小樣本必然偏離長期，是變異數不是實力。</div>
 <div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看長期。<b>僅供研究，不構成投資建議。</b></div>
 <p class="sub"><a href="https://github.com/w2xg2022/twstock-signal">GitHub 原始碼</a>　資料：yfinance 還原價、FinMind 大盤指數</p>
 
@@ -64,13 +65,29 @@ const f=v=>v==null?'—':`<span class="${v>=0?'pos':'neg'}">${v>=0?'+':''}${v.to
 const r2=v=>v==null?null:Math.round(v*100)/100;
 const mean=a=>a&&a.length?a.reduce((x,y)=>x+y,0)/a.length:null;
 const med=a=>{if(!a||!a.length)return null;const b=[...a].sort((x,y)=>x-y),n=b.length;return n%2?b[(n-1)/2]:(b[n/2-1]+b[n/2])/2;};
+const CAP=1e6;  // 固定總資金 100 萬
+const LOT=(price,target,regime)=>{  // 反波動目標金額 -> 張數/零股（轉弱空手）；回傳可讀字串與實際投入
+  if(regime===0||!(price>0)) return {txt:'空手',dep:0};
+  const lc=price*1000;
+  if(target>=lc){const n=Math.floor(target/lc); return {txt:n+'張',dep:n*1000*price};}
+  const s=Math.floor(target/(price*10))*10; return {txt:s?s+'股':'—',dep:s*price};
+};
+const nt=v=>'$'+Math.round(v).toLocaleString('en-US');
 function stockTable(title,arr,curLabel,badge){
-  let rows='';
-  (arr||[]).forEach(s=>rows+=`<tr${s.regime===0?' class="weak"':''}><td class="l">${s.code}</td><td class="l">${s.name}${s.regime===0?' <span class="tag">轉弱</span>':''}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${s.cur}<br><span class="hd">${s.exited?('第'+s.hold+'天出'):('持有'+s.hold+'天')}</span></td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`);
-  const rc=(arr||[]).map(s=>s.rc), rm=(arr||[]).map(s=>s.rm);
-  const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">平均</td><td></td><td></td><td></td><td></td><td></td><td>${f(r2(mean(rc)))}</td><td>${f(r2(mean(rm)))}</td></tr>`;
-  const mrow=`<tr style="background:#fafafa"><td class="l">中位數</td><td></td><td></td><td></td><td></td><td></td><td>${f(r2(med(rc)))}</td><td>${f(r2(med(rm)))}</td></tr>`;
-  return `<h4>${title}${badge||''}</h4><table><thead><tr><th class="l">代號</th><th class="l">簡稱</th><th>市場</th><th>買入價</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}${mrow}</tfoot></table>`;
+  const a=arr||[], eqw=a.length?1/a.length:0;  // 我們=反波動權重(s.weight)；猴子=等權
+  let rows='',totdep=0,wrc=0,wrm=0,sw=0;
+  a.forEach(s=>{
+    const w=(s.weight!=null?s.weight:eqw), L=LOT(s.entry,CAP*w,s.regime);
+    totdep+=L.dep; wrc+=w*s.rc; wrm+=w*s.rm; sw+=w;
+    rows+=`<tr${s.regime===0?' class="weak"':''}><td class="l">${s.code}</td><td class="l">${s.name}${s.regime===0?' <span class="tag">轉弱</span>':''}</td><td>${mkt(s.market)}</td><td>${s.entry}</td><td>${(w*100).toFixed(1)}%<br><span class="hd">${L.txt}</span></td><td>${s.cur}<br><span class="hd">${s.exited?('第'+s.hold+'天出'):('持有'+s.hold+'天')}</span></td><td>${s.hi}</td><td>${f(s.rc)}</td><td>${f(s.rm)}</td></tr>`;
+  });
+  const hasW=a.some(s=>s.weight!=null), cash=CAP-totdep;
+  const rc=a.map(s=>s.rc), rm=a.map(s=>s.rm);
+  const aRc=hasW?(sw?wrc/sw:null):mean(rc), aRm=hasW?(sw?wrm/sw:null):mean(rm);
+  const avg=`<tr style="font-weight:bold;background:#fafafa"><td class="l">${hasW?'加權平均':'平均'}</td><td></td><td></td><td></td><td></td><td></td><td></td><td>${f(r2(aRc))}</td><td>${f(r2(aRm))}</td></tr>`;
+  const mrow=`<tr style="background:#fafafa"><td class="l">中位數</td><td></td><td></td><td></td><td></td><td></td><td></td><td>${f(r2(med(rc)))}</td><td>${f(r2(med(rm)))}</td></tr>`;
+  const cashrow=a.length?`<tr style="background:#f0f7ff"><td class="l">💵 現金部位</td><td></td><td></td><td></td><td>${nt(cash)}<br><span class="hd">${(cash/CAP*100).toFixed(1)}%</span></td><td class="l" colspan="4"><span class="hd">投入 ${nt(totdep)}／總資金 $1,000,000</span></td></tr>`:'';
+  return `<h4>${title}${badge||''}</h4><div style="overflow-x:auto"><table><thead><tr><th class="l">代號</th><th class="l">簡稱</th><th>市場</th><th>買入價</th><th>配置(100萬)</th><th>${curLabel}</th><th>最高價</th><th>收盤%</th><th>最高%</th></tr></thead><tbody>${rows}</tbody><tfoot>${avg}${mrow}${cashrow}</tfoot></table></div>`;
 }
 function group(g){
   const cl = g.status=='settled' ? '賣出價' : '當前價';
