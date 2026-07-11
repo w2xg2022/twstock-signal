@@ -51,9 +51,10 @@ for sat in sats:
         t=np.searchsorted(d["dt"],sat+"~")-1
         if t<240 or t>=d["n"] or d["dt"][t]>sat: continue
         ddate=max(ddate,d["dt"][t]); universe.append(code)
+        if d["C"][t]>=PRICE_MAX: continue  # 高價過濾放第一道(與業務/計算邏輯一致):貴股短路,不必查後面指標
         if not d["v1"][t] or not np.isfinite(d["a120"][t]) or not np.isfinite(d["b120"][t]) or not np.isfinite(d["ext"][t]): continue
         if not np.isfinite(d["vol20"][t]) or d["vol20"][t]/1000<=VOL_MIN: continue  # 流動性:近20日日均量>1000張
-        if not (0<=d["b120"][t]<1) or d["ext"][t]>EXT or d["C"][t]>=PRICE_MAX: continue  # 加排除收盤>=200貴股
+        if not (0<=d["b120"][t]<1) or d["ext"][t]>EXT: continue
         cand.append((code,d))
     if not ddate or len(universe)<20: continue
     tcur=int(np.searchsorted(tdates,ddate))
