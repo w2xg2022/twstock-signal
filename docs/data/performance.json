@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-11T02:00:03.727528+00:00",
+ "updated": "2026-07-11T03:17:41.945968+00:00",
  "latest_date": "2026-07-09",
  "n_weeks": 39,
  "weeks": [
@@ -215,10 +215,10 @@
    "date": "2026-04-02",
    "days": 65,
    "status": "settled",
-   "our_close": -2.31,
-   "our_max": 2.73,
-   "our_close_reg": -2.31,
-   "our_max_reg": 2.73,
+   "our_close": 7.64,
+   "our_max": 17.57,
+   "our_close_reg": 7.64,
+   "our_max_reg": 17.57,
    "weak": 0,
    "monkey_close": 19.11,
    "monkey_max": 32.13,
@@ -439,10 +439,10 @@
    "date": "2025-12-19",
    "days": 129,
    "status": "settled",
-   "our_close": 12.89,
-   "our_max": 33.54,
-   "our_close_reg": 12.89,
-   "our_max_reg": 33.54,
+   "our_close": 12.44,
+   "our_max": 31.37,
+   "our_close_reg": 12.44,
+   "our_max_reg": 31.37,
    "weak": 0,
    "monkey_close": 1.93,
    "monkey_max": 11.7,
@@ -471,10 +471,10 @@
    "date": "2025-12-05",
    "days": 139,
    "status": "settled",
-   "our_close": 4.82,
-   "our_max": 15.51,
-   "our_close_reg": 4.82,
-   "our_max_reg": 15.51,
+   "our_close": 5.97,
+   "our_max": 14.27,
+   "our_close_reg": 5.97,
+   "our_max_reg": 14.27,
    "weak": 0,
    "monkey_close": 3.07,
    "monkey_max": 6.62,
@@ -503,11 +503,11 @@
    "date": "2025-11-21",
    "days": 149,
    "status": "settled",
-   "our_close": -3.01,
-   "our_max": 8.85,
-   "our_close_reg": 0.0,
-   "our_max_reg": 0.0,
-   "weak": 3,
+   "our_close": 7.13,
+   "our_max": 16.07,
+   "our_close_reg": 7.13,
+   "our_max_reg": 16.07,
+   "weak": 0,
    "monkey_close": 12.88,
    "monkey_max": 19.0,
    "market_twse_close": 73.32,
@@ -521,9 +521,9 @@
    "status": "settled",
    "our_close": 2.83,
    "our_max": 9.78,
-   "our_close_reg": 3.67,
-   "our_max_reg": 9.29,
-   "weak": 1,
+   "our_close_reg": 2.83,
+   "our_max_reg": 9.78,
+   "weak": 0,
    "monkey_close": 12.75,
    "monkey_max": 14.9,
    "market_twse_close": 67.3,
@@ -2703,6 +2703,21 @@
    "weak": 0,
    "our": [
     {
+     "code": "6658",
+     "name": "聯策",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 72.5,
+     "cur": 188.5,
+     "hi": 247.0,
+     "rc": 161.67,
+     "rm": 240.69,
+     "exited": true,
+     "hold": 44,
+     "exit_date": "2026-06-09",
+     "weight": 0.0616
+    },
+    {
      "code": "3045",
      "name": "台灣大",
      "market": "TWSE",
@@ -2715,7 +2730,22 @@
      "exited": true,
      "hold": 20,
      "exit_date": "2026-05-06",
-     "weight": 0.3916
+     "weight": 0.3186
+    },
+    {
+     "code": "2891",
+     "name": "中信金",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 54.6,
+     "cur": 52.7,
+     "hi": 56.9,
+     "rc": -3.48,
+     "rm": 4.21,
+     "exited": true,
+     "hold": 14,
+     "exit_date": "2026-04-27",
+     "weight": 0.1249
     },
     {
      "code": "1218",
@@ -2730,7 +2760,7 @@
      "exited": true,
      "hold": 12,
      "exit_date": "2026-04-23",
-     "weight": 0.3306
+     "weight": 0.269
     },
     {
      "code": "1227",
@@ -2745,7 +2775,7 @@
      "exited": true,
      "hold": 13,
      "exit_date": "2026-04-24",
-     "weight": 0.2777
+     "weight": 0.226
     }
    ],
    "monkey": [
@@ -4897,7 +4927,7 @@
      "exited": true,
      "hold": 28,
      "exit_date": "2026-02-02",
-     "weight": 0.1493
+     "weight": 0.1196
     },
     {
      "code": "6282",
@@ -4912,7 +4942,22 @@
      "exited": true,
      "hold": 27,
      "exit_date": "2026-01-30",
-     "weight": 0.125
+     "weight": 0.1002
+    },
+    {
+     "code": "2885",
+     "name": "元大金",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 40.1,
+     "cur": 43.3,
+     "hi": 49.7,
+     "rc": 7.98,
+     "rm": 23.94,
+     "exited": true,
+     "hold": 49,
+     "exit_date": "2026-03-13",
+     "weight": 0.3006
     },
     {
      "code": "2890",
@@ -4927,22 +4972,7 @@
      "exited": true,
      "hold": 60,
      "exit_date": "2026-03-30",
-     "weight": 0.3986
-    },
-    {
-     "code": "2495",
-     "name": "普安",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 29.95,
-     "cur": 30.8,
-     "hi": 37.9,
-     "rc": 2.84,
-     "rm": 26.54,
-     "exited": true,
-     "hold": 32,
-     "exit_date": "2026-02-06",
-     "weight": 0.127
+     "weight": 0.3193
     },
     {
      "code": "2867",
@@ -4957,7 +4987,7 @@
      "exited": true,
      "hold": 50,
      "exit_date": "2026-03-16",
-     "weight": 0.2001
+     "weight": 0.1603
     }
    ],
    "monkey": [
@@ -5189,19 +5219,19 @@
    "weak": 0,
    "our": [
     {
-     "code": "2885",
-     "name": "元大金",
+     "code": "1309",
+     "name": "台達化",
      "market": "TWSE",
      "regime": 1,
-     "entry": 37.3,
-     "cur": 43.3,
-     "hi": 49.7,
-     "rc": 16.09,
-     "rm": 33.24,
+     "entry": 11.75,
+     "cur": 16.3,
+     "hi": 16.8,
+     "rc": 38.72,
+     "rm": 42.98,
      "exited": true,
-     "hold": 59,
-     "exit_date": "2026-03-13",
-     "weight": 0.2226
+     "hold": 60,
+     "exit_date": "2026-03-16",
+     "weight": 0.1178
     },
     {
      "code": "2891",
@@ -5216,7 +5246,7 @@
      "exited": true,
      "hold": 52,
      "exit_date": "2026-03-04",
-     "weight": 0.2674
+     "weight": 0.3035
     },
     {
      "code": "2834",
@@ -5231,7 +5261,7 @@
      "exited": true,
      "hold": 31,
      "exit_date": "2026-01-22",
-     "weight": 0.3377
+     "weight": 0.3832
     },
     {
      "code": "2486",
@@ -5246,7 +5276,7 @@
      "exited": true,
      "hold": 22,
      "exit_date": "2026-01-09",
-     "weight": 0.0714
+     "weight": 0.081
     },
     {
      "code": "9802",
@@ -5261,7 +5291,7 @@
      "exited": true,
      "hold": 11,
      "exit_date": "2025-12-23",
-     "weight": 0.101
+     "weight": 0.1146
     }
    ],
    "monkey": [
@@ -5504,13 +5534,28 @@
    "date": "2025-11-21",
    "days": 149,
    "status": "settled",
-   "weak": 3,
+   "weak": 0,
    "our": [
+    {
+     "code": "2885",
+     "name": "元大金",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 35.85,
+     "cur": 47.25,
+     "hi": 49.7,
+     "rc": 31.8,
+     "rm": 38.63,
+     "exited": true,
+     "hold": 60,
+     "exit_date": "2026-03-02",
+     "weight": 0.2967
+    },
     {
      "code": "3010",
      "name": "華立",
      "market": "TWSE",
-     "regime": 0,
+     "regime": 1,
      "entry": 105.5,
      "cur": 106.0,
      "hi": 122.5,
@@ -5519,13 +5564,13 @@
      "exited": true,
      "hold": 25,
      "exit_date": "2025-12-30",
-     "weight": 0.4549
+     "weight": 0.2078
     },
     {
      "code": "1307",
      "name": "三芳",
      "market": "TWSE",
-     "regime": 0,
+     "regime": 1,
      "entry": 33.6,
      "cur": 32.4,
      "hi": 34.6,
@@ -5534,13 +5579,28 @@
      "exited": true,
      "hold": 25,
      "exit_date": "2025-12-30",
-     "weight": 0.3463
+     "weight": 0.1582
+    },
+    {
+     "code": "2903",
+     "name": "遠百",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 23.9,
+     "cur": 23.0,
+     "hi": 24.45,
+     "rc": -3.77,
+     "rm": 2.3,
+     "exited": true,
+     "hold": 13,
+     "exit_date": "2025-12-11",
+     "weight": 0.2465
     },
     {
      "code": "2201",
      "name": "裕隆",
      "market": "TWSE",
-     "regime": 0,
+     "regime": 1,
      "entry": 36.95,
      "cur": 33.25,
      "hi": 37.85,
@@ -5549,7 +5609,7 @@
      "exited": true,
      "hold": 11,
      "exit_date": "2025-12-09",
-     "weight": 0.1988
+     "weight": 0.0908
     }
    ],
    "monkey": [
@@ -5633,7 +5693,7 @@
    "date": "2025-11-14",
    "days": 154,
    "status": "settled",
-   "weak": 1,
+   "weak": 0,
    "our": [
     {
      "code": "2890",
@@ -5699,7 +5759,7 @@
      "code": "6432",
      "name": "今展科",
      "market": "OTC",
-     "regime": 0,
+     "regime": 1,
      "entry": 37.0,
      "cur": 33.9,
      "hi": 38.8,
@@ -6744,10 +6804,10 @@
   }
  ],
  "avg": {
-  "our_close": 3.45,
-  "our_max": 18.24,
-  "our_close_reg": 3.55,
-  "our_max_reg": 18.0,
+  "our_close": 3.99,
+  "our_max": 18.72,
+  "our_close_reg": 3.99,
+  "our_max_reg": 18.72,
   "monkey_close": 3.35,
   "monkey_max": 12.73,
   "market_twse_close": 38.66,

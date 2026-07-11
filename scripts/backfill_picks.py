@@ -9,11 +9,16 @@ ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP
 D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
-MA_REG=60  # regime季線
+MA_REG=60; REG_CONFIRM=5  # regime季線; 連續5天跌破MA60才算轉弱(避免單日插針whipsaw)
 regidx={mk:(g["date"].values.astype(str),g["idx"].values.astype(float),pd.Series(g["idx"].values.astype(float)).rolling(MA_REG).mean().values) for mk,g in idxs.items()}
 def regime_ok(mk,ddate):
     dd,v,ma=regidx[mk]; ii=np.searchsorted(dd,ddate,"right")-1
-    return bool(ii>=MA_REG and np.isfinite(ma[ii]) and v[ii]>=ma[ii])
+    if ii<MA_REG: return True
+    cb=0  # 從ii往回數連續跌破MA60的天數
+    for k in range(ii,-1,-1):
+        if np.isfinite(ma[k]) and v[k]<ma[k]: cb+=1
+        else: break
+    return cb<REG_CONFIRM  # 連續<5天跌破=仍進場; >=5天=轉弱空手
 lst=pd.read_csv(f"{ROOT}/../twstock-alphabeta/data/stock_list.csv",dtype={"code":str})
 info={r.code:(r.name,r.market) for r in lst.itertuples()}
 S={}
@@ -57,14 +62,15 @@ for sat in sats:
     cand.sort(key=lambda x:-x[1]["a120"][np.searchsorted(x[1]["dt"],ddate)])
     # 我們: 跳過持有中後，取 rank SKIP+1 .. SKIP+TOPN (6-10名，配4層排列，head-to-head報酬/空頭勝8-12)
     elig=[(code,d) for code,d in cand if code not in held_our]
+    start=min(SKIP,max(0,len(elig)-TOPN))  # 弱市候選不足時自動下移,保證取滿TOPN檔、仍避開最前段
     our=[]
-    for code,d in elig[SKIP:SKIP+TOPN]:
+    for code,d in elig[start:start+TOPN]:
         tt=np.searchsorted(d["dt"],ddate)
         our.append(dict(code=code,name=d["name"],market=d["mk"],close=round(float(d["C"][tt]),2),
             alpha120=round(float(d["a120"][tt]),4),beta120=round(float(d["b120"][tt]),3),d240h=round(float(d["d240h"][tt]),4)))
         held_our[code]=tcur
     if not our: continue
-    D=pd.DataFrame(our); D["rank"]=range(D_RANK_START,D_RANK_START+len(D))
+    D=pd.DataFrame(our); D["rank"]=range(start+1,start+1+len(D))
     D["regime"]=D["market"].map(lambda m:int(regime_ok(m,ddate))); D.insert(0,"pick_date",ddate)
     D.to_csv(f"{ROOT}/data/picks/{ddate}.csv",index=False,encoding="utf-8-sig")
     # 猴子: 隨機5(排除持有中的猴子)

@@ -8,7 +8,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; ROOT = lib.ROOT  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10,配4層排列,walk-forward最佳); MA_REG:regime季線
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; REG_CONFIRM = 5; ROOT = lib.ROOT  # SKIP:取6-10(4層排列,walk-forward最佳); MA_REG:regime季線; REG_CONFIRM:連續5天跌破才轉弱
 
 def held_within(dirn, taiex_dates, cur_i):
     """回傳 20交易日內已推薦的 code 集合"""
@@ -27,10 +27,14 @@ def main():
     idx = {"TWSE": lib.fetch_index("TAIEX"), "OTC": lib.fetch_index("TPEx")}
     tdates = idx["TWSE"]["date"].values.astype(str)
     # regime 濾網：市場指數站上 MA60(季線) 才進場，跌破則該市場的股票標記轉弱(建議空手)
-    regime_ok = {}
+    regime_ok = {}  # 連續5天跌破MA60才轉弱(避免單日插針whipsaw)
     for mk, idf in idx.items():
         v = idf["idx"].values.astype(float); ma = pd.Series(v).rolling(MA_REG).mean().values
-        regime_ok[mk] = bool(len(v) >= MA_REG and np.isfinite(ma[-1]) and v[-1] >= ma[-1])
+        cb = 0  # 從最後一日往回數連續跌破MA60的天數
+        for k in range(len(v) - 1, -1, -1):
+            if np.isfinite(ma[k]) and v[k] < ma[k]: cb += 1
+            else: break
+        regime_ok[mk] = bool(len(v) >= MA_REG and cb < REG_CONFIRM)
     print(f"regime: 上市{'多' if regime_ok['TWSE'] else '空'} 上櫃{'多' if regime_ok['OTC'] else '空'}", flush=True)
     prices = lib.fetch_prices(stocks["ticker"].tolist())
     print(f"抓到價格 {len(prices)} 檔", flush=True)
@@ -58,8 +62,10 @@ def main():
     # 我們：alpha 由高到低，跳過持有中，取第 SKIP+1 .. SKIP+TOPN 名(6-10,配4層排列，walk-forward最佳)
     # 大樣本證實：最高alpha最延伸易回落，第6-13名是穩健高原;取8-12(平台中央)與6-10報酬統計等價(t≈0.2)但OOS前後半更均衡
     D = pd.DataFrame(rows).sort_values("alpha120", ascending=False)
-    D = D[~D["code"].isin(held_our)].reset_index(drop=True).iloc[SKIP:SKIP+TOPN].reset_index(drop=True)
-    D["rank"] = range(SKIP + 1, SKIP + 1 + len(D))
+    D = D[~D["code"].isin(held_our)].reset_index(drop=True)
+    start = min(SKIP, max(0, len(D) - TOPN))  # 弱市候選不足時自動下移,保證取滿TOPN檔、仍避開最前段
+    D = D.iloc[start:start+TOPN].reset_index(drop=True)
+    D["rank"] = range(start + 1, start + 1 + len(D))
     D["regime"] = D["market"].map(lambda m: int(regime_ok[m]))  # 1=市場站上季線可進場; 0=轉弱建議空手
     D.insert(0, "pick_date", data_date)
     os.makedirs(os.path.join(ROOT, "data", "picks"), exist_ok=True)
