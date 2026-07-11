@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """一次性: 回填 2026-03-07 起每週六歷史推薦(我們+猴子)
-我們: 多頭排列 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序 → 前5
+我們: 4層多頭排列(MA5>10>20>60) → 量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第6-10名
 去重: 20交易日內(=持有期)已推薦過的股票不再選,由下一名遞補；猴子同理(重抽)
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"
-ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=7  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取8-12,平台中央)
+ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=5  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10,配4層排列,walk-forward最佳)
 D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
@@ -26,8 +26,8 @@ for r in lst.itertuples():
     if g["idx"].isna().all(): continue
     C=g["Close"].values.astype(float);IX=g["idx"].values.astype(float);D=g["date"].values.astype(str)
     c=pd.Series(C);ix=pd.Series(IX);s=c.pct_change();m=ix.pct_change()
-    m5=c.rolling(5).mean().values;m10=c.rolling(10).mean().values;m20=c.rolling(20).mean().values
-    v1=(m5>m10)&(m10>m20)&(np.r_[False,m20[1:]>m20[:-1]])&(C>m5)
+    m5=c.rolling(5).mean().values;m10=c.rolling(10).mean().values;m20=c.rolling(20).mean().values;m60=c.rolling(60).mean().values
+    v1=(m5>m10)&(m10>m20)&(m20>m60)&(np.r_[False,m20[1:]>m20[:-1]])&(C>m5)  # 4層多頭排列
     b120=(s.rolling(120).cov(m)/m.rolling(120).var()).values
     a120=((s.rolling(120).mean()-pd.Series(b120)*m.rolling(120).mean())*252).values
     ext=C/m20-1; d240h=(C/c.rolling(240).max().values-1)
@@ -55,7 +55,7 @@ for sat in sats:
     held_our={c:tt for c,tt in held_our.items() if tcur-tt<HOLD}
     held_mk={c:tt for c,tt in held_mk.items() if tcur-tt<HOLD}
     cand.sort(key=lambda x:-x[1]["a120"][np.searchsorted(x[1]["dt"],ddate)])
-    # 我們: 跳過持有中後，取 rank SKIP+1 .. SKIP+TOPN (8-12名，平台中央，與6-10報酬等價但OOS更均衡)
+    # 我們: 跳過持有中後，取 rank SKIP+1 .. SKIP+TOPN (6-10名，配4層排列，head-to-head報酬/空頭勝8-12)
     elig=[(code,d) for code,d in cand if code not in held_our]
     our=[]
     for code,d in elig[SKIP:SKIP+TOPN]:

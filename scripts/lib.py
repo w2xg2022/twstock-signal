@@ -141,8 +141,8 @@ def compute_features(df, idx_df):
     aC = g["aClose"].values.astype(float)  # 還原收盤(指標用)
     rawC = g["Close"].values.astype(float)  # 原始收盤(顯示用)
     IX = g["idx"].values.astype(float); c = pd.Series(aC); s = c.pct_change(); m = pd.Series(IX).pct_change()
-    m5 = c.rolling(5).mean().values; m10 = c.rolling(10).mean().values; m20 = c.rolling(20).mean().values
-    v1 = (m5 > m10) & (m10 > m20) & (np.r_[False, m20[1:] > m20[:-1]]) & (aC > m5)
+    m5 = c.rolling(5).mean().values; m10 = c.rolling(10).mean().values; m20 = c.rolling(20).mean().values; m60 = c.rolling(60).mean().values
+    v1 = (m5 > m10) & (m10 > m20) & (m20 > m60) & (np.r_[False, m20[1:] > m20[:-1]]) & (aC > m5)  # 4層多頭排列(MA5>10>20>60,MA20上升,收盤>MA5)
     b120 = s.rolling(120).cov(m) / m.rolling(120).var()
     a120 = ((s.rolling(120).mean() - b120 * m.rolling(120).mean()) * 252).values
     d240h = (aC / c.rolling(240).max().values - 1)

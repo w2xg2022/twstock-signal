@@ -38,6 +38,6 @@ jobs:
           # picks 與 monkey 基本檔名相同會撞名，複製成不同檔名再上傳
           cp "data/picks/$DATE.csv" "/tmp/picks_$DATE.csv"
           cp "data/monkey/$DATE.csv" "/tmp/monkey_$DATE.csv"
-          gh release create "picks-$DATE" "/tmp/picks_$DATE.csv" "/tmp/monkey_$DATE.csv" --title "本週推薦 $DATE 🧑‍💻 vs 🐒" --notes $'策略：多頭排列 → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序取第8~12名(中段動能高原,避開最延伸前段)。\n買入價＝推薦隔日(高+低)/2；反波動(60日)加權5檔；季線(MA60)濾網,轉弱空手；出場＝ATR移動停利(收盤自高點回落3.5×ATR(14),最長抱60天)；固定100萬試算張數,買不滿與空手計入現金。\n同附一組隨機5檔猴子(等權、固定抱20交易日、無濾網無停利，Malkiel《漫步華爾街》)一起對戰。詳見 README 與 docs 績效頁。' || echo "release 已存在"
+          gh release create "picks-$DATE" "/tmp/picks_$DATE.csv" "/tmp/monkey_$DATE.csv" --title "本週推薦 $DATE 🧑‍💻 vs 🐒" --notes $'策略：4層多頭排列(MA5>10>20>60) → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序取第6~10名(中段動能高原,避開最延伸前段;4層+6-10經walk-forward驗證最佳)。\n買入價＝推薦隔日(高+低)/2；反波動(60日)加權5檔；季線(MA60)濾網,轉弱空手；出場＝ATR移動停利(收盤自高點回落3.5×ATR(14),最長抱60天)；固定100萬試算張數,買不滿與空手計入現金。\n同附一組隨機5檔猴子(等權、固定抱20交易日、無濾網無停利，Malkiel《漫步華爾街》)一起對戰。詳見 README 與 docs 績效頁。' || echo "release 已存在"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

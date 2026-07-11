@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """產生本週推薦（我們 + 猴子）：
-我們：多頭排列 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序 → 前5
+我們：4層多頭排列(MA5>10>20>60,MA20升,收盤>MA5) → 量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序取第6-10名
 去重：20交易日內(持有期)已推薦過的不再選，由下一名遞補；猴子同理
 猴子：全市場隨機5檔，以資料日為種子 — 致敬 Malkiel《漫步華爾街》"""
 import os, sys, glob, random
@@ -8,7 +8,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 7; MA_REG = 60; ROOT = lib.ROOT  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取8-12,平台中央); MA_REG:regime季線
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; ROOT = lib.ROOT  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10,配4層排列,walk-forward最佳); MA_REG:regime季線
 
 def held_within(dirn, taiex_dates, cur_i):
     """回傳 20交易日內已推薦的 code 集合"""
@@ -55,7 +55,7 @@ def main():
     cur_i = int(np.searchsorted(tdates, data_date))
     held_our = held_within("picks", tdates, cur_i)
     held_mk = held_within("monkey", tdates, cur_i)
-    # 我們：alpha 由高到低，跳過持有中，取第 SKIP+1 .. SKIP+TOPN 名(8-12,平台中央)
+    # 我們：alpha 由高到低，跳過持有中，取第 SKIP+1 .. SKIP+TOPN 名(6-10,配4層排列，walk-forward最佳)
     # 大樣本證實：最高alpha最延伸易回落，第6-13名是穩健高原;取8-12(平台中央)與6-10報酬統計等價(t≈0.2)但OOS前後半更均衡
     D = pd.DataFrame(rows).sort_values("alpha120", ascending=False)
     D = D[~D["code"].isin(held_our)].reset_index(drop=True).iloc[SKIP:SKIP+TOPN].reset_index(drop=True)
