@@ -11,7 +11,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20    # 只抓價格重算報酬，不重新選股
+    timeout-minutes: 40    # 抓價格重算報酬(含10隻猴子~1000檔,較重)，不重新選股
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

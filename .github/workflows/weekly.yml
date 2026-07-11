@@ -11,7 +11,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30    # 只抓yfinance價格(~10分)+2個指數；無FinMind限流問題
+    timeout-minutes: 50    # 選股抓全市場+track_perf抓10隻猴子~1000檔；無FinMind限流問題
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

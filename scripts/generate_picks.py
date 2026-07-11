@@ -8,7 +8,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; REG_CONFIRM = 5; ROOT = lib.ROOT  # SKIP:取6-10(4層排列,walk-forward最佳); MA_REG:regime季線; REG_CONFIRM:連續5天跌破才轉弱
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; REG_CONFIRM = 5; PRICE_MAX = 200; N_MONKEY = 10; ROOT = lib.ROOT  # SKIP:取6-10; REG_CONFIRM:連續5天跌破才轉弱; PRICE_MAX:排除推薦日收盤>=200的貴股(高原120-200,取200); N_MONKEY:猴子隻數(取報酬中位數那隻展示)
 
 def held_within(dirn, taiex_dates, cur_i):
     """回傳 20交易日內已推薦的 code 集合"""
@@ -43,10 +43,13 @@ def main():
     for r in stocks.itertuples():
         df = prices.get(r.ticker)
         if df is None or idx[r.market].empty: continue
+        cl = float(df["Close"].iloc[-1])  # 便宜取最新收盤:先擋貴股,超過門檻不必算features
+        if not np.isfinite(cl) or cl <= 0: continue
+        data_date = max(data_date, str(df["date"].iloc[-1]))
+        universe.append((r.code, r.name, r.market, cl))  # 全市場(給猴子),不套價格/選股濾網
+        if cl >= PRICE_MAX: continue  # 貴股:已入universe,跳過4層MA/alpha/beta計算(省算力)
         feat = lib.compute_features(df, idx[r.market]); last = feat.iloc[-1]
         if not np.isfinite(last["Close"]) or last["Close"] <= 0: continue
-        data_date = max(data_date, str(last["date"]))
-        universe.append((r.code, r.name, r.market, float(last["Close"])))
         if not last["v1"]: continue
         if not np.isfinite(last["vol20"]) or last["vol20"]/1000 <= VOL_MIN: continue  # 流動性:近20日日均量>1000張
         if not all(np.isfinite(last[k]) for k in ["alpha120","beta120","ext"]): continue
@@ -73,13 +76,17 @@ def main():
     print(f"資料日 {data_date}, 我們推薦前{len(D)}:", flush=True)
     for r in D.itertuples():
         print(f"  {r.rank} {r.code} {r.name[:8]} α120={r.alpha120:+.2f} β120={r.beta120:.2f}", flush=True)
-    # 猴子：以資料日為種子隨機5檔（排除持有中）
-    rng = random.Random(int(data_date.replace("-", "")))
-    pool = [u for u in universe if u[0] not in held_mk]; rng.shuffle(pool); mk = pool[:TOPN]
-    M = pd.DataFrame([dict(pick_date=data_date, code=c, name=n, market=m, close=round(cl,2)) for c,n,m,cl in mk])
+    # 猴子：N_MONKEY 隻各自隨機5檔(種子=資料日×100+k,可重現);track_perf 取報酬中位數那隻展示,移除單隻運氣
+    rows_m = []; base = int(data_date.replace("-", ""))
+    for k in range(N_MONKEY):
+        rng = random.Random(base * 100 + k)
+        pool = universe[:]; rng.shuffle(pool); mk = pool[:TOPN]  # 全市場隨機5(不套濾網、不去重,各猴子獨立)
+        for c,n,m,cl in mk:
+            rows_m.append(dict(monkey_id=k, pick_date=data_date, code=c, name=n, market=m, close=round(cl,2)))
+    M = pd.DataFrame(rows_m)
     os.makedirs(os.path.join(ROOT, "data", "monkey"), exist_ok=True)
     M.to_csv(os.path.join(ROOT, "data", "monkey", f"{data_date}.csv"), index=False, encoding="utf-8-sig")
-    print(f"🐒 猴子隨機5檔: {', '.join(c for c,_,_,_ in mk)}", flush=True)
+    print(f"🐒 產生 {N_MONKEY} 隻猴子(各5檔), track_perf 取報酬中位數展示", flush=True)
 
 if __name__ == "__main__":
     main()

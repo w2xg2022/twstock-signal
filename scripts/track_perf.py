@@ -67,7 +67,7 @@ def main():
         if dpt >= VOLW:
             r = C[dpt-VOLW+1:dpt+1] / C[dpt-VOLW:dpt] - 1
             v = float(np.std(r, ddof=1))
-            if np.isfinite(v) and v > 0: iv = 1.0 / v
+            if np.isfinite(v) and v > 0: iv = 1.0 / (v * v)  # 反變異數(1/vol²);比1/vol更集中到穩定股,組合層夏普↑回撤↓
         if naive:
             # 猴子：天真固定持有 MONKEY_HOLD 交易日賣出(無ATR、無系統)
             cap = j + MONKEY_HOLD
@@ -98,6 +98,18 @@ def main():
         out.sort(key=lambda x: -x["rc"])
         return out
 
+    def median_monkey(df, pick_date):
+        """N隻猴子取「報酬中位數那隻」展示(移除單隻運氣);向後相容單一猴子檔"""
+        if df is None or len(df) == 0: return []
+        if "monkey_id" not in df.columns: return week_list(df, pick_date, naive=True)
+        cands = []
+        for _, sub in df.groupby("monkey_id"):
+            dl = week_list(sub, pick_date, naive=True)
+            if dl: cands.append((float(np.mean([x["rc"] for x in dl])), dl))
+        if not cands: return []
+        cands.sort(key=lambda x: x[0])
+        return cands[len(cands) // 2][1]  # 報酬中位數那隻(10隻取index5)
+
     weeks = sorted(set(ours) | set(monk), reverse=True)
     agg = []; detail = []
     for w in weeks:
@@ -106,7 +118,7 @@ def main():
         days = int(len(tdates) - 1 - j)
         mtc, mtm = idx_ret(taiex, w); moc, mom = idx_ret(tpex, w)
         od = week_list(ours[w], w) if w in ours else []
-        md = week_list(monk[w], w, naive=True) if w in monk else []  # 猴子:隨機5檔+天真固定抱MONKEY_HOLD天
+        md = median_monkey(monk[w], w) if w in monk else []  # 猴子:N隻取報酬中位數那隻(天真固定抱MONKEY_HOLD天)
         settled = bool(od + md) and all(x["exited"] for x in od + md)  # 我們+猴子全部出場才算已結束
         # 反波動加權(僅我們)：權重=1/vol60 正規化；有缺 vol 則整週退回等權。猴子維持等權(天真)
         ivs = [x["iv"] for x in od]

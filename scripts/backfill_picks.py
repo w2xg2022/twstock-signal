@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""一次性: 回填 2025-10-04 起每週六歷史推薦(我們+猴子)
+"""一次性: 回填 2025-01-04 起每週六歷史推薦(我們+猴子)
 我們: 4層多頭排列(MA5>10>20>60) → 量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第6-10名
 去重: 20交易日內(=持有期)已推薦過的股票不再選,由下一名遞補；猴子同理(重抽)
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"
-ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=5  # VOL_MIN:近20日日均量下限(張); SKIP:跳過前幾名(取6-10,配4層排列,walk-forward最佳)
+ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP=5; PRICE_MAX=200; N_MONKEY=10  # SKIP:取6-10; PRICE_MAX:排除收盤>=200貴股; N_MONKEY:猴子隻數(取報酬中位數展示)
 D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
@@ -42,7 +42,7 @@ last=max(max(d["dt"]) for d in S.values())
 print(f"載入{len(S)}檔, 資料至{last}")
 os.makedirs(f"{ROOT}/data/picks",exist_ok=True); os.makedirs(f"{ROOT}/data/monkey",exist_ok=True)
 # 依時間順序(舊→新)處理，維護持有中集合
-sats=[]; d0=dt.date(2025,10,4)
+sats=[]; d0=dt.date(2025,1,4)
 while d0.strftime("%Y-%m-%d")<=last: sats.append(d0.strftime("%Y-%m-%d")); d0+=dt.timedelta(days=7)
 held_our={}; held_mk={}; n=0  # code -> 決策日交易索引
 for sat in sats:
@@ -53,7 +53,7 @@ for sat in sats:
         ddate=max(ddate,d["dt"][t]); universe.append(code)
         if not d["v1"][t] or not np.isfinite(d["a120"][t]) or not np.isfinite(d["b120"][t]) or not np.isfinite(d["ext"][t]): continue
         if not np.isfinite(d["vol20"][t]) or d["vol20"][t]/1000<=VOL_MIN: continue  # 流動性:近20日日均量>1000張
-        if not (0<=d["b120"][t]<1) or d["ext"][t]>EXT: continue
+        if not (0<=d["b120"][t]<1) or d["ext"][t]>EXT or d["C"][t]>=PRICE_MAX: continue  # 加排除收盤>=200貴股
         cand.append((code,d))
     if not ddate or len(universe)<20: continue
     tcur=int(np.searchsorted(tdates,ddate))
@@ -73,11 +73,13 @@ for sat in sats:
     D=pd.DataFrame(our); D["rank"]=range(start+1,start+1+len(D))
     D["regime"]=D["market"].map(lambda m:int(regime_ok(m,ddate))); D.insert(0,"pick_date",ddate)
     D.to_csv(f"{ROOT}/data/picks/{ddate}.csv",index=False,encoding="utf-8-sig")
-    # 猴子: 隨機5(排除持有中的猴子)
-    rng=random.Random(int(ddate.replace("-","")))
-    pool=[c for c in universe if c not in held_mk]; rng.shuffle(pool); mk=pool[:TOPN]
-    for c in mk: held_mk[c]=tcur
-    M=pd.DataFrame([dict(pick_date=ddate,code=c,name=S[c]["name"],market=S[c]["mk"],
-        close=round(float(S[c]["C"][np.searchsorted(S[c]["dt"],ddate)]),2)) for c in mk])
-    M.to_csv(f"{ROOT}/data/monkey/{ddate}.csv",index=False,encoding="utf-8-sig"); n+=1
+    # 猴子: N_MONKEY 隻各自隨機5(全市場,各猴子獨立,不去重);track_perf 取報酬中位數那隻展示
+    base=int(ddate.replace("-","")); rows_m=[]
+    for k in range(N_MONKEY):
+        rng=random.Random(base*100+k)
+        pool=universe[:]; rng.shuffle(pool); mk=pool[:TOPN]
+        for c in mk:
+            tt=np.searchsorted(S[c]["dt"],ddate)
+            rows_m.append(dict(monkey_id=k,pick_date=ddate,code=c,name=S[c]["name"],market=S[c]["mk"],close=round(float(S[c]["C"][tt]),2)))
+    pd.DataFrame(rows_m).to_csv(f"{ROOT}/data/monkey/{ddate}.csv",index=False,encoding="utf-8-sig"); n+=1
 print(f"回填 {n} 週 (延伸<{EXT*100:.0f}% + 去重{HOLD}交易日)")
