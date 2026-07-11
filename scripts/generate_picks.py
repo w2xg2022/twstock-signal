@@ -26,6 +26,7 @@ def main():
     print(f"全市場 {len(stocks)} 檔", flush=True)
     idx = {"TWSE": lib.fetch_index("TAIEX"), "OTC": lib.fetch_index("TPEx")}
     tdates = idx["TWSE"]["date"].values.astype(str)
+    tdays = {mk: set(idf["date"].values.astype(str)) for mk, idf in idx.items()}  # FinMind大盤指數=權威交易日曆;有無交易日以此為準,擋yfinance休市日(如颱風)的幽靈K棒
     # regime 濾網：市場指數站上 MA60(季線) 才進場，跌破則該市場的股票標記轉弱(建議空手)
     regime_ok = {}  # 連續5天跌破MA60才轉弱(避免單日插針whipsaw)
     for mk, idf in idx.items():
@@ -43,6 +44,8 @@ def main():
     for r in stocks.itertuples():
         df = prices.get(r.ticker)
         if df is None or idx[r.market].empty: continue
+        df = df[df["date"].isin(tdays[r.market])]  # 只保留FinMind有的交易日:擋掉yfinance幽靈K棒(否則會誤產休市日推薦)
+        if len(df) < 260: continue
         cl = float(df["Close"].iloc[-1])  # 便宜取最新收盤:先擋貴股,超過門檻不必算features
         if not np.isfinite(cl) or cl <= 0: continue
         data_date = max(data_date, str(df["date"].iloc[-1]))
