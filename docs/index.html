@@ -11,6 +11,9 @@
   .tabs button{padding:8px 16px;border:1px solid #ccc;background:#f7f7f7;border-radius:8px;cursor:pointer;font-size:.95rem}
   .tabs button.active{background:#1565c0;color:#fff;border-color:#1565c0;font-weight:bold}
   .panel{display:none} .panel.active{display:block}
+  .qtabs{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}
+  .qtabs .qbtn{padding:4px 12px;border:1px solid #ccc;background:#f0f0f0;border-radius:6px;cursor:pointer;font-size:.82rem}
+  .qtabs .qbtn.active{background:#455a64;color:#fff;border-color:#455a64;font-weight:bold}
   table{border-collapse:collapse;width:100%;margin:4px 0;font-size:.86rem}
   th,td{border:1px solid #e5e5e5;padding:4px 7px;text-align:right;white-space:nowrap} th{background:#f5f5f5}
   td.l,th.l{text-align:left}
@@ -41,7 +44,7 @@
 </div>
 
 <div class="panel active" id="running"><p class="sub">尚有個股未出場的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（公平估計，非單一成交價）；<b>配置(100萬)</b>＝反波動權重 × 100 萬換算的建議張數（不足一張走零股、轉弱空手）；<b>出場</b>＝ATR 移動停利（收盤自持有期高點回落 3.5×ATR(14) 即出場，最長抱 60 交易日）。已出場者「當前價」＝出場價（標「第 N 天出」）、未出場者＝最新收盤（標「持有 N 天」）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
-<div class="panel" id="settled"><p class="sub">我們＋猴子 10 檔<b>全部出場</b>的週次，新→舊（最多 10 組）。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝ATR 移動停利觸發（收盤自高點回落 3.5×ATR(14)）或抱滿 60 交易日的出場價。全量回測顯示此動態出場比固定天數出場把夏普 0.12→0.47、淨值 ×1.0→×2.4（樣本內外皆成立）。報酬率以還原價計算（含除權息）。</p><div id="set-groups"></div></div>
+<div class="panel" id="settled"><p class="sub">我們＋猴子 10 檔<b>全部出場</b>的週次，依<b>季度</b>分頁、每季內新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝ATR 移動停利觸發（收盤自高點回落 3.5×ATR(14)）或抱滿 60 交易日的出場價。全量回測顯示此動態出場比固定天數出場把夏普 0.12→0.47、淨值 ×1.0→×2.4（樣本內外皆成立）。報酬率以還原價計算（含除權息）。<br>📌 回填自 2025-10 起（含 2025 Q4 非純多頭段），比只看 2026 多頭窗口更公允。</p><div class="qtabs" id="set-qtabs"></div><div id="set-groups"></div></div>
 <div class="panel" id="board">
   <p class="sub">每週 5 檔平均報酬，我們 / 我們﹢市況濾網 / 猴子 / 同期大盤 並列，每列一週。<br><b>﹢市況濾網（季線）</b>＝進場當下所屬市場指數跌破季線（MA60）的個股視為空手（報酬計 0）。全量 131 個月回測顯示此濾網能把夏普 0.81→1.04、最大回撤 44%→32%（樣本內外皆成立）。<br>📌 大盤處於季線之上時，濾網不作動、兩欄會完全相同（如目前 2026 多頭）；<b>要等大盤跌破季線的下跌段，濾網空手躲開，兩欄才會拉開</b>。<br>末列<b>平均 vs 中位數</b>：平均＝跨週平均（含暴衝週）；中位數＝各週的中位數（典型一週，剔除少數暴衝/暴跌週的影響）。若平均高、中位數低，代表績效靠少數幾週撐起、不夠穩定。</p>
   <div style="overflow-x:auto"><table id="boardtab"><thead>
@@ -103,9 +106,19 @@ function group(g){
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
   const run=(d.detail||[]).filter(g=>g.status=='running');
-  const set=(d.detail||[]).filter(g=>g.status=='settled').slice(0,10);
+  const set=(d.detail||[]).filter(g=>g.status=='settled');
   document.getElementById('run-groups').innerHTML=run.length?run.map(group).join(''):'<p class="sub">目前沒有預測中的週次</p>';
-  document.getElementById('set-groups').innerHTML=set.length?set.map(group).join(''):'<p class="sub">尚無已結束的週次</p>';
+  // 已結束：依季度分子頁（季度由資料自動推導，新季度來自動出現）
+  const qOf=dt=>dt.slice(0,4)+' Q'+(Math.floor((+dt.slice(5,7)-1)/3)+1);
+  const byQ={}; set.forEach(g=>{const q=qOf(g.date);(byQ[q]=byQ[q]||[]).push(g);});
+  const quarters=Object.keys(byQ).sort().reverse();
+  const qtabs=document.getElementById('set-qtabs'), sg=document.getElementById('set-groups');
+  const renderQ=q=>{sg.innerHTML=(byQ[q]||[]).map(group).join('');};
+  if(quarters.length){
+    qtabs.innerHTML=quarters.map((q,i)=>`<button class="qbtn${i?'':' active'}" data-q="${q}">${q}（${byQ[q].length}）</button>`).join('');
+    qtabs.querySelectorAll('.qbtn').forEach(b=>b.onclick=()=>{qtabs.querySelectorAll('.qbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderQ(b.dataset.q);});
+    renderQ(quarters[0]);
+  } else sg.innerHTML='<p class="sub">尚無已結束的週次</p>';
   const tb=document.querySelector('#boardtab tbody');
   (d.weeks||[]).forEach(w=>tb.insertAdjacentHTML('beforeend',
     `<tr><td class="l">${w.date}</td><td>${w.days}</td><td>${f(w.our_close)}</td><td>${f(w.our_max)}</td><td>${f(w.our_close_reg)}</td><td>${f(w.our_max_reg)}</td><td>${f(w.monkey_close)}</td><td>${f(w.monkey_max)}</td><td>${f(w.market_twse_close)}</td><td>${f(w.market_twse_max)}</td><td>${f(w.market_otc_close)}</td><td>${f(w.market_otc_max)}</td></tr>`));
