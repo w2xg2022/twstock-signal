@@ -46,7 +46,7 @@ def main():
     allcodes = set()
     for d in list(ours.values()) + list(monk.values()): allcodes |= set(d["code"].astype(str))
     prices = lib.fetch_prices([slist.loc[c, "ticker"] for c in allcodes if c in slist.index])
-    taiex = lib.fetch_index("TAIEX"); tpex = lib.fetch_index("TPEx")
+    taiex = lib.fetch_index("TAIEX", price=True); tpex = lib.fetch_index("TPEx", price=True)  # 大盤基準展示用價格指數(加權指數,跟一般人看盤一樣)
     tdates = taiex["date"].values.astype(str); latest = tdates[-1]
 
     def detail_one(code, name, market, pick_date, regime=1, naive=False):

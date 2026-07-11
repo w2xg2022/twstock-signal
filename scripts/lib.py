@@ -89,18 +89,20 @@ def fetch_prices(tickers, start="2014-01-01"):
 
 IDXDIR = os.path.join(ROOT, "data", "index")
 
-def fetch_index(data_id, start="2014-01-01"):
-    """抓大盤指數；成功則更新快取 data/index/<id>.csv，失敗則用快取 fallback（對限流/FinMind當機穩健）"""
-    cache = os.path.join(IDXDIR, f"{data_id}.csv")
+def fetch_index(data_id, start="2014-01-01", price=False):
+    """抓大盤指數。price=False→含息報酬指數(TaiwanStockTotalReturnIndex,給 alpha/beta 用,與還原股價一致)；
+    price=True→價格指數(TaiwanStockPrice.close,加權指數,給大盤基準展示,跟一般人看盤一樣、避免報酬指數在此環境偏高)。
+    成功更新快取，失敗用快取 fallback"""
+    ds, col = ("TaiwanStockPrice", "close") if price else ("TaiwanStockTotalReturnIndex", "price")
+    cache = os.path.join(IDXDIR, f"{data_id}{'_px' if price else ''}.csv")  # 兩種指數分開快取
     for use_tok in ([True, False] if TOKEN else [False]):
-        p = dict(dataset="TaiwanStockTotalReturnIndex", data_id=data_id, start_date=start)
+        p = dict(dataset=ds, data_id=data_id, start_date=start)
         if use_tok: p["token"] = TOKEN
         try:
             j = requests.get(FINMIND, params=p, timeout=60).json()
             if j.get("status") == 200 and j.get("data"):
                 d = pd.DataFrame(j["data"])
-                v = [c for c in d.columns if c not in ("date","stock_id") and pd.api.types.is_numeric_dtype(d[c])][0]
-                out = d[["date", v]].rename(columns={v: "idx"})
+                out = d[["date", col]].rename(columns={col: "idx"})
                 os.makedirs(IDXDIR, exist_ok=True); out.to_csv(cache, index=False)
                 return out
         except Exception: pass

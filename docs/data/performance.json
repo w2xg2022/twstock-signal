@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-11T05:59:17.866027+00:00",
+ "updated": "2026-07-11T06:31:43.129160+00:00",
  "latest_date": "2026-07-09",
  "n_weeks": 76,
  "weeks": [
@@ -14,10 +14,10 @@
    "weak": 0,
    "monkey_close": -3.93,
    "monkey_max": 2.17,
-   "market_twse_close": -2.66,
-   "market_twse_max": -0.23,
-   "market_otc_close": -3.77,
-   "market_otc_max": -0.58
+   "market_twse_close": -2.82,
+   "market_twse_max": -0.24,
+   "market_otc_close": -3.98,
+   "market_otc_max": -0.63
   },
   {
    "date": "2026-06-26",
@@ -30,10 +30,10 @@
    "weak": 0,
    "monkey_close": 3.38,
    "monkey_max": 11.3,
-   "market_twse_close": 1.68,
-   "market_twse_max": 5.14,
-   "market_otc_close": 3.05,
-   "market_otc_max": 7.72
+   "market_twse_close": 1.27,
+   "market_twse_max": 4.99,
+   "market_otc_close": 2.63,
+   "market_otc_max": 7.56
   },
   {
    "date": "2026-06-18",
@@ -46,9 +46,9 @@
    "weak": 0,
    "monkey_close": -0.51,
    "monkey_max": 6.06,
-   "market_twse_close": -3.26,
-   "market_twse_max": 1.37,
-   "market_otc_close": -5.14,
+   "market_twse_close": -3.71,
+   "market_twse_max": 1.35,
+   "market_otc_close": -5.62,
    "market_otc_max": 0.72
   },
   {
@@ -62,10 +62,10 @@
    "weak": 0,
    "monkey_close": -0.26,
    "monkey_max": 13.64,
-   "market_twse_close": 4.4,
-   "market_twse_max": 6.73,
-   "market_otc_close": 4.04,
-   "market_otc_max": 6.91
+   "market_twse_close": 3.96,
+   "market_twse_max": 6.61,
+   "market_otc_close": 3.59,
+   "market_otc_max": 6.82
   },
   {
    "date": "2026-06-05",
@@ -78,10 +78,10 @@
    "weak": 0,
    "monkey_close": 7.71,
    "monkey_max": 18.81,
-   "market_twse_close": 6.23,
-   "market_twse_max": 8.1,
-   "market_otc_close": 5.99,
-   "market_otc_max": 7.66
+   "market_twse_close": 5.63,
+   "market_twse_max": 7.8,
+   "market_otc_close": 5.59,
+   "market_otc_max": 7.51
   },
   {
    "date": "2026-05-29",
@@ -94,10 +94,10 @@
    "weak": 0,
    "monkey_close": 0.88,
    "monkey_max": 6.92,
-   "market_twse_close": 3.99,
-   "market_twse_max": 6.31,
-   "market_otc_close": -0.62,
-   "market_otc_max": 2.12
+   "market_twse_close": 3.38,
+   "market_twse_max": 6.01,
+   "market_otc_close": -1.13,
+   "market_otc_max": 1.95
   },
   {
    "date": "2026-05-22",
@@ -110,10 +110,10 @@
    "weak": 0,
    "monkey_close": 5.19,
    "monkey_max": 12.17,
-   "market_twse_close": 9.54,
-   "market_twse_max": 11.46,
-   "market_otc_close": 4.24,
-   "market_otc_max": 5.88
+   "market_twse_close": 8.9,
+   "market_twse_max": 11.14,
+   "market_otc_close": 3.79,
+   "market_otc_max": 5.68
   },
   {
    "date": "2026-05-15",
@@ -126,10 +126,10 @@
    "weak": 0,
    "monkey_close": 14.79,
    "monkey_max": 19.75,
-   "market_twse_close": 8.99,
-   "market_twse_max": 16.69,
-   "market_otc_close": 1.46,
-   "market_otc_max": 10.71
+   "market_twse_close": 8.63,
+   "market_twse_max": 16.35,
+   "market_otc_close": 1.18,
+   "market_otc_max": 10.5
   },
   {
    "date": "2026-05-08",
@@ -142,10 +142,10 @@
    "weak": 0,
    "monkey_close": -0.08,
    "monkey_max": 9.33,
-   "market_twse_close": 11.3,
-   "market_twse_max": 14.83,
-   "market_otc_close": 6.06,
-   "market_otc_max": 9.29
+   "market_twse_close": 10.93,
+   "market_twse_max": 14.5,
+   "market_otc_close": 5.8,
+   "market_otc_max": 9.09
   },
   {
    "date": "2026-04-30",
@@ -158,10 +158,10 @@
    "weak": 0,
    "monkey_close": 14.77,
    "monkey_max": 36.07,
-   "market_twse_close": 14.23,
-   "market_twse_max": 16.7,
-   "market_otc_close": 9.82,
-   "market_otc_max": 14.19
+   "market_twse_close": 14.02,
+   "market_twse_max": 16.68,
+   "market_otc_close": 9.7,
+   "market_otc_max": 14.16
   },
   {
    "date": "2026-04-24",
@@ -174,10 +174,10 @@
    "weak": 0,
    "monkey_close": 7.72,
    "monkey_max": 11.89,
-   "market_twse_close": 16.31,
-   "market_twse_max": 18.3,
-   "market_otc_close": 16.07,
-   "market_otc_max": 17.84
+   "market_twse_close": 16.3,
+   "market_twse_max": 18.29,
+   "market_otc_close": 16.03,
+   "market_otc_max": 17.8
   },
   {
    "date": "2026-04-17",
@@ -190,10 +190,10 @@
    "weak": 0,
    "monkey_close": 0.1,
    "monkey_max": 10.45,
-   "market_twse_close": 10.88,
+   "market_twse_close": 10.87,
    "market_twse_max": 13.7,
-   "market_otc_close": 8.4,
-   "market_otc_max": 12.88
+   "market_otc_close": 8.39,
+   "market_otc_max": 12.87
   },
   {
    "date": "2026-04-10",
@@ -206,10 +206,10 @@
    "weak": 0,
    "monkey_close": 7.57,
    "monkey_max": 19.99,
-   "market_twse_close": 18.24,
-   "market_twse_max": 18.34,
-   "market_otc_close": 21.41,
-   "market_otc_max": 21.41
+   "market_twse_close": 18.23,
+   "market_twse_max": 18.33,
+   "market_otc_close": 21.33,
+   "market_otc_max": 21.33
   },
   {
    "date": "2026-04-02",
@@ -222,10 +222,10 @@
    "weak": 0,
    "monkey_close": 14.03,
    "monkey_max": 23.81,
-   "market_twse_close": 27.47,
-   "market_twse_max": 27.47,
-   "market_otc_close": 29.54,
-   "market_otc_max": 29.54
+   "market_twse_close": 27.45,
+   "market_twse_max": 27.45,
+   "market_otc_close": 29.42,
+   "market_otc_max": 29.42
   },
   {
    "date": "2026-03-27",
@@ -238,10 +238,10 @@
    "weak": 0,
    "monkey_close": 4.92,
    "monkey_max": 17.24,
-   "market_twse_close": 24.26,
-   "market_twse_max": 24.26,
-   "market_otc_close": 26.41,
-   "market_otc_max": 26.41
+   "market_twse_close": 24.24,
+   "market_twse_max": 24.24,
+   "market_otc_close": 26.26,
+   "market_otc_max": 26.26
   },
   {
    "date": "2026-03-20",
@@ -254,10 +254,10 @@
    "weak": 0,
    "monkey_close": 12.01,
    "monkey_max": 15.4,
-   "market_twse_close": 14.37,
-   "market_twse_max": 14.37,
-   "market_otc_close": 22.7,
-   "market_otc_max": 22.7
+   "market_twse_close": 14.32,
+   "market_twse_max": 14.32,
+   "market_otc_close": 22.43,
+   "market_otc_max": 22.43
   },
   {
    "date": "2026-03-13",
@@ -270,10 +270,10 @@
    "weak": 0,
    "monkey_close": 4.81,
    "monkey_max": 11.48,
-   "market_twse_close": 18.67,
-   "market_twse_max": 18.96,
-   "market_otc_close": 21.64,
-   "market_otc_max": 25.78
+   "market_twse_close": 18.43,
+   "market_twse_max": 18.71,
+   "market_otc_close": 21.27,
+   "market_otc_max": 25.4
   },
   {
    "date": "2026-03-06",
@@ -286,10 +286,10 @@
    "weak": 0,
    "monkey_close": 4.18,
    "monkey_max": 32.41,
-   "market_twse_close": 13.25,
-   "market_twse_max": 13.25,
-   "market_otc_close": 23.28,
-   "market_otc_max": 23.28
+   "market_twse_close": 13.02,
+   "market_twse_max": 13.02,
+   "market_otc_close": 22.92,
+   "market_otc_max": 22.92
   },
   {
    "date": "2026-02-26",
@@ -302,10 +302,10 @@
    "weak": 0,
    "monkey_close": -4.14,
    "monkey_max": 6.74,
-   "market_twse_close": -1.2,
+   "market_twse_close": -1.4,
    "market_twse_max": -0.45,
-   "market_otc_close": 8.08,
-   "market_otc_max": 8.08
+   "market_otc_close": 7.85,
+   "market_otc_max": 7.85
   },
   {
    "date": "2026-02-11",
@@ -318,10 +318,10 @@
    "weak": 0,
    "monkey_close": -0.56,
    "monkey_max": 7.16,
-   "market_twse_close": 9.47,
-   "market_twse_max": 10.44,
-   "market_otc_close": 24.16,
-   "market_otc_max": 24.16
+   "market_twse_close": 9.25,
+   "market_twse_max": 10.22,
+   "market_otc_close": 23.8,
+   "market_otc_max": 23.8
   },
   {
    "date": "2026-02-06",
@@ -334,10 +334,10 @@
    "weak": 0,
    "monkey_close": 2.25,
    "monkey_max": 13.28,
-   "market_twse_close": 10.7,
-   "market_twse_max": 10.7,
-   "market_otc_close": 20.23,
-   "market_otc_max": 20.23
+   "market_twse_close": 10.48,
+   "market_twse_max": 10.48,
+   "market_otc_close": 19.94,
+   "market_otc_max": 19.94
   },
   {
    "date": "2026-01-30",
@@ -352,7 +352,7 @@
    "monkey_max": 5.4,
    "market_twse_close": 0.84,
    "market_twse_max": 11.21,
-   "market_otc_close": -2.88,
+   "market_otc_close": -2.89,
    "market_otc_max": 6.45
   },
   {
@@ -368,7 +368,7 @@
    "monkey_max": 12.29,
    "market_twse_close": 5.19,
    "market_twse_max": 10.63,
-   "market_otc_close": 1.09,
+   "market_otc_close": 1.08,
    "market_otc_max": 5.24
   },
   {
@@ -400,8 +400,8 @@
    "monkey_max": 13.44,
    "market_twse_close": 10.66,
    "market_twse_max": 16.39,
-   "market_otc_close": 7.43,
-   "market_otc_max": 11.85
+   "market_otc_close": 7.41,
+   "market_otc_max": 11.84
   },
   {
    "date": "2026-01-02",
@@ -414,10 +414,10 @@
    "weak": 0,
    "monkey_close": 0.32,
    "monkey_max": 13.51,
-   "market_twse_close": 8.67,
-   "market_twse_max": 10.4,
-   "market_otc_close": 8.94,
-   "market_otc_max": 11.74
+   "market_twse_close": 8.62,
+   "market_twse_max": 10.35,
+   "market_otc_close": 8.91,
+   "market_otc_max": 11.72
   },
   {
    "date": "2025-12-26",
@@ -430,10 +430,10 @@
    "weak": 0,
    "monkey_close": 3.56,
    "monkey_max": 13.44,
-   "market_twse_close": 10.31,
-   "market_twse_max": 14.42,
-   "market_otc_close": 8.19,
-   "market_otc_max": 13.69
+   "market_twse_close": 10.25,
+   "market_twse_max": 14.36,
+   "market_otc_close": 8.14,
+   "market_otc_max": 13.64
   },
   {
    "date": "2025-12-19",
@@ -446,10 +446,10 @@
    "weak": 0,
    "monkey_close": 3.2,
    "monkey_max": 14.61,
-   "market_twse_close": 26.89,
-   "market_twse_max": 26.89,
-   "market_otc_close": 19.69,
-   "market_otc_max": 19.69
+   "market_twse_close": 26.83,
+   "market_twse_max": 26.83,
+   "market_otc_close": 19.64,
+   "market_otc_max": 19.64
   },
   {
    "date": "2025-12-12",
@@ -462,10 +462,10 @@
    "weak": 0,
    "monkey_close": 6.89,
    "monkey_max": 13.44,
-   "market_twse_close": 20.18,
-   "market_twse_max": 26.4,
-   "market_otc_close": 14.8,
-   "market_otc_max": 19.52
+   "market_twse_close": 20.12,
+   "market_twse_max": 26.33,
+   "market_otc_close": 14.68,
+   "market_otc_max": 19.4
   },
   {
    "date": "2025-12-05",
@@ -478,10 +478,10 @@
    "weak": 0,
    "monkey_close": 2.53,
    "monkey_max": 8.06,
-   "market_twse_close": 16.79,
-   "market_twse_max": 16.79,
-   "market_otc_close": 18.38,
-   "market_otc_max": 18.38
+   "market_twse_close": 16.56,
+   "market_twse_max": 16.56,
+   "market_otc_close": 18.27,
+   "market_otc_max": 18.27
   },
   {
    "date": "2025-11-28",
@@ -494,10 +494,10 @@
    "weak": 0,
    "monkey_close": 2.61,
    "monkey_max": 10.34,
-   "market_twse_close": 10.95,
-   "market_twse_max": 11.47,
-   "market_otc_close": 7.92,
-   "market_otc_max": 7.92
+   "market_twse_close": 10.74,
+   "market_twse_max": 11.25,
+   "market_otc_close": 7.83,
+   "market_otc_max": 7.83
   },
   {
    "date": "2025-11-21",
@@ -510,9 +510,9 @@
    "weak": 0,
    "monkey_close": 9.98,
    "monkey_max": 15.64,
-   "market_twse_close": 3.92,
+   "market_twse_close": 3.77,
    "market_twse_max": 7.3,
-   "market_otc_close": 4.59,
+   "market_otc_close": 4.53,
    "market_otc_max": 6.94
   },
   {
@@ -526,10 +526,10 @@
    "weak": 0,
    "monkey_close": 7.08,
    "monkey_max": 9.48,
-   "market_twse_close": 12.2,
-   "market_twse_max": 12.2,
-   "market_otc_close": 11.53,
-   "market_otc_max": 12.0
+   "market_twse_close": 11.98,
+   "market_twse_max": 11.98,
+   "market_otc_close": 11.42,
+   "market_otc_max": 11.9
   },
   {
    "date": "2025-11-07",
@@ -542,10 +542,10 @@
    "weak": 0,
    "monkey_close": -0.29,
    "monkey_max": 5.81,
-   "market_twse_close": 1.72,
+   "market_twse_close": 1.58,
    "market_twse_max": 2.31,
-   "market_otc_close": 2.84,
-   "market_otc_max": 2.84
+   "market_otc_close": 2.83,
+   "market_otc_max": 2.83
   },
   {
    "date": "2025-10-31",
@@ -560,7 +560,7 @@
    "monkey_max": 6.51,
    "market_twse_close": -1.07,
    "market_twse_max": 0.18,
-   "market_otc_close": -1.63,
+   "market_otc_close": -1.64,
    "market_otc_max": 0.26
   },
   {
@@ -592,7 +592,7 @@
    "monkey_max": 11.54,
    "market_twse_close": 2.94,
    "market_twse_max": 3.05,
-   "market_otc_close": 0.06,
+   "market_otc_close": 0.04,
    "market_otc_max": 1.37
   },
   {
@@ -608,7 +608,7 @@
    "monkey_max": 15.21,
    "market_twse_close": -0.74,
    "market_twse_max": 4.51,
-   "market_otc_close": -3.35,
+   "market_otc_close": -3.36,
    "market_otc_max": 0.99
   },
   {
@@ -624,7 +624,7 @@
    "monkey_max": 9.58,
    "market_twse_close": 4.19,
    "market_twse_max": 5.0,
-   "market_otc_close": -1.22,
+   "market_otc_close": -1.23,
    "market_otc_max": 0.6
   },
   {
@@ -640,8 +640,8 @@
    "monkey_max": 12.94,
    "market_twse_close": 8.56,
    "market_twse_max": 10.25,
-   "market_otc_close": 1.11,
-   "market_otc_max": 2.55
+   "market_otc_close": 1.09,
+   "market_otc_max": 2.54
   },
   {
    "date": "2025-09-19",
@@ -654,9 +654,9 @@
    "weak": 0,
    "monkey_close": 3.15,
    "monkey_max": 12.7,
-   "market_twse_close": 8.82,
-   "market_twse_max": 8.82,
-   "market_otc_close": 0.04,
+   "market_twse_close": 8.8,
+   "market_twse_max": 8.8,
+   "market_otc_close": 0.02,
    "market_otc_max": 0.52
   },
   {
@@ -670,10 +670,10 @@
    "weak": 0,
    "monkey_close": -2.07,
    "monkey_max": 6.33,
-   "market_twse_close": 11.53,
-   "market_twse_max": 11.53,
-   "market_otc_close": 2.8,
-   "market_otc_max": 3.55
+   "market_twse_close": 11.33,
+   "market_twse_max": 11.33,
+   "market_otc_close": 2.77,
+   "market_otc_max": 3.54
   },
   {
    "date": "2025-09-05",
@@ -686,10 +686,10 @@
    "weak": 0,
    "monkey_close": -1.2,
    "monkey_max": 8.25,
-   "market_twse_close": 15.78,
-   "market_twse_max": 15.78,
-   "market_otc_close": 2.68,
-   "market_otc_max": 2.8
+   "market_twse_close": 15.55,
+   "market_twse_max": 15.55,
+   "market_otc_close": 2.62,
+   "market_otc_max": 2.76
   },
   {
    "date": "2025-08-29",
@@ -702,10 +702,10 @@
    "weak": 0,
    "monkey_close": -0.05,
    "monkey_max": 6.94,
-   "market_twse_close": 11.05,
-   "market_twse_max": 11.05,
-   "market_otc_close": 4.06,
-   "market_otc_max": 4.99
+   "market_twse_close": 10.8,
+   "market_twse_max": 10.8,
+   "market_otc_close": 3.93,
+   "market_otc_max": 4.87
   },
   {
    "date": "2025-08-22",
@@ -718,10 +718,10 @@
    "weak": 0,
    "monkey_close": 1.19,
    "monkey_max": 7.42,
-   "market_twse_close": 2.26,
-   "market_twse_max": 2.26,
-   "market_otc_close": 5.85,
-   "market_otc_max": 5.85
+   "market_twse_close": 2.19,
+   "market_twse_max": 2.19,
+   "market_otc_close": 5.68,
+   "market_otc_max": 5.68
   },
   {
    "date": "2025-08-15",
@@ -734,10 +734,10 @@
    "weak": 0,
    "monkey_close": -0.28,
    "monkey_max": 6.86,
-   "market_twse_close": 3.44,
-   "market_twse_max": 3.44,
-   "market_otc_close": 4.02,
-   "market_otc_max": 5.69
+   "market_twse_close": 3.31,
+   "market_twse_max": 3.31,
+   "market_otc_close": 3.79,
+   "market_otc_max": 5.47
   },
   {
    "date": "2025-08-08",
@@ -750,10 +750,10 @@
    "weak": 0,
    "monkey_close": 2.49,
    "monkey_max": 9.0,
-   "market_twse_close": 2.14,
-   "market_twse_max": 2.14,
-   "market_otc_close": 8.5,
-   "market_otc_max": 8.5
+   "market_twse_close": 1.95,
+   "market_twse_max": 1.95,
+   "market_otc_close": 8.24,
+   "market_otc_max": 8.24
   },
   {
    "date": "2025-08-01",
@@ -766,10 +766,10 @@
    "weak": 0,
    "monkey_close": 2.96,
    "monkey_max": 9.61,
-   "market_twse_close": 7.94,
-   "market_twse_max": 7.94,
-   "market_otc_close": 11.82,
-   "market_otc_max": 11.82
+   "market_twse_close": 7.63,
+   "market_twse_max": 7.63,
+   "market_otc_close": 11.45,
+   "market_otc_max": 11.45
   },
   {
    "date": "2025-07-25",
@@ -782,10 +782,10 @@
    "weak": 0,
    "monkey_close": 2.63,
    "monkey_max": 12.03,
-   "market_twse_close": 1.92,
-   "market_twse_max": 4.96,
-   "market_otc_close": 5.04,
-   "market_otc_max": 6.81
+   "market_twse_close": 1.61,
+   "market_twse_max": 4.68,
+   "market_otc_close": 4.73,
+   "market_otc_max": 6.53
   },
   {
    "date": "2025-07-18",
@@ -798,10 +798,10 @@
    "weak": 0,
    "monkey_close": 4.99,
    "monkey_max": 8.74,
-   "market_twse_close": 5.4,
-   "market_twse_max": 5.4,
-   "market_otc_close": 8.71,
-   "market_otc_max": 8.71
+   "market_twse_close": 4.96,
+   "market_twse_max": 4.96,
+   "market_otc_close": 8.04,
+   "market_otc_max": 8.04
   },
   {
    "date": "2025-07-11",
@@ -814,10 +814,10 @@
    "weak": 0,
    "monkey_close": 4.32,
    "monkey_max": 9.3,
-   "market_twse_close": 8.49,
-   "market_twse_max": 8.49,
-   "market_otc_close": 8.33,
-   "market_otc_max": 8.33
+   "market_twse_close": 7.93,
+   "market_twse_max": 7.93,
+   "market_otc_close": 7.26,
+   "market_otc_max": 7.26
   },
   {
    "date": "2025-07-04",
@@ -830,10 +830,10 @@
    "weak": 0,
    "monkey_close": 4.76,
    "monkey_max": 7.49,
-   "market_twse_close": 3.7,
-   "market_twse_max": 4.64,
-   "market_otc_close": 1.37,
-   "market_otc_max": 2.93
+   "market_twse_close": 3.17,
+   "market_twse_max": 4.11,
+   "market_otc_close": 0.38,
+   "market_otc_max": 2.34
   },
   {
    "date": "2025-06-27",
@@ -846,10 +846,10 @@
    "weak": 0,
    "monkey_close": 0.91,
    "monkey_max": 9.79,
-   "market_twse_close": 5.76,
-   "market_twse_max": 6.25,
-   "market_otc_close": 2.12,
-   "market_otc_max": 2.34
+   "market_twse_close": 4.53,
+   "market_twse_max": 5.02,
+   "market_otc_close": 0.66,
+   "market_otc_max": 1.36
   },
   {
    "date": "2025-06-20",
@@ -862,10 +862,10 @@
    "weak": 0,
    "monkey_close": 1.68,
    "monkey_max": 9.55,
-   "market_twse_close": 6.93,
-   "market_twse_max": 6.93,
-   "market_otc_close": 5.34,
-   "market_otc_max": 5.34
+   "market_twse_close": 5.59,
+   "market_twse_max": 5.59,
+   "market_otc_close": 4.07,
+   "market_otc_max": 4.07
   },
   {
    "date": "2025-06-13",
@@ -878,10 +878,10 @@
    "weak": 0,
    "monkey_close": -0.15,
    "monkey_max": 11.99,
-   "market_twse_close": 8.55,
-   "market_twse_max": 8.55,
-   "market_otc_close": 2.23,
-   "market_otc_max": 3.35
+   "market_twse_close": 6.71,
+   "market_twse_max": 6.71,
+   "market_otc_close": 0.35,
+   "market_otc_max": 1.93
   },
   {
    "date": "2025-06-06",
@@ -894,10 +894,10 @@
    "weak": 0,
    "monkey_close": -0.54,
    "monkey_max": 7.24,
-   "market_twse_close": 5.25,
-   "market_twse_max": 5.94,
-   "market_otc_close": 2.45,
-   "market_otc_max": 3.88
+   "market_twse_close": 3.69,
+   "market_twse_max": 4.55,
+   "market_otc_close": 1.4,
+   "market_otc_max": 3.15
   },
   {
    "date": "2025-05-29",
@@ -910,10 +910,10 @@
    "weak": 2,
    "monkey_close": 1.24,
    "monkey_max": 7.65,
-   "market_twse_close": 8.88,
-   "market_twse_max": 8.88,
-   "market_otc_close": 4.04,
-   "market_otc_max": 5.31
+   "market_twse_close": 7.17,
+   "market_twse_max": 7.26,
+   "market_otc_close": 2.83,
+   "market_otc_max": 4.5
   },
   {
    "date": "2025-05-23",
@@ -926,10 +926,10 @@
    "weak": 0,
    "monkey_close": -2.56,
    "monkey_max": 2.8,
-   "market_twse_close": 6.63,
-   "market_twse_max": 6.63,
-   "market_otc_close": 3.69,
-   "market_otc_max": 3.69
+   "market_twse_close": 5.18,
+   "market_twse_max": 5.18,
+   "market_otc_close": 2.79,
+   "market_otc_max": 2.87
   },
   {
    "date": "2025-05-16",
@@ -942,10 +942,10 @@
    "weak": 0,
    "monkey_close": -0.76,
    "monkey_max": 10.46,
-   "market_twse_close": 2.08,
-   "market_twse_max": 3.69,
-   "market_otc_close": 1.18,
-   "market_otc_max": 2.69
+   "market_twse_close": 1.79,
+   "market_twse_max": 3.63,
+   "market_otc_close": 0.95,
+   "market_otc_max": 2.52
   },
   {
    "date": "2025-05-09",
@@ -958,9 +958,9 @@
    "weak": 5,
    "monkey_close": 0.34,
    "monkey_max": 6.43,
-   "market_twse_close": 5.86,
-   "market_twse_max": 5.86,
-   "market_otc_close": 2.84,
+   "market_twse_close": 5.8,
+   "market_twse_max": 5.8,
+   "market_otc_close": 2.68,
    "market_otc_max": 2.96
   },
   {
@@ -974,10 +974,10 @@
    "weak": 2,
    "monkey_close": 0.97,
    "monkey_max": 10.07,
-   "market_twse_close": 4.96,
+   "market_twse_close": 4.91,
    "market_twse_max": 5.73,
-   "market_otc_close": 2.59,
-   "market_otc_max": 4.43
+   "market_otc_close": 2.52,
+   "market_otc_max": 4.44
   },
   {
    "date": "2025-04-25",
@@ -990,10 +990,10 @@
    "weak": 5,
    "monkey_close": 1.99,
    "monkey_max": 10.52,
-   "market_twse_close": 10.93,
-   "market_twse_max": 12.69,
-   "market_otc_close": 6.21,
-   "market_otc_max": 7.8
+   "market_twse_close": 10.62,
+   "market_twse_max": 12.61,
+   "market_otc_close": 5.97,
+   "market_otc_max": 7.61
   },
   {
    "date": "2025-04-11",
@@ -1006,10 +1006,10 @@
    "weak": 1,
    "monkey_close": 8.63,
    "monkey_max": 16.78,
-   "market_twse_close": 10.95,
-   "market_twse_max": 11.91,
-   "market_otc_close": 10.77,
-   "market_otc_max": 12.07
+   "market_twse_close": 10.92,
+   "market_twse_max": 11.9,
+   "market_otc_close": 10.65,
+   "market_otc_max": 11.94
   },
   {
    "date": "2025-04-02",
@@ -1022,10 +1022,10 @@
    "weak": 5,
    "monkey_close": 2.39,
    "monkey_max": 8.1,
-   "market_twse_close": 5.38,
-   "market_twse_max": 7.81,
-   "market_otc_close": 0.81,
-   "market_otc_max": 2.65
+   "market_twse_close": 5.34,
+   "market_twse_max": 7.79,
+   "market_otc_close": 0.62,
+   "market_otc_max": 2.47
   },
   {
    "date": "2025-03-28",
@@ -1039,9 +1039,9 @@
    "monkey_close": -6.89,
    "monkey_max": 1.92,
    "market_twse_close": -9.06,
-   "market_twse_max": 0.71,
-   "market_otc_close": -9.4,
-   "market_otc_max": 0.31
+   "market_twse_max": 0.7,
+   "market_otc_close": -9.42,
+   "market_otc_max": 0.3
   },
   {
    "date": "2025-03-21",
@@ -1054,10 +1054,10 @@
    "weak": 4,
    "monkey_close": -17.06,
    "monkey_max": 3.9,
-   "market_twse_close": -12.1,
+   "market_twse_close": -12.14,
    "market_twse_max": 0.52,
-   "market_otc_close": -15.56,
-   "market_otc_max": -0.15
+   "market_otc_close": -15.71,
+   "market_otc_max": -0.18
   },
   {
    "date": "2025-03-14",
@@ -1070,10 +1070,10 @@
    "weak": 5,
    "monkey_close": -14.53,
    "monkey_max": 7.44,
-   "market_twse_close": -3.24,
-   "market_twse_max": 1.71,
-   "market_otc_close": -5.69,
-   "market_otc_max": 1.64
+   "market_twse_close": -3.46,
+   "market_twse_max": 1.51,
+   "market_otc_close": -5.83,
+   "market_otc_max": 1.63
   },
   {
    "date": "2025-03-07",
@@ -1086,9 +1086,9 @@
    "weak": 4,
    "monkey_close": -25.64,
    "monkey_max": 6.78,
-   "market_twse_close": -0.89,
+   "market_twse_close": -1.09,
    "market_twse_max": -0.26,
-   "market_otc_close": -1.79,
+   "market_otc_close": -1.84,
    "market_otc_max": -0.38
   },
   {
@@ -1102,10 +1102,10 @@
    "weak": 0,
    "monkey_close": -5.36,
    "monkey_max": 3.9,
-   "market_twse_close": -2.62,
+   "market_twse_close": -2.81,
    "market_twse_max": -0.14,
-   "market_otc_close": -2.2,
-   "market_otc_max": 0.92
+   "market_otc_close": -2.27,
+   "market_otc_max": 0.91
   },
   {
    "date": "2025-02-21",
@@ -1118,9 +1118,9 @@
    "weak": 0,
    "monkey_close": -1.85,
    "monkey_max": 4.67,
-   "market_twse_close": -5.19,
+   "market_twse_close": -5.37,
    "market_twse_max": -0.35,
-   "market_otc_close": -3.49,
+   "market_otc_close": -3.52,
    "market_otc_max": 0.11
   },
   {
@@ -1136,8 +1136,8 @@
    "monkey_max": 6.06,
    "market_twse_close": -5.39,
    "market_twse_max": 1.72,
-   "market_otc_close": -1.82,
-   "market_otc_max": 3.06
+   "market_otc_close": -1.83,
+   "market_otc_max": 3.05
   },
   {
    "date": "2025-02-07",
@@ -1152,8 +1152,8 @@
    "monkey_max": 10.98,
    "market_twse_close": -3.38,
    "market_twse_max": 1.56,
-   "market_otc_close": 1.06,
-   "market_otc_max": 3.73
+   "market_otc_close": 1.05,
+   "market_otc_max": 3.72
   },
   {
    "date": "2025-01-22",
@@ -1166,10 +1166,10 @@
    "weak": 0,
    "monkey_close": 6.58,
    "monkey_max": 14.22,
-   "market_twse_close": -3.46,
+   "market_twse_close": -3.63,
    "market_twse_max": 2.68,
-   "market_otc_close": 1.52,
-   "market_otc_max": 5.81
+   "market_otc_close": 1.5,
+   "market_otc_max": 5.8
   },
   {
    "date": "2025-01-17",
@@ -1184,8 +1184,8 @@
    "monkey_max": 11.03,
    "market_twse_close": -3.22,
    "market_twse_max": 2.25,
-   "market_otc_close": 2.23,
-   "market_otc_max": 5.72
+   "market_otc_close": 2.2,
+   "market_otc_max": 5.7
   },
   {
    "date": "2025-01-10",
@@ -1200,8 +1200,8 @@
    "monkey_max": 10.38,
    "market_twse_close": 1.33,
    "market_twse_max": 4.31,
-   "market_otc_close": 5.59,
-   "market_otc_max": 7.26
+   "market_otc_close": 5.55,
+   "market_otc_max": 7.22
   },
   {
    "date": "2025-01-03",
@@ -1216,8 +1216,8 @@
    "monkey_max": 3.57,
    "market_twse_close": 1.62,
    "market_twse_max": 1.89,
-   "market_otc_close": 3.2,
-   "market_otc_max": 3.2
+   "market_otc_close": 3.08,
+   "market_otc_max": 3.08
   }
  ],
  "detail": [
@@ -1375,10 +1375,10 @@
      "exit_date": "2026-07-10"
     }
    ],
-   "market_twse_close": -2.66,
-   "market_twse_max": -0.23,
-   "market_otc_close": -3.77,
-   "market_otc_max": -0.58
+   "market_twse_close": -2.82,
+   "market_twse_max": -0.24,
+   "market_otc_close": -3.98,
+   "market_otc_max": -0.63
   },
   {
    "date": "2026-06-26",
@@ -1534,10 +1534,10 @@
      "exit_date": "2026-07-10"
     }
    ],
-   "market_twse_close": 1.68,
-   "market_twse_max": 5.14,
-   "market_otc_close": 3.05,
-   "market_otc_max": 7.72
+   "market_twse_close": 1.27,
+   "market_twse_max": 4.99,
+   "market_otc_close": 2.63,
+   "market_otc_max": 7.56
   },
   {
    "date": "2026-06-18",
@@ -1693,9 +1693,9 @@
      "exit_date": "2026-07-10"
     }
    ],
-   "market_twse_close": -3.26,
-   "market_twse_max": 1.37,
-   "market_otc_close": -5.14,
+   "market_twse_close": -3.71,
+   "market_twse_max": 1.35,
+   "market_otc_close": -5.62,
    "market_otc_max": 0.72
   },
   {
@@ -1852,10 +1852,10 @@
      "exit_date": "2026-07-10"
     }
    ],
-   "market_twse_close": 4.4,
-   "market_twse_max": 6.73,
-   "market_otc_close": 4.04,
-   "market_otc_max": 6.91
+   "market_twse_close": 3.96,
+   "market_twse_max": 6.61,
+   "market_otc_close": 3.59,
+   "market_otc_max": 6.82
   },
   {
    "date": "2026-06-05",
@@ -2011,10 +2011,10 @@
      "exit_date": "2026-07-07"
     }
    ],
-   "market_twse_close": 6.23,
-   "market_twse_max": 8.1,
-   "market_otc_close": 5.99,
-   "market_otc_max": 7.66
+   "market_twse_close": 5.63,
+   "market_twse_max": 7.8,
+   "market_otc_close": 5.59,
+   "market_otc_max": 7.51
   },
   {
    "date": "2026-05-29",
@@ -2170,10 +2170,10 @@
      "exit_date": "2026-06-30"
     }
    ],
-   "market_twse_close": 3.99,
-   "market_twse_max": 6.31,
-   "market_otc_close": -0.62,
-   "market_otc_max": 2.12
+   "market_twse_close": 3.38,
+   "market_twse_max": 6.01,
+   "market_otc_close": -1.13,
+   "market_otc_max": 1.95
   },
   {
    "date": "2026-05-22",
@@ -2329,10 +2329,10 @@
      "exit_date": "2026-06-23"
     }
    ],
-   "market_twse_close": 9.54,
-   "market_twse_max": 11.46,
-   "market_otc_close": 4.24,
-   "market_otc_max": 5.88
+   "market_twse_close": 8.9,
+   "market_twse_max": 11.14,
+   "market_otc_close": 3.79,
+   "market_otc_max": 5.68
   },
   {
    "date": "2026-05-15",
@@ -2488,10 +2488,10 @@
      "exit_date": "2026-06-15"
     }
    ],
-   "market_twse_close": 8.99,
-   "market_twse_max": 16.69,
-   "market_otc_close": 1.46,
-   "market_otc_max": 10.71
+   "market_twse_close": 8.63,
+   "market_twse_max": 16.35,
+   "market_otc_close": 1.18,
+   "market_otc_max": 10.5
   },
   {
    "date": "2026-05-08",
@@ -2647,10 +2647,10 @@
      "exit_date": "2026-06-08"
     }
    ],
-   "market_twse_close": 11.3,
-   "market_twse_max": 14.83,
-   "market_otc_close": 6.06,
-   "market_otc_max": 9.29
+   "market_twse_close": 10.93,
+   "market_twse_max": 14.5,
+   "market_otc_close": 5.8,
+   "market_otc_max": 9.09
   },
   {
    "date": "2026-04-30",
@@ -2806,10 +2806,10 @@
      "exit_date": "2026-06-01"
     }
    ],
-   "market_twse_close": 14.23,
-   "market_twse_max": 16.7,
-   "market_otc_close": 9.82,
-   "market_otc_max": 14.19
+   "market_twse_close": 14.02,
+   "market_twse_max": 16.68,
+   "market_otc_close": 9.7,
+   "market_otc_max": 14.16
   },
   {
    "date": "2026-04-24",
@@ -2965,10 +2965,10 @@
      "exit_date": "2026-05-26"
     }
    ],
-   "market_twse_close": 16.31,
-   "market_twse_max": 18.3,
-   "market_otc_close": 16.07,
-   "market_otc_max": 17.84
+   "market_twse_close": 16.3,
+   "market_twse_max": 18.29,
+   "market_otc_close": 16.03,
+   "market_otc_max": 17.8
   },
   {
    "date": "2026-04-17",
@@ -3124,10 +3124,10 @@
      "exit_date": "2026-05-19"
     }
    ],
-   "market_twse_close": 10.88,
+   "market_twse_close": 10.87,
    "market_twse_max": 13.7,
-   "market_otc_close": 8.4,
-   "market_otc_max": 12.88
+   "market_otc_close": 8.39,
+   "market_otc_max": 12.87
   },
   {
    "date": "2026-04-10",
@@ -3283,10 +3283,10 @@
      "exit_date": "2026-05-12"
     }
    ],
-   "market_twse_close": 18.24,
-   "market_twse_max": 18.34,
-   "market_otc_close": 21.41,
-   "market_otc_max": 21.41
+   "market_twse_close": 18.23,
+   "market_twse_max": 18.33,
+   "market_otc_close": 21.33,
+   "market_otc_max": 21.33
   },
   {
    "date": "2026-04-02",
@@ -3442,10 +3442,10 @@
      "exit_date": "2026-05-06"
     }
    ],
-   "market_twse_close": 27.47,
-   "market_twse_max": 27.47,
-   "market_otc_close": 29.54,
-   "market_otc_max": 29.54
+   "market_twse_close": 27.45,
+   "market_twse_max": 27.45,
+   "market_otc_close": 29.42,
+   "market_otc_max": 29.42
   },
   {
    "date": "2026-03-27",
@@ -3601,10 +3601,10 @@
      "exit_date": "2026-04-29"
     }
    ],
-   "market_twse_close": 24.26,
-   "market_twse_max": 24.26,
-   "market_otc_close": 26.41,
-   "market_otc_max": 26.41
+   "market_twse_close": 24.24,
+   "market_twse_max": 24.24,
+   "market_otc_close": 26.26,
+   "market_otc_max": 26.26
   },
   {
    "date": "2026-03-20",
@@ -3760,10 +3760,10 @@
      "exit_date": "2026-04-22"
     }
    ],
-   "market_twse_close": 14.37,
-   "market_twse_max": 14.37,
-   "market_otc_close": 22.7,
-   "market_otc_max": 22.7
+   "market_twse_close": 14.32,
+   "market_twse_max": 14.32,
+   "market_otc_close": 22.43,
+   "market_otc_max": 22.43
   },
   {
    "date": "2026-03-13",
@@ -3919,10 +3919,10 @@
      "exit_date": "2026-04-15"
     }
    ],
-   "market_twse_close": 18.67,
-   "market_twse_max": 18.96,
-   "market_otc_close": 21.64,
-   "market_otc_max": 25.78
+   "market_twse_close": 18.43,
+   "market_twse_max": 18.71,
+   "market_otc_close": 21.27,
+   "market_otc_max": 25.4
   },
   {
    "date": "2026-03-06",
@@ -4078,10 +4078,10 @@
      "exit_date": "2026-04-08"
     }
    ],
-   "market_twse_close": 13.25,
-   "market_twse_max": 13.25,
-   "market_otc_close": 23.28,
-   "market_otc_max": 23.28
+   "market_twse_close": 13.02,
+   "market_twse_max": 13.02,
+   "market_otc_close": 22.92,
+   "market_otc_max": 22.92
   },
   {
    "date": "2026-02-26",
@@ -4237,10 +4237,10 @@
      "exit_date": "2026-03-30"
     }
    ],
-   "market_twse_close": -1.2,
+   "market_twse_close": -1.4,
    "market_twse_max": -0.45,
-   "market_otc_close": 8.08,
-   "market_otc_max": 8.08
+   "market_otc_close": 7.85,
+   "market_otc_max": 7.85
   },
   {
    "date": "2026-02-11",
@@ -4396,10 +4396,10 @@
      "exit_date": "2026-03-24"
     }
    ],
-   "market_twse_close": 9.47,
-   "market_twse_max": 10.44,
-   "market_otc_close": 24.16,
-   "market_otc_max": 24.16
+   "market_twse_close": 9.25,
+   "market_twse_max": 10.22,
+   "market_otc_close": 23.8,
+   "market_otc_max": 23.8
   },
   {
    "date": "2026-02-06",
@@ -4555,10 +4555,10 @@
      "exit_date": "2026-03-19"
     }
    ],
-   "market_twse_close": 10.7,
-   "market_twse_max": 10.7,
-   "market_otc_close": 20.23,
-   "market_otc_max": 20.23
+   "market_twse_close": 10.48,
+   "market_twse_max": 10.48,
+   "market_otc_close": 19.94,
+   "market_otc_max": 19.94
   },
   {
    "date": "2026-01-30",
@@ -4716,7 +4716,7 @@
    ],
    "market_twse_close": 0.84,
    "market_twse_max": 11.21,
-   "market_otc_close": -2.88,
+   "market_otc_close": -2.89,
    "market_otc_max": 6.45
   },
   {
@@ -4875,7 +4875,7 @@
    ],
    "market_twse_close": 5.19,
    "market_twse_max": 10.63,
-   "market_otc_close": 1.09,
+   "market_otc_close": 1.08,
    "market_otc_max": 5.24
   },
   {
@@ -5193,8 +5193,8 @@
    ],
    "market_twse_close": 10.66,
    "market_twse_max": 16.39,
-   "market_otc_close": 7.43,
-   "market_otc_max": 11.85
+   "market_otc_close": 7.41,
+   "market_otc_max": 11.84
   },
   {
    "date": "2026-01-02",
@@ -5350,10 +5350,10 @@
      "exit_date": "2026-02-02"
     }
    ],
-   "market_twse_close": 8.67,
-   "market_twse_max": 10.4,
-   "market_otc_close": 8.94,
-   "market_otc_max": 11.74
+   "market_twse_close": 8.62,
+   "market_twse_max": 10.35,
+   "market_otc_close": 8.91,
+   "market_otc_max": 11.72
   },
   {
    "date": "2025-12-26",
@@ -5509,10 +5509,10 @@
      "exit_date": "2026-01-27"
     }
    ],
-   "market_twse_close": 10.31,
-   "market_twse_max": 14.42,
-   "market_otc_close": 8.19,
-   "market_otc_max": 13.69
+   "market_twse_close": 10.25,
+   "market_twse_max": 14.36,
+   "market_otc_close": 8.14,
+   "market_otc_max": 13.64
   },
   {
    "date": "2025-12-19",
@@ -5668,10 +5668,10 @@
      "exit_date": "2026-01-21"
     }
    ],
-   "market_twse_close": 26.89,
-   "market_twse_max": 26.89,
-   "market_otc_close": 19.69,
-   "market_otc_max": 19.69
+   "market_twse_close": 26.83,
+   "market_twse_max": 26.83,
+   "market_otc_close": 19.64,
+   "market_otc_max": 19.64
   },
   {
    "date": "2025-12-12",
@@ -5827,10 +5827,10 @@
      "exit_date": "2026-01-14"
     }
    ],
-   "market_twse_close": 20.18,
-   "market_twse_max": 26.4,
-   "market_otc_close": 14.8,
-   "market_otc_max": 19.52
+   "market_twse_close": 20.12,
+   "market_twse_max": 26.33,
+   "market_otc_close": 14.68,
+   "market_otc_max": 19.4
   },
   {
    "date": "2025-12-05",
@@ -5986,10 +5986,10 @@
      "exit_date": "2026-01-07"
     }
    ],
-   "market_twse_close": 16.79,
-   "market_twse_max": 16.79,
-   "market_otc_close": 18.38,
-   "market_otc_max": 18.38
+   "market_twse_close": 16.56,
+   "market_twse_max": 16.56,
+   "market_otc_close": 18.27,
+   "market_otc_max": 18.27
   },
   {
    "date": "2025-11-28",
@@ -6145,10 +6145,10 @@
      "exit_date": "2025-12-30"
     }
    ],
-   "market_twse_close": 10.95,
-   "market_twse_max": 11.47,
-   "market_otc_close": 7.92,
-   "market_otc_max": 7.92
+   "market_twse_close": 10.74,
+   "market_twse_max": 11.25,
+   "market_otc_close": 7.83,
+   "market_otc_max": 7.83
   },
   {
    "date": "2025-11-21",
@@ -6304,9 +6304,9 @@
      "exit_date": "2025-12-22"
     }
    ],
-   "market_twse_close": 3.92,
+   "market_twse_close": 3.77,
    "market_twse_max": 7.3,
-   "market_otc_close": 4.59,
+   "market_otc_close": 4.53,
    "market_otc_max": 6.94
   },
   {
@@ -6463,10 +6463,10 @@
      "exit_date": "2025-12-15"
     }
    ],
-   "market_twse_close": 12.2,
-   "market_twse_max": 12.2,
-   "market_otc_close": 11.53,
-   "market_otc_max": 12.0
+   "market_twse_close": 11.98,
+   "market_twse_max": 11.98,
+   "market_otc_close": 11.42,
+   "market_otc_max": 11.9
   },
   {
    "date": "2025-11-07",
@@ -6622,10 +6622,10 @@
      "exit_date": "2025-12-08"
     }
    ],
-   "market_twse_close": 1.72,
+   "market_twse_close": 1.58,
    "market_twse_max": 2.31,
-   "market_otc_close": 2.84,
-   "market_otc_max": 2.84
+   "market_otc_close": 2.83,
+   "market_otc_max": 2.83
   },
   {
    "date": "2025-10-31",
@@ -6783,7 +6783,7 @@
    ],
    "market_twse_close": -1.07,
    "market_twse_max": 0.18,
-   "market_otc_close": -1.63,
+   "market_otc_close": -1.64,
    "market_otc_max": 0.26
   },
   {
@@ -7101,7 +7101,7 @@
    ],
    "market_twse_close": 2.94,
    "market_twse_max": 3.05,
-   "market_otc_close": 0.06,
+   "market_otc_close": 0.04,
    "market_otc_max": 1.37
   },
   {
@@ -7260,7 +7260,7 @@
    ],
    "market_twse_close": -0.74,
    "market_twse_max": 4.51,
-   "market_otc_close": -3.35,
+   "market_otc_close": -3.36,
    "market_otc_max": 0.99
   },
   {
@@ -7419,7 +7419,7 @@
    ],
    "market_twse_close": 4.19,
    "market_twse_max": 5.0,
-   "market_otc_close": -1.22,
+   "market_otc_close": -1.23,
    "market_otc_max": 0.6
   },
   {
@@ -7578,8 +7578,8 @@
    ],
    "market_twse_close": 8.56,
    "market_twse_max": 10.25,
-   "market_otc_close": 1.11,
-   "market_otc_max": 2.55
+   "market_otc_close": 1.09,
+   "market_otc_max": 2.54
   },
   {
    "date": "2025-09-19",
@@ -7735,9 +7735,9 @@
      "exit_date": "2025-10-23"
     }
    ],
-   "market_twse_close": 8.82,
-   "market_twse_max": 8.82,
-   "market_otc_close": 0.04,
+   "market_twse_close": 8.8,
+   "market_twse_max": 8.8,
+   "market_otc_close": 0.02,
    "market_otc_max": 0.52
   },
   {
@@ -7894,10 +7894,10 @@
      "exit_date": "2025-10-16"
     }
    ],
-   "market_twse_close": 11.53,
-   "market_twse_max": 11.53,
-   "market_otc_close": 2.8,
-   "market_otc_max": 3.55
+   "market_twse_close": 11.33,
+   "market_twse_max": 11.33,
+   "market_otc_close": 2.77,
+   "market_otc_max": 3.54
   },
   {
    "date": "2025-09-05",
@@ -8053,10 +8053,10 @@
      "exit_date": "2025-10-08"
     }
    ],
-   "market_twse_close": 15.78,
-   "market_twse_max": 15.78,
-   "market_otc_close": 2.68,
-   "market_otc_max": 2.8
+   "market_twse_close": 15.55,
+   "market_twse_max": 15.55,
+   "market_otc_close": 2.62,
+   "market_otc_max": 2.76
   },
   {
    "date": "2025-08-29",
@@ -8212,10 +8212,10 @@
      "exit_date": "2025-09-30"
     }
    ],
-   "market_twse_close": 11.05,
-   "market_twse_max": 11.05,
-   "market_otc_close": 4.06,
-   "market_otc_max": 4.99
+   "market_twse_close": 10.8,
+   "market_twse_max": 10.8,
+   "market_otc_close": 3.93,
+   "market_otc_max": 4.87
   },
   {
    "date": "2025-08-22",
@@ -8371,10 +8371,10 @@
      "exit_date": "2025-09-22"
     }
    ],
-   "market_twse_close": 2.26,
-   "market_twse_max": 2.26,
-   "market_otc_close": 5.85,
-   "market_otc_max": 5.85
+   "market_twse_close": 2.19,
+   "market_twse_max": 2.19,
+   "market_otc_close": 5.68,
+   "market_otc_max": 5.68
   },
   {
    "date": "2025-08-15",
@@ -8530,10 +8530,10 @@
      "exit_date": "2025-09-15"
     }
    ],
-   "market_twse_close": 3.44,
-   "market_twse_max": 3.44,
-   "market_otc_close": 4.02,
-   "market_otc_max": 5.69
+   "market_twse_close": 3.31,
+   "market_twse_max": 3.31,
+   "market_otc_close": 3.79,
+   "market_otc_max": 5.47
   },
   {
    "date": "2025-08-08",
@@ -8689,10 +8689,10 @@
      "exit_date": "2025-09-08"
     }
    ],
-   "market_twse_close": 2.14,
-   "market_twse_max": 2.14,
-   "market_otc_close": 8.5,
-   "market_otc_max": 8.5
+   "market_twse_close": 1.95,
+   "market_twse_max": 1.95,
+   "market_otc_close": 8.24,
+   "market_otc_max": 8.24
   },
   {
    "date": "2025-08-01",
@@ -8848,10 +8848,10 @@
      "exit_date": "2025-09-01"
     }
    ],
-   "market_twse_close": 7.94,
-   "market_twse_max": 7.94,
-   "market_otc_close": 11.82,
-   "market_otc_max": 11.82
+   "market_twse_close": 7.63,
+   "market_twse_max": 7.63,
+   "market_otc_close": 11.45,
+   "market_otc_max": 11.45
   },
   {
    "date": "2025-07-25",
@@ -9007,10 +9007,10 @@
      "exit_date": "2025-08-26"
     }
    ],
-   "market_twse_close": 1.92,
-   "market_twse_max": 4.96,
-   "market_otc_close": 5.04,
-   "market_otc_max": 6.81
+   "market_twse_close": 1.61,
+   "market_twse_max": 4.68,
+   "market_otc_close": 4.73,
+   "market_otc_max": 6.53
   },
   {
    "date": "2025-07-18",
@@ -9166,10 +9166,10 @@
      "exit_date": "2025-08-19"
     }
    ],
-   "market_twse_close": 5.4,
-   "market_twse_max": 5.4,
-   "market_otc_close": 8.71,
-   "market_otc_max": 8.71
+   "market_twse_close": 4.96,
+   "market_twse_max": 4.96,
+   "market_otc_close": 8.04,
+   "market_otc_max": 8.04
   },
   {
    "date": "2025-07-11",
@@ -9325,10 +9325,10 @@
      "exit_date": "2025-08-12"
     }
    ],
-   "market_twse_close": 8.49,
-   "market_twse_max": 8.49,
-   "market_otc_close": 8.33,
-   "market_otc_max": 8.33
+   "market_twse_close": 7.93,
+   "market_twse_max": 7.93,
+   "market_otc_close": 7.26,
+   "market_otc_max": 7.26
   },
   {
    "date": "2025-07-04",
@@ -9484,10 +9484,10 @@
      "exit_date": "2025-08-05"
     }
    ],
-   "market_twse_close": 3.7,
-   "market_twse_max": 4.64,
-   "market_otc_close": 1.37,
-   "market_otc_max": 2.93
+   "market_twse_close": 3.17,
+   "market_twse_max": 4.11,
+   "market_otc_close": 0.38,
+   "market_otc_max": 2.34
   },
   {
    "date": "2025-06-27",
@@ -9643,10 +9643,10 @@
      "exit_date": "2025-07-28"
     }
    ],
-   "market_twse_close": 5.76,
-   "market_twse_max": 6.25,
-   "market_otc_close": 2.12,
-   "market_otc_max": 2.34
+   "market_twse_close": 4.53,
+   "market_twse_max": 5.02,
+   "market_otc_close": 0.66,
+   "market_otc_max": 1.36
   },
   {
    "date": "2025-06-20",
@@ -9802,10 +9802,10 @@
      "exit_date": "2025-07-21"
     }
    ],
-   "market_twse_close": 6.93,
-   "market_twse_max": 6.93,
-   "market_otc_close": 5.34,
-   "market_otc_max": 5.34
+   "market_twse_close": 5.59,
+   "market_twse_max": 5.59,
+   "market_otc_close": 4.07,
+   "market_otc_max": 4.07
   },
   {
    "date": "2025-06-13",
@@ -9961,10 +9961,10 @@
      "exit_date": "2025-07-14"
     }
    ],
-   "market_twse_close": 8.55,
-   "market_twse_max": 8.55,
-   "market_otc_close": 2.23,
-   "market_otc_max": 3.35
+   "market_twse_close": 6.71,
+   "market_twse_max": 6.71,
+   "market_otc_close": 0.35,
+   "market_otc_max": 1.93
   },
   {
    "date": "2025-06-06",
@@ -10120,10 +10120,10 @@
      "exit_date": "2025-07-07"
     }
    ],
-   "market_twse_close": 5.25,
-   "market_twse_max": 5.94,
-   "market_otc_close": 2.45,
-   "market_otc_max": 3.88
+   "market_twse_close": 3.69,
+   "market_twse_max": 4.55,
+   "market_otc_close": 1.4,
+   "market_otc_max": 3.15
   },
   {
    "date": "2025-05-29",
@@ -10279,10 +10279,10 @@
      "exit_date": "2025-06-30"
     }
    ],
-   "market_twse_close": 8.88,
-   "market_twse_max": 8.88,
-   "market_otc_close": 4.04,
-   "market_otc_max": 5.31
+   "market_twse_close": 7.17,
+   "market_twse_max": 7.26,
+   "market_otc_close": 2.83,
+   "market_otc_max": 4.5
   },
   {
    "date": "2025-05-23",
@@ -10438,10 +10438,10 @@
      "exit_date": "2025-06-24"
     }
    ],
-   "market_twse_close": 6.63,
-   "market_twse_max": 6.63,
-   "market_otc_close": 3.69,
-   "market_otc_max": 3.69
+   "market_twse_close": 5.18,
+   "market_twse_max": 5.18,
+   "market_otc_close": 2.79,
+   "market_otc_max": 2.87
   },
   {
    "date": "2025-05-16",
@@ -10597,10 +10597,10 @@
      "exit_date": "2025-06-17"
     }
    ],
-   "market_twse_close": 2.08,
-   "market_twse_max": 3.69,
-   "market_otc_close": 1.18,
-   "market_otc_max": 2.69
+   "market_twse_close": 1.79,
+   "market_twse_max": 3.63,
+   "market_otc_close": 0.95,
+   "market_otc_max": 2.52
   },
   {
    "date": "2025-05-09",
@@ -10756,9 +10756,9 @@
      "exit_date": "2025-06-10"
     }
    ],
-   "market_twse_close": 5.86,
-   "market_twse_max": 5.86,
-   "market_otc_close": 2.84,
+   "market_twse_close": 5.8,
+   "market_twse_max": 5.8,
+   "market_otc_close": 2.68,
    "market_otc_max": 2.96
   },
   {
@@ -10870,10 +10870,10 @@
      "exit_date": "2025-06-03"
     }
    ],
-   "market_twse_close": 4.96,
+   "market_twse_close": 4.91,
    "market_twse_max": 5.73,
-   "market_otc_close": 2.59,
-   "market_otc_max": 4.43
+   "market_otc_close": 2.52,
+   "market_otc_max": 4.44
   },
   {
    "date": "2025-04-25",
@@ -11029,10 +11029,10 @@
      "exit_date": "2025-05-27"
     }
    ],
-   "market_twse_close": 10.93,
-   "market_twse_max": 12.69,
-   "market_otc_close": 6.21,
-   "market_otc_max": 7.8
+   "market_twse_close": 10.62,
+   "market_twse_max": 12.61,
+   "market_otc_close": 5.97,
+   "market_otc_max": 7.61
   },
   {
    "date": "2025-04-11",
@@ -11128,10 +11128,10 @@
      "exit_date": "2025-05-13"
     }
    ],
-   "market_twse_close": 10.95,
-   "market_twse_max": 11.91,
-   "market_otc_close": 10.77,
-   "market_otc_max": 12.07
+   "market_twse_close": 10.92,
+   "market_twse_max": 11.9,
+   "market_otc_close": 10.65,
+   "market_otc_max": 11.94
   },
   {
    "date": "2025-04-02",
@@ -11287,10 +11287,10 @@
      "exit_date": "2025-05-06"
     }
    ],
-   "market_twse_close": 5.38,
-   "market_twse_max": 7.81,
-   "market_otc_close": 0.81,
-   "market_otc_max": 2.65
+   "market_twse_close": 5.34,
+   "market_twse_max": 7.79,
+   "market_otc_close": 0.62,
+   "market_otc_max": 2.47
   },
   {
    "date": "2025-03-28",
@@ -11447,9 +11447,9 @@
     }
    ],
    "market_twse_close": -9.06,
-   "market_twse_max": 0.71,
-   "market_otc_close": -9.4,
-   "market_otc_max": 0.31
+   "market_twse_max": 0.7,
+   "market_otc_close": -9.42,
+   "market_otc_max": 0.3
   },
   {
    "date": "2025-03-21",
@@ -11591,10 +11591,10 @@
      "exit_date": "2025-04-23"
     }
    ],
-   "market_twse_close": -12.1,
+   "market_twse_close": -12.14,
    "market_twse_max": 0.52,
-   "market_otc_close": -15.56,
-   "market_otc_max": -0.15
+   "market_otc_close": -15.71,
+   "market_otc_max": -0.18
   },
   {
    "date": "2025-03-14",
@@ -11750,10 +11750,10 @@
      "exit_date": "2025-04-16"
     }
    ],
-   "market_twse_close": -3.24,
-   "market_twse_max": 1.71,
-   "market_otc_close": -5.69,
-   "market_otc_max": 1.64
+   "market_twse_close": -3.46,
+   "market_twse_max": 1.51,
+   "market_otc_close": -5.83,
+   "market_otc_max": 1.63
   },
   {
    "date": "2025-03-07",
@@ -11909,9 +11909,9 @@
      "exit_date": "2025-04-09"
     }
    ],
-   "market_twse_close": -0.89,
+   "market_twse_close": -1.09,
    "market_twse_max": -0.26,
-   "market_otc_close": -1.79,
+   "market_otc_close": -1.84,
    "market_otc_max": -0.38
   },
   {
@@ -12068,10 +12068,10 @@
      "exit_date": "2025-03-31"
     }
    ],
-   "market_twse_close": -2.62,
+   "market_twse_close": -2.81,
    "market_twse_max": -0.14,
-   "market_otc_close": -2.2,
-   "market_otc_max": 0.92
+   "market_otc_close": -2.27,
+   "market_otc_max": 0.91
   },
   {
    "date": "2025-02-21",
@@ -12227,9 +12227,9 @@
      "exit_date": "2025-03-25"
     }
    ],
-   "market_twse_close": -5.19,
+   "market_twse_close": -5.37,
    "market_twse_max": -0.35,
-   "market_otc_close": -3.49,
+   "market_otc_close": -3.52,
    "market_otc_max": 0.11
   },
   {
@@ -12388,8 +12388,8 @@
    ],
    "market_twse_close": -5.39,
    "market_twse_max": 1.72,
-   "market_otc_close": -1.82,
-   "market_otc_max": 3.06
+   "market_otc_close": -1.83,
+   "market_otc_max": 3.05
   },
   {
    "date": "2025-02-07",
@@ -12547,8 +12547,8 @@
    ],
    "market_twse_close": -3.38,
    "market_twse_max": 1.56,
-   "market_otc_close": 1.06,
-   "market_otc_max": 3.73
+   "market_otc_close": 1.05,
+   "market_otc_max": 3.72
   },
   {
    "date": "2025-01-22",
@@ -12704,10 +12704,10 @@
      "exit_date": "2025-03-04"
     }
    ],
-   "market_twse_close": -3.46,
+   "market_twse_close": -3.63,
    "market_twse_max": 2.68,
-   "market_otc_close": 1.52,
-   "market_otc_max": 5.81
+   "market_otc_close": 1.5,
+   "market_otc_max": 5.8
   },
   {
    "date": "2025-01-17",
@@ -12865,8 +12865,8 @@
    ],
    "market_twse_close": -3.22,
    "market_twse_max": 2.25,
-   "market_otc_close": 2.23,
-   "market_otc_max": 5.72
+   "market_otc_close": 2.2,
+   "market_otc_max": 5.7
   },
   {
    "date": "2025-01-10",
@@ -13024,8 +13024,8 @@
    ],
    "market_twse_close": 1.33,
    "market_twse_max": 4.31,
-   "market_otc_close": 5.59,
-   "market_otc_max": 7.26
+   "market_otc_close": 5.55,
+   "market_otc_max": 7.22
   },
   {
    "date": "2025-01-03",
@@ -13183,8 +13183,8 @@
    ],
    "market_twse_close": 1.62,
    "market_twse_max": 1.89,
-   "market_otc_close": 3.2,
-   "market_otc_max": 3.2
+   "market_otc_close": 3.08,
+   "market_otc_max": 3.08
   }
  ],
  "avg": {
@@ -13194,9 +13194,9 @@
   "our_max_reg": 11.58,
   "monkey_close": 1.43,
   "monkey_max": 10.71,
-  "market_twse_close": 6.3,
-  "market_twse_max": 8.5,
-  "market_otc_close": 5.59,
-  "market_otc_max": 7.94
+  "market_twse_close": 6.03,
+  "market_twse_max": 8.28,
+  "market_otc_close": 5.32,
+  "market_otc_max": 7.74
  }
 }
