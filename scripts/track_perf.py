@@ -30,13 +30,14 @@ def tick(p):
     else: t = 5.0
     return round(round(p / t) * t, 2)
 
-def idx_ret(idxdf, pick_date):
+def idx_ret(idxdf, pick_date, hold=MAXH):
     dts = idxdf["date"].values.astype(str); v = idxdf["idx"].values.astype(float)
     j = np.searchsorted(dts, str(pick_date), "right")  # j=次一交易日；j-1=推薦日
     if j >= len(v) or j < 1: return None, None
     base = (v[j-1] + v[j]) / 2   # 大盤基準=推薦日收盤與次一交易日收盤的均值(降低次日單日大漲跌造成的失真)
     if base <= 0: return None, None
-    return round(float(v[-1]/base-1)*100, 2), round(float(np.max(v[j:])/base-1)*100, 2)
+    end = min(j + hold, len(v) - 1)  # 大盤窗口對齊我們部位的平均持有天數(至多MAXH);修正原本算到當前日的長期漲幅失真
+    return round(float(v[end]/base-1)*100, 2), round(float(np.max(v[j:end+1])/base-1)*100, 2)
 
 def main():
     ours = load("picks"); monk = load("monkey")  # picks已是選定的5檔(rank 6-10)，不再用rank_cap過濾
@@ -116,9 +117,10 @@ def main():
         j = np.searchsorted(tdates, w, "right")
         if j >= len(tdates): continue
         days = int(len(tdates) - 1 - j)
-        mtc, mtm = idx_ret(taiex, w); moc, mom = idx_ret(tpex, w)
         od = week_list(ours[w], w) if w in ours else []
         md = median_monkey(monk[w], w) if w in monk else []  # 猴子:N隻取報酬中位數那隻(天真固定抱MONKEY_HOLD天)
+        hold_days = int(round(np.mean([x["hold"] for x in od]))) if od else MONKEY_HOLD  # 大盤窗口=我們部位平均持有天數(對齊出場,無部位則用20天)
+        mtc, mtm = idx_ret(taiex, w, hold_days); moc, mom = idx_ret(tpex, w, hold_days)
         settled = bool(od + md) and all(x["exited"] for x in od + md)  # 我們+猴子全部出場才算已結束
         # 反波動加權(僅我們)：權重=1/vol60 正規化；有缺 vol 則整週退回等權。猴子維持等權(天真)
         ivs = [x["iv"] for x in od]
