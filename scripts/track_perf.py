@@ -118,6 +118,7 @@ def main():
         j = np.searchsorted(tdates, w, "right")
         if j >= len(tdates): continue
         days = int(len(tdates) - 1 - j)
+        entry_date = str(tdates[j])  # 進場日=推薦隔日(第一個交易日)
         od = week_list(ours[w], w) if w in ours else []
         md = median_monkey(monk[w], w) if w in monk else []  # 猴子:N隻取報酬中位數那隻(天真固定抱MONKEY_HOLD天)
         hold_days = int(round(np.mean([x["hold"] for x in od]))) if od else MONKEY_HOLD  # 大盤窗口=我們部位平均持有天數(對齊出場,無部位則用20天)
@@ -136,11 +137,11 @@ def main():
         st = "settled" if settled else "running"
         nwk = sum(1 for x in od if not x["regime"])  # 本週我們有幾檔轉弱(建議空手)
         mkt = {"market_twse_close": mtc, "market_twse_max": mtm, "market_otc_close": moc, "market_otc_max": mom}
-        agg.append({"date": w, "days": days, "status": st,
+        agg.append({"date": w, "entry_date": entry_date, "days": days, "status": st,
                     "our_close": wmean(od,"rc"), "our_max": wmean(od,"rm"),
                     "our_close_reg": wmean(od,"rc",True), "our_max_reg": wmean(od,"rm",True), "weak": nwk,
                     "monkey_close": avg(md,"rc"), "monkey_max": avg(md,"rm"), **mkt})
-        detail.append({"date": w, "days": days, "status": st, "weak": nwk, "our": od, "monkey": md, **mkt})
+        detail.append({"date": w, "entry_date": entry_date, "days": days, "status": st, "weak": nwk, "our": od, "monkey": md, **mkt})
     keys = ["our_close","our_max","our_close_reg","our_max_reg","monkey_close","monkey_max","market_twse_close","market_twse_max","market_otc_close","market_otc_max"]
     def gavg(k):
         v = [r[k] for r in agg if r[k] is not None]

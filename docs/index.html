@@ -101,7 +101,7 @@ function group(g){
   if(oa!=null&&ma!=null){(oa>ma?ow:ma>oa?mw:[]).push('平均勝');}
   if(om!=null&&mm!=null){(om>mm?ow:mm>om?mw:[]).push('中位數勝');}
   const bd=w=>w.length?` <span class="win">${w.join(' ｜ ')}</span>`:'';
-  return `<div class="grp"><div class="grphead">推薦日 ${g.date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+warn+
+  return `<div class="grp"><div class="grphead">推薦日 ${g.date} ／ 進場日 ${g.entry_date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+warn+
     stockTable('🧑‍💻 我們',g.our,cl,bd(ow))+stockTable('🐒 猴子',g.monkey,cl,bd(mw))+`</div>`;
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{
