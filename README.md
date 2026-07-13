@@ -7,7 +7,7 @@
 
 線上查詢：**[https://w2xg2022.github.io/twstock-signal/](https://w2xg2022.github.io/twstock-signal/)**
 
-每週入選 CSV：**[Releases](https://github.com/w2xg2022/twstock-signal/releases)**
+每週入選結果與績效皆於上述研究頁面呈現；原始資料存於本倉庫 `data/`（僅供研究）。
 
 ## 策略（131 個月全量回測定案）
 
