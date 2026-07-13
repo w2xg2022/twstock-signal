@@ -18,9 +18,9 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: 產生本週推薦
+      - name: 產生本週入選
         run: python scripts/generate_picks.py
-      - name: 追蹤歷史推薦績效
+      - name: 追蹤歷史入選績效
         run: python scripts/track_perf.py
       - name: 產生 docs 資料
         run: python scripts/build_docs_data.py
@@ -31,13 +31,13 @@ jobs:
           git add data docs
           git commit -m "weekly update $(date -u +%Y-%m-%d)" || echo "無變更"
           git push
-      - name: Release 本週推薦
+      - name: Release 本週入選
         run: |
           LATEST=$(ls -t data/picks/*.csv | head -1)
           DATE=$(basename "$LATEST" .csv)
           # picks 與 monkey 基本檔名相同會撞名，複製成不同檔名再上傳
           cp "data/picks/$DATE.csv" "/tmp/picks_$DATE.csv"
           cp "data/monkey/$DATE.csv" "/tmp/monkey_$DATE.csv"
-          gh release create "picks-$DATE" "/tmp/picks_$DATE.csv" "/tmp/monkey_$DATE.csv" --title "本週推薦 $DATE 🧑‍💻 vs 🐒" --notes $'策略：排除收盤>=200高價股 → 4層多頭排列(MA5>10>20>60) → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序取第6~10名(中段動能高原;經walk-forward驗證)。\n買入價＝推薦隔日(高+低)/2；反變異數(1/vol²)加權5檔；季線(MA60)連續5天跌破才轉弱空手；出場＝ATR移動停利(3.5×ATR(14),最長抱60天)；固定100萬試算張數,買不滿與空手計入現金。\n同附10隻猴子(各全市場隨機5檔、等權、固定抱20交易日、無濾網無停利,Malkiel《漫步華爾街》)取報酬中位數那隻對戰。詳見 README 與 docs 績效頁。' || echo "release 已存在"
+          gh release create "picks-$DATE" "/tmp/picks_$DATE.csv" "/tmp/monkey_$DATE.csv" --title "本週入選 $DATE 🧑‍💻 vs 🐒" --notes $'策略：排除收盤>=200高價股 → 4層多頭排列(MA5>10>20>60) → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序取第6~10名(中段動能高原;經walk-forward驗證)。\n買入價＝入選隔日(高+低)/2；反變異數(1/vol²)加權5檔；季線(MA60)連續5天跌破才轉弱空手；出場＝ATR移動停利(3.5×ATR(14),最長抱60天)；固定100萬試算張數,買不滿與空手計入現金。\n同附10隻猴子(各全市場隨機5檔、等權、固定抱20交易日、無濾網無停利,Malkiel《漫步華爾街》)取報酬中位數那隻對戰。詳見 README 與 docs 績效頁。' || echo "release 已存在"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

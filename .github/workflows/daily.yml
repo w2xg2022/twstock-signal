@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: 重算歷史推薦績效（不重新選股）
+      - name: 重算歷史入選績效（不重新選股）
         run: python scripts/track_perf.py
       - name: 產生 docs 資料
         run: python scripts/build_docs_data.py

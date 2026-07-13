@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-"""產生本週推薦（我們 + 猴子）：
+"""產生本週入選（我們 + 猴子）：
 我們：4層多頭排列(MA5>10>20>60,MA20升,收盤>MA5) → 量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120排序取第6-10名
-去重：20交易日內(持有期)已推薦過的不再選，由下一名遞補；猴子同理
+去重：20交易日內(持有期)已入選過的不再選，由下一名遞補；猴子同理
 猴子：全市場隨機5檔，以資料日為種子 — 致敬 Malkiel《漫步華爾街》"""
 import os, sys, glob, random
 import numpy as np, pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
 
-TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; REG_CONFIRM = 5; PRICE_MAX = 200; N_MONKEY = 10; ROOT = lib.ROOT  # SKIP:取6-10; REG_CONFIRM:連續5天跌破才轉弱; PRICE_MAX:排除推薦日收盤>=200的貴股(高原120-200,取200); N_MONKEY:猴子隻數(取報酬中位數那隻展示)
+TOPN = 5; EXT = 0.10; HOLD = 20; VOL_MIN = 1000; SKIP = 5; MA_REG = 60; REG_CONFIRM = 5; PRICE_MAX = 200; N_MONKEY = 10; ROOT = lib.ROOT  # SKIP:取6-10; REG_CONFIRM:連續5天跌破才轉弱; PRICE_MAX:排除入選日收盤>=200的貴股(高原120-200,取200); N_MONKEY:猴子隻數(取報酬中位數那隻展示)
 
 def held_within(dirn, taiex_dates, cur_i):
-    """回傳 20交易日內已推薦的 code 集合"""
+    """回傳 20交易日內已入選的 code 集合"""
     held = set()
     for f in glob.glob(os.path.join(ROOT, "data", dirn, "*.csv")):
         pd_ = os.path.basename(f)[:-4]
@@ -27,7 +27,7 @@ def main():
     idx = {"TWSE": lib.fetch_index("TAIEX"), "OTC": lib.fetch_index("TPEx")}
     tdates = idx["TWSE"]["date"].values.astype(str)
     tdays = {mk: set(idf["date"].values.astype(str)) for mk, idf in idx.items()}  # FinMind大盤指數=權威交易日曆;有無交易日以此為準,擋yfinance休市日(如颱風)的幽靈K棒
-    # regime 濾網：市場指數站上 MA60(季線) 才進場，跌破則該市場的股票標記轉弱(建議空手)
+    # regime 濾網：市場指數站上 MA60(季線) 才進場，跌破則該市場的股票標記轉弱(判定空手)
     regime_ok = {}  # 連續5天跌破MA60才轉弱(避免單日插針whipsaw)
     for mk, idf in idx.items():
         v = idf["idx"].values.astype(float); ma = pd.Series(v).rolling(MA_REG).mean().values
@@ -44,7 +44,7 @@ def main():
     for r in stocks.itertuples():
         df = prices.get(r.ticker)
         if df is None or idx[r.market].empty: continue
-        df = df[df["date"].isin(tdays[r.market])]  # 只保留FinMind有的交易日:擋掉yfinance幽靈K棒(否則會誤產休市日推薦)
+        df = df[df["date"].isin(tdays[r.market])]  # 只保留FinMind有的交易日:擋掉yfinance幽靈K棒(否則會誤產休市日入選)
         if len(df) < 260: continue
         cl = float(df["Close"].iloc[-1])  # 便宜取最新收盤:先擋貴股,超過門檻不必算features
         if not np.isfinite(cl) or cl <= 0: continue
@@ -72,11 +72,11 @@ def main():
     start = min(SKIP, max(0, len(D) - TOPN))  # 弱市候選不足時自動下移,保證取滿TOPN檔、仍避開最前段
     D = D.iloc[start:start+TOPN].reset_index(drop=True)
     D["rank"] = range(start + 1, start + 1 + len(D))
-    D["regime"] = D["market"].map(lambda m: int(regime_ok[m]))  # 1=市場站上季線可進場; 0=轉弱建議空手
+    D["regime"] = D["market"].map(lambda m: int(regime_ok[m]))  # 1=市場站上季線可進場; 0=轉弱判定空手
     D.insert(0, "pick_date", data_date)
     os.makedirs(os.path.join(ROOT, "data", "picks"), exist_ok=True)
     D.to_csv(os.path.join(ROOT, "data", "picks", f"{data_date}.csv"), index=False, encoding="utf-8-sig")
-    print(f"資料日 {data_date}, 我們推薦前{len(D)}:", flush=True)
+    print(f"資料日 {data_date}, 我們入選前{len(D)}:", flush=True)
     for r in D.itertuples():
         print(f"  {r.rank} {r.code} {r.name[:8]} α120={r.alpha120:+.2f} β120={r.beta120:.2f}", flush=True)
     # 猴子：N_MONKEY 隻各自隨機5檔(種子=資料日×100+k,可重現);track_perf 取報酬中位數那隻展示,移除單隻運氣

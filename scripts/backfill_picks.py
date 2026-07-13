@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""一次性: 回填 2025-01-04 起每週六歷史推薦(我們+猴子)
+"""一次性: 回填 2025-01-04 起每週六歷史入選(我們+猴子)
 我們: 4層多頭排列(MA5>10>20>60) → 量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第6-10名
-去重: 20交易日內(=持有期)已推薦過的股票不再選,由下一名遞補；猴子同理(重抽)
+去重: 20交易日內(=持有期)已入選過的股票不再選,由下一名遞補；猴子同理(重抽)
 猴子: 全市場隨機5檔(以當週日期為種子) — 致敬 Malkiel《漫步華爾街》"""
 import numpy as np, pandas as pd, os, datetime as dt, random
 CACHE="/home/woody/stock-research/cache_full/prices"; IDXC="/home/woody/stock-research/cache_pe"

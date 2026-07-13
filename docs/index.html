@@ -34,7 +34,7 @@
 </head>
 <body>
 <h1>台股訊號選股 🧑‍💻 vs 🐒</h1>
-<p class="sub"><b>排除收盤≥200 高價股</b> → 4層多頭排列(MA5>10>20>60) → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 6～10 名（中段動能高原，4層+6-10 經滾動前進驗證最佳）。進場：推薦隔日 (最高+最低)/2；<b>反變異數(1/vol²)加權</b>5 檔（越穩配越多）；<b>季線(MA60)濾網</b>（大盤連續5天跌破季線才轉弱、避免單日插針），轉弱該檔空手。出場：<b>ATR 移動停利</b>（收盤自高點回落 3.5×ATR(14)，最長抱 60 交易日），讓贏家續跑、轉弱才出。以<b>固定 100 萬</b>試算張數，買不滿與空手皆計入<b>現金部位</b>。</p>
+<p class="sub"><b>排除收盤≥200 高價股</b> → 4層多頭排列(MA5>10>20>60) → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 6～10 名（中段動能高原，4層+6-10 經滾動前進驗證最佳）。進場：入選隔日 (最高+最低)/2；<b>反變異數(1/vol²)加權</b>5 檔（越穩配越多）；<b>季線(MA60)濾網</b>（大盤連續5天跌破季線才轉弱、避免單日插針），轉弱該檔空手。出場：<b>ATR 移動停利</b>（收盤自高點回落 3.5×ATR(14)，最長抱 60 交易日），讓贏家續跑、轉弱才出。以<b>固定 100 萬</b>試算張數，買不滿與空手皆計入<b>現金部位</b>。</p>
 <p class="sub">🐒「猴子選股」= 每週產 <b>10 隻</b>猴子（每隻各自從全市場隨機抽 5 檔、以日期為種子可重現），展示<b>報酬中位數那一隻</b>（移除單隻運氣、更接近「猴子平均」）；<b>等權、固定抱 20 交易日、無濾網無停利</b>。典故：Burton Malkiel《漫步華爾街》——蒙眼猴子射飛鏢選股，未必輸給專家。<b>我們若長期贏不過猴子，就沒有存在價值。</b></p>
 
 <div class="tabs">
@@ -43,18 +43,18 @@
   <button data-tab="board">📊 對戰總表</button>
 </div>
 
-<div class="panel active" id="running"><p class="sub">尚有個股未出場的週次（含本週推薦），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（公平估計，非單一成交價）；<b>配置(100萬)</b>＝反波動權重 × 100 萬換算的建議張數（不足一張走零股、轉弱空手）；<b>出場</b>＝ATR 移動停利（收盤自持有期高點回落 3.5×ATR(14) 即出場，最長抱 60 交易日）。已出場者「當前價」＝出場價（標「第 N 天出」）、未出場者＝最新收盤（標「持有 N 天」）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
+<div class="panel active" id="running"><p class="sub">尚有個股未出場的週次（含本週入選），新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位（公平估計，非單一成交價）；<b>配置(100萬)</b>＝反波動權重 × 100 萬換算的模擬張數（不足一張走零股、轉弱空手）；<b>出場</b>＝ATR 移動停利（收盤自持有期高點回落 3.5×ATR(14) 即出場，最長抱 60 交易日）。已出場者「當前價」＝出場價（標「第 N 天出」）、未出場者＝最新收盤（標「持有 N 天」）。報酬率以還原價計算（含除權息）。</p><div id="run-groups"></div></div>
 <div class="panel" id="settled"><p class="sub">我們＋猴子 10 檔<b>全部出場</b>的週次，依<b>季度</b>分頁、每季內新→舊。<br><b>買入價</b>＝進場日（當日最高＋最低）÷2 湊合法檔位；<b>賣出價</b>＝ATR 移動停利觸發（收盤自高點回落 3.5×ATR(14)）或抱滿 60 交易日的出場價。全量回測顯示此動態出場比固定天數出場把夏普 0.12→0.47、淨值 ×1.0→×2.4（樣本內外皆成立）。報酬率以還原價計算（含除權息）。<br>📌 回填自 2025-10 起（含 2025 Q4 非純多頭段），比只看 2026 多頭窗口更公允。</p><div class="qtabs" id="set-qtabs"></div><div id="set-groups"></div></div>
 <div class="panel" id="board">
   <p class="sub">每週 5 檔平均報酬，我們 / 我們﹢市況濾網 / 猴子 / 同期大盤 並列，每列一週。<br><b>同期大盤</b>＝TAIEX／TPEx <b>加權（價格）指數</b>（跟一般人看盤的加權指數一樣，非含息報酬指數）在<b>與我們部位相同的持有窗口</b>（該週我們持股的平均持有天數，至多 60 交易日）的報酬——不是算到當前日，才能跟我們公平對比。<br><b>﹢市況濾網（季線）</b>＝進場當下所屬市場指數<b>連續 5 天</b>跌破季線（MA60）的個股視為空手（報酬計 0；連續 5 天確認可避免單日插針被洗、比單日判定的空頭防守更好）。全量回測顯示此濾網能顯著提升夏普、壓低回撤（樣本內外皆成立）。<br>📌 大盤處於季線之上時，濾網不作動、兩欄會完全相同（如目前 2026 多頭）；<b>要等大盤跌破季線的下跌段，濾網空手躲開，兩欄才會拉開</b>。<br>最上兩列<b>平均 vs 中位數</b>（放最上面直接看結果）：平均＝跨週平均（含暴衝週）；中位數＝各週的中位數（典型一週，剔除少數暴衝/暴跌週的影響）。若平均高、中位數低，代表績效靠少數幾週撐起、不夠穩定。</p>
   <div style="overflow-x:auto"><table id="boardtab"><thead>
-    <tr><th class="l" rowspan="2">推薦日</th><th rowspan="2">距今<br>交易日</th><th colspan="2">🧑‍💻 我們</th><th colspan="2">🧑‍💻﹢市況濾網</th><th colspan="2">🐒 猴子</th><th colspan="2">大盤上市</th><th colspan="2">大盤上櫃</th></tr>
+    <tr><th class="l" rowspan="2">入選日</th><th rowspan="2">距今<br>交易日</th><th colspan="2">🧑‍💻 我們</th><th colspan="2">🧑‍💻﹢市況濾網</th><th colspan="2">🐒 猴子</th><th colspan="2">大盤上市</th><th colspan="2">大盤上櫃</th></tr>
     <tr><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th><th>收盤%</th><th>最高%</th></tr>
   </thead><tbody></tbody><tfoot></tfoot></table></div>
 </div>
 
 <div class="card warn">🐒 <b>猴子現在看起來很猛？那是「多頭窗口」的錯覺。</b> 全樣本 127 期蒙地卡羅：隨機猴子長期只有 +0.66%/月，<b>遠低於大盤 +1.61%</b>（本策略回測 +3.5%）。目前 live 只有十幾週、全泡在 2026 大多頭裡，水漲船高把猴子、我們、大盤全一起抬上去、擠在一起。<b>等遇到一段回檔，猴子會現原形、我們的領先才會浮出來</b>——小樣本必然偏離長期，是變異數不是實力。</div>
-<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看長期。<b>僅供研究，不構成投資建議。</b></div>
+<div class="card warn">⚠️ 正偏態策略，靠少數大贏股拉抬，須分散長期執行；急跌反彈期動能因子逆風。短期輸給猴子很正常，看長期。<b>本站為量化模型的研究展示，非證券投資顧問、未收取任何費用、不對個別有價證券作推介或買賣建議；所列個股僅為策略回測之篩選結果，非投資建議，投資人應自行判斷並承擔風險。</b></div>
 <p class="sub"><a href="https://github.com/w2xg2022/twstock-signal">GitHub 原始碼</a>　資料：yfinance 還原價、FinMind 大盤指數</p>
 
 <script>
@@ -94,14 +94,14 @@ function stockTable(title,arr,curLabel,badge){
 }
 function group(g){
   const cl = g.status=='settled' ? '賣出價' : '當前價';
-  const warn = g.weak>0 ? `<div class="regwarn">⚠️ 本週 ${g.weak} 檔所屬市場連續5天跌破季線（MA60），市況濾網建議這幾檔<b>空手</b>；「套用市況濾網」績效已把它們視為持現金。</div>` : '';
+  const warn = g.weak>0 ? `<div class="regwarn">⚠️ 本週 ${g.weak} 檔所屬市場連續5天跌破季線（MA60），市況濾網判定這幾檔<b>空手</b>；「套用市況濾網」績效已把它們視為持現金。</div>` : '';
   // 平均勝 / 中位數勝：我們 vs 猴子（收盤%）
   const orc=(g.our||[]).map(s=>s.rc), mrc=(g.monkey||[]).map(s=>s.rc);
   const oa=mean(orc),ma=mean(mrc),om=med(orc),mm=med(mrc),ow=[],mw=[];
   if(oa!=null&&ma!=null){(oa>ma?ow:ma>oa?mw:[]).push('平均勝');}
   if(om!=null&&mm!=null){(om>mm?ow:mm>om?mw:[]).push('中位數勝');}
   const bd=w=>w.length?` <span class="win">${w.join(' ｜ ')}</span>`:'';
-  return `<div class="grp"><div class="grphead">推薦日 ${g.date} ／ 進場日 ${g.entry_date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+warn+
+  return `<div class="grp"><div class="grphead">入選日 ${g.date} ／ 進場日 ${g.entry_date}　<span class="d">距今 ${g.days} 交易日｜大盤 上市 ${f(g.market_twse_close)}／上櫃 ${f(g.market_otc_close)}</span></div>`+warn+
     stockTable('🧑‍💻 我們',g.our,cl,bd(ow))+stockTable('🐒 猴子',g.monkey,cl,bd(mw))+`</div>`;
 }
 fetch('data/performance.json').then(r=>r.json()).then(d=>{

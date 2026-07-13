@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """樣本外對戰成績單：每週個股明細（我們/猴子）+ 每週彙總
-每檔：買入價=推薦隔日(H+L)/2；出場=ATR移動停利（收盤自持有期高點回落 ATR_K×ATR(14) 即出場，最長抱 MAXH 天）。
+每檔：買入價=入選隔日(H+L)/2；出場=ATR移動停利（收盤自持有期高點回落 ATR_K×ATR(14) 即出場，最長抱 MAXH 天）。
   賣出價=出場當日收盤（未出場則=最新收盤，仍持有）；最高價=進場至出場區間最高。
   報酬%(收盤)=賣出/買入−1；報酬%(最高)=最高/買入−1（皆取2位小數，用還原價）。組內依收盤報酬由高到低。
 大盤分 上市(TAIEX)/上櫃(TPEx)，各有 收盤%/最高%。
@@ -32,16 +32,16 @@ def tick(p):
 
 def idx_ret(idxdf, pick_date, hold=MAXH):
     dts = idxdf["date"].values.astype(str); v = idxdf["idx"].values.astype(float)
-    j = np.searchsorted(dts, str(pick_date), "right")  # j=次一交易日；j-1=推薦日
+    j = np.searchsorted(dts, str(pick_date), "right")  # j=次一交易日；j-1=入選日
     if j >= len(v) or j < 1: return None, None
-    base = (v[j-1] + v[j]) / 2   # 大盤基準=推薦日收盤與次一交易日收盤的均值(降低次日單日大漲跌造成的失真)
+    base = (v[j-1] + v[j]) / 2   # 大盤基準=入選日收盤與次一交易日收盤的均值(降低次日單日大漲跌造成的失真)
     if base <= 0: return None, None
     end = min(j + hold, len(v) - 1)  # 大盤窗口對齊我們部位的平均持有天數(至多MAXH);修正原本算到當前日的長期漲幅失真
     return round(float(v[end]/base-1)*100, 2), round(float(np.max(v[j:end+1])/base-1)*100, 2)
 
 def main():
     ours = load("picks"); monk = load("monkey")  # picks已是選定的5檔(rank 6-10)，不再用rank_cap過濾
-    if not ours: print("尚無推薦"); return
+    if not ours: print("尚無入選"); return
     slist = lib.load_stock_list().set_index("code")
     allcodes = set()
     for d in list(ours.values()) + list(monk.values()): allcodes |= set(d["code"].astype(str))
@@ -56,7 +56,7 @@ def main():
         df = prices.get(slist.loc[code, "ticker"])
         if df is None: return None
         dts = df["date"].values.astype(str)
-        j = np.searchsorted(dts, str(pick_date), "right")  # 進場=推薦隔日
+        j = np.searchsorted(dts, str(pick_date), "right")  # 進場=入選隔日
         if j >= len(df): return None
         H = df["High"].values.astype(float); L = df["Low"].values.astype(float); C = df["Close"].values.astype(float)         # 原始(顯示)
         aH = df["aHigh"].values.astype(float); aC = df["aClose"].values.astype(float)                                          # 還原(報酬)
@@ -64,7 +64,7 @@ def main():
         if e <= 0 or C[j] <= 0: return None
         ae = e * (aC[j] / C[j])       # 對應還原買入價
         end = len(df) - 1
-        # 反波動加權：推薦日(j-1)為止 VOLW 日「日報酬標準差」-> iv=1/vol(越穩權重越高)；缺資料則 None(退回等權)
+        # 反波動加權：入選日(j-1)為止 VOLW 日「日報酬標準差」-> iv=1/vol(越穩權重越高)；缺資料則 None(退回等權)
         iv = None; dpt = j - 1
         if dpt >= VOLW:
             r = C[dpt-VOLW+1:dpt+1] / C[dpt-VOLW:dpt] - 1
@@ -118,7 +118,7 @@ def main():
         j = np.searchsorted(tdates, w, "right")
         if j >= len(tdates): continue
         days = int(len(tdates) - 1 - j)
-        entry_date = str(tdates[j])  # 進場日=推薦隔日(第一個交易日)
+        entry_date = str(tdates[j])  # 進場日=入選隔日(第一個交易日)
         od = week_list(ours[w], w) if w in ours else []
         md = median_monkey(monk[w], w) if w in monk else []  # 猴子:N隻取報酬中位數那隻(天真固定抱MONKEY_HOLD天)
         hold_days = int(round(np.mean([x["hold"] for x in od]))) if od else MONKEY_HOLD  # 大盤窗口=我們部位平均持有天數(對齊出場,無部位則用20天)
@@ -135,7 +135,7 @@ def main():
         wmean = lambda lst, k, reg=False: round(float(sum(x["weight"]*(x[k] if (not reg or x["regime"]) else 0.0) for x in lst)), 2) if lst else None
         avg = lambda lst, k: round(float(np.mean([x[k] for x in lst])), 2) if lst else None  # 猴子等權
         st = "settled" if settled else "running"
-        nwk = sum(1 for x in od if not x["regime"])  # 本週我們有幾檔轉弱(建議空手)
+        nwk = sum(1 for x in od if not x["regime"])  # 本週我們有幾檔轉弱(判定空手)
         mkt = {"market_twse_close": mtc, "market_twse_max": mtm, "market_otc_close": moc, "market_otc_max": mom}
         agg.append({"date": w, "entry_date": entry_date, "days": days, "status": st,
                     "our_close": wmean(od,"rc"), "our_max": wmean(od,"rm"),
