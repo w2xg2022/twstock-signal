@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>台股訊號選股 · 人 vs 猴子</title>
+<title>台股基於量化選股策略篩選 · 人 vs 猴子</title>
 <style>
   body{font-family:system-ui,"Microsoft JhengHei",sans-serif;max-width:920px;margin:0 auto;padding:16px;color:#222;line-height:1.6}
   h1{font-size:1.4rem;margin-bottom:2px} .sub{color:#666;font-size:.86rem}
@@ -33,7 +33,7 @@
 </style>
 </head>
 <body>
-<h1>台股訊號選股 🧑‍💻 vs 🐒</h1>
+<h1>台股基於量化選股策略篩選 🧑‍💻 vs 🐒</h1>
 <p class="sub"><b>排除收盤≥200 高價股</b> → 4層多頭排列(MA5>10>20>60) → 近20日日均量>1000張 → beta120∈[0,1] → 收盤離MA20<10% → alpha120 排序取第 6～10 名（中段動能高原，4層+6-10 經滾動前進驗證最佳）。進場：入選隔日 (最高+最低)/2；<b>反變異數(1/vol²)加權</b>5 檔（越穩配越多）；<b>季線(MA60)濾網</b>（大盤連續5天跌破季線才轉弱、避免單日插針），轉弱該檔空手。出場：<b>ATR 移動停利</b>（收盤自高點回落 3.5×ATR(14)，最長抱 60 交易日），讓贏家續跑、轉弱才出。以<b>固定 100 萬</b>試算張數，買不滿與空手皆計入<b>現金部位</b>。</p>
 <p class="sub">🐒「猴子選股」= 每週產 <b>10 隻</b>猴子（每隻各自從全市場隨機抽 5 檔、以日期為種子可重現），展示<b>報酬中位數那一隻</b>（移除單隻運氣、更接近「猴子平均」）；<b>等權、固定抱 20 交易日、無濾網無停利</b>。典故：Burton Malkiel《漫步華爾街》——蒙眼猴子射飛鏢選股，未必輸給專家。<b>我們若長期贏不過猴子，就沒有存在價值。</b></p>
 
