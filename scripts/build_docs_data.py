@@ -7,3 +7,4 @@ src = os.path.join(ROOT, "data", "performance.json")
 if os.path.exists(src):
     shutil.copy(src, os.path.join(DOCS, "performance.json"))
     print("docs 資料已更新", flush=True)
+# 注意:data/admin_monkeys.json 故意不複製到 docs/(不上 Pages),由 admin 頁經 GitHub API+PAT 讀取

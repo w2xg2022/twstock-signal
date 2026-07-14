@@ -112,8 +112,21 @@ def main():
         cands.sort(key=lambda x: x[0])
         return cands[len(cands) // 2][1]  # 報酬中位數那隻(10隻取index5)
 
+    def all_monkeys(df, pick_date):
+        """admin用:全N隻猴子所有持股攤平成一串、標monkey_id、依個股收盤報酬由高到低排序(不分組)"""
+        if df is None or len(df) == 0: return []
+        out = []
+        if "monkey_id" in df.columns:
+            for mid, sub in df.groupby("monkey_id"):
+                for d in week_list(sub, pick_date, naive=True):
+                    d = dict(d); d.pop("iv", None); d["monkey_id"] = int(mid); out.append(d)
+        else:
+            out = [{k: v for k, v in d.items() if k != "iv"} for d in week_list(df, pick_date, naive=True)]
+        out.sort(key=lambda x: -x["rc"])  # 依個股績效排序,不基於猴子
+        return out
+
     weeks = sorted(set(ours) | set(monk), reverse=True)
-    agg = []; detail = []
+    agg = []; detail = []; admin = []  # admin=預測中週次的全猴子個股(加密後只給admin頁)
     for w in weeks:
         j = np.searchsorted(tdates, w, "right")
         if j >= len(tdates): continue
@@ -142,6 +155,8 @@ def main():
                     "our_close_reg": wmean(od,"rc",True), "our_max_reg": wmean(od,"rm",True), "weak": nwk,
                     "monkey_close": avg(md,"rc"), "monkey_max": avg(md,"rm"), **mkt})
         detail.append({"date": w, "entry_date": entry_date, "days": days, "status": st, "weak": nwk, "our": od, "monkey": md, **mkt})
+        if st == "running" and w in monk:  # 只有預測中才輸出全猴子明細(admin用)
+            admin.append({"date": w, "entry_date": entry_date, "days": days, "stocks": all_monkeys(monk[w], w)})
     keys = ["our_close","our_max","our_close_reg","our_max_reg","monkey_close","monkey_max","market_twse_close","market_twse_max","market_otc_close","market_otc_max"]
     def gavg(k):
         v = [r[k] for r in agg if r[k] is not None]
@@ -149,6 +164,11 @@ def main():
     summary = {"updated": pd.Timestamp.now("UTC").isoformat(), "latest_date": latest, "n_weeks": len(agg),
                "weeks": agg, "detail": detail, "avg": {k: gavg(k) for k in keys}}
     json.dump(summary, open(os.path.join(ROOT,"data","performance.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
+    # admin(全猴子個股,僅預測中週次):輸出到 data/admin_monkeys.json,故意「不」複製到 docs/(不上 Pages、不加連結),
+    # 由 admin 頁用 GitHub PAT 經 API 讀取(照 twstock-wordcloud 模式)。公開 repo 唯讀非真加密,只擋 Pages 站面與一般使用者。
+    admin_out = {"updated": summary["updated"], "latest_date": latest, "weeks": admin}
+    json.dump(admin_out, open(os.path.join(ROOT,"data","admin_monkeys.json"),"w",encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"admin_monkeys.json 已輸出({len(admin)} 週預測中,全猴子個股)", flush=True)
     ns = sum(1 for r in agg if r["status"]=="settled")
     print(f"{len(agg)}週 (預測中{len(agg)-ns}/已結束{ns}). 平均收盤 我們{summary['avg']['our_close']} 猴子{summary['avg']['monkey_close']} 大盤上市{summary['avg']['market_twse_close']}/上櫃{summary['avg']['market_otc_close']}", flush=True)
 
