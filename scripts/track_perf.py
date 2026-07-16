@@ -48,7 +48,8 @@ def main():
     prices = lib.fetch_prices([slist.loc[c, "ticker"] for c in allcodes if c in slist.index])
     taiex = lib.fetch_index("TAIEX", price=True); tpex = lib.fetch_index("TPEx", price=True)  # 大盤基準展示用價格指數(加權指數,跟一般人看盤一樣)
     tdates = taiex["date"].values.astype(str); latest = tdates[-1]
-    prices = {t: df[df["date"] <= latest] for t, df in prices.items()}  # 個股價格截到大盤最後交易日(FinMind交易日曆);擋yfinance休市日(如颱風7/10)幽靈K棒->持有天數與距今一致
+    tdset = set(tdates) | set(tpex["date"].values.astype(str))  # FinMind兩市場交易日曆=權威交易日
+    prices = {t: df[df["date"].isin(tdset)] for t, df in prices.items()}  # 用isin交易日曆(非<=latest):才能移除「夾在中間」的幽靈日(如颱風7/10),否則進場會落在幽靈日、持有天數比距今多1
 
     def detail_one(code, name, market, pick_date, regime=1, naive=False):
         if code not in slist.index: return None
