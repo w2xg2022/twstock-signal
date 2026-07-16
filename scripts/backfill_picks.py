@@ -9,6 +9,7 @@ ROOT="/home/woody/twstock-signal"; TOPN=5; EXT=0.10; HOLD=20; VOL_MIN=1000; SKIP
 D_RANK_START=SKIP+1
 idxs={"TWSE":pd.read_csv(f"{IDXC}/idx_TAIEX.csv"),"OTC":pd.read_csv(f"{IDXC}/idx_TPEx.csv")}
 tdates=idxs["TWSE"]["date"].values.astype(str)  # 交易日曆
+CALSET=set(tdates)|set(idxs["OTC"]["date"].values.astype(str))  # FinMind兩市場真交易日;擋cache_full殘留的yfinance颱風幽靈K棒
 MA_REG=60; REG_CONFIRM=5  # regime季線; 連續5天跌破MA60才算轉弱(避免單日插針whipsaw)
 regidx={mk:(g["date"].values.astype(str),g["idx"].values.astype(float),pd.Series(g["idx"].values.astype(float)).rolling(MA_REG).mean().values) for mk,g in idxs.items()}
 def regime_ok(mk,ddate):
@@ -26,6 +27,7 @@ for r in lst.itertuples():
     fp=f"{CACHE}/{r.code}.csv"
     if not os.path.exists(fp): continue
     g=pd.read_csv(fp)
+    g=g[g["date"].isin(CALSET)]  # 交易日一律以FinMind為準:移除yfinance在颱風休市日的幽靈K棒(否則污染MA/alpha或讓決策日落在幽靈日)
     if len(g)<300: continue
     g=g.merge(idxs[r.market],on="date",how="left");g["idx"]=g["idx"].ffill()
     if g["idx"].isna().all(): continue
