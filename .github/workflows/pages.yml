@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
     paths: ["docs/**"]
+  workflow_run:                       # daily/weekly 用 GITHUB_TOKEN 推的資料 commit 不會觸發上面的 push;
+    workflows: ["weekly", "daily"]    # 改用 workflow_run,在它們跑完後自動部署,線上才會跟上每日資料
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
