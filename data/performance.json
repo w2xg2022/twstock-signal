@@ -1,71 +1,71 @@
 {
- "updated": "2026-07-29T10:37:37.678899+00:00",
- "latest_date": "2026-07-29",
+ "updated": "2026-07-30T10:25:02.003471+00:00",
+ "latest_date": "2026-07-30",
  "n_weeks": 79,
  "weeks": [
   {
    "date": "2026-07-24",
    "entry_date": "2026-07-27",
-   "days": 2,
+   "days": 3,
    "status": "running",
-   "our_close": -0.74,
-   "our_max": 2.14,
-   "our_close_reg": -0.87,
-   "our_max_reg": 1.2,
+   "our_close": -1.74,
+   "our_max": 2.32,
+   "our_close_reg": -1.03,
+   "our_max_reg": 1.39,
    "weak": 1,
-   "monkey_close": -4.86,
-   "monkey_max": 1.57,
-   "market_twse_close": -8.26,
+   "monkey_close": -6.0,
+   "monkey_max": 0.77,
+   "market_twse_close": -8.5,
    "market_twse_max": -0.02,
-   "market_otc_close": -11.54,
+   "market_otc_close": -13.66,
    "market_otc_max": 0.06
   },
   {
    "date": "2026-07-17",
    "entry_date": "2026-07-20",
-   "days": 7,
+   "days": 8,
    "status": "running",
-   "our_close": 2.21,
-   "our_max": 5.16,
-   "our_close_reg": 2.21,
-   "our_max_reg": 5.16,
+   "our_close": 3.55,
+   "our_max": 5.78,
+   "our_close_reg": 3.55,
+   "our_max_reg": 5.78,
    "weak": 0,
-   "monkey_close": -4.17,
-   "monkey_max": 11.08,
-   "market_twse_close": -5.92,
+   "monkey_close": -6.42,
+   "monkey_max": 8.12,
+   "market_twse_close": -6.17,
    "market_twse_max": 5.38,
-   "market_otc_close": -10.51,
+   "market_otc_close": -12.65,
    "market_otc_max": 5.81
   },
   {
    "date": "2026-07-09",
    "entry_date": "2026-07-13",
-   "days": 12,
+   "days": 13,
    "status": "running",
-   "our_close": -1.16,
-   "our_max": 3.12,
-   "our_close_reg": -1.16,
-   "our_max_reg": 3.12,
+   "our_close": -0.92,
+   "our_max": 3.14,
+   "our_close_reg": -0.92,
+   "our_max_reg": 3.14,
    "weak": 0,
-   "monkey_close": -12.27,
-   "monkey_max": 3.38,
-   "market_twse_close": -3.78,
+   "monkey_close": -12.74,
+   "monkey_max": 3.79,
+   "market_twse_close": -3.82,
    "market_twse_max": 0.58,
-   "market_otc_close": -10.61,
+   "market_otc_close": -10.5,
    "market_otc_max": -0.6
   },
   {
    "date": "2026-07-03",
    "entry_date": "2026-07-06",
-   "days": 16,
+   "days": 17,
    "status": "running",
-   "our_close": -8.61,
+   "our_close": -10.57,
    "our_max": 21.38,
-   "our_close_reg": -8.61,
+   "our_close_reg": -10.57,
    "our_max_reg": 21.38,
    "weak": 0,
-   "monkey_close": -15.44,
-   "monkey_max": 2.57,
+   "monkey_close": -15.71,
+   "monkey_max": 4.26,
    "market_twse_close": -3.95,
    "market_twse_max": -0.24,
    "market_otc_close": -10.71,
@@ -74,24 +74,24 @@
   {
    "date": "2026-06-26",
    "entry_date": "2026-06-29",
-   "days": 21,
+   "days": 22,
    "status": "running",
-   "our_close": 4.76,
-   "our_max": 7.3,
-   "our_close_reg": 4.76,
-   "our_max_reg": 7.3,
+   "our_close": 6.56,
+   "our_max": 8.27,
+   "our_close_reg": 6.56,
+   "our_max_reg": 8.27,
    "weak": 0,
    "monkey_close": -4.84,
    "monkey_max": 17.86,
-   "market_twse_close": -10.6,
+   "market_twse_close": -10.83,
    "market_twse_max": 4.99,
-   "market_otc_close": -19.28,
+   "market_otc_close": -21.22,
    "market_otc_max": 7.56
   },
   {
    "date": "2026-06-18",
    "entry_date": "2026-06-22",
-   "days": 26,
+   "days": 27,
    "status": "settled",
    "our_close": -7.53,
    "our_max": 7.64,
@@ -108,7 +108,7 @@
   {
    "date": "2026-06-12",
    "entry_date": "2026-06-15",
-   "days": 30,
+   "days": 31,
    "status": "settled",
    "our_close": -4.08,
    "our_max": 12.1,
@@ -125,11 +125,11 @@
   {
    "date": "2026-06-05",
    "entry_date": "2026-06-08",
-   "days": 35,
-   "status": "running",
-   "our_close": 3.01,
+   "days": 36,
+   "status": "settled",
+   "our_close": 1.38,
    "our_max": 20.55,
-   "our_close_reg": 3.01,
+   "our_close_reg": 1.38,
    "our_max_reg": 20.55,
    "weak": 0,
    "monkey_close": 7.71,
@@ -142,7 +142,7 @@
   {
    "date": "2026-05-29",
    "entry_date": "2026-06-01",
-   "days": 40,
+   "days": 41,
    "status": "settled",
    "our_close": 5.47,
    "our_max": 20.69,
@@ -159,7 +159,7 @@
   {
    "date": "2026-05-22",
    "entry_date": "2026-05-25",
-   "days": 45,
+   "days": 46,
    "status": "settled",
    "our_close": 6.08,
    "our_max": 20.71,
@@ -176,7 +176,7 @@
   {
    "date": "2026-05-15",
    "entry_date": "2026-05-18",
-   "days": 50,
+   "days": 51,
    "status": "settled",
    "our_close": 14.48,
    "our_max": 45.21,
@@ -193,11 +193,11 @@
   {
    "date": "2026-05-08",
    "entry_date": "2026-05-11",
-   "days": 55,
+   "days": 56,
    "status": "running",
-   "our_close": 15.32,
+   "our_close": 15.08,
    "our_max": 28.03,
-   "our_close_reg": 15.32,
+   "our_close_reg": 15.08,
    "our_max_reg": 28.03,
    "weak": 0,
    "monkey_close": -0.08,
@@ -210,7 +210,7 @@
   {
    "date": "2026-04-30",
    "entry_date": "2026-05-04",
-   "days": 60,
+   "days": 61,
    "status": "settled",
    "our_close": 5.88,
    "our_max": 21.94,
@@ -227,7 +227,7 @@
   {
    "date": "2026-04-24",
    "entry_date": "2026-04-27",
-   "days": 64,
+   "days": 65,
    "status": "settled",
    "our_close": -2.16,
    "our_max": 12.35,
@@ -244,7 +244,7 @@
   {
    "date": "2026-04-17",
    "entry_date": "2026-04-20",
-   "days": 69,
+   "days": 70,
    "status": "settled",
    "our_close": -6.23,
    "our_max": 4.79,
@@ -261,7 +261,7 @@
   {
    "date": "2026-04-10",
    "entry_date": "2026-04-13",
-   "days": 74,
+   "days": 75,
    "status": "settled",
    "our_close": 1.19,
    "our_max": 22.08,
@@ -278,7 +278,7 @@
   {
    "date": "2026-04-02",
    "entry_date": "2026-04-07",
-   "days": 78,
+   "days": 79,
    "status": "settled",
    "our_close": 0.47,
    "our_max": 6.8,
@@ -295,7 +295,7 @@
   {
    "date": "2026-03-27",
    "entry_date": "2026-03-30",
-   "days": 82,
+   "days": 83,
    "status": "settled",
    "our_close": -1.98,
    "our_max": 4.19,
@@ -312,7 +312,7 @@
   {
    "date": "2026-03-20",
    "entry_date": "2026-03-23",
-   "days": 87,
+   "days": 88,
    "status": "settled",
    "our_close": -0.87,
    "our_max": 6.5,
@@ -329,7 +329,7 @@
   {
    "date": "2026-03-13",
    "entry_date": "2026-03-16",
-   "days": 92,
+   "days": 93,
    "status": "settled",
    "our_close": 12.49,
    "our_max": 28.99,
@@ -346,7 +346,7 @@
   {
    "date": "2026-03-06",
    "entry_date": "2026-03-09",
-   "days": 97,
+   "days": 98,
    "status": "settled",
    "our_close": -0.95,
    "our_max": 18.25,
@@ -363,7 +363,7 @@
   {
    "date": "2026-02-26",
    "entry_date": "2026-03-02",
-   "days": 102,
+   "days": 103,
    "status": "settled",
    "our_close": 15.58,
    "our_max": 30.37,
@@ -380,7 +380,7 @@
   {
    "date": "2026-02-11",
    "entry_date": "2026-02-23",
-   "days": 106,
+   "days": 107,
    "status": "settled",
    "our_close": 27.24,
    "our_max": 37.84,
@@ -397,7 +397,7 @@
   {
    "date": "2026-02-06",
    "entry_date": "2026-02-09",
-   "days": 109,
+   "days": 110,
    "status": "settled",
    "our_close": 6.16,
    "our_max": 12.19,
@@ -414,7 +414,7 @@
   {
    "date": "2026-01-30",
    "entry_date": "2026-02-02",
-   "days": 114,
+   "days": 115,
    "status": "settled",
    "our_close": -3.83,
    "our_max": 14.36,
@@ -431,7 +431,7 @@
   {
    "date": "2026-01-23",
    "entry_date": "2026-01-26",
-   "days": 119,
+   "days": 120,
    "status": "settled",
    "our_close": -9.95,
    "our_max": 5.31,
@@ -448,7 +448,7 @@
   {
    "date": "2026-01-16",
    "entry_date": "2026-01-19",
-   "days": 124,
+   "days": 125,
    "status": "settled",
    "our_close": -8.72,
    "our_max": 12.23,
@@ -465,7 +465,7 @@
   {
    "date": "2026-01-09",
    "entry_date": "2026-01-12",
-   "days": 129,
+   "days": 130,
    "status": "settled",
    "our_close": 18.79,
    "our_max": 53.45,
@@ -482,7 +482,7 @@
   {
    "date": "2026-01-02",
    "entry_date": "2026-01-05",
-   "days": 134,
+   "days": 135,
    "status": "settled",
    "our_close": 4.59,
    "our_max": 32.31,
@@ -499,7 +499,7 @@
   {
    "date": "2025-12-26",
    "entry_date": "2025-12-29",
-   "days": 138,
+   "days": 139,
    "status": "settled",
    "our_close": -2.14,
    "our_max": 17.63,
@@ -516,7 +516,7 @@
   {
    "date": "2025-12-19",
    "entry_date": "2025-12-22",
-   "days": 142,
+   "days": 143,
    "status": "settled",
    "our_close": 10.18,
    "our_max": 26.67,
@@ -533,7 +533,7 @@
   {
    "date": "2025-12-12",
    "entry_date": "2025-12-15",
-   "days": 147,
+   "days": 148,
    "status": "settled",
    "our_close": 11.7,
    "our_max": 26.17,
@@ -550,7 +550,7 @@
   {
    "date": "2025-12-05",
    "entry_date": "2025-12-08",
-   "days": 152,
+   "days": 153,
    "status": "settled",
    "our_close": 4.42,
    "our_max": 12.22,
@@ -567,7 +567,7 @@
   {
    "date": "2025-11-28",
    "entry_date": "2025-12-01",
-   "days": 157,
+   "days": 158,
    "status": "settled",
    "our_close": -1.17,
    "our_max": 9.16,
@@ -584,7 +584,7 @@
   {
    "date": "2025-11-21",
    "entry_date": "2025-11-24",
-   "days": 162,
+   "days": 163,
    "status": "settled",
    "our_close": -3.98,
    "our_max": 6.61,
@@ -601,7 +601,7 @@
   {
    "date": "2025-11-14",
    "entry_date": "2025-11-17",
-   "days": 167,
+   "days": 168,
    "status": "settled",
    "our_close": 13.04,
    "our_max": 16.75,
@@ -618,7 +618,7 @@
   {
    "date": "2025-11-07",
    "entry_date": "2025-11-10",
-   "days": 172,
+   "days": 173,
    "status": "settled",
    "our_close": 2.95,
    "our_max": 11.56,
@@ -635,7 +635,7 @@
   {
    "date": "2025-10-31",
    "entry_date": "2025-11-03",
-   "days": 177,
+   "days": 178,
    "status": "settled",
    "our_close": 6.06,
    "our_max": 27.43,
@@ -652,7 +652,7 @@
   {
    "date": "2025-10-23",
    "entry_date": "2025-10-27",
-   "days": 182,
+   "days": 183,
    "status": "settled",
    "our_close": -7.13,
    "our_max": 2.53,
@@ -669,7 +669,7 @@
   {
    "date": "2025-10-17",
    "entry_date": "2025-10-20",
-   "days": 186,
+   "days": 187,
    "status": "settled",
    "our_close": -0.61,
    "our_max": 6.59,
@@ -686,7 +686,7 @@
   {
    "date": "2025-10-09",
    "entry_date": "2025-10-13",
-   "days": 191,
+   "days": 192,
    "status": "settled",
    "our_close": 5.51,
    "our_max": 18.65,
@@ -703,7 +703,7 @@
   {
    "date": "2025-10-03",
    "entry_date": "2025-10-07",
-   "days": 194,
+   "days": 195,
    "status": "settled",
    "our_close": 1.19,
    "our_max": 10.9,
@@ -720,7 +720,7 @@
   {
    "date": "2025-09-26",
    "entry_date": "2025-09-30",
-   "days": 198,
+   "days": 199,
    "status": "settled",
    "our_close": -1.21,
    "our_max": 8.49,
@@ -737,7 +737,7 @@
   {
    "date": "2025-09-19",
    "entry_date": "2025-09-22",
-   "days": 203,
+   "days": 204,
    "status": "settled",
    "our_close": -1.1,
    "our_max": 7.57,
@@ -754,7 +754,7 @@
   {
    "date": "2025-09-12",
    "entry_date": "2025-09-15",
-   "days": 208,
+   "days": 209,
    "status": "settled",
    "our_close": -1.36,
    "our_max": 3.4,
@@ -771,7 +771,7 @@
   {
    "date": "2025-09-05",
    "entry_date": "2025-09-08",
-   "days": 213,
+   "days": 214,
    "status": "settled",
    "our_close": 3.12,
    "our_max": 13.89,
@@ -788,7 +788,7 @@
   {
    "date": "2025-08-29",
    "entry_date": "2025-09-01",
-   "days": 218,
+   "days": 219,
    "status": "settled",
    "our_close": 0.86,
    "our_max": 13.42,
@@ -805,7 +805,7 @@
   {
    "date": "2025-08-22",
    "entry_date": "2025-08-25",
-   "days": 223,
+   "days": 224,
    "status": "settled",
    "our_close": -4.92,
    "our_max": 4.02,
@@ -822,7 +822,7 @@
   {
    "date": "2025-08-15",
    "entry_date": "2025-08-18",
-   "days": 228,
+   "days": 229,
    "status": "settled",
    "our_close": -3.18,
    "our_max": 3.35,
@@ -839,7 +839,7 @@
   {
    "date": "2025-08-08",
    "entry_date": "2025-08-11",
-   "days": 233,
+   "days": 234,
    "status": "settled",
    "our_close": -1.33,
    "our_max": 2.6,
@@ -856,7 +856,7 @@
   {
    "date": "2025-08-01",
    "entry_date": "2025-08-04",
-   "days": 238,
+   "days": 239,
    "status": "settled",
    "our_close": 18.39,
    "our_max": 34.14,
@@ -873,7 +873,7 @@
   {
    "date": "2025-07-25",
    "entry_date": "2025-07-28",
-   "days": 243,
+   "days": 244,
    "status": "settled",
    "our_close": 2.54,
    "our_max": 10.69,
@@ -890,7 +890,7 @@
   {
    "date": "2025-07-18",
    "entry_date": "2025-07-21",
-   "days": 248,
+   "days": 249,
    "status": "settled",
    "our_close": 1.57,
    "our_max": 6.61,
@@ -907,7 +907,7 @@
   {
    "date": "2025-07-11",
    "entry_date": "2025-07-14",
-   "days": 253,
+   "days": 254,
    "status": "settled",
    "our_close": 0.33,
    "our_max": 4.35,
@@ -924,7 +924,7 @@
   {
    "date": "2025-07-04",
    "entry_date": "2025-07-07",
-   "days": 258,
+   "days": 259,
    "status": "settled",
    "our_close": -0.68,
    "our_max": 5.3,
@@ -941,7 +941,7 @@
   {
    "date": "2025-06-27",
    "entry_date": "2025-06-30",
-   "days": 263,
+   "days": 264,
    "status": "settled",
    "our_close": 2.78,
    "our_max": 9.1,
@@ -958,7 +958,7 @@
   {
    "date": "2025-06-20",
    "entry_date": "2025-06-23",
-   "days": 268,
+   "days": 269,
    "status": "settled",
    "our_close": -1.32,
    "our_max": 2.51,
@@ -975,7 +975,7 @@
   {
    "date": "2025-06-13",
    "entry_date": "2025-06-16",
-   "days": 273,
+   "days": 274,
    "status": "settled",
    "our_close": 1.32,
    "our_max": 5.59,
@@ -992,7 +992,7 @@
   {
    "date": "2025-06-06",
    "entry_date": "2025-06-09",
-   "days": 278,
+   "days": 279,
    "status": "settled",
    "our_close": -2.94,
    "our_max": 3.51,
@@ -1009,7 +1009,7 @@
   {
    "date": "2025-05-29",
    "entry_date": "2025-06-02",
-   "days": 283,
+   "days": 284,
    "status": "settled",
    "our_close": 17.75,
    "our_max": 23.58,
@@ -1026,7 +1026,7 @@
   {
    "date": "2025-05-23",
    "entry_date": "2025-05-26",
-   "days": 287,
+   "days": 288,
    "status": "settled",
    "our_close": 8.16,
    "our_max": 16.05,
@@ -1043,7 +1043,7 @@
   {
    "date": "2025-05-16",
    "entry_date": "2025-05-19",
-   "days": 292,
+   "days": 293,
    "status": "settled",
    "our_close": -4.37,
    "our_max": 2.27,
@@ -1060,7 +1060,7 @@
   {
    "date": "2025-05-09",
    "entry_date": "2025-05-12",
-   "days": 297,
+   "days": 298,
    "status": "settled",
    "our_close": 1.96,
    "our_max": 6.15,
@@ -1077,7 +1077,7 @@
   {
    "date": "2025-05-02",
    "entry_date": "2025-05-05",
-   "days": 302,
+   "days": 303,
    "status": "settled",
    "our_close": -3.75,
    "our_max": 5.85,
@@ -1094,7 +1094,7 @@
   {
    "date": "2025-04-25",
    "entry_date": "2025-04-28",
-   "days": 306,
+   "days": 307,
    "status": "settled",
    "our_close": 12.53,
    "our_max": 33.38,
@@ -1111,7 +1111,7 @@
   {
    "date": "2025-04-11",
    "entry_date": "2025-04-14",
-   "days": 316,
+   "days": 317,
    "status": "settled",
    "our_close": -1.43,
    "our_max": 10.95,
@@ -1128,7 +1128,7 @@
   {
    "date": "2025-04-02",
    "entry_date": "2025-04-07",
-   "days": 321,
+   "days": 322,
    "status": "settled",
    "our_close": 6.84,
    "our_max": 11.56,
@@ -1145,7 +1145,7 @@
   {
    "date": "2025-03-28",
    "entry_date": "2025-03-31",
-   "days": 324,
+   "days": 325,
    "status": "settled",
    "our_close": -8.48,
    "our_max": 1.92,
@@ -1162,7 +1162,7 @@
   {
    "date": "2025-03-21",
    "entry_date": "2025-03-24",
-   "days": 329,
+   "days": 330,
    "status": "settled",
    "our_close": -7.5,
    "our_max": 8.78,
@@ -1179,7 +1179,7 @@
   {
    "date": "2025-03-14",
    "entry_date": "2025-03-17",
-   "days": 334,
+   "days": 335,
    "status": "settled",
    "our_close": -7.3,
    "our_max": 3.47,
@@ -1196,7 +1196,7 @@
   {
    "date": "2025-03-07",
    "entry_date": "2025-03-10",
-   "days": 339,
+   "days": 340,
    "status": "settled",
    "our_close": -9.21,
    "our_max": 4.16,
@@ -1213,7 +1213,7 @@
   {
    "date": "2025-02-27",
    "entry_date": "2025-03-03",
-   "days": 344,
+   "days": 345,
    "status": "settled",
    "our_close": -9.67,
    "our_max": 4.37,
@@ -1230,7 +1230,7 @@
   {
    "date": "2025-02-21",
    "entry_date": "2025-02-24",
-   "days": 348,
+   "days": 349,
    "status": "settled",
    "our_close": -5.49,
    "our_max": 11.41,
@@ -1247,7 +1247,7 @@
   {
    "date": "2025-02-14",
    "entry_date": "2025-02-17",
-   "days": 353,
+   "days": 354,
    "status": "settled",
    "our_close": -1.71,
    "our_max": 5.12,
@@ -1264,7 +1264,7 @@
   {
    "date": "2025-02-07",
    "entry_date": "2025-02-10",
-   "days": 358,
+   "days": 359,
    "status": "settled",
    "our_close": -5.12,
    "our_max": 4.59,
@@ -1281,7 +1281,7 @@
   {
    "date": "2025-01-22",
    "entry_date": "2025-02-03",
-   "days": 363,
+   "days": 364,
    "status": "settled",
    "our_close": -9.28,
    "our_max": 2.7,
@@ -1298,7 +1298,7 @@
   {
    "date": "2025-01-17",
    "entry_date": "2025-01-20",
-   "days": 366,
+   "days": 367,
    "status": "settled",
    "our_close": -2.74,
    "our_max": 3.33,
@@ -1315,7 +1315,7 @@
   {
    "date": "2025-01-10",
    "entry_date": "2025-01-13",
-   "days": 371,
+   "days": 372,
    "status": "settled",
    "our_close": 2.79,
    "our_max": 11.0,
@@ -1332,7 +1332,7 @@
   {
    "date": "2025-01-03",
    "entry_date": "2025-01-06",
-   "days": 376,
+   "days": 377,
    "status": "settled",
    "our_close": -3.39,
    "our_max": 9.17,
@@ -1351,24 +1351,24 @@
   {
    "date": "2026-07-24",
    "entry_date": "2026-07-27",
-   "days": 2,
+   "days": 3,
    "status": "running",
    "weak": 1,
    "our": [
     {
-     "code": "5490",
-     "name": "同亨",
-     "market": "OTC",
-     "regime": 0,
-     "entry": 32.85,
-     "cur": 33.15,
-     "hi": 34.95,
-     "rc": 0.91,
-     "rm": 6.39,
+     "code": "5876",
+     "name": "上海商銀",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 46.2,
+     "cur": 44.8,
+     "hi": 46.63,
+     "rc": 0.87,
+     "rm": 1.32,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29",
-     "weight": 0.1462
+     "hold": 3,
+     "exit_date": "2026-07-30",
+     "weight": 0.4988
     },
     {
      "code": "2615",
@@ -1376,29 +1376,29 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 84.5,
-     "cur": 85.0,
+     "cur": 84.4,
      "hi": 86.2,
-     "rc": 0.59,
+     "rc": -0.12,
      "rm": 2.01,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29",
+     "hold": 3,
+     "exit_date": "2026-07-30",
      "weight": 0.226
     },
     {
-     "code": "5876",
-     "name": "上海商銀",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 46.2,
-     "cur": 44.35,
-     "hi": 46.63,
-     "rc": -0.14,
-     "rm": 0.94,
+     "code": "5490",
+     "name": "同亨",
+     "market": "OTC",
+     "regime": 0,
+     "entry": 32.85,
+     "cur": 31.25,
+     "hi": 34.95,
+     "rc": -4.87,
+     "rm": 6.39,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29",
-     "weight": 0.4988
+     "hold": 3,
+     "exit_date": "2026-07-30",
+     "weight": 0.1462
     },
     {
      "code": "2425",
@@ -1406,13 +1406,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 46.4,
-     "cur": 44.15,
+     "cur": 42.7,
      "hi": 47.6,
-     "rc": -4.85,
+     "rc": -7.97,
      "rm": 2.59,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29",
+     "hold": 3,
+     "exit_date": "2026-07-30",
      "weight": 0.0614
     },
     {
@@ -1421,97 +1421,97 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 91.1,
-     "cur": 82.5,
+     "cur": 78.3,
      "hi": 92.7,
-     "rc": -9.44,
+     "rc": -14.05,
      "rm": 1.76,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29",
+     "hold": 3,
+     "exit_date": "2026-07-30",
      "weight": 0.0676
     }
    ],
    "monkey": [
     {
-     "code": "5364",
-     "name": "力麗店",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 8.59,
-     "cur": 8.5,
-     "hi": 8.66,
-     "rc": -1.05,
-     "rm": 0.81,
-     "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "6881",
-     "name": "潤德",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 204.0,
-     "cur": 199.0,
-     "hi": 204.0,
-     "rc": -2.45,
-     "rm": 0.0,
-     "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "5014",
-     "name": "建錩",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 11.35,
-     "cur": 10.9,
-     "hi": 11.5,
-     "rc": -3.96,
-     "rm": 1.32,
-     "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "1587",
-     "name": "吉茂",
+     "code": "9930",
+     "name": "中聯資源",
      "market": "TWSE",
      "regime": 1,
-     "entry": 25.45,
-     "cur": 23.75,
-     "hi": 26.0,
-     "rc": -6.68,
-     "rm": 2.16,
+     "entry": 63.6,
+     "cur": 63.1,
+     "hi": 64.3,
+     "rc": -0.79,
+     "rm": 1.1,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29"
+     "hold": 3,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "4903",
-     "name": "聯光通",
+     "code": "8477",
+     "name": "創業家",
      "market": "OTC",
      "regime": 1,
-     "entry": 39.3,
-     "cur": 35.3,
-     "hi": 40.7,
-     "rc": -10.18,
-     "rm": 3.56,
+     "entry": 15.7,
+     "cur": 15.35,
+     "hi": 15.7,
+     "rc": -2.23,
+     "rm": -0.0,
      "exited": false,
-     "hold": 2,
-     "exit_date": "2026-07-29"
+     "hold": 3,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "6728",
+     "name": "上洋",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 110.0,
+     "cur": 107.0,
+     "hi": 110.0,
+     "rc": -2.73,
+     "rm": 0.0,
+     "exited": false,
+     "hold": 3,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "6021",
+     "name": "美好證",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 35.4,
+     "cur": 31.65,
+     "hi": 35.6,
+     "rc": -10.59,
+     "rm": 0.56,
+     "exited": false,
+     "hold": 3,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "8071",
+     "name": "能率網通",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 22.7,
+     "cur": 19.6,
+     "hi": 23.2,
+     "rc": -13.66,
+     "rm": 2.2,
+     "exited": false,
+     "hold": 3,
+     "exit_date": "2026-07-30"
     }
    ],
-   "market_twse_close": -8.26,
+   "market_twse_close": -8.5,
    "market_twse_max": -0.02,
-   "market_otc_close": -11.54,
+   "market_otc_close": -13.66,
    "market_otc_max": 0.06
   },
   {
    "date": "2026-07-17",
    "entry_date": "2026-07-20",
-   "days": 7,
+   "days": 8,
    "status": "running",
    "weak": 0,
    "our": [
@@ -1521,29 +1521,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 40.7,
-     "cur": 43.25,
+     "cur": 43.7,
      "hi": 45.5,
-     "rc": 6.27,
+     "rc": 7.37,
      "rm": 11.79,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29",
+     "hold": 8,
+     "exit_date": "2026-07-30",
      "weight": 0.1031
-    },
-    {
-     "code": "2867",
-     "name": "三商壽",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 9.1,
-     "cur": 9.37,
-     "hi": 9.65,
-     "rc": 2.97,
-     "rm": 6.04,
-     "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29",
-     "weight": 0.3155
     },
     {
      "code": "2884",
@@ -1551,29 +1536,29 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 35.55,
-     "cur": 36.5,
-     "hi": 37.2,
-     "rc": 2.67,
-     "rm": 4.64,
+     "cur": 37.7,
+     "hi": 37.8,
+     "rc": 6.05,
+     "rm": 6.33,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29",
+     "hold": 8,
+     "exit_date": "2026-07-30",
      "weight": 0.2605
     },
     {
-     "code": "5871",
-     "name": "中租-KY",
+     "code": "2867",
+     "name": "三商壽",
      "market": "TWSE",
      "regime": 1,
-     "entry": 118.0,
-     "cur": 112.5,
-     "hi": 122.06,
-     "rc": 0.28,
-     "rm": 3.44,
+     "entry": 9.1,
+     "cur": 9.58,
+     "hi": 9.7,
+     "rc": 5.27,
+     "rm": 6.59,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29",
-     "weight": 0.1411
+     "hold": 8,
+     "exit_date": "2026-07-30",
+     "weight": 0.3155
     },
     {
      "code": "9941",
@@ -1581,97 +1566,112 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 82.5,
-     "cur": 82.0,
+     "cur": 81.4,
      "hi": 84.1,
-     "rc": -0.61,
+     "rc": -1.33,
      "rm": 1.94,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29",
+     "hold": 8,
+     "exit_date": "2026-07-30",
      "weight": 0.1798
+    },
+    {
+     "code": "5871",
+     "name": "中租-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 118.0,
+     "cur": 110.5,
+     "hi": 122.06,
+     "rc": -1.5,
+     "rm": 3.44,
+     "exited": true,
+     "hold": 8,
+     "exit_date": "2026-07-30",
+     "weight": 0.1411
     }
    ],
    "monkey": [
     {
-     "code": "6577",
-     "name": "勁豐",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 74.8,
-     "cur": 81.8,
-     "hi": 96.8,
-     "rc": 9.36,
-     "rm": 29.41,
-     "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "4205",
-     "name": "中華食",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 70.8,
-     "cur": 69.8,
-     "hi": 71.2,
-     "rc": -1.41,
-     "rm": 0.56,
-     "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "1903",
-     "name": "士紙",
+     "code": "4938",
+     "name": "和碩",
      "market": "TWSE",
      "regime": 1,
-     "entry": 48.8,
-     "cur": 48.0,
-     "hi": 50.1,
-     "rc": -1.64,
-     "rm": 2.66,
+     "entry": 81.6,
+     "cur": 80.5,
+     "hi": 90.4,
+     "rc": -1.35,
+     "rm": 10.78,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29"
+     "hold": 8,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "8155",
-     "name": "博智",
+     "code": "6692",
+     "name": "進能服",
      "market": "OTC",
      "regime": 1,
-     "entry": 288.0,
-     "cur": 258.0,
-     "hi": 338.0,
-     "rc": -10.42,
-     "rm": 17.36,
+     "entry": 22.75,
+     "cur": 22.25,
+     "hi": 23.95,
+     "rc": -2.2,
+     "rm": 5.27,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29"
+     "hold": 8,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "6829",
-     "name": "千附精密",
+     "code": "8092",
+     "name": "建暐",
      "market": "OTC",
      "regime": 1,
-     "entry": 203.0,
-     "cur": 169.0,
-     "hi": 214.0,
-     "rc": -16.75,
-     "rm": 5.42,
+     "entry": 13.4,
+     "cur": 12.9,
+     "hi": 13.95,
+     "rc": -3.73,
+     "rm": 4.1,
      "exited": false,
-     "hold": 7,
-     "exit_date": "2026-07-29"
+     "hold": 8,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "6499",
+     "name": "益安",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 63.6,
+     "cur": 55.8,
+     "hi": 66.3,
+     "rc": -12.26,
+     "rm": 4.25,
+     "exited": false,
+     "hold": 8,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "6415",
+     "name": "矽力*-KY",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 429.5,
+     "cur": 375.5,
+     "hi": 499.0,
+     "rc": -12.57,
+     "rm": 16.18,
+     "exited": false,
+     "hold": 8,
+     "exit_date": "2026-07-30"
     }
    ],
-   "market_twse_close": -5.92,
+   "market_twse_close": -6.17,
    "market_twse_max": 5.38,
-   "market_otc_close": -10.51,
+   "market_otc_close": -12.65,
    "market_otc_max": 5.81
   },
   {
    "date": "2026-07-09",
    "entry_date": "2026-07-13",
-   "days": 12,
+   "days": 13,
    "status": "running",
    "weak": 0,
    "our": [
@@ -1681,13 +1681,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 39.1,
-     "cur": 41.8,
-     "hi": 42.5,
-     "rc": 6.91,
-     "rm": 8.7,
+     "cur": 42.65,
+     "hi": 42.65,
+     "rc": 9.08,
+     "rm": 9.08,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29",
+     "hold": 13,
+     "exit_date": "2026-07-30",
      "weight": 0.0643
     },
     {
@@ -1696,13 +1696,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 78.7,
-     "cur": 78.2,
+     "cur": 75.6,
      "hi": 80.7,
-     "rc": -0.64,
+     "rc": -0.11,
      "rm": 2.54,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29",
+     "hold": 13,
+     "exit_date": "2026-07-30",
      "weight": 0.2587
     },
     {
@@ -1741,97 +1741,97 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 149.0,
-     "cur": 137.5,
+     "cur": 136.0,
      "hi": 158.0,
-     "rc": -7.72,
+     "rc": -8.72,
      "rm": 6.04,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29",
+     "hold": 13,
+     "exit_date": "2026-07-30",
      "weight": 0.0364
     }
    ],
    "monkey": [
     {
-     "code": "8482",
-     "name": "商億-KY",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 47.85,
-     "cur": 49.7,
-     "hi": 50.3,
-     "rc": 3.87,
-     "rm": 5.12,
-     "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "6227",
-     "name": "茂綸",
+     "code": "7770",
+     "name": "君曜",
      "market": "OTC",
      "regime": 1,
-     "entry": 117.0,
-     "cur": 111.0,
-     "hi": 121.0,
-     "rc": -5.13,
-     "rm": 3.42,
+     "entry": 42.3,
+     "cur": 40.35,
+     "hi": 43.3,
+     "rc": 0.02,
+     "rm": 4.61,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29"
+     "hold": 13,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "2032",
-     "name": "新鋼",
+     "code": "8404",
+     "name": "百和興業-KY",
      "market": "TWSE",
      "regime": 1,
-     "entry": 16.2,
-     "cur": 15.3,
-     "hi": 16.55,
-     "rc": -5.56,
-     "rm": 2.16,
+     "entry": 17.3,
+     "cur": 16.35,
+     "hi": 17.85,
+     "rc": -5.49,
+     "rm": 3.18,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29"
+     "hold": 13,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "1514",
-     "name": "亞力",
-     "market": "TWSE",
+     "code": "6015",
+     "name": "宏遠證",
+     "market": "OTC",
      "regime": 1,
-     "entry": 121.0,
-     "cur": 98.7,
-     "hi": 123.0,
-     "rc": -18.43,
-     "rm": 1.65,
+     "entry": 17.55,
+     "cur": 14.55,
+     "hi": 18.0,
+     "rc": -17.09,
+     "rm": 2.56,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29"
+     "hold": 13,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "6202",
-     "name": "盛群",
-     "market": "TWSE",
+     "code": "5493",
+     "name": "三聯",
+     "market": "OTC",
      "regime": 1,
-     "entry": 70.5,
-     "cur": 45.05,
-     "hi": 73.7,
-     "rc": -36.1,
-     "rm": 4.54,
+     "entry": 87.2,
+     "cur": 71.3,
+     "hi": 89.3,
+     "rc": -18.23,
+     "rm": 2.41,
      "exited": false,
-     "hold": 12,
-     "exit_date": "2026-07-29"
+     "hold": 13,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "4924",
+     "name": "欣厚-KY",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 12.1,
+     "cur": 9.33,
+     "hi": 12.85,
+     "rc": -22.89,
+     "rm": 6.2,
+     "exited": false,
+     "hold": 13,
+     "exit_date": "2026-07-30"
     }
    ],
-   "market_twse_close": -3.78,
+   "market_twse_close": -3.82,
    "market_twse_max": 0.58,
-   "market_otc_close": -10.61,
+   "market_otc_close": -10.5,
    "market_otc_max": -0.6
   },
   {
    "date": "2026-07-03",
    "entry_date": "2026-07-06",
-   "days": 16,
+   "days": 17,
    "status": "running",
    "weak": 0,
    "our": [
@@ -1856,13 +1856,13 @@
      "market": "OTC",
      "regime": 1,
      "entry": 66.5,
-     "cur": 68.9,
+     "cur": 62.3,
      "hi": 95.0,
-     "rc": 6.78,
+     "rc": -3.45,
      "rm": 47.23,
-     "exited": false,
-     "hold": 16,
-     "exit_date": "2026-07-29",
+     "exited": true,
+     "hold": 17,
+     "exit_date": "2026-07-30",
      "weight": 0.1911
     },
     {
@@ -1913,74 +1913,74 @@
    ],
    "monkey": [
     {
-     "code": "2063",
-     "name": "世鎧精密",
+     "code": "3521",
+     "name": "台鋼建設",
      "market": "OTC",
      "regime": 1,
-     "entry": 24.05,
-     "cur": 23.75,
-     "hi": 24.3,
-     "rc": -1.25,
-     "rm": 1.04,
+     "entry": 13.1,
+     "cur": 12.2,
+     "hi": 13.6,
+     "rc": -6.87,
+     "rm": 3.82,
      "exited": false,
-     "hold": 16,
-     "exit_date": "2026-07-29"
+     "hold": 17,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "8416",
-     "name": "實威",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 171.5,
-     "cur": 168.0,
-     "hi": 172.5,
-     "rc": -2.04,
-     "rm": 0.58,
-     "exited": false,
-     "hold": 16,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "3293",
-     "name": "鈊象",
-     "market": "OTC",
-     "regime": 1,
-     "entry": 798.0,
-     "cur": 734.0,
-     "hi": 805.0,
-     "rc": -3.51,
-     "rm": 0.88,
-     "exited": false,
-     "hold": 16,
-     "exit_date": "2026-07-29"
-    },
-    {
-     "code": "1446",
-     "name": "宏和",
+     "code": "3706",
+     "name": "神達",
      "market": "TWSE",
      "regime": 1,
-     "entry": 17.65,
-     "cur": 13.65,
-     "hi": 17.9,
-     "rc": -15.27,
-     "rm": 1.42,
+     "entry": 91.2,
+     "cur": 84.1,
+     "hi": 94.1,
+     "rc": -7.79,
+     "rm": 3.18,
      "exited": false,
-     "hold": 16,
-     "exit_date": "2026-07-29"
+     "hold": 17,
+     "exit_date": "2026-07-30"
     },
     {
-     "code": "2478",
-     "name": "大毅",
+     "code": "1522",
+     "name": "堤維西",
      "market": "TWSE",
      "regime": 1,
-     "entry": 235.5,
-     "cur": 104.5,
-     "hi": 256.5,
-     "rc": -55.13,
-     "rm": 8.92,
+     "entry": 30.8,
+     "cur": 27.0,
+     "hi": 31.1,
+     "rc": -8.7,
+     "rm": 0.97,
      "exited": false,
-     "hold": 16,
-     "exit_date": "2026-07-29"
+     "hold": 17,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "3609",
+     "name": "三一東林",
+     "market": "OTC",
+     "regime": 1,
+     "entry": 28.0,
+     "cur": 23.5,
+     "hi": 30.0,
+     "rc": -16.07,
+     "rm": 7.14,
+     "exited": false,
+     "hold": 17,
+     "exit_date": "2026-07-30"
+    },
+    {
+     "code": "3481",
+     "name": "群創",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 68.0,
+     "cur": 41.4,
+     "hi": 72.2,
+     "rc": -39.12,
+     "rm": 6.18,
+     "exited": false,
+     "hold": 17,
+     "exit_date": "2026-07-30"
     }
    ],
    "market_twse_close": -3.95,
@@ -1991,7 +1991,7 @@
   {
    "date": "2026-06-26",
    "entry_date": "2026-06-29",
-   "days": 21,
+   "days": 22,
    "status": "running",
    "weak": 0,
    "our": [
@@ -2001,13 +2001,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 46.8,
-     "cur": 49.9,
-     "hi": 50.5,
-     "rc": 6.62,
-     "rm": 7.91,
+     "cur": 51.5,
+     "hi": 51.7,
+     "rc": 10.04,
+     "rm": 10.47,
      "exited": false,
-     "hold": 21,
-     "exit_date": "2026-07-29",
+     "hold": 22,
+     "exit_date": "2026-07-30",
      "weight": 0.2023
     },
     {
@@ -2016,29 +2016,14 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 32.9,
-     "cur": 34.8,
-     "hi": 35.1,
-     "rc": 5.78,
-     "rm": 6.69,
+     "cur": 35.5,
+     "hi": 35.65,
+     "rc": 7.9,
+     "rm": 8.36,
      "exited": false,
-     "hold": 21,
-     "exit_date": "2026-07-29",
+     "hold": 22,
+     "exit_date": "2026-07-30",
      "weight": 0.2305
-    },
-    {
-     "code": "2527",
-     "name": "宏璟",
-     "market": "TWSE",
-     "regime": 1,
-     "entry": 39.95,
-     "cur": 41.65,
-     "hi": 52.0,
-     "rc": 4.26,
-     "rm": 30.16,
-     "exited": false,
-     "hold": 21,
-     "exit_date": "2026-07-29",
-     "weight": 0.0497
     },
     {
      "code": "2801",
@@ -2046,13 +2031,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 23.5,
-     "cur": 24.45,
+     "cur": 24.8,
      "hi": 24.85,
-     "rc": 4.04,
+     "rc": 5.53,
      "rm": 5.74,
      "exited": false,
-     "hold": 21,
-     "exit_date": "2026-07-29",
+     "hold": 22,
+     "exit_date": "2026-07-30",
      "weight": 0.2813
     },
     {
@@ -2061,14 +2046,29 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 70.2,
-     "cur": 72.4,
-     "hi": 73.3,
-     "rc": 3.13,
-     "rm": 4.42,
+     "cur": 73.4,
+     "hi": 73.5,
+     "rc": 4.56,
+     "rm": 4.7,
      "exited": false,
-     "hold": 21,
-     "exit_date": "2026-07-29",
+     "hold": 22,
+     "exit_date": "2026-07-30",
      "weight": 0.2362
+    },
+    {
+     "code": "2527",
+     "name": "宏璟",
+     "market": "TWSE",
+     "regime": 1,
+     "entry": 39.95,
+     "cur": 40.55,
+     "hi": 52.0,
+     "rc": 1.5,
+     "rm": 30.16,
+     "exited": true,
+     "hold": 22,
+     "exit_date": "2026-07-30",
+     "weight": 0.0497
     }
    ],
    "monkey": [
@@ -2143,15 +2143,15 @@
      "exit_date": "2026-07-28"
     }
    ],
-   "market_twse_close": -10.6,
+   "market_twse_close": -10.83,
    "market_twse_max": 4.99,
-   "market_otc_close": -19.28,
+   "market_otc_close": -21.22,
    "market_otc_max": 7.56
   },
   {
    "date": "2026-06-18",
    "entry_date": "2026-06-22",
-   "days": 26,
+   "days": 27,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -2311,7 +2311,7 @@
   {
    "date": "2026-06-12",
    "entry_date": "2026-06-15",
-   "days": 30,
+   "days": 31,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -2471,8 +2471,8 @@
   {
    "date": "2026-06-05",
    "entry_date": "2026-06-08",
-   "days": 35,
-   "status": "running",
+   "days": 36,
+   "status": "settled",
    "weak": 0,
    "our": [
     {
@@ -2481,13 +2481,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 19.75,
-     "cur": 24.0,
+     "cur": 22.55,
      "hi": 28.6,
-     "rc": 21.52,
+     "rc": 14.18,
      "rm": 44.81,
-     "exited": false,
-     "hold": 35,
-     "exit_date": "2026-07-29",
+     "exited": true,
+     "hold": 36,
+     "exit_date": "2026-07-30",
      "weight": 0.2231
     },
     {
@@ -2631,7 +2631,7 @@
   {
    "date": "2026-05-29",
    "entry_date": "2026-06-01",
-   "days": 40,
+   "days": 41,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -2791,7 +2791,7 @@
   {
    "date": "2026-05-22",
    "entry_date": "2026-05-25",
-   "days": 45,
+   "days": 46,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -2951,7 +2951,7 @@
   {
    "date": "2026-05-15",
    "entry_date": "2026-05-18",
-   "days": 50,
+   "days": 51,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3111,7 +3111,7 @@
   {
    "date": "2026-05-08",
    "entry_date": "2026-05-11",
-   "days": 55,
+   "days": 56,
    "status": "running",
    "weak": 0,
    "our": [
@@ -3121,13 +3121,13 @@
      "market": "TWSE",
      "regime": 1,
      "entry": 22.95,
-     "cur": 29.15,
+     "cur": 28.95,
      "hi": 31.3,
-     "rc": 31.45,
+     "rc": 30.55,
      "rm": 41.14,
      "exited": false,
-     "hold": 55,
-     "exit_date": "2026-07-29",
+     "hold": 56,
+     "exit_date": "2026-07-30",
      "weight": 0.2585
     },
     {
@@ -3271,7 +3271,7 @@
   {
    "date": "2026-04-30",
    "entry_date": "2026-05-04",
-   "days": 60,
+   "days": 61,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3431,7 +3431,7 @@
   {
    "date": "2026-04-24",
    "entry_date": "2026-04-27",
-   "days": 64,
+   "days": 65,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3591,7 +3591,7 @@
   {
    "date": "2026-04-17",
    "entry_date": "2026-04-20",
-   "days": 69,
+   "days": 70,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3751,7 +3751,7 @@
   {
    "date": "2026-04-10",
    "entry_date": "2026-04-13",
-   "days": 74,
+   "days": 75,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3911,7 +3911,7 @@
   {
    "date": "2026-04-02",
    "entry_date": "2026-04-07",
-   "days": 78,
+   "days": 79,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4071,7 +4071,7 @@
   {
    "date": "2026-03-27",
    "entry_date": "2026-03-30",
-   "days": 82,
+   "days": 83,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4231,7 +4231,7 @@
   {
    "date": "2026-03-20",
    "entry_date": "2026-03-23",
-   "days": 87,
+   "days": 88,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4391,7 +4391,7 @@
   {
    "date": "2026-03-13",
    "entry_date": "2026-03-16",
-   "days": 92,
+   "days": 93,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4551,7 +4551,7 @@
   {
    "date": "2026-03-06",
    "entry_date": "2026-03-09",
-   "days": 97,
+   "days": 98,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4711,7 +4711,7 @@
   {
    "date": "2026-02-26",
    "entry_date": "2026-03-02",
-   "days": 102,
+   "days": 103,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4871,7 +4871,7 @@
   {
    "date": "2026-02-11",
    "entry_date": "2026-02-23",
-   "days": 106,
+   "days": 107,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5031,7 +5031,7 @@
   {
    "date": "2026-02-06",
    "entry_date": "2026-02-09",
-   "days": 109,
+   "days": 110,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5191,7 +5191,7 @@
   {
    "date": "2026-01-30",
    "entry_date": "2026-02-02",
-   "days": 114,
+   "days": 115,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5351,7 +5351,7 @@
   {
    "date": "2026-01-23",
    "entry_date": "2026-01-26",
-   "days": 119,
+   "days": 120,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5511,7 +5511,7 @@
   {
    "date": "2026-01-16",
    "entry_date": "2026-01-19",
-   "days": 124,
+   "days": 125,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5671,7 +5671,7 @@
   {
    "date": "2026-01-09",
    "entry_date": "2026-01-12",
-   "days": 129,
+   "days": 130,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5831,7 +5831,7 @@
   {
    "date": "2026-01-02",
    "entry_date": "2026-01-05",
-   "days": 134,
+   "days": 135,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5991,7 +5991,7 @@
   {
    "date": "2025-12-26",
    "entry_date": "2025-12-29",
-   "days": 138,
+   "days": 139,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6151,7 +6151,7 @@
   {
    "date": "2025-12-19",
    "entry_date": "2025-12-22",
-   "days": 142,
+   "days": 143,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6311,7 +6311,7 @@
   {
    "date": "2025-12-12",
    "entry_date": "2025-12-15",
-   "days": 147,
+   "days": 148,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6471,7 +6471,7 @@
   {
    "date": "2025-12-05",
    "entry_date": "2025-12-08",
-   "days": 152,
+   "days": 153,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6631,7 +6631,7 @@
   {
    "date": "2025-11-28",
    "entry_date": "2025-12-01",
-   "days": 157,
+   "days": 158,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6791,7 +6791,7 @@
   {
    "date": "2025-11-21",
    "entry_date": "2025-11-24",
-   "days": 162,
+   "days": 163,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6951,7 +6951,7 @@
   {
    "date": "2025-11-14",
    "entry_date": "2025-11-17",
-   "days": 167,
+   "days": 168,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7111,7 +7111,7 @@
   {
    "date": "2025-11-07",
    "entry_date": "2025-11-10",
-   "days": 172,
+   "days": 173,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7271,7 +7271,7 @@
   {
    "date": "2025-10-31",
    "entry_date": "2025-11-03",
-   "days": 177,
+   "days": 178,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7431,7 +7431,7 @@
   {
    "date": "2025-10-23",
    "entry_date": "2025-10-27",
-   "days": 182,
+   "days": 183,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7591,7 +7591,7 @@
   {
    "date": "2025-10-17",
    "entry_date": "2025-10-20",
-   "days": 186,
+   "days": 187,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7751,7 +7751,7 @@
   {
    "date": "2025-10-09",
    "entry_date": "2025-10-13",
-   "days": 191,
+   "days": 192,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7911,7 +7911,7 @@
   {
    "date": "2025-10-03",
    "entry_date": "2025-10-07",
-   "days": 194,
+   "days": 195,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8071,7 +8071,7 @@
   {
    "date": "2025-09-26",
    "entry_date": "2025-09-30",
-   "days": 198,
+   "days": 199,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8231,7 +8231,7 @@
   {
    "date": "2025-09-19",
    "entry_date": "2025-09-22",
-   "days": 203,
+   "days": 204,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8391,7 +8391,7 @@
   {
    "date": "2025-09-12",
    "entry_date": "2025-09-15",
-   "days": 208,
+   "days": 209,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8551,7 +8551,7 @@
   {
    "date": "2025-09-05",
    "entry_date": "2025-09-08",
-   "days": 213,
+   "days": 214,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8711,7 +8711,7 @@
   {
    "date": "2025-08-29",
    "entry_date": "2025-09-01",
-   "days": 218,
+   "days": 219,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8871,7 +8871,7 @@
   {
    "date": "2025-08-22",
    "entry_date": "2025-08-25",
-   "days": 223,
+   "days": 224,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9031,7 +9031,7 @@
   {
    "date": "2025-08-15",
    "entry_date": "2025-08-18",
-   "days": 228,
+   "days": 229,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9191,7 +9191,7 @@
   {
    "date": "2025-08-08",
    "entry_date": "2025-08-11",
-   "days": 233,
+   "days": 234,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9351,7 +9351,7 @@
   {
    "date": "2025-08-01",
    "entry_date": "2025-08-04",
-   "days": 238,
+   "days": 239,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9511,7 +9511,7 @@
   {
    "date": "2025-07-25",
    "entry_date": "2025-07-28",
-   "days": 243,
+   "days": 244,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9671,7 +9671,7 @@
   {
    "date": "2025-07-18",
    "entry_date": "2025-07-21",
-   "days": 248,
+   "days": 249,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9831,7 +9831,7 @@
   {
    "date": "2025-07-11",
    "entry_date": "2025-07-14",
-   "days": 253,
+   "days": 254,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9991,7 +9991,7 @@
   {
    "date": "2025-07-04",
    "entry_date": "2025-07-07",
-   "days": 258,
+   "days": 259,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10151,7 +10151,7 @@
   {
    "date": "2025-06-27",
    "entry_date": "2025-06-30",
-   "days": 263,
+   "days": 264,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10311,7 +10311,7 @@
   {
    "date": "2025-06-20",
    "entry_date": "2025-06-23",
-   "days": 268,
+   "days": 269,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10471,7 +10471,7 @@
   {
    "date": "2025-06-13",
    "entry_date": "2025-06-16",
-   "days": 273,
+   "days": 274,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10631,7 +10631,7 @@
   {
    "date": "2025-06-06",
    "entry_date": "2025-06-09",
-   "days": 278,
+   "days": 279,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10791,7 +10791,7 @@
   {
    "date": "2025-05-29",
    "entry_date": "2025-06-02",
-   "days": 283,
+   "days": 284,
    "status": "settled",
    "weak": 2,
    "our": [
@@ -10951,7 +10951,7 @@
   {
    "date": "2025-05-23",
    "entry_date": "2025-05-26",
-   "days": 287,
+   "days": 288,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11111,7 +11111,7 @@
   {
    "date": "2025-05-16",
    "entry_date": "2025-05-19",
-   "days": 292,
+   "days": 293,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11271,7 +11271,7 @@
   {
    "date": "2025-05-09",
    "entry_date": "2025-05-12",
-   "days": 297,
+   "days": 298,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -11431,7 +11431,7 @@
   {
    "date": "2025-05-02",
    "entry_date": "2025-05-05",
-   "days": 302,
+   "days": 303,
    "status": "settled",
    "weak": 2,
    "our": [
@@ -11546,7 +11546,7 @@
   {
    "date": "2025-04-25",
    "entry_date": "2025-04-28",
-   "days": 306,
+   "days": 307,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -11706,7 +11706,7 @@
   {
    "date": "2025-04-11",
    "entry_date": "2025-04-14",
-   "days": 316,
+   "days": 317,
    "status": "settled",
    "weak": 1,
    "our": [
@@ -11806,7 +11806,7 @@
   {
    "date": "2025-04-02",
    "entry_date": "2025-04-07",
-   "days": 321,
+   "days": 322,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -11966,7 +11966,7 @@
   {
    "date": "2025-03-28",
    "entry_date": "2025-03-31",
-   "days": 324,
+   "days": 325,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -12126,7 +12126,7 @@
   {
    "date": "2025-03-21",
    "entry_date": "2025-03-24",
-   "days": 329,
+   "days": 330,
    "status": "settled",
    "weak": 4,
    "our": [
@@ -12272,7 +12272,7 @@
   {
    "date": "2025-03-14",
    "entry_date": "2025-03-17",
-   "days": 334,
+   "days": 335,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -12432,7 +12432,7 @@
   {
    "date": "2025-03-07",
    "entry_date": "2025-03-10",
-   "days": 339,
+   "days": 340,
    "status": "settled",
    "weak": 4,
    "our": [
@@ -12592,7 +12592,7 @@
   {
    "date": "2025-02-27",
    "entry_date": "2025-03-03",
-   "days": 344,
+   "days": 345,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12752,7 +12752,7 @@
   {
    "date": "2025-02-21",
    "entry_date": "2025-02-24",
-   "days": 348,
+   "days": 349,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12912,7 +12912,7 @@
   {
    "date": "2025-02-14",
    "entry_date": "2025-02-17",
-   "days": 353,
+   "days": 354,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13072,7 +13072,7 @@
   {
    "date": "2025-02-07",
    "entry_date": "2025-02-10",
-   "days": 358,
+   "days": 359,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13232,7 +13232,7 @@
   {
    "date": "2025-01-22",
    "entry_date": "2025-02-03",
-   "days": 363,
+   "days": 364,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13392,7 +13392,7 @@
   {
    "date": "2025-01-17",
    "entry_date": "2025-01-20",
-   "days": 366,
+   "days": 367,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13552,7 +13552,7 @@
   {
    "date": "2025-01-10",
    "entry_date": "2025-01-13",
-   "days": 371,
+   "days": 372,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13712,7 +13712,7 @@
   {
    "date": "2025-01-03",
    "entry_date": "2025-01-06",
-   "days": 376,
+   "days": 377,
    "status": "settled",
    "weak": 1,
    "our": [
@@ -13871,15 +13871,15 @@
   }
  ],
  "avg": {
-  "our_close": 1.4,
-  "our_max": 13.03,
-  "our_close_reg": 1.31,
-  "our_max_reg": 11.62,
-  "monkey_close": 0.77,
-  "monkey_max": 10.52,
-  "market_twse_close": 5.33,
+  "our_close": 1.38,
+  "our_max": 13.05,
+  "our_close_reg": 1.3,
+  "our_max_reg": 11.64,
+  "monkey_close": 0.72,
+  "monkey_max": 10.5,
+  "market_twse_close": 5.32,
   "market_twse_max": 8.04,
-  "market_otc_close": 4.09,
+  "market_otc_close": 4.02,
   "market_otc_max": 7.51
  }
 }
