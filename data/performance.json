@@ -1,5 +1,5 @@
 {
- "updated": "2026-08-21T08:38:04.489464+00:00",
+ "updated": "2026-08-22T03:48:48.229128+00:00",
  "latest_date": "2026-08-21",
  "n_weeks": 82,
  "weeks": [
@@ -960,9 +960,9 @@
    "entry_date": "2025-07-14",
    "days": 270,
    "status": "settled",
-   "our_close": 0.32,
+   "our_close": 0.31,
    "our_max": 4.34,
-   "our_close_reg": 0.32,
+   "our_close_reg": 0.31,
    "our_max_reg": 4.34,
    "weak": 0,
    "monkey_close": 4.32,
@@ -2087,8 +2087,8 @@
      "rc": 6.59,
      "rm": 10.44,
      "exited": false,
-     "hold": 23,
-     "exit_date": "2026-08-20",
+     "hold": 24,
+     "exit_date": "2026-08-21",
      "weight": 0.3155
     },
     {
@@ -10404,8 +10404,8 @@
      "entry": 12.1,
      "cur": 11.64,
      "hi": 12.17,
-     "rc": -1.31,
-     "rm": 0.8,
+     "rc": -1.32,
+     "rm": 0.79,
      "exited": true,
      "hold": 18,
      "exit_date": "2025-08-08",
