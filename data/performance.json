@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-11T15:53:05.991894+00:00",
- "latest_date": "2026-11-11",
+ "updated": "2026-11-12T16:34:46.237920+00:00",
+ "latest_date": "2026-11-12",
  "n_weeks": 94,
  "weeks": [
   {
    "date": "2026-11-06",
    "entry_date": "2026-11-09",
-   "days": 2,
+   "days": 3,
    "status": "running",
    "our_close": 11.06,
    "our_max": 11.06,
@@ -23,7 +23,7 @@
   {
    "date": "2026-10-30",
    "entry_date": "2026-11-02",
-   "days": 7,
+   "days": 8,
    "status": "running",
    "our_close": -4.38,
    "our_max": 1.07,
@@ -40,7 +40,7 @@
   {
    "date": "2026-10-22",
    "entry_date": "2026-10-27",
-   "days": 11,
+   "days": 12,
    "status": "running",
    "our_close": -0.69,
    "our_max": 4.1,
@@ -57,7 +57,7 @@
   {
    "date": "2026-10-16",
    "entry_date": "2026-10-19",
-   "days": 15,
+   "days": 16,
    "status": "running",
    "our_close": -1.06,
    "our_max": 5.5,
@@ -74,7 +74,7 @@
   {
    "date": "2026-10-08",
    "entry_date": "2026-10-12",
-   "days": 20,
+   "days": 21,
    "status": "settled",
    "our_close": -8.02,
    "our_max": 3.27,
@@ -91,7 +91,7 @@
   {
    "date": "2026-10-02",
    "entry_date": "2026-10-05",
-   "days": 24,
+   "days": 25,
    "status": "settled",
    "our_close": -6.74,
    "our_max": 10.98,
@@ -108,7 +108,7 @@
   {
    "date": "2026-09-24",
    "entry_date": "2026-09-29",
-   "days": 28,
+   "days": 29,
    "status": "running",
    "our_close": 0.11,
    "our_max": 9.87,
@@ -125,7 +125,7 @@
   {
    "date": "2026-09-18",
    "entry_date": "2026-09-21",
-   "days": 32,
+   "days": 33,
    "status": "running",
    "our_close": -2.15,
    "our_max": 8.36,
@@ -142,7 +142,7 @@
   {
    "date": "2026-09-11",
    "entry_date": "2026-09-14",
-   "days": 37,
+   "days": 38,
    "status": "settled",
    "our_close": -3.98,
    "our_max": 2.58,
@@ -159,7 +159,7 @@
   {
    "date": "2026-09-04",
    "entry_date": "2026-09-07",
-   "days": 42,
+   "days": 43,
    "status": "running",
    "our_close": -1.65,
    "our_max": 7.97,
@@ -176,7 +176,7 @@
   {
    "date": "2026-08-28",
    "entry_date": "2026-08-31",
-   "days": 47,
+   "days": 48,
    "status": "settled",
    "our_close": 2.49,
    "our_max": 13.69,
@@ -193,7 +193,7 @@
   {
    "date": "2026-08-21",
    "entry_date": "2026-08-24",
-   "days": 52,
+   "days": 53,
    "status": "running",
    "our_close": -0.16,
    "our_max": 7.42,
@@ -210,7 +210,7 @@
   {
    "date": "2026-08-14",
    "entry_date": "2026-08-17",
-   "days": 57,
+   "days": 58,
    "status": "running",
    "our_close": 0.6,
    "our_max": 10.87,
@@ -227,7 +227,7 @@
   {
    "date": "2026-08-07",
    "entry_date": "2026-08-10",
-   "days": 62,
+   "days": 63,
    "status": "settled",
    "our_close": 1.56,
    "our_max": 9.96,
@@ -244,7 +244,7 @@
   {
    "date": "2026-07-31",
    "entry_date": "2026-08-03",
-   "days": 67,
+   "days": 68,
    "status": "settled",
    "our_close": -1.03,
    "our_max": 4.36,
@@ -261,7 +261,7 @@
   {
    "date": "2026-07-24",
    "entry_date": "2026-07-27",
-   "days": 72,
+   "days": 73,
    "status": "settled",
    "our_close": 9.02,
    "our_max": 25.08,
@@ -278,7 +278,7 @@
   {
    "date": "2026-07-17",
    "entry_date": "2026-07-20",
-   "days": 77,
+   "days": 78,
    "status": "settled",
    "our_close": 17.21,
    "our_max": 22.05,
@@ -295,7 +295,7 @@
   {
    "date": "2026-07-09",
    "entry_date": "2026-07-13",
-   "days": 82,
+   "days": 83,
    "status": "settled",
    "our_close": -1.97,
    "our_max": 3.93,
@@ -312,7 +312,7 @@
   {
    "date": "2026-07-03",
    "entry_date": "2026-07-06",
-   "days": 86,
+   "days": 87,
    "status": "settled",
    "our_close": -10.57,
    "our_max": 21.38,
@@ -329,7 +329,7 @@
   {
    "date": "2026-06-26",
    "entry_date": "2026-06-29",
-   "days": 91,
+   "days": 92,
    "status": "settled",
    "our_close": 5.85,
    "our_max": 16.41,
@@ -346,7 +346,7 @@
   {
    "date": "2026-06-18",
    "entry_date": "2026-06-22",
-   "days": 96,
+   "days": 97,
    "status": "settled",
    "our_close": -7.53,
    "our_max": 7.64,
@@ -363,7 +363,7 @@
   {
    "date": "2026-06-12",
    "entry_date": "2026-06-15",
-   "days": 100,
+   "days": 101,
    "status": "settled",
    "our_close": -4.09,
    "our_max": 12.09,
@@ -380,7 +380,7 @@
   {
    "date": "2026-06-05",
    "entry_date": "2026-06-08",
-   "days": 105,
+   "days": 106,
    "status": "settled",
    "our_close": 1.38,
    "our_max": 20.55,
@@ -397,7 +397,7 @@
   {
    "date": "2026-05-29",
    "entry_date": "2026-06-01",
-   "days": 110,
+   "days": 111,
    "status": "settled",
    "our_close": 5.47,
    "our_max": 20.69,
@@ -414,7 +414,7 @@
   {
    "date": "2026-05-22",
    "entry_date": "2026-05-25",
-   "days": 115,
+   "days": 116,
    "status": "settled",
    "our_close": 6.08,
    "our_max": 20.72,
@@ -431,7 +431,7 @@
   {
    "date": "2026-05-15",
    "entry_date": "2026-05-18",
-   "days": 120,
+   "days": 121,
    "status": "settled",
    "our_close": 14.47,
    "our_max": 45.19,
@@ -448,7 +448,7 @@
   {
    "date": "2026-05-08",
    "entry_date": "2026-05-11",
-   "days": 125,
+   "days": 126,
    "status": "settled",
    "our_close": 18.17,
    "our_max": 28.55,
@@ -465,7 +465,7 @@
   {
    "date": "2026-04-30",
    "entry_date": "2026-05-04",
-   "days": 130,
+   "days": 131,
    "status": "settled",
    "our_close": 5.88,
    "our_max": 21.94,
@@ -482,7 +482,7 @@
   {
    "date": "2026-04-24",
    "entry_date": "2026-04-27",
-   "days": 134,
+   "days": 135,
    "status": "settled",
    "our_close": -2.16,
    "our_max": 12.35,
@@ -499,7 +499,7 @@
   {
    "date": "2026-04-17",
    "entry_date": "2026-04-20",
-   "days": 139,
+   "days": 140,
    "status": "settled",
    "our_close": -6.22,
    "our_max": 4.8,
@@ -516,7 +516,7 @@
   {
    "date": "2026-04-10",
    "entry_date": "2026-04-13",
-   "days": 144,
+   "days": 145,
    "status": "settled",
    "our_close": 1.2,
    "our_max": 22.1,
@@ -533,7 +533,7 @@
   {
    "date": "2026-04-02",
    "entry_date": "2026-04-07",
-   "days": 148,
+   "days": 149,
    "status": "settled",
    "our_close": 0.47,
    "our_max": 6.8,
@@ -550,7 +550,7 @@
   {
    "date": "2026-03-27",
    "entry_date": "2026-03-30",
-   "days": 152,
+   "days": 153,
    "status": "settled",
    "our_close": -1.98,
    "our_max": 4.19,
@@ -567,14 +567,14 @@
   {
    "date": "2026-03-20",
    "entry_date": "2026-03-23",
-   "days": 157,
+   "days": 158,
    "status": "settled",
    "our_close": -0.87,
    "our_max": 6.5,
    "our_close_reg": -0.87,
    "our_max_reg": 6.5,
    "weak": 0,
-   "monkey_close": 12.01,
+   "monkey_close": 12.02,
    "monkey_max": 15.4,
    "market_twse_close": 14.32,
    "market_twse_max": 14.32,
@@ -584,7 +584,7 @@
   {
    "date": "2026-03-13",
    "entry_date": "2026-03-16",
-   "days": 162,
+   "days": 163,
    "status": "settled",
    "our_close": 12.49,
    "our_max": 28.99,
@@ -601,7 +601,7 @@
   {
    "date": "2026-03-06",
    "entry_date": "2026-03-09",
-   "days": 167,
+   "days": 168,
    "status": "settled",
    "our_close": -0.95,
    "our_max": 18.25,
@@ -618,7 +618,7 @@
   {
    "date": "2026-02-26",
    "entry_date": "2026-03-02",
-   "days": 172,
+   "days": 173,
    "status": "settled",
    "our_close": 15.58,
    "our_max": 30.37,
@@ -635,7 +635,7 @@
   {
    "date": "2026-02-11",
    "entry_date": "2026-02-23",
-   "days": 176,
+   "days": 177,
    "status": "settled",
    "our_close": 27.21,
    "our_max": 37.8,
@@ -652,7 +652,7 @@
   {
    "date": "2026-02-06",
    "entry_date": "2026-02-09",
-   "days": 179,
+   "days": 180,
    "status": "settled",
    "our_close": 6.16,
    "our_max": 12.19,
@@ -669,7 +669,7 @@
   {
    "date": "2026-01-30",
    "entry_date": "2026-02-02",
-   "days": 184,
+   "days": 185,
    "status": "settled",
    "our_close": -3.88,
    "our_max": 14.31,
@@ -686,7 +686,7 @@
   {
    "date": "2026-01-23",
    "entry_date": "2026-01-26",
-   "days": 189,
+   "days": 190,
    "status": "settled",
    "our_close": -9.95,
    "our_max": 5.31,
@@ -703,7 +703,7 @@
   {
    "date": "2026-01-16",
    "entry_date": "2026-01-19",
-   "days": 194,
+   "days": 195,
    "status": "settled",
    "our_close": -8.72,
    "our_max": 12.23,
@@ -720,7 +720,7 @@
   {
    "date": "2026-01-09",
    "entry_date": "2026-01-12",
-   "days": 199,
+   "days": 200,
    "status": "settled",
    "our_close": 18.79,
    "our_max": 53.45,
@@ -737,7 +737,7 @@
   {
    "date": "2026-01-02",
    "entry_date": "2026-01-05",
-   "days": 204,
+   "days": 205,
    "status": "settled",
    "our_close": 4.63,
    "our_max": 32.35,
@@ -754,7 +754,7 @@
   {
    "date": "2025-12-26",
    "entry_date": "2025-12-29",
-   "days": 208,
+   "days": 209,
    "status": "settled",
    "our_close": -2.14,
    "our_max": 17.63,
@@ -771,7 +771,7 @@
   {
    "date": "2025-12-19",
    "entry_date": "2025-12-22",
-   "days": 212,
+   "days": 213,
    "status": "settled",
    "our_close": 10.19,
    "our_max": 26.68,
@@ -788,7 +788,7 @@
   {
    "date": "2025-12-12",
    "entry_date": "2025-12-15",
-   "days": 217,
+   "days": 218,
    "status": "settled",
    "our_close": 11.8,
    "our_max": 26.28,
@@ -805,7 +805,7 @@
   {
    "date": "2025-12-05",
    "entry_date": "2025-12-08",
-   "days": 222,
+   "days": 223,
    "status": "settled",
    "our_close": 4.41,
    "our_max": 12.21,
@@ -822,7 +822,7 @@
   {
    "date": "2025-11-28",
    "entry_date": "2025-12-01",
-   "days": 227,
+   "days": 228,
    "status": "settled",
    "our_close": -1.15,
    "our_max": 9.18,
@@ -839,7 +839,7 @@
   {
    "date": "2025-11-21",
    "entry_date": "2025-11-24",
-   "days": 232,
+   "days": 233,
    "status": "settled",
    "our_close": -3.98,
    "our_max": 6.61,
@@ -856,7 +856,7 @@
   {
    "date": "2025-11-14",
    "entry_date": "2025-11-17",
-   "days": 237,
+   "days": 238,
    "status": "settled",
    "our_close": 13.03,
    "our_max": 16.75,
@@ -873,7 +873,7 @@
   {
    "date": "2025-11-07",
    "entry_date": "2025-11-10",
-   "days": 242,
+   "days": 243,
    "status": "settled",
    "our_close": 2.95,
    "our_max": 11.56,
@@ -890,7 +890,7 @@
   {
    "date": "2025-10-31",
    "entry_date": "2025-11-03",
-   "days": 247,
+   "days": 248,
    "status": "settled",
    "our_close": 6.06,
    "our_max": 27.43,
@@ -907,7 +907,7 @@
   {
    "date": "2025-10-23",
    "entry_date": "2025-10-27",
-   "days": 252,
+   "days": 253,
    "status": "settled",
    "our_close": -7.13,
    "our_max": 2.54,
@@ -924,7 +924,7 @@
   {
    "date": "2025-10-17",
    "entry_date": "2025-10-20",
-   "days": 256,
+   "days": 257,
    "status": "settled",
    "our_close": -1.67,
    "our_max": 5.63,
@@ -941,7 +941,7 @@
   {
    "date": "2025-10-09",
    "entry_date": "2025-10-13",
-   "days": 261,
+   "days": 262,
    "status": "settled",
    "our_close": 5.51,
    "our_max": 18.65,
@@ -958,7 +958,7 @@
   {
    "date": "2025-10-03",
    "entry_date": "2025-10-07",
-   "days": 264,
+   "days": 265,
    "status": "settled",
    "our_close": 2.2,
    "our_max": 11.66,
@@ -975,7 +975,7 @@
   {
    "date": "2025-09-26",
    "entry_date": "2025-09-30",
-   "days": 268,
+   "days": 269,
    "status": "settled",
    "our_close": -1.21,
    "our_max": 8.49,
@@ -992,7 +992,7 @@
   {
    "date": "2025-09-19",
    "entry_date": "2025-09-22",
-   "days": 273,
+   "days": 274,
    "status": "settled",
    "our_close": -1.1,
    "our_max": 7.58,
@@ -1009,7 +1009,7 @@
   {
    "date": "2025-09-12",
    "entry_date": "2025-09-15",
-   "days": 278,
+   "days": 279,
    "status": "settled",
    "our_close": -1.36,
    "our_max": 3.4,
@@ -1026,7 +1026,7 @@
   {
    "date": "2025-09-05",
    "entry_date": "2025-09-08",
-   "days": 283,
+   "days": 284,
    "status": "settled",
    "our_close": 3.14,
    "our_max": 13.92,
@@ -1043,7 +1043,7 @@
   {
    "date": "2025-08-29",
    "entry_date": "2025-09-01",
-   "days": 288,
+   "days": 289,
    "status": "settled",
    "our_close": 0.87,
    "our_max": 13.43,
@@ -1060,7 +1060,7 @@
   {
    "date": "2025-08-22",
    "entry_date": "2025-08-25",
-   "days": 293,
+   "days": 294,
    "status": "settled",
    "our_close": -4.92,
    "our_max": 4.02,
@@ -1077,7 +1077,7 @@
   {
    "date": "2025-08-15",
    "entry_date": "2025-08-18",
-   "days": 298,
+   "days": 299,
    "status": "settled",
    "our_close": -3.18,
    "our_max": 3.35,
@@ -1094,7 +1094,7 @@
   {
    "date": "2025-08-08",
    "entry_date": "2025-08-11",
-   "days": 303,
+   "days": 304,
    "status": "settled",
    "our_close": -1.32,
    "our_max": 2.61,
@@ -1111,7 +1111,7 @@
   {
    "date": "2025-08-01",
    "entry_date": "2025-08-04",
-   "days": 308,
+   "days": 309,
    "status": "settled",
    "our_close": 18.4,
    "our_max": 34.15,
@@ -1128,7 +1128,7 @@
   {
    "date": "2025-07-25",
    "entry_date": "2025-07-28",
-   "days": 313,
+   "days": 314,
    "status": "settled",
    "our_close": 2.54,
    "our_max": 10.68,
@@ -1145,7 +1145,7 @@
   {
    "date": "2025-07-18",
    "entry_date": "2025-07-21",
-   "days": 318,
+   "days": 319,
    "status": "settled",
    "our_close": 1.52,
    "our_max": 6.56,
@@ -1162,7 +1162,7 @@
   {
    "date": "2025-07-11",
    "entry_date": "2025-07-14",
-   "days": 323,
+   "days": 324,
    "status": "settled",
    "our_close": 0.31,
    "our_max": 4.34,
@@ -1179,7 +1179,7 @@
   {
    "date": "2025-07-04",
    "entry_date": "2025-07-07",
-   "days": 328,
+   "days": 329,
    "status": "settled",
    "our_close": -0.67,
    "our_max": 5.31,
@@ -1196,7 +1196,7 @@
   {
    "date": "2025-06-27",
    "entry_date": "2025-06-30",
-   "days": 333,
+   "days": 334,
    "status": "settled",
    "our_close": 2.82,
    "our_max": 9.13,
@@ -1213,7 +1213,7 @@
   {
    "date": "2025-06-20",
    "entry_date": "2025-06-23",
-   "days": 338,
+   "days": 339,
    "status": "settled",
    "our_close": -1.32,
    "our_max": 2.51,
@@ -1230,7 +1230,7 @@
   {
    "date": "2025-06-13",
    "entry_date": "2025-06-16",
-   "days": 343,
+   "days": 344,
    "status": "settled",
    "our_close": 1.34,
    "our_max": 5.61,
@@ -1247,7 +1247,7 @@
   {
    "date": "2025-06-06",
    "entry_date": "2025-06-09",
-   "days": 348,
+   "days": 349,
    "status": "settled",
    "our_close": -2.93,
    "our_max": 3.52,
@@ -1264,7 +1264,7 @@
   {
    "date": "2025-05-29",
    "entry_date": "2025-06-02",
-   "days": 353,
+   "days": 354,
    "status": "settled",
    "our_close": 17.76,
    "our_max": 23.58,
@@ -1281,7 +1281,7 @@
   {
    "date": "2025-05-23",
    "entry_date": "2025-05-26",
-   "days": 357,
+   "days": 358,
    "status": "settled",
    "our_close": 8.16,
    "our_max": 16.05,
@@ -1298,7 +1298,7 @@
   {
    "date": "2025-05-16",
    "entry_date": "2025-05-19",
-   "days": 362,
+   "days": 363,
    "status": "settled",
    "our_close": -4.35,
    "our_max": 2.29,
@@ -1315,7 +1315,7 @@
   {
    "date": "2025-05-09",
    "entry_date": "2025-05-12",
-   "days": 367,
+   "days": 368,
    "status": "settled",
    "our_close": 1.96,
    "our_max": 6.15,
@@ -1332,7 +1332,7 @@
   {
    "date": "2025-05-02",
    "entry_date": "2025-05-05",
-   "days": 372,
+   "days": 373,
    "status": "settled",
    "our_close": -3.75,
    "our_max": 5.85,
@@ -1349,7 +1349,7 @@
   {
    "date": "2025-04-25",
    "entry_date": "2025-04-28",
-   "days": 376,
+   "days": 377,
    "status": "settled",
    "our_close": 12.53,
    "our_max": 33.38,
@@ -1366,7 +1366,7 @@
   {
    "date": "2025-04-11",
    "entry_date": "2025-04-14",
-   "days": 386,
+   "days": 387,
    "status": "settled",
    "our_close": -1.43,
    "our_max": 10.95,
@@ -1383,7 +1383,7 @@
   {
    "date": "2025-04-02",
    "entry_date": "2025-04-07",
-   "days": 391,
+   "days": 392,
    "status": "settled",
    "our_close": 6.84,
    "our_max": 11.56,
@@ -1400,7 +1400,7 @@
   {
    "date": "2025-03-28",
    "entry_date": "2025-03-31",
-   "days": 394,
+   "days": 395,
    "status": "settled",
    "our_close": -8.48,
    "our_max": 1.92,
@@ -1417,7 +1417,7 @@
   {
    "date": "2025-03-21",
    "entry_date": "2025-03-24",
-   "days": 399,
+   "days": 400,
    "status": "settled",
    "our_close": -7.5,
    "our_max": 8.78,
@@ -1434,7 +1434,7 @@
   {
    "date": "2025-03-14",
    "entry_date": "2025-03-17",
-   "days": 404,
+   "days": 405,
    "status": "settled",
    "our_close": -7.3,
    "our_max": 3.47,
@@ -1451,7 +1451,7 @@
   {
    "date": "2025-03-07",
    "entry_date": "2025-03-10",
-   "days": 409,
+   "days": 410,
    "status": "settled",
    "our_close": -9.27,
    "our_max": 4.09,
@@ -1468,7 +1468,7 @@
   {
    "date": "2025-02-27",
    "entry_date": "2025-03-03",
-   "days": 414,
+   "days": 415,
    "status": "settled",
    "our_close": -9.67,
    "our_max": 4.37,
@@ -1485,7 +1485,7 @@
   {
    "date": "2025-02-21",
    "entry_date": "2025-02-24",
-   "days": 418,
+   "days": 419,
    "status": "settled",
    "our_close": -5.5,
    "our_max": 11.39,
@@ -1502,7 +1502,7 @@
   {
    "date": "2025-02-14",
    "entry_date": "2025-02-17",
-   "days": 423,
+   "days": 424,
    "status": "settled",
    "our_close": -1.71,
    "our_max": 5.12,
@@ -1519,7 +1519,7 @@
   {
    "date": "2025-02-07",
    "entry_date": "2025-02-10",
-   "days": 428,
+   "days": 429,
    "status": "settled",
    "our_close": -5.12,
    "our_max": 4.59,
@@ -1536,7 +1536,7 @@
   {
    "date": "2025-01-22",
    "entry_date": "2025-02-03",
-   "days": 433,
+   "days": 434,
    "status": "settled",
    "our_close": -9.28,
    "our_max": 2.7,
@@ -1553,7 +1553,7 @@
   {
    "date": "2025-01-17",
    "entry_date": "2025-01-20",
-   "days": 436,
+   "days": 437,
    "status": "settled",
    "our_close": -2.81,
    "our_max": 3.25,
@@ -1570,7 +1570,7 @@
   {
    "date": "2025-01-10",
    "entry_date": "2025-01-13",
-   "days": 441,
+   "days": 442,
    "status": "settled",
    "our_close": 2.79,
    "our_max": 11.0,
@@ -1587,7 +1587,7 @@
   {
    "date": "2025-01-03",
    "entry_date": "2025-01-06",
-   "days": 446,
+   "days": 447,
    "status": "settled",
    "our_close": -3.39,
    "our_max": 9.17,
@@ -1606,7 +1606,7 @@
   {
    "date": "2026-11-06",
    "entry_date": "2026-11-09",
-   "days": 2,
+   "days": 3,
    "status": "running",
    "weak": 2,
    "our": [
@@ -1721,7 +1721,7 @@
   {
    "date": "2026-10-30",
    "entry_date": "2026-11-02",
-   "days": 7,
+   "days": 8,
    "status": "running",
    "weak": 0,
    "our": [
@@ -1881,7 +1881,7 @@
   {
    "date": "2026-10-22",
    "entry_date": "2026-10-27",
-   "days": 11,
+   "days": 12,
    "status": "running",
    "weak": 0,
    "our": [
@@ -2041,7 +2041,7 @@
   {
    "date": "2026-10-16",
    "entry_date": "2026-10-19",
-   "days": 15,
+   "days": 16,
    "status": "running",
    "weak": 0,
    "our": [
@@ -2201,7 +2201,7 @@
   {
    "date": "2026-10-08",
    "entry_date": "2026-10-12",
-   "days": 20,
+   "days": 21,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -2361,7 +2361,7 @@
   {
    "date": "2026-10-02",
    "entry_date": "2026-10-05",
-   "days": 24,
+   "days": 25,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -2521,7 +2521,7 @@
   {
    "date": "2026-09-24",
    "entry_date": "2026-09-29",
-   "days": 28,
+   "days": 29,
    "status": "running",
    "weak": 0,
    "our": [
@@ -2681,7 +2681,7 @@
   {
    "date": "2026-09-18",
    "entry_date": "2026-09-21",
-   "days": 32,
+   "days": 33,
    "status": "running",
    "weak": 0,
    "our": [
@@ -2841,7 +2841,7 @@
   {
    "date": "2026-09-11",
    "entry_date": "2026-09-14",
-   "days": 37,
+   "days": 38,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3001,7 +3001,7 @@
   {
    "date": "2026-09-04",
    "entry_date": "2026-09-07",
-   "days": 42,
+   "days": 43,
    "status": "running",
    "weak": 0,
    "our": [
@@ -3161,7 +3161,7 @@
   {
    "date": "2026-08-28",
    "entry_date": "2026-08-31",
-   "days": 47,
+   "days": 48,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3321,7 +3321,7 @@
   {
    "date": "2026-08-21",
    "entry_date": "2026-08-24",
-   "days": 52,
+   "days": 53,
    "status": "running",
    "weak": 0,
    "our": [
@@ -3481,7 +3481,7 @@
   {
    "date": "2026-08-14",
    "entry_date": "2026-08-17",
-   "days": 57,
+   "days": 58,
    "status": "running",
    "weak": 0,
    "our": [
@@ -3641,7 +3641,7 @@
   {
    "date": "2026-08-07",
    "entry_date": "2026-08-10",
-   "days": 62,
+   "days": 63,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -3801,7 +3801,7 @@
   {
    "date": "2026-07-31",
    "entry_date": "2026-08-03",
-   "days": 67,
+   "days": 68,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -3961,7 +3961,7 @@
   {
    "date": "2026-07-24",
    "entry_date": "2026-07-27",
-   "days": 72,
+   "days": 73,
    "status": "settled",
    "weak": 1,
    "our": [
@@ -4121,7 +4121,7 @@
   {
    "date": "2026-07-17",
    "entry_date": "2026-07-20",
-   "days": 77,
+   "days": 78,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4266,7 +4266,7 @@
   {
    "date": "2026-07-09",
    "entry_date": "2026-07-13",
-   "days": 82,
+   "days": 83,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4426,7 +4426,7 @@
   {
    "date": "2026-07-03",
    "entry_date": "2026-07-06",
-   "days": 86,
+   "days": 87,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4586,7 +4586,7 @@
   {
    "date": "2026-06-26",
    "entry_date": "2026-06-29",
-   "days": 91,
+   "days": 92,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4746,7 +4746,7 @@
   {
    "date": "2026-06-18",
    "entry_date": "2026-06-22",
-   "days": 96,
+   "days": 97,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -4906,7 +4906,7 @@
   {
    "date": "2026-06-12",
    "entry_date": "2026-06-15",
-   "days": 100,
+   "days": 101,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5066,7 +5066,7 @@
   {
    "date": "2026-06-05",
    "entry_date": "2026-06-08",
-   "days": 105,
+   "days": 106,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5226,7 +5226,7 @@
   {
    "date": "2026-05-29",
    "entry_date": "2026-06-01",
-   "days": 110,
+   "days": 111,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5386,7 +5386,7 @@
   {
    "date": "2026-05-22",
    "entry_date": "2026-05-25",
-   "days": 115,
+   "days": 116,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5546,7 +5546,7 @@
   {
    "date": "2026-05-15",
    "entry_date": "2026-05-18",
-   "days": 120,
+   "days": 121,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5706,7 +5706,7 @@
   {
    "date": "2026-05-08",
    "entry_date": "2026-05-11",
-   "days": 125,
+   "days": 126,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -5866,7 +5866,7 @@
   {
    "date": "2026-04-30",
    "entry_date": "2026-05-04",
-   "days": 130,
+   "days": 131,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6026,7 +6026,7 @@
   {
    "date": "2026-04-24",
    "entry_date": "2026-04-27",
-   "days": 134,
+   "days": 135,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6186,7 +6186,7 @@
   {
    "date": "2026-04-17",
    "entry_date": "2026-04-20",
-   "days": 139,
+   "days": 140,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6346,7 +6346,7 @@
   {
    "date": "2026-04-10",
    "entry_date": "2026-04-13",
-   "days": 144,
+   "days": 145,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6506,7 +6506,7 @@
   {
    "date": "2026-04-02",
    "entry_date": "2026-04-07",
-   "days": 148,
+   "days": 149,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6666,7 +6666,7 @@
   {
    "date": "2026-03-27",
    "entry_date": "2026-03-30",
-   "days": 152,
+   "days": 153,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6826,7 +6826,7 @@
   {
    "date": "2026-03-20",
    "entry_date": "2026-03-23",
-   "days": 157,
+   "days": 158,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -6968,11 +6968,11 @@
      "name": "潤隆",
      "market": "TWSE",
      "regime": 1,
-     "entry": 30.45,
-     "cur": 29.7,
-     "hi": 31.95,
-     "rc": -2.46,
-     "rm": 4.93,
+     "entry": 38.05,
+     "cur": 37.12,
+     "hi": 39.94,
+     "rc": -2.43,
+     "rm": 4.96,
      "exited": true,
      "hold": 20,
      "exit_date": "2026-04-22"
@@ -6986,7 +6986,7 @@
   {
    "date": "2026-03-13",
    "entry_date": "2026-03-16",
-   "days": 162,
+   "days": 163,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7146,7 +7146,7 @@
   {
    "date": "2026-03-06",
    "entry_date": "2026-03-09",
-   "days": 167,
+   "days": 168,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7306,7 +7306,7 @@
   {
    "date": "2026-02-26",
    "entry_date": "2026-03-02",
-   "days": 172,
+   "days": 173,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7466,7 +7466,7 @@
   {
    "date": "2026-02-11",
    "entry_date": "2026-02-23",
-   "days": 176,
+   "days": 177,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7626,7 +7626,7 @@
   {
    "date": "2026-02-06",
    "entry_date": "2026-02-09",
-   "days": 179,
+   "days": 180,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7786,7 +7786,7 @@
   {
    "date": "2026-01-30",
    "entry_date": "2026-02-02",
-   "days": 184,
+   "days": 185,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -7946,7 +7946,7 @@
   {
    "date": "2026-01-23",
    "entry_date": "2026-01-26",
-   "days": 189,
+   "days": 190,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8106,7 +8106,7 @@
   {
    "date": "2026-01-16",
    "entry_date": "2026-01-19",
-   "days": 194,
+   "days": 195,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8266,7 +8266,7 @@
   {
    "date": "2026-01-09",
    "entry_date": "2026-01-12",
-   "days": 199,
+   "days": 200,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8426,7 +8426,7 @@
   {
    "date": "2026-01-02",
    "entry_date": "2026-01-05",
-   "days": 204,
+   "days": 205,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8586,7 +8586,7 @@
   {
    "date": "2025-12-26",
    "entry_date": "2025-12-29",
-   "days": 208,
+   "days": 209,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8746,7 +8746,7 @@
   {
    "date": "2025-12-19",
    "entry_date": "2025-12-22",
-   "days": 212,
+   "days": 213,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -8906,7 +8906,7 @@
   {
    "date": "2025-12-12",
    "entry_date": "2025-12-15",
-   "days": 217,
+   "days": 218,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9066,7 +9066,7 @@
   {
    "date": "2025-12-05",
    "entry_date": "2025-12-08",
-   "days": 222,
+   "days": 223,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9226,7 +9226,7 @@
   {
    "date": "2025-11-28",
    "entry_date": "2025-12-01",
-   "days": 227,
+   "days": 228,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9386,7 +9386,7 @@
   {
    "date": "2025-11-21",
    "entry_date": "2025-11-24",
-   "days": 232,
+   "days": 233,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9546,7 +9546,7 @@
   {
    "date": "2025-11-14",
    "entry_date": "2025-11-17",
-   "days": 237,
+   "days": 238,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9706,7 +9706,7 @@
   {
    "date": "2025-11-07",
    "entry_date": "2025-11-10",
-   "days": 242,
+   "days": 243,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -9866,7 +9866,7 @@
   {
    "date": "2025-10-31",
    "entry_date": "2025-11-03",
-   "days": 247,
+   "days": 248,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10026,7 +10026,7 @@
   {
    "date": "2025-10-23",
    "entry_date": "2025-10-27",
-   "days": 252,
+   "days": 253,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10186,7 +10186,7 @@
   {
    "date": "2025-10-17",
    "entry_date": "2025-10-20",
-   "days": 256,
+   "days": 257,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10331,7 +10331,7 @@
   {
    "date": "2025-10-09",
    "entry_date": "2025-10-13",
-   "days": 261,
+   "days": 262,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10491,7 +10491,7 @@
   {
    "date": "2025-10-03",
    "entry_date": "2025-10-07",
-   "days": 264,
+   "days": 265,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10651,7 +10651,7 @@
   {
    "date": "2025-09-26",
    "entry_date": "2025-09-30",
-   "days": 268,
+   "days": 269,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10811,7 +10811,7 @@
   {
    "date": "2025-09-19",
    "entry_date": "2025-09-22",
-   "days": 273,
+   "days": 274,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -10971,7 +10971,7 @@
   {
    "date": "2025-09-12",
    "entry_date": "2025-09-15",
-   "days": 278,
+   "days": 279,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11131,7 +11131,7 @@
   {
    "date": "2025-09-05",
    "entry_date": "2025-09-08",
-   "days": 283,
+   "days": 284,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11291,7 +11291,7 @@
   {
    "date": "2025-08-29",
    "entry_date": "2025-09-01",
-   "days": 288,
+   "days": 289,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11451,7 +11451,7 @@
   {
    "date": "2025-08-22",
    "entry_date": "2025-08-25",
-   "days": 293,
+   "days": 294,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11611,7 +11611,7 @@
   {
    "date": "2025-08-15",
    "entry_date": "2025-08-18",
-   "days": 298,
+   "days": 299,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11771,7 +11771,7 @@
   {
    "date": "2025-08-08",
    "entry_date": "2025-08-11",
-   "days": 303,
+   "days": 304,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -11931,7 +11931,7 @@
   {
    "date": "2025-08-01",
    "entry_date": "2025-08-04",
-   "days": 308,
+   "days": 309,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12091,7 +12091,7 @@
   {
    "date": "2025-07-25",
    "entry_date": "2025-07-28",
-   "days": 313,
+   "days": 314,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12251,7 +12251,7 @@
   {
    "date": "2025-07-18",
    "entry_date": "2025-07-21",
-   "days": 318,
+   "days": 319,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12411,7 +12411,7 @@
   {
    "date": "2025-07-11",
    "entry_date": "2025-07-14",
-   "days": 323,
+   "days": 324,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12571,7 +12571,7 @@
   {
    "date": "2025-07-04",
    "entry_date": "2025-07-07",
-   "days": 328,
+   "days": 329,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12731,7 +12731,7 @@
   {
    "date": "2025-06-27",
    "entry_date": "2025-06-30",
-   "days": 333,
+   "days": 334,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -12891,7 +12891,7 @@
   {
    "date": "2025-06-20",
    "entry_date": "2025-06-23",
-   "days": 338,
+   "days": 339,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13051,7 +13051,7 @@
   {
    "date": "2025-06-13",
    "entry_date": "2025-06-16",
-   "days": 343,
+   "days": 344,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13211,7 +13211,7 @@
   {
    "date": "2025-06-06",
    "entry_date": "2025-06-09",
-   "days": 348,
+   "days": 349,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13371,7 +13371,7 @@
   {
    "date": "2025-05-29",
    "entry_date": "2025-06-02",
-   "days": 353,
+   "days": 354,
    "status": "settled",
    "weak": 2,
    "our": [
@@ -13531,7 +13531,7 @@
   {
    "date": "2025-05-23",
    "entry_date": "2025-05-26",
-   "days": 357,
+   "days": 358,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13691,7 +13691,7 @@
   {
    "date": "2025-05-16",
    "entry_date": "2025-05-19",
-   "days": 362,
+   "days": 363,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -13851,7 +13851,7 @@
   {
    "date": "2025-05-09",
    "entry_date": "2025-05-12",
-   "days": 367,
+   "days": 368,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -14011,7 +14011,7 @@
   {
    "date": "2025-05-02",
    "entry_date": "2025-05-05",
-   "days": 372,
+   "days": 373,
    "status": "settled",
    "weak": 2,
    "our": [
@@ -14126,7 +14126,7 @@
   {
    "date": "2025-04-25",
    "entry_date": "2025-04-28",
-   "days": 376,
+   "days": 377,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -14286,7 +14286,7 @@
   {
    "date": "2025-04-11",
    "entry_date": "2025-04-14",
-   "days": 386,
+   "days": 387,
    "status": "settled",
    "weak": 1,
    "our": [
@@ -14386,7 +14386,7 @@
   {
    "date": "2025-04-02",
    "entry_date": "2025-04-07",
-   "days": 391,
+   "days": 392,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -14546,7 +14546,7 @@
   {
    "date": "2025-03-28",
    "entry_date": "2025-03-31",
-   "days": 394,
+   "days": 395,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -14706,7 +14706,7 @@
   {
    "date": "2025-03-21",
    "entry_date": "2025-03-24",
-   "days": 399,
+   "days": 400,
    "status": "settled",
    "weak": 4,
    "our": [
@@ -14852,7 +14852,7 @@
   {
    "date": "2025-03-14",
    "entry_date": "2025-03-17",
-   "days": 404,
+   "days": 405,
    "status": "settled",
    "weak": 5,
    "our": [
@@ -15012,7 +15012,7 @@
   {
    "date": "2025-03-07",
    "entry_date": "2025-03-10",
-   "days": 409,
+   "days": 410,
    "status": "settled",
    "weak": 4,
    "our": [
@@ -15172,7 +15172,7 @@
   {
    "date": "2025-02-27",
    "entry_date": "2025-03-03",
-   "days": 414,
+   "days": 415,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -15332,7 +15332,7 @@
   {
    "date": "2025-02-21",
    "entry_date": "2025-02-24",
-   "days": 418,
+   "days": 419,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -15492,7 +15492,7 @@
   {
    "date": "2025-02-14",
    "entry_date": "2025-02-17",
-   "days": 423,
+   "days": 424,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -15652,7 +15652,7 @@
   {
    "date": "2025-02-07",
    "entry_date": "2025-02-10",
-   "days": 428,
+   "days": 429,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -15812,7 +15812,7 @@
   {
    "date": "2025-01-22",
    "entry_date": "2025-02-03",
-   "days": 433,
+   "days": 434,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -15972,7 +15972,7 @@
   {
    "date": "2025-01-17",
    "entry_date": "2025-01-20",
-   "days": 436,
+   "days": 437,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -16132,7 +16132,7 @@
   {
    "date": "2025-01-10",
    "entry_date": "2025-01-13",
-   "days": 441,
+   "days": 442,
    "status": "settled",
    "weak": 0,
    "our": [
@@ -16292,7 +16292,7 @@
   {
    "date": "2025-01-03",
    "entry_date": "2025-01-06",
-   "days": 446,
+   "days": 447,
    "status": "settled",
    "weak": 1,
    "our": [
